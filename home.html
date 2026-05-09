@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ramaiah Institute of Management | MSRIM Bengaluru</title>
+<meta name="description" content="Ramaiah Institute of Management (MSRIM) — AICTE approved, NBA accredited PGDM programmes in Bengaluru. Building tomorrow's leaders since 1995."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,400;9..144,0,600;9..144,0,700;9..144,1,400;9..144,1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<style>
+:root{
+  --navy:#0a1f3d;--navy-800:#102b52;--navy-700:#1a3a6b;--navy-100:#e8eef7;
+  --gold:#c9a961;--gold-dark:#b08f48;--gold-light:#f5ecd6;
+  --cream:#faf6ee;--cream-2:#f3ece0;
+  --crimson:#B5174B;--orange:#E03820;
+  --ink:#1a1a1a;--muted:#5a5a5a;--line:#e3dccd;
+  --serif:"Fraunces","Times New Roman",serif;
+  --sans:"DM Sans",-apple-system,sans-serif;
+  --grad:linear-gradient(135deg,var(--crimson) 0%,var(--orange) 100%);
+  --shadow-sm:0 2px 12px rgba(10,31,61,.06);
+  --shadow-md:0 8px 30px rgba(10,31,61,.12);
+  --shadow-lg:0 20px 60px rgba(10,31,61,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-size:16px;line-height:1.65;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none;transition:color .25s}
+img{max-width:100%;display:block}
+ul{list-style:none}
+
+/* ── UTILITY BAR ── */
+.util{background:var(--grad);color:#fff;font-size:13px;padding:9px 0}
+.util .w{max-width:1380px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.util .left{font-weight:500;letter-spacing:.2px}
+.util .right{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.util a{color:#fff;transition:opacity .2s}
+.util a:hover{opacity:.78}
+.util .ico{display:inline-flex;gap:6px;align-items:center}
+.util .pill{border:1px solid rgba(255,255,255,.5);padding:4px 14px;border-radius:999px;font-size:12px;transition:all .25s}
+.util .pill:hover{background:rgba(255,255,255,.2)}
+
+/* ── HEADER ── */
+.site-header{background:#fff;position:sticky;top:0;z-index:200;box-shadow:0 1px 0 var(--line)}
+.hdr{max-width:1380px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.logo img{height:44px;width:auto}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-links a{font-size:13.5px;font-weight:500;color:var(--navy);padding:6px 10px;border-radius:6px;transition:all .2s;white-space:nowrap}
+.nav-links a:hover{background:var(--navy-100);color:var(--navy)}
+.nav-links a.active{background:var(--gold-light);font-weight:700}
+/* Dropdown */
+.nav-links .has-drop{position:relative}
+.nav-links .has-drop > a{display:flex;align-items:center;gap:4px}
+.nav-links .has-drop > a::after{content:"";display:inline-block;width:0;height:0;border:4px solid transparent;border-top-color:var(--navy);margin-top:2px;transition:transform .2s}
+.nav-links .has-drop:hover > a::after{transform:rotate(180deg);margin-top:-2px}
+.drop-menu{position:absolute;top:calc(100% + 8px);left:0;min-width:220px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 40px rgba(10,31,61,.14);opacity:0;visibility:hidden;transform:translateY(-8px);transition:all .25s;z-index:999;padding:6px}
+.has-drop:hover .drop-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.drop-menu a{display:block;padding:9px 14px;font-size:13px;font-weight:500;color:var(--ink);border-radius:6px;transition:all .2s;white-space:nowrap}
+.drop-menu a:hover{background:var(--navy-100);color:var(--navy);padding-left:18px}
+.drop-menu .drop-divider{height:1px;background:var(--line);margin:4px 0}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--grad);color:#fff;padding:9px 20px;border-radius:999px;font-size:13.5px;font-weight:600;letter-spacing:.3px;transition:opacity .25s;flex-shrink:0}
+.nav-cta:hover{opacity:.88}
+/* ── BURGER MENU PILL ── */
+.menu-pill{display:none;align-items:center;justify-content:center;width:42px;height:42px;background:#fff;border:1.5px solid var(--line);border-radius:8px;cursor:pointer;box-shadow:0 2px 8px rgba(10,31,61,.08);transition:all .3s;flex-shrink:0;margin-left:auto}
+.menu-pill:hover{border-color:var(--gold);box-shadow:0 4px 16px rgba(201,169,97,.25)}
+.menu-pill .lines{display:flex;flex-direction:column;gap:4px;width:20px}
+.menu-pill .lines span{height:2px;background:var(--navy);border-radius:2px;transition:all .3s;display:block}
+.menu-pill .lines span:nth-child(2){width:70%;margin-left:auto}
+.menu-pill.open .lines span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.menu-pill.open .lines span:nth-child(2){opacity:0;width:0}
+.menu-pill.open .lines span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+/* ── MOBILE NAV PANEL ── */
+.mobile-nav{position:fixed;top:0;left:0;right:0;bottom:0;z-index:980;visibility:hidden;pointer-events:none}
+.mobile-nav-overlay{position:absolute;inset:0;background:rgba(10,31,61,.55);opacity:0;transition:opacity .35s;backdrop-filter:blur(3px)}
+.mobile-nav-panel{position:absolute;top:0;left:0;right:0;background:#fff;transform:translateY(-100%);transition:transform .4s cubic-bezier(.25,.8,.25,1);padding:20px 24px 32px;max-height:90vh;overflow-y:auto}
+.mobile-nav.open{visibility:visible;pointer-events:auto}
+.mobile-nav.open .mobile-nav-overlay{opacity:1}
+.mobile-nav.open .mobile-nav-panel{transform:translateY(0)}
+.mobile-nav-header{display:flex;align-items:center;justify-content:space-between;padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.mobile-nav-header .logo img{height:38px}
+.mobile-nav-close{width:36px;height:36px;border-radius:50%;background:var(--navy-100);border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;color:var(--navy);transition:all .25s}
+.mobile-nav-close:hover{background:var(--navy);color:#fff}
+.mobile-nav-links{display:flex;flex-direction:column;gap:2px;margin-top:8px}
+.mobile-nav-links a{display:block;padding:12px 14px;font-size:15px;font-weight:500;color:var(--navy);border-radius:8px;transition:all .2s}
+.mobile-nav-links a:hover{background:var(--navy-100)}
+.mobile-nav-links a.active{background:var(--gold-light);font-weight:700}
+.mobile-nav-group{border-radius:8px;overflow:hidden}
+.mobile-nav-group-title{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;font-size:15px;font-weight:600;color:var(--navy);cursor:pointer;transition:background .2s}
+.mobile-nav-group-title:hover{background:var(--navy-100)}
+.mobile-nav-group-title i{font-size:12px;transition:transform .25s;color:var(--gold)}
+.mobile-nav-group.open .mobile-nav-group-title i{transform:rotate(180deg)}
+.mobile-nav-sub{display:none;padding-left:14px;border-left:2px solid var(--gold-light);margin-left:14px}
+.mobile-nav-group.open .mobile-nav-sub{display:block}
+.mobile-nav-sub a{font-size:13.5px;color:var(--muted);padding:9px 10px}
+.mobile-nav-sub a:hover{color:var(--navy);background:var(--cream);border-radius:6px}
+.mobile-nav-cta{margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
+.mobile-nav-cta a{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--grad);color:#fff;padding:13px;border-radius:999px;font-weight:700;font-size:14.5px}
+
+/* ── VIDEO CAROUSEL HERO ── */
+.vc{position:relative;height:88vh;min-height:560px;overflow:hidden;background:#071428}
+.vc-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease;pointer-events:none}
+.vc-slide.active{opacity:1;pointer-events:auto}
+.vc-slide video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.vc-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(5,12,30,.88) 0%,rgba(5,12,30,.55) 50%,rgba(5,12,30,.18) 100%);z-index:1}
+.vc-caption{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:0 8% 100px}
+.vc-caption.right{align-items:flex-end;text-align:right;padding:0 8% 100px}
+.vc-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,169,97,.18);border:1px solid rgba(201,169,97,.35);color:var(--gold);font-size:11.5px;font-weight:600;letter-spacing:2px;padding:6px 16px;border-radius:999px;margin-bottom:22px;text-transform:uppercase;width:fit-content}
+.vc-caption h1{font-family:var(--serif);font-size:clamp(36px,5.5vw,70px);font-weight:600;color:#fff;line-height:1.12;max-width:700px;margin-bottom:14px;opacity:0;transform:translateY(28px);transition:all .8s ease .3s}
+.vc-caption.right h1{max-width:700px}
+.vc-caption p{font-size:16px;color:rgba(255,255,255,.78);max-width:480px;line-height:1.65;margin-bottom:32px;opacity:0;transform:translateY(20px);transition:all .8s ease .5s}
+.vc-caption .vc-actions{display:flex;gap:12px;flex-wrap:wrap;opacity:0;transform:translateY(16px);transition:all .7s ease .7s}
+.vc-caption.right .vc-actions{justify-content:flex-end}
+.vc-slide.active .vc-caption h1,
+.vc-slide.active .vc-caption p,
+.vc-slide.active .vc-caption .vc-actions{opacity:1;transform:translateY(0)}
+/* Nav arrows */
+.vc-prev,.vc-next{position:absolute;top:50%;transform:translateY(-50%);z-index:10;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(8px);color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s}
+.vc-prev{left:24px}.vc-next{right:24px}
+.vc-prev:hover,.vc-next:hover{background:var(--grad);border-color:transparent}
+/* Dots */
+.vc-dots{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:10;display:flex;gap:7px}
+.vc-dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.35);border:none;cursor:pointer;transition:all .3s;padding:0}
+.vc-dot.active{background:#fff;width:22px;border-radius:4px}
+/* Chips bottom right */
+.vc-chips{position:absolute;bottom:28px;right:28px;display:flex;gap:10px;z-index:10}
+.chip{background:rgba(255,255,255,.1);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.2);color:#fff;padding:8px 14px;border-radius:8px;font-size:11.5px;font-weight:600;text-align:center}
+.chip span{display:block;font-size:17px;font-weight:700;color:var(--gold)}
+/* Progress bar */
+.vc-progress{position:absolute;bottom:0;left:0;height:3px;background:var(--grad);z-index:10;width:0;transition:none}
+.btn-primary{display:inline-flex;align-items:center;gap:9px;background:var(--grad);color:#fff;padding:12px 26px;border-radius:999px;font-weight:600;font-size:14.5px;transition:all .3s;box-shadow:0 4px 20px rgba(181,23,75,.35)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(181,23,75,.45)}
+.btn-outline{display:inline-flex;align-items:center;gap:9px;background:transparent;color:#fff;padding:11px 24px;border-radius:999px;font-weight:600;font-size:14.5px;border:2px solid rgba(255,255,255,.5);transition:all .3s}
+.btn-outline:hover{background:rgba(255,255,255,.12);border-color:#fff}
+
+/* ── QUICK LINKS ── */
+.quicklinks{background:#fff;border-bottom:1px solid var(--line)}
+.ql-inner{max-width:1380px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:repeat(4,1fr)}
+.ql-item{display:flex;align-items:center;gap:14px;padding:22px 20px;border-right:1px solid var(--line);cursor:pointer;transition:background .25s;text-decoration:none;color:inherit}
+.ql-item:last-child{border-right:none}
+.ql-item:hover{background:var(--navy-100)}
+.ql-icon{width:46px;height:46px;border-radius:12px;background:var(--gold-light);display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--navy);flex-shrink:0;transition:all .25s}
+.ql-item:hover .ql-icon{background:var(--grad);color:#fff}
+.ql-text h4{font-size:15px;font-weight:600;color:var(--navy)}
+.ql-text p{font-size:12.5px;color:var(--muted)}
+
+/* ── SECTION COMMONS ── */
+.section{padding:56px 0}
+.section.bg-cream{background:var(--cream)}
+.section.bg-white{background:#fff}
+.section.bg-navy{background:var(--navy)}
+.section.bg-dark{background:#071428}
+.wrap{max-width:1380px;margin:0 auto;padding:0 28px}
+.eyebrow{font-size:11.5px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";display:block;width:28px;height:2px;background:var(--gold)}
+.section-heading{font-family:var(--serif);font-size:clamp(28px,4vw,44px);font-weight:600;color:var(--navy);line-height:1.15;margin-bottom:16px}
+.section-heading em{color:var(--gold);font-style:italic}
+.section-sub{font-size:16px;color:var(--muted);max-width:560px;line-height:1.7}
+.section-header{margin-bottom:32px}
+.section-header.center{text-align:center}
+.section-header.center .section-sub{margin:0 auto}
+.section-header.center .eyebrow{justify-content:center}
+.section-header.center .eyebrow::before{display:none}
+
+/* ── STATS ── */
+.stats-bar{background:var(--navy);padding:24px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.stat-item{padding:16px 24px;border-right:1px solid rgba(255,255,255,.1);text-align:center}
+.stat-item:last-child{border-right:none}
+.stat-num{font-family:var(--serif);font-size:34px;font-weight:700;color:var(--gold);line-height:1;margin-bottom:4px}
+.stat-label{font-size:13px;color:rgba(255,255,255,.75);font-weight:500;letter-spacing:.3px}
+.stat-desc{font-size:11px;color:rgba(255,255,255,.4);margin-top:2px}
+
+/* ── PROGRAMS ── */
+.prog-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pcard{position:relative;border-radius:20px;overflow:hidden;cursor:pointer;background:#fff;border:1px solid rgba(10,31,61,.09);box-shadow:0 4px 24px rgba(10,31,61,.07);transition:transform .45s cubic-bezier(.25,.8,.25,1),box-shadow .45s;display:flex;flex-direction:column}
+.pcard:hover{transform:translateY(-8px);box-shadow:0 24px 56px rgba(10,31,61,.16)}
+/* Gold top-border slides in on hover */
+.pcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);z-index:4;opacity:0;transition:opacity .4s}
+.pcard:hover::before{opacity:1}
+/* Image block — fixed height at top */
+.pcard-img{position:relative;height:220px;flex-shrink:0;overflow:hidden}
+.pcard-img img{width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .9s cubic-bezier(.25,.46,.45,.94);filter:brightness(.92) saturate(1.08)}
+.pcard:hover .pcard-img img{transform:scale(1.07)}
+.pcard-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(10,31,61,.18) 100%)}
+/* Badge pinned on image */
+.pcard-label{position:absolute;top:14px;left:14px;z-index:3;display:inline-flex;align-items:center;gap:5px;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:5px 12px;border-radius:3px}
+.pcard-label.pop{background:var(--grad);color:#fff}
+.pcard-label.glob{background:rgba(201,169,97,.95);color:var(--navy)}
+.pcard-label.res{background:rgba(10,31,61,.75);color:#fff;backdrop-filter:blur(8px)}
+/* White content panel */
+.pcard-body{padding:22px 24px 26px;display:flex;flex-direction:column;flex:1}
+/* Gold accent line */
+.pcard-accent{display:block;width:32px;height:2.5px;background:var(--gold);margin-bottom:13px;border-radius:2px;transition:width .45s ease}
+.pcard:hover .pcard-accent{width:60px}
+.pcard-body h3{font-family:var(--serif);font-size:clamp(17px,1.7vw,21px);font-weight:600;color:var(--navy);line-height:1.22;margin-bottom:9px}
+.pcard-desc{font-size:13px;color:#555;line-height:1.7;margin-bottom:14px;flex:1}
+.pcard-pills{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:14px}
+.pcard-pill{background:rgba(10,31,61,.07);color:var(--navy);font-size:10px;padding:3px 10px;border-radius:3px;font-weight:600;letter-spacing:.3px}
+.pcard-meta{display:flex;gap:14px;margin-bottom:18px}
+.pcard-meta span{display:inline-flex;align-items:center;gap:5px;font-size:12px;color:#777;font-weight:500}
+.pcard-meta i{color:var(--gold);font-size:11px}
+.pcard-link{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;font-size:12.5px;font-weight:600;padding:10px 22px;border-radius:999px;transition:all .35s;width:fit-content;margin-top:auto}
+.pcard-link:hover{background:var(--grad);gap:13px}
+@media(max-width:900px){.prog-cards{grid-template-columns:1fr;gap:16px}}
+@media(max-width:600px){.pcard-img{height:180px}}
+/* ── WHY MSRIM ── */
+.why-dark{background:var(--navy);padding:52px 0}
+.why-dark-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;border-radius:20px;overflow:hidden}
+.wbento{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);padding:40px;position:relative;overflow:hidden;transition:background .3s}
+.wbento:hover{background:rgba(255,255,255,.07)}
+.wbento.big{grid-column:span 1;grid-row:span 2;background:linear-gradient(145deg,rgba(201,169,97,.1) 0%,rgba(255,255,255,.03) 100%);border-color:rgba(201,169,97,.2)}
+.wbento.dark{background:linear-gradient(145deg,#071428,rgba(10,31,61,.8))}
+.wbento-icon{width:52px;height:52px;border-radius:14px;background:rgba(201,169,97,.12);border:1px solid rgba(201,169,97,.2);display:flex;align-items:center;justify-content:center;font-size:24px;color:var(--gold);margin-bottom:20px}
+.wbento h3{font-family:var(--serif);font-size:clamp(28px,3vw,42px);font-weight:700;color:var(--gold);line-height:1;margin-bottom:4px}
+.wbento h3.big-num{font-size:clamp(56px,6vw,80px)}
+.wbento h4{font-size:16px;font-weight:700;color:#fff;margin-bottom:8px}
+.wbento p{font-size:13.5px;color:rgba(255,255,255,.55);line-height:1.65}
+.wbento-deco{position:absolute;bottom:-20px;right:-20px;font-size:120px;opacity:.04;color:#fff;font-family:var(--serif);line-height:1;pointer-events:none}
+.wbento-img{position:relative;border-radius:20px;overflow:hidden;height:100%;min-height:460px}
+.wbento-img img{width:100%;height:100%;object-fit:cover}
+.wbento-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(5,15,35,.85) 0%,transparent 60%)}
+.wbento-img-text{position:absolute;bottom:28px;left:28px;color:#fff}
+.wbento-img-text .big{font-family:var(--serif);font-size:52px;font-weight:700;color:var(--gold);line-height:1}
+.wbento-img-text p{font-size:13px;color:rgba(255,255,255,.7);margin-top:4px}
+/* ── TESTIMONIALS ── */
+.testi-section{background:var(--cream);padding:48px 0}
+.testi-carousel{position:relative}
+.testi-track-wrap{overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,black 5%,black 95%,transparent);mask:linear-gradient(90deg,transparent,black 5%,black 95%,transparent)}
+.testi-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:10;width:40px;height:40px;border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:15px;transition:all .3s;background:#fff;color:var(--navy);box-shadow:0 3px 14px rgba(10,31,61,.14);border:1.5px solid rgba(201,169,97,.3)}
+.testi-nav:hover{background:var(--grad);color:#fff;border-color:transparent;box-shadow:0 6px 20px rgba(181,23,75,.25)}
+.testi-nav.prev{left:-20px}
+.testi-nav.next{right:-20px}
+.testi-track{display:flex;gap:16px;animation:tScroll 40s linear infinite;width:max-content}
+.testi-track:hover{animation-play-state:paused}
+@keyframes tScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.testi-card-item{background:#fff;border:1px solid rgba(201,169,97,.2);border-radius:14px;padding:20px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:all .35s;box-shadow:0 2px 14px rgba(201,169,97,.08);width:300px;height:264px;flex-shrink:0}
+.testi-card-item::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light),var(--gold))}
+.testi-card-item::after{content:"\201C";font-family:var(--serif);font-size:80px;color:var(--gold);opacity:.07;position:absolute;top:-8px;right:12px;line-height:1;pointer-events:none}
+.testi-card-item:hover{transform:translateY(-5px);box-shadow:0 14px 36px rgba(201,169,97,.18);border-color:rgba(201,169,97,.4)}
+.testi-stars{display:flex;gap:2px;margin-bottom:10px}
+.testi-stars i{color:var(--gold);font-size:12px}
+.testi-text{font-size:12.5px;color:var(--muted);line-height:1.6;font-style:italic;flex:1;margin-bottom:10px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical}
+.testi-person{display:flex;align-items:center;gap:10px;border-top:1px solid rgba(201,169,97,.15);padding-top:12px;margin-top:auto}
+.testi-avatar{width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy-700));display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:17px;font-weight:600;color:#fff;flex-shrink:0;border:2.5px solid rgba(201,169,97,.55);box-shadow:0 4px 14px rgba(10,31,61,.2);overflow:hidden}
+.testi-avatar img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.testi-name{font-size:13px;font-weight:700;color:var(--navy)}
+.testi-role{font-size:11px;color:var(--muted);margin-top:1px}
+.testi-batch{display:inline-block;background:rgba(201,169,97,.1);color:var(--gold-dark);font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:4px;margin-top:4px;border:1px solid rgba(201,169,97,.25)}
+
+/* ── WHY MSRIM ── */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.why-img{position:relative;border-radius:20px;overflow:hidden;height:520px}
+.why-img img{width:100%;height:100%;object-fit:cover}
+.why-img::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,31,61,.08),transparent)}
+.why-badge{position:absolute;bottom:28px;left:28px;background:#fff;border-radius:14px;padding:18px 22px;box-shadow:var(--shadow-md)}
+.why-badge .num{font-family:var(--serif);font-size:36px;font-weight:700;color:var(--navy);line-height:1}
+.why-badge .lbl{font-size:12px;color:var(--muted);margin-top:2px}
+.why-features{display:flex;flex-direction:column;gap:20px;margin-top:36px}
+.why-feat{display:flex;gap:18px;align-items:flex-start;padding:20px;border-radius:14px;background:#fff;border:1px solid var(--line);transition:all .3s}
+.why-feat:hover{border-color:var(--gold);box-shadow:var(--shadow-sm)}
+.why-feat-icon{width:48px;height:48px;border-radius:12px;background:var(--gold-light);display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--navy);flex-shrink:0}
+.why-feat-text h4{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:4px}
+.why-feat-text p{font-size:13.5px;color:var(--muted);line-height:1.55}
+
+/* ── ACCREDITATIONS ── */
+.accred-bar{background:var(--cream);padding:20px 0 24px}
+.accred-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1100px;margin:0 auto;padding:0 28px}
+.accred-item{background:linear-gradient(145deg,rgba(201,169,97,.07) 0%,#fff 100%);border:1px solid rgba(201,169,97,.2);border-radius:16px;padding:22px 16px 18px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;transition:all .35s;cursor:default;box-shadow:0 2px 16px rgba(201,169,97,.08);position:relative;overflow:hidden}
+.accred-item::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-light),var(--gold),var(--gold-light));opacity:.8}
+.accred-item::after{content:"";position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.accred-item:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(10,31,61,.13);border-color:rgba(201,169,97,.4)}
+.accred-item:hover::after{transform:scaleX(1)}
+.accred-icon{width:72px;height:72px;border-radius:14px;background:linear-gradient(145deg,#fff,#faf6ee);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(10,31,61,.08);overflow:hidden;padding:6px;flex-shrink:0;transition:all .35s}
+.accred-item:hover .accred-icon{box-shadow:0 8px 24px rgba(201,169,97,.3);border-color:var(--gold);transform:scale(1.05)}
+.accred-icon img{width:100%;height:100%;object-fit:contain}
+.accred-icon i{font-size:28px;color:var(--gold)}
+.accred-item .a-title{font-size:13px;font-weight:700;color:var(--navy);line-height:1.2}
+.accred-item .a-sub{font-size:10.5px;color:var(--muted);line-height:1.4;text-align:center}
+.accred-divider{display:none}
+
+/* ── PLACEMENTS ── */
+.placement-section{background:var(--cream);padding:52px 0}
+.placement-top{display:flex;flex-direction:column;gap:20px;margin-bottom:0}
+.placement-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+.pl-stat{background:#fff;border:1.5px solid rgba(201,169,97,.22);border-radius:14px;padding:16px 18px;box-shadow:0 3px 14px rgba(201,169,97,.1);position:relative;overflow:hidden;transition:all .3s}
+.pl-stat::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light),var(--gold))}
+.pl-stat:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(201,169,97,.18);border-color:var(--gold)}
+.pl-stat .num{font-family:var(--serif);font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-top:4px}
+.pl-stat .lbl{font-size:12px;color:var(--muted);margin-top:5px;font-weight:500}
+.partners-marquee{display:flex;flex-direction:column;gap:10px;overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,black 6%,black 94%,transparent);mask:linear-gradient(90deg,transparent,black 6%,black 94%,transparent)}
+.partners-row{display:flex;gap:10px;width:max-content}
+.partners-row.row1{animation:scrollL 35s linear infinite}
+.partners-row.row2{animation:scrollR 40s linear infinite}
+.partners-row:hover{animation-play-state:paused}
+@keyframes scrollL{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes scrollR{0%{transform:translateX(-50%)}100%{transform:translateX(0)}}
+.partner-logo{background:#fff;border:1.5px solid rgba(201,169,97,.25);border-radius:14px;padding:12px 22px;height:90px;width:190px;display:flex;align-items:center;justify-content:center;transition:all .35s cubic-bezier(.25,.8,.25,1);box-shadow:0 3px 14px rgba(201,169,97,.12),0 1px 4px rgba(10,31,61,.05);flex-shrink:0;position:relative;overflow:hidden}
+.partner-logo::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(201,169,97,.05) 0%,transparent 60%);pointer-events:none}
+.partner-logo::after{content:"";position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--orange),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+.partner-logo:hover{background:linear-gradient(145deg,#fffdf5,#fff);border-color:var(--gold);box-shadow:0 12px 36px rgba(201,169,97,.28),0 3px 10px rgba(10,31,61,.08);transform:translateY(-6px) scale(1.04)}
+.partner-logo:hover::after{transform:scaleX(1)}
+.partner-logo img{max-height:58px;width:auto;max-width:150px;object-fit:contain;transition:all .35s;filter:drop-shadow(0 1px 3px rgba(0,0,0,.07))}
+.partner-logo:hover img{transform:scale(1.08);filter:drop-shadow(0 3px 8px rgba(0,0,0,.14))}
+
+/* ── TESTIMONIALS ── */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.testi-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px;position:relative;transition:all .3s}
+.testi-card:hover{box-shadow:var(--shadow-md);transform:translateY(-4px)}
+.testi-card::before{content:"\201C";font-family:var(--serif);font-size:72px;color:var(--gold);opacity:.25;position:absolute;top:12px;left:24px;line-height:1}
+.testi-stars{display:flex;gap:3px;margin-bottom:16px}
+.testi-stars i{color:var(--gold);font-size:13px}
+.testi-text{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:24px;font-style:italic}
+.testi-person{display:flex;align-items:center;gap:14px;border-top:1px solid var(--line);padding-top:18px}
+.testi-avatar{width:46px;height:46px;border-radius:50%;background:var(--navy-100);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:18px;font-weight:600;color:var(--navy);flex-shrink:0;overflow:hidden}
+.testi-avatar img{width:100%;height:100%;object-fit:cover}
+.testi-name{font-size:14px;font-weight:700;color:var(--navy)}
+.testi-role{font-size:12px;color:var(--muted);margin-top:1px}
+.testi-batch{display:inline-block;background:var(--gold-light);color:var(--navy);font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;margin-top:4px}
+
+/* ── CAMPUS LIFE STAGGER ── */
+.campus-stagger{background:#f5f0e8;padding:52px 0;overflow:hidden}
+.campus-layout{display:flex;gap:0;align-items:flex-start}
+.campus-vtitle{writing-mode:vertical-rl;transform:rotate(180deg);font-size:10.5px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--gold);border-left:2px solid var(--gold);padding:0 12px;flex-shrink:0;align-self:center;margin-right:48px;white-space:nowrap}
+.campus-main{flex:1}
+.campus-header{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;margin-bottom:36px}
+.campus-header h2{font-family:var(--serif);font-size:clamp(36px,4vw,58px);font-weight:600;color:var(--navy);line-height:1.05}
+.campus-header h2 span{color:var(--gold);font-style:italic}
+.campus-header p{font-size:15px;color:var(--muted);line-height:1.75;border-left:3px solid var(--gold);padding-left:20px}
+.campus-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+/* ── Silicon ball icon ── */
+@keyframes ballSpin{
+  0%{transform:rotateY(0deg) scale(1)}
+  40%{transform:rotateY(200deg) scale(1.15)}
+  100%{transform:rotateY(360deg) scale(1)}
+}
+.ccard{display:flex;flex-direction:column;background:#f5f0e8;border-radius:16px;padding:20px 18px 22px;position:relative;overflow:hidden;text-decoration:none;transition:all .4s cubic-bezier(.25,.8,.25,1);cursor:pointer;box-shadow:0 2px 12px rgba(10,31,61,.06);border:1px solid rgba(201,169,97,.2)}
+.ccard::before{content:"";position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .4s ease}
+.ccard:hover{background:linear-gradient(145deg,#0a1f3d 0%,#102b52 100%);transform:translateY(-6px);box-shadow:0 16px 40px rgba(10,31,61,.2);border-color:transparent;z-index:2}
+.ccard:hover::before{transform:scaleX(1)}
+.ccard.offset{margin-top:40px}
+.ccard-num{position:absolute;top:14px;right:14px;font-family:var(--serif);font-size:36px;font-weight:700;color:rgba(10,31,61,.05);line-height:1;transition:color .4s;user-select:none}
+.ccard:hover .ccard-num{color:rgba(255,255,255,.05)}
+
+/* The silicon ball */
+.ccard-ball{width:54px;height:54px;border-radius:50%;margin-bottom:14px;position:relative;display:flex;align-items:center;justify-content:center;font-size:22px;color:#fff;flex-shrink:0;
+  background:
+    radial-gradient(circle at 33% 28%,rgba(255,255,255,.75) 0%,rgba(255,255,255,0) 52%),
+    radial-gradient(circle at 68% 72%,rgba(10,31,61,.45) 0%,transparent 48%),
+    linear-gradient(140deg,#c5d8f0 0%,#0a1f3d 100%);
+  box-shadow:
+    inset -3px -4px 8px rgba(0,0,0,.22),
+    inset 2px 3px 7px rgba(255,255,255,.45),
+    0 10px 28px rgba(10,31,61,.28),
+    0 3px 8px rgba(10,31,61,.12);
+  transition:background .4s ease,box-shadow .4s ease;
+}
+.ccard:hover .ccard-ball{
+  background:
+    radial-gradient(circle at 33% 28%,rgba(255,255,255,.7) 0%,rgba(255,255,255,0) 52%),
+    radial-gradient(circle at 68% 72%,rgba(100,0,0,.3) 0%,transparent 48%),
+    linear-gradient(140deg,#f08060 0%,#B5174B 100%);
+  box-shadow:
+    inset -3px -4px 8px rgba(0,0,0,.2),
+    inset 2px 3px 7px rgba(255,255,255,.4),
+    0 10px 32px rgba(181,23,75,.4),
+    0 3px 8px rgba(181,23,75,.2);
+  animation:ballSpin .65s cubic-bezier(.4,0,.2,1);
+}
+.ccard h4{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:7px;transition:color .4s;line-height:1.25}
+.ccard:hover h4{color:#fff}
+.ccard p{font-size:13.5px;color:var(--muted);line-height:1.6;transition:color .4s;margin-bottom:0}
+.ccard:hover p{color:rgba(255,255,255,.6)}
+.ccard-arrow{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:var(--crimson);margin-top:10px;transition:all .4s;opacity:0;transform:translateY(4px)}
+.ccard:hover .ccard-arrow{opacity:1;transform:translateY(0);color:var(--gold)}
+
+@media(max-width:1100px){.campus-grid{grid-template-columns:repeat(4,1fr);gap:12px}}
+@media(max-width:900px){.campus-grid{grid-template-columns:repeat(2,1fr);gap:14px}.ccard.offset{margin-top:0}.campus-header{grid-template-columns:1fr}.campus-vtitle{display:none}}
+@media(max-width:600px){.campus-grid{grid-template-columns:1fr 1fr;gap:12px}.ccard{padding:24px 18px 30px}}
+@media(max-width:900px){.accred-inner{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.accred-inner{grid-template-columns:1fr 1fr;gap:12px}.accred-item{padding:14px 12px}}
+
+/* ── NEWS / CAMPUS LIFE ── */
+.news-section{background:#f5f0e8;padding:52px 0}
+.news-controls{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:28px}
+.news-tabs{display:flex;gap:4px;border-bottom:2px solid var(--line);margin-bottom:32px;overflow-x:auto;flex-wrap:nowrap}
+.news-tab{padding:9px 16px;font-size:13px;font-weight:500;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;white-space:nowrap;transition:all .25s}
+.news-tab.active{color:var(--orange);border-bottom-color:var(--orange);font-weight:600}
+.view-toggle{display:flex;gap:6px}
+.view-btn{height:36px;padding:0 16px;border-radius:999px;border:1.5px solid var(--line);background:#fff;cursor:pointer;display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--muted);transition:all .3s;font-family:var(--sans)}
+.view-btn:hover{border-color:var(--gold);color:var(--navy)}
+.view-btn.active{background:var(--navy);color:#fff;border-color:var(--navy);box-shadow:0 4px 14px rgba(10,31,61,.18)}
+/* News Grid */
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.news-card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:all .3s;text-decoration:none;display:block}
+.news-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px)}
+.news-img{height:170px;overflow:hidden;background:var(--navy-100)}
+.news-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.news-card:hover .news-img img{transform:scale(1.05)}
+.news-body{padding:16px}
+.news-meta{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.news-tag{display:inline-block;background:var(--navy-100);color:var(--navy);font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:4px}
+.news-tag.guest{background:#fff3e0;color:#e65100}
+.news-tag.student{background:#e8f5e9;color:#2e7d32}
+.news-tag.industrial{background:#e3f2fd;color:#1565c0}
+.news-tag.conclave{background:#f3e5f5;color:#6a1b9a}
+.news-tag.mdp{background:#fce4ec;color:#880e4f}
+.news-date{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--muted)}
+.news-date i{color:var(--gold);font-size:10px}
+.news-body h4{font-size:14px;font-weight:600;color:var(--navy);line-height:1.4;margin-bottom:0}
+/* Calendar View */
+.cal-wrap{display:none}
+.cal-wrap.active{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start}
+.cal-box{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow-sm)}
+.cal-header{background:linear-gradient(135deg,var(--navy),var(--navy-700));padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
+.cal-header h3{font-family:var(--serif);font-size:17px;font-weight:600;color:#fff;letter-spacing:.3px}
+.cal-nav{display:flex;gap:8px}
+.cal-nav button{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:13px;transition:all .3s}
+.cal-nav button:hover{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+.cal-days-hdr{display:grid;grid-template-columns:repeat(7,1fr);background:var(--navy-100)}
+.cal-days-hdr span{padding:8px 4px;text-align:center;font-size:10.5px;font-weight:700;color:var(--navy);letter-spacing:.5px;text-transform:uppercase}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:var(--line)}
+.cal-day{background:#fff;min-height:60px;padding:6px;cursor:pointer;transition:all .2s;position:relative}
+.cal-day:hover{background:#fffdf5}
+.cal-day.other-month{background:#fafafa}
+.cal-day.other-month .cal-day-num{color:#ccc}
+.cal-day.today{background:rgba(201,169,97,.08)}
+.cal-day.today .cal-day-num{color:var(--navy);font-weight:700;background:var(--gold);width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px}
+.cal-day.has-event{background:#fffef8}
+.cal-day.has-event:hover{background:#fff8e6}
+.cal-day.selected{background:rgba(10,31,61,.06);box-shadow:inset 0 0 0 2px var(--navy)}
+.cal-day-num{font-size:11.5px;font-weight:500;color:var(--ink);margin-bottom:4px}
+.cal-dots{display:flex;gap:3px;flex-wrap:wrap;margin-top:2px}
+.cal-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.dot-news{background:var(--orange)}
+.dot-guest{background:#e65100}
+.dot-student{background:#2e7d32}
+.dot-industrial{background:#1565c0}
+.dot-conclave{background:#6a1b9a}
+.dot-mdp{background:#880e4f}
+/* Event detail panel */
+.cal-panel{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;position:sticky;top:100px;box-shadow:var(--shadow-sm)}
+.cal-panel-hdr{background:linear-gradient(135deg,var(--navy),var(--navy-700));padding:16px 20px}
+.cal-panel-hdr h4{font-size:14px;font-weight:700;color:#fff}
+.cal-panel-hdr p{font-size:11.5px;color:rgba(255,255,255,.6);margin-top:3px}
+.cal-event-list{max-height:380px;overflow-y:auto}
+.cal-event-item{padding:12px 16px;border-bottom:1px solid var(--line);display:flex;gap:10px;align-items:flex-start;transition:background .2s;text-decoration:none}
+.cal-event-item:hover{background:var(--cream)}
+.cal-event-item:last-child{border-bottom:none}
+.cal-event-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:4px}
+.cal-event-title{font-size:12.5px;font-weight:600;color:var(--navy);line-height:1.35;margin-bottom:2px}
+.cal-event-cat{font-size:10.5px;color:var(--muted)}
+.cal-no-events{padding:28px;text-align:center;color:var(--muted);font-size:13px}
+.cal-no-events i{font-size:28px;display:block;margin-bottom:8px;color:var(--gold);opacity:.4}
+/* Legend row */
+.cal-legend{display:flex;gap:12px;flex-wrap:wrap;padding:12px 16px;background:var(--cream);border-top:1px solid var(--line)}
+.cal-legend-item{display:flex;align-items:center;gap:5px;font-size:10.5px;color:var(--muted);font-weight:500}
+.cal-legend-dot{width:8px;height:8px;border-radius:50%}
+/* News list hidden class */
+.news-list-wrap{display:block}
+.news-list-wrap.hidden{display:none}
+.view-all{display:inline-flex;align-items:center;gap:8px;color:var(--orange);font-weight:600;font-size:14px;transition:gap .25s}
+.view-all:hover{gap:14px;color:var(--crimson)}
+
+/* ── ADMISSIONS ── */
+.adm-section{background:var(--cream);padding:72px 0 80px}
+.adm-header{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:40px;flex-wrap:wrap}
+/* Stats bar */
+.adm-stats{display:flex;align-items:center;background:#fff;border:1px solid rgba(10,31,61,.08);border-radius:16px;padding:20px 32px;gap:0;margin-bottom:52px;box-shadow:0 4px 20px rgba(10,31,61,.06)}
+.adm-stat{flex:1;text-align:center;padding:8px 12px}
+.adm-stat-num{display:block;font-family:var(--serif);font-size:28px;font-weight:700;color:var(--navy);line-height:1}
+.adm-stat-lbl{display:block;font-size:11.5px;color:var(--muted);margin-top:5px;font-weight:500;letter-spacing:.3px}
+.adm-stat-div{width:1px;height:44px;background:rgba(10,31,61,.1);flex-shrink:0}
+/* Process Steps */
+.adm-steps-label{font-size:11.5px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.adm-steps-label::before{content:"";display:block;width:28px;height:2px;background:var(--gold)}
+.adm-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-bottom:52px;position:relative}
+.adm-steps::before{content:"";position:absolute;top:36px;left:10%;right:10%;height:2px;background:linear-gradient(90deg,var(--gold) 0%,rgba(201,169,97,.2) 100%);z-index:0}
+.adm-step{background:#fff;border:1px solid rgba(10,31,61,.08);border-radius:16px;padding:24px 20px;text-align:center;position:relative;z-index:1;transition:all .35s;box-shadow:0 4px 16px rgba(10,31,61,.05)}
+.adm-step:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(10,31,61,.12);border-color:rgba(201,169,97,.35)}
+.adm-step::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);border-radius:16px 16px 0 0;opacity:0;transition:opacity .35s}
+.adm-step:hover::before{opacity:1}
+.adm-step-num{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-700) 100%);color:#fff;font-family:var(--serif);font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;border:3px solid #fff;box-shadow:0 4px 14px rgba(10,31,61,.2)}
+.adm-step-icon{font-size:22px;color:var(--gold);margin-bottom:10px;display:block}
+.adm-step h4{font-size:13.5px;font-weight:700;color:var(--navy);margin-bottom:6px;line-height:1.3}
+.adm-step p{font-size:11.5px;color:var(--muted);line-height:1.55}
+/* Two-column grid */
+.adm-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:36px}
+/* Left col */
+.adm-box{background:#fff;border:1px solid rgba(10,31,61,.08);border-radius:18px;padding:30px 32px;box-shadow:0 4px 18px rgba(10,31,61,.06)}
+.adm-box-title{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--navy);margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.adm-box-title i{color:var(--gold)}
+.adm-elig-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+.adm-elig-list li{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--ink);line-height:1.55}
+.adm-elig-list li i{color:var(--gold);font-size:15px;margin-top:2px;flex-shrink:0}
+.adm-divider{border:none;border-top:1px solid rgba(10,31,61,.07);margin:24px 0}
+.adm-exams{display:flex;flex-wrap:wrap;gap:8px}
+.adm-exam{background:var(--navy-100);color:var(--navy);font-size:12px;font-weight:700;padding:6px 14px;border-radius:999px;border:1.5px solid rgba(10,31,61,.12);letter-spacing:.5px}
+/* Right col */
+.adm-right-col{display:flex;flex-direction:column;gap:20px}
+.adm-fee-table{width:100%;border-collapse:collapse}
+.adm-fee-table tr:not(:last-child) td{border-bottom:1px solid rgba(10,31,61,.07)}
+.adm-fee-table td{padding:10px 0;font-size:13.5px;color:var(--ink)}
+.adm-fee-table td:last-child{text-align:right;font-weight:600;color:var(--navy)}
+.adm-fee-total td{border-top:2px solid var(--gold) !important;font-weight:700 !important;color:var(--navy) !important;font-size:15px !important}
+.adm-fee-total td:last-child{color:var(--crimson) !important;font-family:var(--serif);font-size:17px !important}
+.adm-apply-card{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-700) 100%);border-radius:18px;padding:28px 30px;text-align:center;position:relative;overflow:hidden}
+.adm-apply-card::before{content:"";position:absolute;top:-40px;right:-40px;width:140px;height:140px;border-radius:50%;background:rgba(201,169,97,.12)}
+.adm-apply-card h3{font-family:var(--serif);font-size:22px;font-weight:600;color:#fff;margin-bottom:8px;position:relative}
+.adm-apply-card p{font-size:13px;color:rgba(255,255,255,.7);margin-bottom:22px;position:relative}
+.adm-apply-links{display:flex;flex-direction:column;gap:10px;position:relative}
+.adm-apply-btn{display:flex;align-items:center;justify-content:center;gap:9px;padding:12px 24px;border-radius:999px;font-size:14px;font-weight:700;transition:all .3s}
+.adm-apply-btn.primary{background:var(--gold);color:var(--navy)}
+.adm-apply-btn.primary:hover{background:#e0bf70;transform:translateY(-2px)}
+.adm-apply-btn.ghost{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);color:#fff}
+.adm-apply-btn.ghost:hover{background:rgba(255,255,255,.18)}
+.adm-contact-row{display:flex;gap:16px;flex-wrap:wrap}
+.adm-contact-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+.adm-contact-item i{color:var(--gold);font-size:15px}
+.adm-contact-item a{color:var(--navy);font-weight:600}
+/* Scholarships */
+.adm-scholar{background:linear-gradient(135deg,rgba(10,31,61,.04) 0%,rgba(201,169,97,.06) 100%);border:1px solid rgba(201,169,97,.2);border-radius:18px;padding:30px 32px}
+.adm-scholar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.adm-scholar-card{background:#fff;border:1px solid rgba(201,169,97,.2);border-radius:12px;padding:16px 18px;display:flex;align-items:flex-start;gap:12px;transition:all .3s}
+.adm-scholar-card:hover{border-color:var(--gold);box-shadow:0 6px 20px rgba(201,169,97,.15);transform:translateY(-3px)}
+.adm-scholar-icon{width:38px;height:38px;border-radius:10px;background:var(--gold-light);display:flex;align-items:center;justify-content:center;color:var(--navy);font-size:17px;flex-shrink:0}
+.adm-scholar-card h5{font-size:12.5px;font-weight:700;color:var(--navy);margin-bottom:3px;line-height:1.3}
+.adm-scholar-card p{font-size:11px;color:var(--muted);line-height:1.5}
+@media(max-width:1024px){.adm-steps{grid-template-columns:repeat(3,1fr)}.adm-steps::before{display:none}}
+@media(max-width:900px){.adm-grid{grid-template-columns:1fr}.adm-stats{flex-wrap:wrap;gap:14px;padding:18px 20px}.adm-stat-div{display:none}.adm-scholar-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.adm-steps{grid-template-columns:1fr 1fr}.adm-scholar-grid{grid-template-columns:1fr}}
+/* ── CTA BANNER ── */
+.cta-banner{background:#f5f0e8;padding:52px 0;text-align:center;position:relative;overflow:hidden}
+.cta-banner::before{content:"";position:absolute;inset:0;background:url('https://msrim.in/images/msrim_campus.jpg') center/cover no-repeat;opacity:.04}
+.cta-banner h2{font-family:var(--serif);font-size:clamp(30px,4vw,50px);font-weight:600;color:var(--navy);margin-bottom:14px;position:relative}
+.cta-banner p{font-size:17px;color:var(--muted);margin-bottom:36px;position:relative}
+.cta-banner .actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+.btn-white{display:inline-flex;align-items:center;gap:9px;background:var(--grad);color:#fff;padding:13px 28px;border-radius:999px;font-weight:700;font-size:15px;transition:all .3s;box-shadow:0 4px 20px rgba(181,23,75,.25)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(181,23,75,.35)}
+.btn-ghost-white{display:inline-flex;align-items:center;gap:9px;background:transparent;color:var(--navy);padding:12px 26px;border-radius:999px;font-weight:600;font-size:15px;border:2px solid var(--navy);transition:all .3s}
+.btn-ghost-white:hover{background:var(--navy);color:#fff}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);color:#fff;padding:48px 0 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;margin-bottom:36px}
+.footer-brand .logo img{height:42px;filter:brightness(0) invert(1);opacity:.9}
+.footer-brand p{font-size:13.5px;color:rgba(255,255,255,.6);line-height:1.7;margin:18px 0 22px}
+.footer-contact{display:flex;flex-direction:column;gap:10px}
+.footer-contact .fc{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:rgba(255,255,255,.65)}
+.footer-contact .fc i{color:var(--gold);margin-top:3px;flex-shrink:0}
+.socials{display:flex;gap:10px;margin-top:20px}
+.socials a{width:36px;height:36px;border-radius:8px;border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.65);font-size:16px;transition:all .25s}
+.socials a:hover{background:var(--grad);border-color:transparent;color:#fff}
+.footer-col h5{font-size:13.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:rgba(255,255,255,.9);margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid var(--gold);display:inline-block}
+.footer-col ul{display:flex;flex-direction:column;gap:10px}
+.footer-col ul li a{font-size:13.5px;color:rgba(255,255,255,.6);transition:color .2s;display:flex;align-items:center;gap:7px}
+.footer-col ul li a::before{content:"";display:block;width:5px;height:5px;border-radius:50%;background:var(--gold);opacity:.5;flex-shrink:0}
+.footer-col ul li a:hover{color:#fff}
+.footer-col ul li a:hover::before{opacity:1}
+.footer-erp{border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.08);padding:13px 0;background:rgba(0,0,0,.18);margin-top:-1px}
+.footer-erp .w{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-erp-group{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.footer-erp-title{font-size:11.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);flex-shrink:0}
+.footer-erp-links{display:flex;gap:18px;flex-wrap:wrap}
+.footer-erp-links a{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:rgba(255,255,255,.8);transition:color .2s;font-weight:700;letter-spacing:.2px}
+.footer-erp-links a::before{content:"→";color:var(--orange);font-size:11px;font-weight:900}
+.footer-erp-links a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:20px 0}
+.footer-bottom .w{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:12.5px;color:rgba(255,255,255,.4)}
+.footer-bottom a{color:rgba(255,255,255,.5);transition:color .2s}
+.footer-bottom a:hover{color:#fff}
+.footer-badges{display:flex;gap:12px;align-items:center;margin-top:18px}
+.footer-badge{background:#fff;border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:8px 12px;display:flex;align-items:center;gap:10px}
+.footer-badge img{height:40px;width:auto;filter:none;opacity:1;object-fit:contain}
+.footer-badge span{font-size:11px;color:var(--navy);max-width:90px;line-height:1.3;font-weight:600}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){
+  .why-grid{grid-template-columns:1fr;gap:40px}
+  .why-img{height:360px}
+  .placement-top{grid-template-columns:1fr;gap:32px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:36px}
+}
+@media(max-width:900px){
+  .prog-grid{grid-template-columns:1fr 1fr}
+  .testi-grid{grid-template-columns:1fr 1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .stat-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
+  .nav-links{display:none}
+  .menu-pill{display:flex}.nav-links{display:none}.nav-cta{display:none}
+  .ql-inner{grid-template-columns:repeat(2,1fr)}
+  .ql-item:nth-child(2){border-right:none}
+  .news-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .prog-grid{grid-template-columns:1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .news-grid{grid-template-columns:1fr}
+  .ql-inner{grid-template-columns:1fr}
+  .ql-item{border-right:none;border-bottom:1px solid var(--line)}
+  .hero{height:70vh}
+  .hero h1{font-size:32px}
+  .footer-grid{grid-template-columns:1fr}
+  .accred-divider{display:none}
+}
+
+/* ── SCROLL REVEAL ── */
+.reveal{opacity:0;transform:translateY(28px);transition:all .7s cubic-bezier(.22,.61,.36,1)}
+.reveal.visible{opacity:1;transform:none}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+</style>
+</head>
+<body>
+
+<!-- UTILITY BAR -->
+<div class="util">
+  <div class="w">
+    <div class="left">Ramaiah Institute of Management | M.S.R.I.T. Post, Bengaluru</div>
+    <div class="right">
+      <a href="tel:08023606640" class="ico"><i class="bi bi-telephone-fill"></i> 080-2360-6640</a>
+      <a href="mailto:support@msrim.org" class="ico"><i class="bi bi-envelope-fill"></i> support@msrim.org</a>
+      <a href="https://alumni.msrim.in/">Alumni</a>
+      <a href="https://msrim.in/pdf/NIRF2026.pdf">NIRF</a>
+      <a href="https://msrim.digiicampus.com/">Student Portal</a>
+      <a href="https://admissions.msrim.in/" class="pill"><i class="bi bi-pencil-square"></i> Apply Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="hdr">
+    <a href="home.html" class="logo">
+      <img src="https://msrim.in/images/logo-2.png" alt="Ramaiah Institute of Management"/>
+    </a>
+    <nav class="nav-links">
+      <div class="has-drop">
+        <a href="about.html">About Us</a>
+        <div class="drop-menu">
+          <a href="about.html">About MSRIM</a>
+          <a href="https://msrim.in/dean">Dean's Message</a>
+          <a href="https://msrim.in/governance">Governance</a>
+          <a href="https://msrim.in/vision-mission">Vision &amp; Mission</a>
+          <a href="https://msrim.in/governingcouncil">Governing Council</a>
+          <a href="https://msrim.in/academiccouncil">Academic Council</a>
+          <a href="https://msrim.in/organizationalstructure">Organisational Structure</a>
+          <a href="https://msrim.in/iqac">IQAC Team</a>
+          <a href="https://msrim.in/images/Awards-Ranking.mp4" target="_blank">B-School Ranking</a>
+        </div>
+      </div>
+      <div class="has-drop">
+        <a href="programs.html">Programs</a>
+        <div class="drop-menu">
+          <a href="programs.html#pgdm">PGDM — Two Year Full Time</a>
+          <a href="programs.html#fpm">FPM</a>
+        </div>
+      </div>
+      <a href="faculty.html">Faculty</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="placements.html">Placements</a>
+      <div class="has-drop">
+        <a href="centres.html">Centres</a>
+        <div class="drop-menu">
+          <a href="https://msrim.in/centre-for-sustainability">Centre for Sustainability</a>
+          <a href="centre-for-leadership (2).html">Centre for Leadership</a>
+          <a href="https://msrim.in/case-centre">Case Centre</a>
+          <a href="https://msrim.in/bcic">BCIC</a>
+          <a href="https://msrim.in/consultancy">Consultancy</a>
+          <a href="https://msrim.in/industry-on-campus">Industry Institute Interaction Cell</a>
+          <a href="https://msrim.in/rim-innovation-incubation-centre">RIM Innovation &amp; Incubation</a>
+        </div>
+      </div>
+      <a href="research.html">R &amp; D Cell</a>
+    </nav>
+    <a href="https://admissions.msrim.in/" class="nav-cta">
+      <i class="bi bi-mortarboard-fill"></i> Admissions 2026
+    </a>
+    <button class="menu-pill" id="menuBtn" aria-label="Open navigation">
+      <div class="lines"><span></span><span></span><span></span></div>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+  <div class="mobile-nav-panel">
+    <div class="mobile-nav-header">
+      <a href="home.html" class="logo"><img src="https://msrim.in/images/logo-2.png" alt="MSRIM"/></a>
+      <button class="mobile-nav-close" id="mobileClose"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="mobile-nav-links">
+      <div class="mobile-nav-group" id="mg-about">
+        <div class="mobile-nav-group-title" onclick="toggleGroup('mg-about')">About Us <i class="bi bi-chevron-down"></i></div>
+        <div class="mobile-nav-sub">
+          <a href="about.html#about">About MSRIM</a>
+          <a href="about.html#dean">Dean's Message</a>
+          <a href="about.html#vision">Vision &amp; Mission</a>
+          <a href="about.html#governance">Governance</a>
+          <a href="about.html#governing-council">Governing Council</a>
+          <a href="about.html#academic-council">Academic Council</a>
+          <a href="about.html#iqac">IQAC Team</a>
+          <a href="about.html#ranking">B-School Ranking</a>
+        </div>
+      </div>
+      <div class="mobile-nav-group" id="mg-progs">
+        <div class="mobile-nav-group-title" onclick="toggleGroup('mg-progs')">Programs <i class="bi bi-chevron-down"></i></div>
+        <div class="mobile-nav-sub">
+          <a href="programs.html#pgdm">PGDM — Two Year Full Time</a>
+          <a href="programs.html#fpm">FPM</a>
+        </div>
+      </div>
+      <a href="faculty.html">Faculty</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="placements.html">Placements</a>
+      <div class="mobile-nav-group" id="mg-centres">
+        <div class="mobile-nav-group-title" onclick="toggleGroup('mg-centres')">Centres <i class="bi bi-chevron-down"></i></div>
+        <div class="mobile-nav-sub">
+          <a href="https://msrim.in/centre-for-sustainability">Centre for Sustainability</a>
+          <a href="centre-for-leadership (2).html">Centre for Leadership</a>
+          <a href="https://msrim.in/case-centre">Case Centre</a>
+          <a href="https://msrim.in/bcic">BCIC</a>
+          <a href="https://msrim.in/consultancy">Consultancy</a>
+          <a href="https://msrim.in/industry-on-campus">Industry Institute Interaction Cell</a>
+          <a href="https://msrim.in/rim-innovation-incubation-centre">RIM Innovation &amp; Incubation</a>
+        </div>
+      </div>
+      <a href="research.html">R &amp; D Cell</a>
+    </div>
+    <div class="mobile-nav-cta">
+      <a href="https://admissions.msrim.in/"><i class="bi bi-mortarboard-fill"></i> Apply for PGDM 2026</a>
+    </div>
+  </div>
+</div>
+
+<!-- VIDEO CAROUSEL HERO -->
+<section class="vc" id="videoCarousel">
+
+  <!-- Slide 1 -->
+  <div class="vc-slide">
+    <video autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture controlslist="nodownload noplaybackrate noremoteplayback">
+      <source src="https://msrim.in/slider-videos/1.mp4" type="video/mp4"/>
+      <source src="https://msrim.in/slider-videos/1.webm" type="video/webm"/>
+    </video>
+    <div class="vc-overlay"></div>
+    <div class="vc-caption">
+      <div class="vc-badge"><i class="bi bi-award-fill"></i> AICTE Approved · NBA Accredited · Est. 1995</div>
+      <h1>Welcome to Ramaiah<br/>Institute of Management</h1>
+      <p>Discover excellence where innovation meets legacy.</p>
+      <div class="vc-actions">
+        <a href="https://admissions.msrim.in/" class="btn-primary"><i class="bi bi-mortarboard-fill"></i> Apply for 2026</a>
+        <a href="https://msrim.in/campus-tour" class="btn-outline"><i class="bi bi-play-circle-fill"></i> Campus Tour</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="vc-slide">
+    <video autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture controlslist="nodownload noplaybackrate noremoteplayback">
+      <source src="https://msrim.in/slider-videos/2.mp4" type="video/mp4"/>
+      <source src="https://msrim.in/slider-videos/2.webm" type="video/webm"/>
+    </video>
+    <div class="vc-overlay"></div>
+    <div class="vc-caption right">
+      <h1>Every Hallway Holds a<br/>New Conversation</h1>
+      <p>Learning goes beyond classrooms — friendships start here.</p>
+      <div class="vc-actions">
+        <a href="https://admissions.msrim.in/" class="btn-primary"><i class="bi bi-mortarboard-fill"></i> Apply for 2026</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="vc-slide">
+    <video autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture controlslist="nodownload noplaybackrate noremoteplayback">
+      <source src="https://msrim.in/slider-videos/3.mp4" type="video/mp4"/>
+      <source src="https://msrim.in/slider-videos/3.webm" type="video/webm"/>
+    </video>
+    <div class="vc-overlay"></div>
+    <div class="vc-caption">
+      <h1>Tech-Driven Classrooms,<br/>Future-Ready Minds</h1>
+      <p>Experience world-class teaching with smart learning environments.</p>
+      <div class="vc-actions">
+        <a href="https://admissions.msrim.in/" class="btn-primary"><i class="bi bi-mortarboard-fill"></i> Apply for 2026</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 4 -->
+  <div class="vc-slide">
+    <video autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture controlslist="nodownload noplaybackrate noremoteplayback">
+      <source src="https://msrim.in/slider-videos/4.mp4" type="video/mp4"/>
+      <source src="https://msrim.in/slider-videos/4.webm" type="video/webm"/>
+    </video>
+    <div class="vc-overlay"></div>
+    <div class="vc-caption right">
+      <h1>Guidance that<br/>Shapes Futures</h1>
+      <p>Wisdom shared by leaders, inspiring every step ahead.</p>
+      <div class="vc-actions">
+        <a href="https://admissions.msrim.in/" class="btn-primary"><i class="bi bi-mortarboard-fill"></i> Apply for 2026</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 5 -->
+  <div class="vc-slide">
+    <video autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture controlslist="nodownload noplaybackrate noremoteplayback">
+      <source src="https://msrim.in/slider-videos/5.mp4" type="video/mp4"/>
+      <source src="https://msrim.in/slider-videos/5.webm" type="video/webm"/>
+    </video>
+    <div class="vc-overlay"></div>
+    <div class="vc-caption">
+      <h1>Unfiltered Moments.<br/>Unbreakable Bonds.</h1>
+      <p>Friendships made on campus, cherished for life.</p>
+      <div class="vc-actions">
+        <a href="https://admissions.msrim.in/" class="btn-primary"><i class="bi bi-mortarboard-fill"></i> Apply for 2026</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 6 -->
+  <div class="vc-slide">
+    <video autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture controlslist="nodownload noplaybackrate noremoteplayback">
+      <source src="https://msrim.in/slider-videos/6.mp4" type="video/mp4"/>
+      <source src="https://msrim.in/slider-videos/6.webm" type="video/webm"/>
+    </video>
+    <div class="vc-overlay"></div>
+    <div class="vc-caption right">
+      <h1>Knowledge Finds<br/>You Here</h1>
+      <p>Quiet corridors, focused minds — our library speaks success.</p>
+      <div class="vc-actions">
+        <a href="https://admissions.msrim.in/" class="btn-primary"><i class="bi bi-mortarboard-fill"></i> Apply for 2026</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 7 -->
+  <div class="vc-slide">
+    <video autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture controlslist="nodownload noplaybackrate noremoteplayback">
+      <source src="https://msrim.in/slider-videos/7.mp4" type="video/mp4"/>
+      <source src="https://msrim.in/slider-videos/7.webm" type="video/webm"/>
+    </video>
+    <div class="vc-overlay"></div>
+    <div class="vc-caption">
+      <h1>From Bangalore to<br/>the World Stage</h1>
+      <p>Global exposure through international immersion programs.</p>
+      <div class="vc-actions">
+        <a href="https://admissions.msrim.in/" class="btn-primary"><i class="bi bi-mortarboard-fill"></i> Apply for 2026</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 8 -->
+  <div class="vc-slide">
+    <video autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture controlslist="nodownload noplaybackrate noremoteplayback">
+      <source src="https://msrim.in/slider-videos/8.mp4" type="video/mp4"/>
+      <source src="https://msrim.in/slider-videos/8.webm" type="video/webm"/>
+    </video>
+    <div class="vc-overlay"></div>
+    <div class="vc-caption right">
+      <h1>Where Culture<br/>Comes Alive</h1>
+      <p>Celebrating talent, tradition, and togetherness on stage.</p>
+      <div class="vc-actions">
+        <a href="https://admissions.msrim.in/" class="btn-primary"><i class="bi bi-mortarboard-fill"></i> Apply for 2026</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 9 -->
+  <div class="vc-slide">
+    <video autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture controlslist="nodownload noplaybackrate noremoteplayback">
+      <source src="https://msrim.in/slider-videos/9.mp4" type="video/mp4"/>
+      <source src="https://msrim.in/slider-videos/9.webm" type="video/webm"/>
+    </video>
+    <div class="vc-overlay"></div>
+    <div class="vc-caption">
+      <h1>Game On,<br/>Passion Unleashed</h1>
+      <p>Sports meets that ignite spirit, skill, and teamwork.</p>
+      <div class="vc-actions">
+        <a href="https://admissions.msrim.in/" class="btn-primary"><i class="bi bi-mortarboard-fill"></i> Apply for 2026</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 10 -->
+  <div class="vc-slide">
+    <video autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture controlslist="nodownload noplaybackrate noremoteplayback">
+      <source src="https://msrim.in/slider-videos/10.mp4" type="video/mp4"/>
+      <source src="https://msrim.in/slider-videos/10.webm" type="video/webm"/>
+    </video>
+    <div class="vc-overlay"></div>
+    <div class="vc-caption right">
+      <h1>Pride in<br/>Every Achievement</h1>
+      <p>Celebrating student victories that make us all proud.</p>
+      <div class="vc-actions">
+        <a href="https://admissions.msrim.in/" class="btn-primary"><i class="bi bi-mortarboard-fill"></i> Apply for 2026</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 11 -->
+  <div class="vc-slide">
+    <video autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture controlslist="nodownload noplaybackrate noremoteplayback">
+      <source src="https://msrim.in/slider-videos/11.mp4" type="video/mp4"/>
+      <source src="https://msrim.in/slider-videos/11.webm" type="video/webm"/>
+    </video>
+    <div class="vc-overlay"></div>
+    <div class="vc-caption">
+      <h1>Innovation<br/>Meets Excellence</h1>
+      <p>Where cutting-edge research transforms into real-world solutions.</p>
+      <div class="vc-actions">
+        <a href="https://admissions.msrim.in/" class="btn-primary"><i class="bi bi-mortarboard-fill"></i> Apply for 2026</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 12 -->
+  <div class="vc-slide active">
+    <video autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture controlslist="nodownload noplaybackrate noremoteplayback">
+      <source src="https://msrim.in/slider-videos/12.mp4" type="video/mp4"/>
+      <source src="https://msrim.in/slider-videos/12.webm" type="video/webm"/>
+    </video>
+    <div class="vc-overlay"></div>
+    <div class="vc-caption right">
+      <div class="vc-badge"><i class="bi bi-award-fill"></i> AICTE Approved · NBA Accredited · Est. 1995</div>
+      <h1>Building<br/>Tomorrow's Leaders</h1>
+      <p>Empowering minds to create positive change in the world.</p>
+      <div class="vc-actions">
+        <a href="https://admissions.msrim.in/" class="btn-primary"><i class="bi bi-mortarboard-fill"></i> Apply for 2026</a>
+        <a href="https://msrim.in/campus-tour" class="btn-outline"><i class="bi bi-play-circle-fill"></i> Campus Tour</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <button class="vc-prev" id="vcPrev"><i class="bi bi-chevron-left"></i></button>
+  <button class="vc-next" id="vcNext"><i class="bi bi-chevron-right"></i></button>
+
+  <!-- Dots -->
+  <div class="vc-dots" id="vcDots"></div>
+
+  <!-- Stat chips -->
+  <div class="vc-chips">
+    <div class="chip"><span>30+</span>Years</div>
+    <div class="chip"><span>100%</span>Placement</div>
+    <div class="chip"><span>₹22L</span>Highest CTC</div>
+  </div>
+
+  <!-- Progress bar -->
+  <div class="vc-progress" id="vcProgress"></div>
+</section>
+
+<!-- QUICK LINKS -->
+<div class="quicklinks">
+  <div class="ql-inner">
+    <a href="https://msrim.in/programs" class="ql-item">
+      <div class="ql-icon"><i class="bi bi-book-fill"></i></div>
+      <div class="ql-text"><h4>Our Programmes</h4><p>PGDM · FPM · Global Pathways</p></div>
+    </a>
+    <a href="https://msrim.in/rdcell" class="ql-item">
+      <div class="ql-icon"><i class="bi bi-search"></i></div>
+      <div class="ql-text"><h4>Research &amp; Development</h4><p>30+ Publications · 10 Patents · Scopus Indexed</p></div>
+    </a>
+    <a href="https://msrim.in/placement" class="ql-item">
+      <div class="ql-icon"><i class="bi bi-briefcase-fill"></i></div>
+      <div class="ql-text"><h4>Placement Assistance & Career Guidance</h4><p>100% Placements · ₹22L Highest CTC · 150+ Companies</p></div>
+    </a>
+    <a href="https://admissions.msrim.in/" class="ql-item">
+      <div class="ql-icon"><i class="bi bi-pencil-square"></i></div>
+      <div class="ql-text"><h4>Apply Now</h4><p>PGDM Admissions 2026–28</p></div>
+    </a>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="stat-num">30+</div>
+        <div class="stat-label">Years of Excellence</div>
+        <div class="stat-desc">Established 1995</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-1">
+        <div class="stat-num">2500+</div>
+        <div class="stat-label">Alumni Worldwide</div>
+        <div class="stat-desc">Across 20+ countries</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Placement Record</div>
+        <div class="stat-desc">Consecutive years</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-3">
+        <div class="stat-num">150+</div>
+        <div class="stat-label">Recruiting Partners</div>
+        <div class="stat-desc">Top corporates &amp; MNCs</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ACCREDITATIONS -->
+<div class="accred-bar">
+  <div class="accred-inner">
+    <div class="accred-item reveal">
+      <div class="accred-icon">
+        <img src="https://msrim.in/images/AICTE_sliderlogo.jpg" alt="AICTE"/>
+      </div>
+      <div><div class="a-title">AICTE Approved</div><div class="a-sub">All India Council for Technical Education</div></div>
+    </div>
+    <div class="accred-divider"></div>
+    <div class="accred-item reveal reveal-delay-1">
+      <div class="accred-icon">
+        <img src="https://msrim.in/images/NBA_sliderlogo.jpg" alt="NBA"/>
+      </div>
+      <div><div class="a-title">NBA Accredited</div><div class="a-sub">National Board of Accreditation</div></div>
+    </div>
+    <div class="accred-divider"></div>
+    <div class="accred-item reveal reveal-delay-2">
+      <div class="accred-icon">
+        <img src="https://msrim.in/images/c2.png" alt="AIU"/>
+      </div>
+      <div><div class="a-title">AIU Member</div><div class="a-sub">Association of Indian Universities</div></div>
+    </div>
+    <div class="accred-divider"></div>
+    <div class="accred-item reveal reveal-delay-3">
+      <div class="accred-icon">
+        <img src="https://msrim.in/images/amdisa_logo.jpg" alt="AMDISA"/>
+      </div>
+      <div><div class="a-title">AMDISA Member</div><div class="a-sub">South Asian Management Association</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- PROGRAMMES -->
+<section class="section bg-cream" style="padding-top:40px">
+  <div class="wrap">
+    <div class="section-header reveal" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;margin-bottom:40px">
+      <div>
+        <div class="eyebrow">Academic Programmes</div>
+        <h2 class="section-heading">Choose Your Path to <em>Leadership</em></h2>
+        <p class="section-sub">AICTE approved · NBA accredited · Bengaluru</p>
+      </div>
+      <a href="https://msrim.in/programs" class="view-all" style="flex-shrink:0">All Programmes <i class="bi bi-arrow-right"></i></a>
+    </div>
+
+    <div class="prog-cards reveal">
+
+      <!-- Card 1: PGDM -->
+      <div class="pcard">
+        <div class="pcard-img">
+          <img src="https://msrim.in/images/program1.webp" alt="PGDM" onerror="this.src='https://msrim.in/images/msrim_campus.jpg'"/>
+          <div class="pcard-label pop"><i class="bi bi-star-fill"></i> Most Popular</div>
+        </div>
+        <div class="pcard-body">
+          <span class="pcard-accent"></span>
+          <h3>PGDM — Two Year Full Time</h3>
+          <p class="pcard-desc">Flagship AICTE-approved, NBA-accredited programme with six specialisations in Finance, Marketing, HR, Analytics, Operations and Systems.</p>
+          <div class="pcard-pills"><span class="pcard-pill">Finance</span><span class="pcard-pill">Marketing</span><span class="pcard-pill">HR</span><span class="pcard-pill">Analytics</span></div>
+          <div class="pcard-meta"><span><i class="bi bi-clock-fill"></i> 2 Years</span><span><i class="bi bi-patch-check-fill"></i> AICTE · NBA</span></div>
+          <a href="https://msrim.in/pgdm" class="pcard-link">Explore Programme <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Card 2: Global Pathways -->
+      <div class="pcard">
+        <div class="pcard-img">
+          <img src="https://msrim.in/images/program3.webp" alt="Global" onerror="this.src='https://msrim.in/images/msrim_campus.jpg'"/>
+          <div class="pcard-label glob"><i class="bi bi-globe2"></i> Global</div>
+        </div>
+        <div class="pcard-body">
+          <span class="pcard-accent"></span>
+          <h3>PGDM with Global Pathways</h3>
+          <p class="pcard-desc">International immersion with cross-cultural industry exposure and study-abroad opportunities at partner universities.</p>
+          <div class="pcard-pills"><span class="pcard-pill">International</span><span class="pcard-pill">Exchange</span><span class="pcard-pill">Industry</span></div>
+          <div class="pcard-meta"><span><i class="bi bi-clock-fill"></i> 2 Years</span><span><i class="bi bi-airplane-fill"></i> International</span></div>
+          <a href="https://msrim.in/pgdm-global" class="pcard-link">Explore Programme <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Card 3: FPM -->
+      <div class="pcard">
+        <div class="pcard-img">
+          <img src="https://msrim.in/images/program4.webp" alt="FPM" onerror="this.src='https://msrim.in/images/msrim_campus.jpg'"/>
+          <div class="pcard-label res"><i class="bi bi-journal-text"></i> Research</div>
+        </div>
+        <div class="pcard-body">
+          <span class="pcard-accent"></span>
+          <h3>Fellow Programme in Management</h3>
+          <p class="pcard-desc">Doctoral-level programme for aspiring academicians and high-end management researchers seeking academic careers.</p>
+          <div class="pcard-pills"><span class="pcard-pill">Doctoral</span><span class="pcard-pill">Research</span><span class="pcard-pill">Academia</span></div>
+          <div class="pcard-meta"><span><i class="bi bi-clock-fill"></i> 4–5 Years</span><span><i class="bi bi-mortarboard-fill"></i> Doctoral</span></div>
+          <a href="https://msrim.in/fpm" class="pcard-link">Explore Programme <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- PLACEMENTS -->
+<section class="placement-section">
+  <div class="wrap">
+    <div class="placement-top">
+      <!-- Heading — full width on top -->
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px" class="reveal">
+        <div>
+          <div class="eyebrow">Placements</div>
+          <h2 class="section-heading">Placed at the <em>Best</em> Companies</h2>
+          <p class="section-sub">Our students are placed at India's leading corporations, MNCs and startups across every sector.</p>
+        </div>
+        <a href="https://msrim.in/placements" class="view-all" style="font-size:13px;flex-shrink:0">View All <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <!-- Partners logos — full width below -->
+      <div class="reveal">
+        <p style="font-size:11.5px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;font-weight:700;margin-bottom:14px">Our Recruiting Partners</p>
+      <div class="partners-marquee">
+        <div class="partners-row row1">
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec1.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec2.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec3.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec4.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec5.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec6.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec7.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec8.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec9.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec10.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec1.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec2.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec3.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec4.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec5.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec6.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec7.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec8.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec9.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec10.webp" alt="Partner"/></div>
+        </div>
+        <div class="partners-row row2">
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec11.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec12.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec13.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec14.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec15.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec16.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec17.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec18.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec19.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec20.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec11.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec12.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec13.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec14.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec15.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec16.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec17.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec18.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec19.webp" alt="Partner"/></div>
+          <div class="partner-logo"><img src="https://msrim.in/images/home-placement-logos/rec20.webp" alt="Partner"/></div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- Stats below logos -->
+    <div class="placement-stats reveal" style="margin-top:32px">
+      <div class="pl-stat">
+        <div class="num">₹22L</div>
+        <div class="lbl">Highest CTC Offered</div>
+      </div>
+      <div class="pl-stat">
+        <div class="num">₹7.5L</div>
+        <div class="lbl">Average CTC</div>
+      </div>
+      <div class="pl-stat">
+        <div class="num">150+</div>
+        <div class="lbl">Recruiting Companies</div>
+      </div>
+      <div class="pl-stat">
+        <div class="num">100%</div>
+        <div class="lbl">Placement Rate</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi-section">
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:28px;flex-wrap:wrap;gap:16px" class="reveal">
+      <div>
+        <div class="eyebrow">Alumni Speak</div>
+        <h2 class="section-heading">Voices of <em>Success</em></h2>
+        <p style="font-size:15px;color:var(--muted);margin-top:6px">2500+ alumni. 20+ countries. One MSRIM.</p>
+      </div>
+      <a href="https://msrim.in/testimonials" class="view-all">All Alumni Stories <i class="bi bi-arrow-right"></i></a>
+    </div>
+
+    <div class="testi-carousel reveal">
+      <button class="testi-nav prev" id="testiPrev"><i class="bi bi-chevron-left"></i></button>
+      <div class="testi-track-wrap">
+      <div class="testi-track" id="testiTrack">
+
+        <!-- 1. Nitin -->
+        <div class="testi-card-item">
+          <div class="testi-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          <p class="testi-text">"My MBA at M.S. Ramaiah was truly a turning point in my career and personal growth. The mentorship continues to shape who I am — both professionally and personally."</p>
+          <div class="testi-person">
+            <div class="testi-avatar"><img src="https://msrim.in/images/nitin.jpg" alt="Nitin" onerror="this.outerHTML='N'"/></div>
+            <div><div class="testi-name">Nitin</div><div class="testi-role">VP Media Strategy · Valueleaf Services</div><div class="testi-batch">Batch 2006–08</div></div>
+          </div>
+        </div>
+
+        <!-- 2. Satish Kumar -->
+        <div class="testi-card-item">
+          <div class="testi-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          <p class="testi-text">"The MSRIM MBA was one of the most challenging academic efforts I've undertaken, yet very rewarding! It gave me the foundation for my career in global banking."</p>
+          <div class="testi-person">
+            <div class="testi-avatar"><img src="https://msrim.in/images/satish-kumar.jpg" alt="Satish Kumar" onerror="this.outerHTML='SK'"/></div>
+            <div><div class="testi-name">Satish Kumar</div><div class="testi-role">SVP Traded Risk · HSBC UK</div><div class="testi-batch">Batch 2006–08</div></div>
+          </div>
+        </div>
+
+        <!-- 3. Utkarsh Dubey -->
+        <div class="testi-card-item">
+          <div class="testi-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          <p class="testi-text">"Ramaiah instilled values of discipline, critical thinking, and ambition in me. It has been the foundation for my leadership journey at HSBC."</p>
+          <div class="testi-person">
+            <div class="testi-avatar"><img src="https://msrim.in/images/Utkarsh.jpg" alt="Utkarsh Dubey" onerror="this.outerHTML='UD'"/></div>
+            <div><div class="testi-name">Utkarsh Dubey</div><div class="testi-role">VP · HSBC</div><div class="testi-batch">Batch 2015–17</div></div>
+          </div>
+        </div>
+
+        <!-- 4. Priyanka Mehta -->
+        <div class="testi-card-item">
+          <div class="testi-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          <p class="testi-text">"My MBA journey laid a strong foundation for professional growth and entrepreneurship. MSRIM shaped me into the leader and entrepreneur I am today."</p>
+          <div class="testi-person">
+            <div class="testi-avatar"><img src="https://msrim.in/images/Priyanka-Mehta.jpg" alt="Priyanka Mehta" onerror="this.outerHTML='PM'"/></div>
+            <div><div class="testi-name">Priyanka Mehta</div><div class="testi-role">Managing Director · Interazzo.com</div><div class="testi-batch">Batch 2010–12</div></div>
+          </div>
+        </div>
+
+        <!-- 5. Prit Raman -->
+        <div class="testi-card-item">
+          <div class="testi-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          <p class="testi-text">"MSRIM laid the foundation for my success in strategic thinking and business growth. The skills I gained continue to drive my career forward every day."</p>
+          <div class="testi-person">
+            <div class="testi-avatar"><img src="https://msrim.in/images/Prit_Raman.jpg" alt="Prit Raman" onerror="this.outerHTML='PR'"/></div>
+            <div><div class="testi-name">Prit Raman</div><div class="testi-role">GM Corporate Strategy · Informa Markets</div><div class="testi-batch">Batch 2007–09</div></div>
+          </div>
+        </div>
+
+        <!-- 6. Neeraj Shetty -->
+        <div class="testi-card-item">
+          <div class="testi-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          <p class="testi-text">"The teachings and values learned at MSRIM shaped me in all aspects of career and life. It was the turning point that helped me build my own venture."</p>
+          <div class="testi-person">
+            <div class="testi-avatar"><img src="https://msrim.in/images/Neeraj_Shetty.jpeg" alt="Neeraj Shetty" onerror="this.outerHTML='NS'"/></div>
+            <div><div class="testi-name">Neeraj Shetty</div><div class="testi-role">Founder · Prathiksha Hospitality</div><div class="testi-batch">Batch 2006–08</div></div>
+          </div>
+        </div>
+
+        <!-- 7. Mahender Singh -->
+        <div class="testi-card-item">
+          <div class="testi-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          <p class="testi-text">"MSRIM's foundation was instrumental in shaping my banking and leadership career. The rigorous curriculum and peer network have been invaluable."</p>
+          <div class="testi-person">
+            <div class="testi-avatar"><img src="https://msrim.in/images/Mahender_Singh.jpeg" alt="Mahender Singh" onerror="this.outerHTML='MS'"/></div>
+            <div><div class="testi-name">Mahender Singh</div><div class="testi-role">VP Emerging Corporate · Yes Bank</div><div class="testi-batch">Batch 2006–08</div></div>
+          </div>
+        </div>
+
+        <!-- 8. Sonali Monappa -->
+        <div class="testi-card-item">
+          <div class="testi-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          <p class="testi-text">"Practical learning through internships deepened my understanding and critical thinking. MSRIM truly bridges the gap between academia and industry."</p>
+          <div class="testi-person">
+            <div class="testi-avatar"><img src="https://msrim.in/images/sonali_monappa.png" alt="Sonali Monappa" onerror="this.outerHTML='SO'"/></div>
+            <div><div class="testi-name">Sonali Monappa</div><div class="testi-role">Finance &amp; Analytics · Deloitte</div><div class="testi-batch">Batch 2022–24</div></div>
+          </div>
+        </div>
+
+        <!-- 9. Mithula Umakanth -->
+        <div class="testi-card-item">
+          <div class="testi-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          <p class="testi-text">"RIM is the perfect place to study and develop your career with industry alignment. The Entrepreneurship Cell gave me mentors and real pitch opportunities."</p>
+          <div class="testi-person">
+            <div class="testi-avatar"><img src="https://msrim.in/images/mithula_umakanth.png" alt="Mithula Umakanth" onerror="this.outerHTML='MU'"/></div>
+            <div><div class="testi-name">Mithula Umakanth</div><div class="testi-role">Finance &amp; Entrepreneurship · Deloitte</div><div class="testi-batch">Batch 2022–24</div></div>
+          </div>
+        </div>
+
+        <!-- Duplicate set for seamless loop -->
+        <div class="testi-card-item"><div class="testi-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div><p class="testi-text">"My MBA at M.S. Ramaiah was truly a turning point in my career and personal growth. The mentorship continues to shape who I am."</p><div class="testi-person"><div class="testi-avatar"><img src="https://msrim.in/images/nitin.jpg" alt="Nitin"/></div><div><div class="testi-name">Nitin</div><div class="testi-role">VP Media Strategy · Valueleaf Services</div><div class="testi-batch">Batch 2006–08</div></div></div></div>
+        <div class="testi-card-item"><div class="testi-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div><p class="testi-text">"The MSRIM MBA was one of the most challenging academic efforts I've undertaken, yet very rewarding! It gave me the foundation for a global career."</p><div class="testi-person"><div class="testi-avatar"><img src="https://msrim.in/images/satish-kumar.jpg" alt="Satish Kumar"/></div><div><div class="testi-name">Satish Kumar</div><div class="testi-role">SVP Traded Risk · HSBC UK</div><div class="testi-batch">Batch 2006–08</div></div></div></div>
+        <div class="testi-card-item"><div class="testi-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div><p class="testi-text">"Practical learning through internships deepened my understanding and critical thinking. MSRIM truly bridges the gap between academia and industry."</p><div class="testi-person"><div class="testi-avatar"><img src="https://msrim.in/images/sonali_monappa.png" alt="Sonali Monappa"/></div><div><div class="testi-name">Sonali Monappa</div><div class="testi-role">Finance &amp; Analytics · Deloitte</div><div class="testi-batch">Batch 2022–24</div></div></div></div>
+
+      </div>
+      </div>
+      <button class="testi-nav next" id="testiNext"><i class="bi bi-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- CAMPUS LIFE STAGGER -->
+<section class="campus-stagger">
+  <div class="wrap">
+    <div class="campus-layout">
+      <div class="campus-vtitle">Life and Activities</div>
+      <div class="campus-main">
+
+        <div class="campus-header reveal">
+          <h2>Campus <span>Life</span></h2>
+          <p>Elevating the student experience through premium infrastructure, industry connections and dedicated support systems at MSRIM.</p>
+        </div>
+
+        <div class="campus-grid reveal">
+
+          <a href="admissions.html" class="ccard">
+            <span class="ccard-num">01</span>
+            <div class="ccard-ball"><i class="bi bi-pencil-square"></i></div>
+            <h4>Admissions</h4>
+            <p>Applications open for PGDM 2026–28 batch.</p>
+            <span class="ccard-arrow">Explore <i class="bi bi-arrow-right"></i></span>
+          </a>
+
+          <a href="placements.html" class="ccard offset">
+            <span class="ccard-num">02</span>
+            <div class="ccard-ball"><i class="bi bi-briefcase-fill"></i></div>
+            <h4>Placement Assistance &amp; Career Guidance</h4>
+            <p>100% placement record with 150+ top recruiting partners.</p>
+            <span class="ccard-arrow">Explore <i class="bi bi-arrow-right"></i></span>
+          </a>
+
+          <a href="https://alumni.msrim.in/" class="ccard">
+            <span class="ccard-num">03</span>
+            <div class="ccard-ball"><i class="bi bi-mortarboard-fill"></i></div>
+            <h4>Alumni Network</h4>
+            <p>2500+ alumni across 20+ countries driving global impact.</p>
+            <span class="ccard-arrow">Explore <i class="bi bi-arrow-right"></i></span>
+          </a>
+
+          <a href="centres.html" class="ccard offset">
+            <span class="ccard-num">04</span>
+            <div class="ccard-ball"><i class="bi bi-grid-fill"></i></div>
+            <h4>Centres &amp; Cells</h4>
+            <p>Specialised centres for leadership, sustainability and innovation.</p>
+            <span class="ccard-arrow">Explore <i class="bi bi-arrow-right"></i></span>
+          </a>
+
+          <a href="https://msrim.in/student-council" class="ccard">
+            <span class="ccard-num">05</span>
+            <div class="ccard-ball"><i class="bi bi-people-fill"></i></div>
+            <h4>Students Council</h4>
+            <p>Student-led governance driving campus culture and activities.</p>
+            <span class="ccard-arrow">Explore <i class="bi bi-arrow-right"></i></span>
+          </a>
+
+          <a href="research.html" class="ccard offset">
+            <span class="ccard-num">06</span>
+            <div class="ccard-ball"><i class="bi bi-search"></i></div>
+            <h4>Research &amp; Development</h4>
+            <p>Publications, patents and live research initiatives.</p>
+            <span class="ccard-arrow">Explore <i class="bi bi-arrow-right"></i></span>
+          </a>
+
+          <a href="https://msrim.in/library" class="ccard">
+            <span class="ccard-num">07</span>
+            <div class="ccard-ball"><i class="bi bi-book-fill"></i></div>
+            <h4>Library</h4>
+            <p>Digital and physical resources to power your research journey.</p>
+            <span class="ccard-arrow">Explore <i class="bi bi-arrow-right"></i></span>
+          </a>
+
+          <a href="https://msrim.in/innovation-incubation" class="ccard offset">
+            <span class="ccard-num">08</span>
+            <div class="ccard-ball"><i class="bi bi-lightbulb-fill"></i></div>
+            <h4>Innovation &amp; Incubation</h4>
+            <p>Supporting student entrepreneurs through mentorship and funding.</p>
+            <span class="ccard-arrow">Explore <i class="bi bi-arrow-right"></i></span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS / CAMPUS LIFE -->
+<section class="news-section">
+  <div class="wrap">
+    <!-- Header -->
+    <div class="news-controls reveal">
+      <div>
+        <div class="eyebrow">Stay Updated</div>
+        <h2 class="section-heading">Campus <em>Life</em> &amp; Events</h2>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <div class="view-toggle">
+          <button class="view-btn active" id="btnList"><i class="bi bi-grid-3x3-gap-fill"></i> List</button>
+          <button class="view-btn" id="btnCal"><i class="bi bi-calendar3"></i> Calendar</button>
+        </div>
+        <a href="https://msrim.in/happenings" class="view-all">View All <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="news-tabs reveal">
+      <div class="news-tab active" data-cat="all">All Events</div>
+      <div class="news-tab" data-cat="news">News &amp; Events</div>
+      <div class="news-tab" data-cat="guest">Guest Lectures</div>
+      <div class="news-tab" data-cat="industrial">Industrial Visits</div>
+      <div class="news-tab" data-cat="mdp">MDPs &amp; FDPs</div>
+      <div class="news-tab" data-cat="conclave">Conclaves</div>
+      <div class="news-tab" data-cat="student">Student Activities</div>
+    </div>
+
+    <!-- LIST VIEW -->
+    <div class="news-list-wrap reveal" id="newsListWrap">
+      <div class="news-grid" id="newsGrid">
+
+        <a href="https://msrim.in/happenings/neinfo/industry-integrated-ld-students-project-presentation" target="_blank" class="news-card" data-cat="student">
+          <div class="news-img"><img src="https://msrim.in/images/cfl1.webp" alt="Event" onerror="this.parentElement.style.background='var(--navy-100)'"/></div>
+          <div class="news-body">
+            <div class="news-meta"><span class="news-tag student">Student Activities</span><span class="news-date"><i class="bi bi-calendar3"></i> 20 Apr 2026</span></div>
+            <h4>Industry-integrated L&D Students Project Presentation</h4>
+          </div>
+        </a>
+
+        <a href="https://msrim.in/happenings/neinfo/report-on-industrial-visit-to-the-times-of-india-plant-bommasandra-on-15th-april-2026" target="_blank" class="news-card" data-cat="industrial">
+          <div class="news-img"><img src="https://msrim.in/images/cfl2.webp" alt="Event" onerror="this.parentElement.style.background='var(--navy-100)'"/></div>
+          <div class="news-body">
+            <div class="news-meta"><span class="news-tag industrial">Industrial Visit</span><span class="news-date"><i class="bi bi-calendar3"></i> 15 Apr 2026</span></div>
+            <h4>Industrial Visit to The Times of India Plant, Bommasandra</h4>
+          </div>
+        </a>
+
+        <a href="https://msrim.in/happenings/neinfo/panel-discussion-data-drops-to-digital-dominance" target="_blank" class="news-card" data-cat="guest">
+          <div class="news-img"><img src="https://msrim.in/images/cfl3.webp" alt="Event" onerror="this.parentElement.style.background='var(--navy-100)'"/></div>
+          <div class="news-body">
+            <div class="news-meta"><span class="news-tag guest">Guest Lecture</span><span class="news-date"><i class="bi bi-calendar3"></i> 11 Apr 2026</span></div>
+            <h4>Panel Discussion — "Data Drops to Digital Dominance"</h4>
+          </div>
+        </a>
+
+        <a href="https://msrim.in/happenings/neinfo/launch-your-career-the-pgdm-professional-edge-series" target="_blank" class="news-card" data-cat="guest">
+          <div class="news-img"><img src="https://msrim.in/images/cfl4.webp" alt="Event" onerror="this.parentElement.style.background='var(--navy-100)'"/></div>
+          <div class="news-body">
+            <div class="news-meta"><span class="news-tag guest">Guest Lecture</span><span class="news-date"><i class="bi bi-calendar3"></i> 11 Apr 2026</span></div>
+            <h4>Launch Your Career: The PGDM Professional Edge Series</h4>
+          </div>
+        </a>
+
+        <a href="https://msrim.in/happenings/neinfo/iks-concepts-to-contemporary-business-practices" target="_blank" class="news-card" data-cat="guest">
+          <div class="news-img"><img src="https://msrim.in/images/cfl5.webp" alt="Event" onerror="this.parentElement.style.background='var(--navy-100)'"/></div>
+          <div class="news-body">
+            <div class="news-meta"><span class="news-tag guest">Guest Lecture</span><span class="news-date"><i class="bi bi-calendar3"></i> 31 Mar 2026</span></div>
+            <h4>IKS Concepts to Contemporary Business Practices</h4>
+          </div>
+        </a>
+
+        <a href="https://msrim.in/happenings/neinfo/perceptions-sangama-2k26" target="_blank" class="news-card" data-cat="conclave">
+          <div class="news-img"><img src="https://msrim.in/images/Top-Cities-for-Women-in-India-2024.jpg" alt="Event" onerror="this.parentElement.style.background='var(--navy-100)'"/></div>
+          <div class="news-body">
+            <div class="news-meta"><span class="news-tag conclave">Conclave</span><span class="news-date"><i class="bi bi-calendar3"></i> 11 Mar 2026</span></div>
+            <h4>Perceptions SANGAMA 2K26 — National Management Fest</h4>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- CALENDAR VIEW -->
+    <div class="cal-wrap" id="calWrap">
+      <div class="cal-box">
+        <div class="cal-header">
+          <h3 id="calTitle">April 2026</h3>
+          <div class="cal-nav">
+            <button id="calPrev"><i class="bi bi-chevron-left"></i></button>
+            <button id="calNext"><i class="bi bi-chevron-right"></i></button>
+          </div>
+        </div>
+        <div class="cal-days-hdr">
+          <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+        </div>
+        <div class="cal-grid" id="calGrid"></div>
+      </div>
+      <div class="cal-panel">
+        <div class="cal-panel-hdr">
+          <h4 id="calPanelDate">Select a date</h4>
+          <p id="calPanelCount">Click any date to see events</p>
+        </div>
+        <div class="cal-event-list" id="calEventList">
+          <div class="cal-no-events"><i class="bi bi-calendar3"></i>Click a highlighted date to view events</div>
+        </div>
+        <div class="cal-legend">
+          <div class="cal-legend-item"><span class="cal-legend-dot" style="background:#e65100"></span>Guest Lecture</div>
+          <div class="cal-legend-item"><span class="cal-legend-dot" style="background:#2e7d32"></span>Student Activity</div>
+          <div class="cal-legend-item"><span class="cal-legend-dot" style="background:#1565c0"></span>Industrial Visit</div>
+          <div class="cal-legend-item"><span class="cal-legend-dot" style="background:#6a1b9a"></span>Conclave</div>
+          <div class="cal-legend-item"><span class="cal-legend-dot" style="background:#880e4f"></span>MDP &amp; FDP</div>
+          <div class="cal-legend-item"><span class="cal-legend-dot" style="background:var(--orange)"></span>News &amp; Events</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="wrap">
+    <div class="reveal">
+      <h2>Ready to Begin Your Leadership Journey?</h2>
+      <p>Join the MSRIM family. Applications for PGDM 2026–28 are now open.</p>
+      <div class="actions">
+        <a href="https://admissions.msrim.in/" class="btn-white"><i class="bi bi-pencil-square"></i> Apply for PGDM 2026</a>
+        <a href="https://msrim.in/how-to-reach" class="btn-ghost-white"><i class="bi bi-geo-alt-fill"></i> Visit Campus</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><img src="https://msrim.in/images/logo-2.png" alt="MSRIM"/></div>
+        <p>Ramaiah Institute of Management has been nurturing business leaders since 1995. AICTE approved and NBA accredited, we are committed to delivering world-class management education.</p>
+        <div class="footer-contact">
+          <div class="fc"><i class="bi bi-telephone-fill"></i><span>080-2360-6640, 6641, 6642</span></div>
+          <div class="fc"><i class="bi bi-envelope-fill"></i><span>support@msrim.org</span></div>
+          <div class="fc"><i class="bi bi-geo-alt-fill"></i><span>Gate No. 8, Ramaiah Group Campus, 'C' Block, M.S.R.I.T. Post, Bengaluru — 560054</span></div>
+        </div>
+        <div class="socials">
+          <a href="https://facebook.com/msrim"><i class="bi bi-facebook"></i></a>
+          <a href="https://linkedin.com/school/msrim"><i class="bi bi-linkedin"></i></a>
+          <a href="https://instagram.com/msrim"><i class="bi bi-instagram"></i></a>
+          <a href="https://youtube.com/msrim"><i class="bi bi-youtube"></i></a>
+        </div>
+        <div class="footer-badges">
+          <div class="footer-badge"><img src="https://msrim.in/images/iic_new_logo.jpg" alt="IIC"/><span>Institution's Innovation Council</span></div>
+          <div class="footer-badge"><img src="https://msrim.in/images/amdisa_logo.jpg" alt="AMDISA"/><span>AMDISA Member</span></div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Campus Info</h5>
+        <ul>
+          <li><a href="https://msrim.in/our-policies">Our Policies</a></li>
+          <li><a href="https://msrim.in/images/Awards-Ranking.mp4" target="_blank">B-School Ranking</a></li>
+          <li><a href="https://msrim.in/faq">FAQs</a></li>
+          <li><a href="https://msrim.in/future-road-map">Future Road Map</a></li>
+          <li><a href="https://msrim.in/anti-ragging">Anti-Ragging</a></li>
+          <li><a href="https://msrim.in/pdf/Mandatory_Disclousre-2025-26V1.pdf" target="_blank">Mandatory Disclosure 2024–25</a></li>
+          <li><a href="https://msrim.in/photos-gallery">Photo Gallery</a></li>
+          <li><a href="https://msrim.in/pdf/Action_Taken_Report_2024-25.docx.pdf" target="_blank">Action Taken Report 2024–25</a></li>
+          <li><a href="https://msrim.in/pdf/rules/RIM-Governance-Guidelines.pdf" target="_blank">Governance Guidelines</a></li>
+          <li><a href="https://msrim.in/infrastructure">Infrastructure</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Important Info</h5>
+        <ul>
+          <li><a href="https://msrim.in/grievance-redressal-committees">Grievance &amp; Redressal Committees</a></li>
+          <li><a href="https://msrim.in/pdf/EOA-Report-2026-2027.PDF" target="_blank">AICTE Approval 2026–27</a></li>
+          <li><a href="https://msrim.in/approvals">AICTE Approvals since 1995</a></li>
+          <li><a href="https://msrim.in/pdf/rules/AICTE-CSS.pdf" target="_blank">AICTE Centralized Support System</a></li>
+          <li><a href="https://msrim.in/pdf/approvals/NBA-Results-March-2023.pdf" target="_blank">NBA Approval Letter 2022–2025</a></li>
+          <li><a href="https://msrim.in/pdf/approvals/AIU-2023.pdf" target="_blank">AIU Approval Letter 2022–2025</a></li>
+          <li><a href="https://msrim.in/student-initiatives">Student Initiatives</a></li>
+          <li><a href="https://msrim.in/financial-statements">Financial Statements</a></li>
+          <li><a href="https://msrmr.in" target="_blank">Journals</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Explore RIM</h5>
+        <ul>
+          <li><a href="https://msrim.in/campustour">Campus Tour</a></li>
+          <li><a href="https://msrim.in/images/Ramaiah-Launch-Video.mp4" target="_blank">Ramaiah Logo Launch</a></li>
+          <li><a href="https://msrim.in/pdf/NIRF2026.pdf" target="_blank">NIRF Ranking 2026</a></li>
+          <li><a href="https://msrim.in/career">Career</a></li>
+          <li><a href="https://msrim.in/pdf/rules/GEFServiceRules.pdf" target="_blank">GEF Service Rules</a></li>
+          <li><a href="https://msrim.in/pdf/rules/GEFConductRules.pdf" target="_blank">GEF Conduct Rules</a></li>
+          <li><a href="https://msrim.in/blog">Blog</a></li>
+          <li><a href="https://alumni.msrim.in/" target="_blank">Alumni</a></li>
+          <li><a href="https://msrim.in/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- ERP LOGIN / DIGIICAMPUS BAR -->
+  <div class="footer-erp">
+    <div class="wrap w">
+      <div class="footer-erp-group">
+        <span class="footer-erp-title">ERP Login</span>
+        <div class="footer-erp-links">
+          <a href="https://msrim.digiicampus.com/">Student Login</a>
+          <a href="https://msrim.digiicampus.com/">Parent Login</a>
+          <a href="https://msrim.digiicampus.com/">Staff Login</a>
+        </div>
+      </div>
+      <div class="footer-erp-group">
+        <span class="footer-erp-title">Digiicampus</span>
+        <div class="footer-erp-links">
+          <a href="https://msrim.digiicampus.com/home">Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="w">
+      <span>© 2026 Ramaiah Institute of Management. All rights reserved.</span>
+      <div style="display:flex;gap:20px">
+        <a href="https://msrim.in/privacy-policy">Privacy Policy</a>
+        <a href="https://msrim.in/terms">Terms of Use</a>
+        <a href="https://msrim.in/sitemap">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Mobile nav
+const menuBtn=document.getElementById('menuBtn'),mobileNav=document.getElementById('mobileNav'),mobileClose=document.getElementById('mobileClose'),mobileOverlay=document.getElementById('mobileOverlay');
+function openMenu(){mobileNav.classList.add('open');menuBtn.classList.add('open');document.body.style.overflow='hidden'}
+function closeMenu(){mobileNav.classList.remove('open');menuBtn.classList.remove('open');document.body.style.overflow=''}
+if(menuBtn)menuBtn.addEventListener('click',openMenu);
+if(mobileClose)mobileClose.addEventListener('click',closeMenu);
+if(mobileOverlay)mobileOverlay.addEventListener('click',closeMenu);
+function toggleGroup(id){const g=document.getElementById(id);if(g)g.classList.toggle('open')}
+
+// Scroll reveal
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible') })
+}, {threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// News tabs
+document.querySelectorAll('.news-tab').forEach(tab => {
+  tab.addEventListener('click', function(){
+    document.querySelectorAll('.news-tab').forEach(t => t.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+
+// ── TESTIMONIALS NAV ──
+(function(){
+  const track = document.getElementById('testiTrack');
+  const cardW = 316; // card width + gap
+  let paused = false;
+
+  document.getElementById('testiPrev').addEventListener('click', () => {
+    track.style.animation = 'none';
+    const cur = parseFloat(track.style.transform?.replace('translateX(','') || 0);
+    track.style.transform = `translateX(${cur + cardW}px)`;
+    paused = true;
+    setTimeout(() => { track.style.animation = ''; paused = false; }, 3000);
+  });
+
+  document.getElementById('testiNext').addEventListener('click', () => {
+    track.style.animation = 'none';
+    const cur = parseFloat(track.style.transform?.replace('translateX(','') || 0);
+    track.style.transform = `translateX(${cur - cardW}px)`;
+    paused = true;
+    setTimeout(() => { track.style.animation = ''; paused = false; }, 3000);
+  });
+})();
+
+// ── NEWS TABS + FILTER ──
+(function(){
+  const tabs = document.querySelectorAll('.news-tab');
+  const cards = document.querySelectorAll('#newsGrid .news-card');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', function(){
+      tabs.forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+      const cat = this.dataset.cat;
+      cards.forEach(c => {
+        c.style.display = (cat === 'all' || c.dataset.cat === cat) ? 'block' : 'none';
+      });
+    });
+  });
+})();
+
+// ── LIST / CALENDAR TOGGLE ──
+(function(){
+  const btnList = document.getElementById('btnList');
+  const btnCal  = document.getElementById('btnCal');
+  const listWrap = document.getElementById('newsListWrap');
+  const calWrap  = document.getElementById('calWrap');
+  const tabsRow  = document.querySelector('.news-tabs');
+
+  btnList.addEventListener('click', () => {
+    btnList.classList.add('active'); btnCal.classList.remove('active');
+    listWrap.classList.remove('hidden'); calWrap.classList.remove('active');
+    tabsRow.style.display = '';
+  });
+  btnCal.addEventListener('click', () => {
+    btnCal.classList.add('active'); btnList.classList.remove('active');
+    listWrap.classList.add('hidden'); calWrap.classList.add('active');
+    tabsRow.style.display = 'none';
+  });
+})();
+
+// ── INTERACTIVE CALENDAR ──
+(function(){
+  // All MSRIM events from happenings page
+  const EVENTS = [
+    {date:'2026-04-20',title:'Industry-integrated L&D Students Project Presentation',cat:'student',url:'https://msrim.in/happenings/neinfo/industry-integrated-ld-students-project-presentation'},
+    {date:'2026-04-15',title:'Industrial Visit to The Times of India Plant, Bommasandra',cat:'industrial',url:'https://msrim.in/happenings/neinfo/report-on-industrial-visit-to-the-times-of-india-plant-bommasandra-on-15th-april-2026'},
+    {date:'2026-04-14',title:'Industry-Integrated L&D Project Presentations',cat:'student',url:'https://msrim.in/happenings/neinfo/industry-integrated-learning-development-project-presentations'},
+    {date:'2026-04-11',title:'Panel Discussion — Data Drops to Digital Dominance',cat:'guest',url:'https://msrim.in/happenings/neinfo/panel-discussion-data-drops-to-digital-dominance'},
+    {date:'2026-04-11',title:'Launch Your Career: The PGDM Professional Edge Series',cat:'guest',url:'https://msrim.in/happenings/neinfo/launch-your-career-the-pgdm-professional-edge-series'},
+    {date:'2026-03-31',title:'IKS Concepts to Contemporary Business Practices',cat:'guest',url:'https://msrim.in/happenings/neinfo/iks-concepts-to-contemporary-business-practices'},
+    {date:'2026-03-26',title:'MSRIM Women\'s Day',cat:'student',url:'https://msrim.in/happenings/neinfo/msrim-womens-day'},
+    {date:'2026-03-14',title:'On-Campus PGDM Open House',cat:'news',url:'https://msrim.in/happenings/neinfo/on-campuspgdm-open-house'},
+    {date:'2026-03-11',title:'Perceptions SANGAMA 2K26 — National Management Fest',cat:'conclave',url:'https://msrim.in/happenings/neinfo/perceptions-sangama-2k26'},
+    {date:'2026-02-12',title:'Indian Financial Services Sector: Journey Towards Viksit Bharat',cat:'guest',url:'https://msrim.in/happenings/neinfo/indian-financial-services-sector-journey-towards-viksit-bharat'},
+    {date:'2026-01-14',title:'Assessments of Case Study Presentations by External Industry Expert',cat:'guest',url:'https://msrim.in/happenings/neinfo/assessments-of-case-study-presentations-by-external-industry-expert'},
+    {date:'2026-01-13',title:'The Four Ports of Call — the Change Journey',cat:'mdp',url:'https://msrim.in/happenings/neinfo/the-four-ports-of-callthe-change-journey'},
+    {date:'2025-12-31',title:'XXIX Annual Convocation of MSRIM',cat:'news',url:'https://msrim.in/happenings/neinfo/xxix-annual-convocation-of-msrim-held-on-31-december-2025'},
+    {date:'2025-12-15',title:'AIKYAM 2024',cat:'conclave',url:'https://msrim.in/happenings/neinfo/aikyam-2024'},
+    {date:'2025-12-11',title:'Report on Visit to Buhler India',cat:'industrial',url:'https://msrim.in/happenings/neinfo/report-on-visit-to-buhler-india'},
+    {date:'2025-12-11',title:'Visit to Bangalore International Airport T2',cat:'industrial',url:'https://msrim.in/happenings/neinfo/report-on-a-visit-to-bangalore-international-airport-t2'},
+    {date:'2025-11-14',title:'The EcoBuild Conclave 2025',cat:'conclave',url:'https://msrim.in/happenings/neinfo/the-ecobuild-conclave-2025'},
+    {date:'2025-09-24',title:'Bazaar-e-Buzz',cat:'student',url:'https://msrim.in/happenings/neinfo/bazaar-e-buzz'},
+    {date:'2025-09-23',title:'Celebrating Local Leaders, Global Lessons',cat:'guest',url:'https://msrim.in/happenings/neinfo/celebrating-local-leaders-global-lessons'},
+    {date:'2025-08-24',title:'Market Research in the Age of AI',cat:'guest',url:'https://msrim.in/happenings/neinfo/market-research-in-the-age-of-ai'},
+    {date:'2025-08-11',title:'MSRIM Cultural Day 2025',cat:'student',url:'https://msrim.in/happenings/neinfo/msrim-cultural-day-2025'},
+    {date:'2025-07-31',title:'Skills for the Corporate',cat:'guest',url:'https://msrim.in/happenings/neinfo/skills-for-the-corporate'},
+    {date:'2025-07-28',title:'From Stress to Self-Mastery',cat:'mdp',url:'https://msrim.in/happenings/neinfo/from-stress-to-self-mastery'},
+    {date:'2025-07-25',title:'Strategize Your Publishing Journey',cat:'mdp',url:'https://msrim.in/happenings/neinfo/strategize-your-publishing-journey'},
+    {date:'2025-06-28',title:'MSRIM Alumni Meet 2025',cat:'student',url:'https://msrim.in/happenings/neinfo/msrim-alumini-meet-2025'},
+    {date:'2025-06-27',title:'Case Writing Workshop',cat:'mdp',url:'https://msrim.in/happenings/neinfo/case-writing-workshop'},
+    {date:'2025-04-08',title:'Design Thinking for Business Solutions',cat:'guest',url:'https://msrim.in/happenings/neinfo/design-thinking-for-business-solutions'},
+    {date:'2025-03-27',title:'DigiThon 2025',cat:'student',url:'https://msrim.in/happenings/neinfo/digithon-2025'},
+    {date:'2025-03-11',title:'RBI Visit',cat:'industrial',url:'https://msrim.in/happenings/neinfo/rbi-visit'},
+    {date:'2025-02-21',title:'Perceptions — Management Fest',cat:'conclave',url:'https://msrim.in/happenings/neinfo/preceptions-management-fest'},
+  ];
+
+  const catColors = {news:'#e65100',guest:'#e65100',student:'#2e7d32',industrial:'#1565c0',conclave:'#6a1b9a',mdp:'#880e4f'};
+  const catLabels = {news:'News & Events',guest:'Guest Lecture',student:'Student Activities',industrial:'Industrial Visit',conclave:'Conclave',mdp:'MDP & FDP'};
+  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+  let cur = {y:2026, m:3}; // April 2026 (0-indexed)
+  const today = new Date();
+
+  function getEventsForDate(y,m,d){
+    const key = `${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    return EVENTS.filter(e => e.date === key);
+  }
+
+  function getEventsForMonth(y,m){
+    const prefix = `${y}-${String(m+1).padStart(2,'0')}-`;
+    return EVENTS.filter(e => e.date.startsWith(prefix));
+  }
+
+  function renderCal(){
+    const grid = document.getElementById('calGrid');
+    document.getElementById('calTitle').textContent = `${months[cur.m]} ${cur.y}`;
+    grid.innerHTML = '';
+
+    const first = new Date(cur.y, cur.m, 1).getDay();
+    const days  = new Date(cur.y, cur.m+1, 0).getDate();
+    const prevDays = new Date(cur.y, cur.m, 0).getDate();
+    const monthEvents = getEventsForMonth(cur.y, cur.m);
+    const eventDays = {};
+    monthEvents.forEach(e => {
+      const d = parseInt(e.date.split('-')[2]);
+      if(!eventDays[d]) eventDays[d] = [];
+      eventDays[d].push(e);
+    });
+
+    // Prev month days
+    for(let i = first - 1; i >= 0; i--){
+      const cell = document.createElement('div');
+      cell.className = 'cal-day other-month';
+      cell.innerHTML = `<div class="cal-day-num">${prevDays - i}</div>`;
+      grid.appendChild(cell);
+    }
+
+    // Current month days
+    for(let d = 1; d <= days; d++){
+      const cell = document.createElement('div');
+      const isToday = cur.y === today.getFullYear() && cur.m === today.getMonth() && d === today.getDate();
+      const evs = eventDays[d] || [];
+      cell.className = 'cal-day' + (isToday ? ' today' : '') + (evs.length ? ' has-event' : '');
+      cell.innerHTML = `<div class="cal-day-num">${d}</div><div class="cal-dots">${evs.slice(0,3).map(e=>`<span class="cal-dot" style="background:${catColors[e.cat]||'#999'}" title="${e.title}"></span>`).join('')}</div>`;
+      cell.addEventListener('click', () => showDayEvents(d, evs, cell));
+      grid.appendChild(cell);
+    }
+
+    // Next month filler
+    const total = first + days;
+    const remaining = total % 7 === 0 ? 0 : 7 - (total % 7);
+    for(let i = 1; i <= remaining; i++){
+      const cell = document.createElement('div');
+      cell.className = 'cal-day other-month';
+      cell.innerHTML = `<div class="cal-day-num">${i}</div>`;
+      grid.appendChild(cell);
+    }
+  }
+
+  function showDayEvents(d, evs, cell){
+    document.querySelectorAll('.cal-day.selected').forEach(c => c.classList.remove('selected'));
+    cell.classList.add('selected');
+    document.getElementById('calPanelDate').textContent = `${months[cur.m]} ${d}, ${cur.y}`;
+    document.getElementById('calPanelCount').textContent = evs.length ? `${evs.length} event${evs.length>1?'s':''} on this day` : 'No events on this day';
+    const list = document.getElementById('calEventList');
+    if(!evs.length){
+      list.innerHTML = '<div class="cal-no-events"><i class="bi bi-calendar3"></i>No events scheduled</div>';
+      return;
+    }
+    list.innerHTML = evs.map(e => `
+      <a href="${e.url}" target="_blank" class="cal-event-item">
+        <span class="cal-event-dot" style="background:${catColors[e.cat]||'#999'}"></span>
+        <div>
+          <div class="cal-event-title">${e.title}</div>
+          <div class="cal-event-cat">${catLabels[e.cat]||e.cat}</div>
+        </div>
+      </a>`).join('');
+  }
+
+  document.getElementById('calPrev').addEventListener('click', () => {
+    cur.m--; if(cur.m < 0){cur.m=11; cur.y--;} renderCal();
+    document.getElementById('calEventList').innerHTML = '<div class="cal-no-events"><i class="bi bi-calendar3"></i>Click a highlighted date to view events</div>';
+    document.getElementById('calPanelDate').textContent = 'Select a date';
+    document.getElementById('calPanelCount').textContent = 'Click any date to see events';
+  });
+  document.getElementById('calNext').addEventListener('click', () => {
+    cur.m++; if(cur.m > 11){cur.m=0; cur.y++;} renderCal();
+    document.getElementById('calEventList').innerHTML = '<div class="cal-no-events"><i class="bi bi-calendar3"></i>Click a highlighted date to view events</div>';
+    document.getElementById('calPanelDate').textContent = 'Select a date';
+    document.getElementById('calPanelCount').textContent = 'Click any date to see events';
+  });
+
+  renderCal();
+})();
+
+// ── VIDEO CAROUSEL ──
+(function(){
+  const slides = document.querySelectorAll('.vc-slide');
+  const dotsWrap = document.getElementById('vcDots');
+  const progress = document.getElementById('vcProgress');
+  const total = slides.length;
+  let current = total - 1; // slide 12 is active first
+  let timer, progTimer;
+  const INTERVAL = 5000;
+
+  // Build dots
+  slides.forEach((_,i) => {
+    const d = document.createElement('button');
+    d.className = 'vc-dot' + (i === current ? ' active' : '');
+    d.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(d);
+  });
+
+  function getDots(){ return dotsWrap.querySelectorAll('.vc-dot'); }
+
+  function goTo(n){
+    slides[current].classList.remove('active');
+    getDots()[current].classList.remove('active');
+    current = (n + total) % total;
+    slides[current].classList.add('active');
+    getDots()[current].classList.add('active');
+    // play video of active slide
+    const vid = slides[current].querySelector('video');
+    if(vid){ vid.currentTime = 0; vid.play().catch(()=>{}); }
+    startProgress();
+  }
+
+  function startProgress(){
+    clearInterval(progTimer);
+    progress.style.transition = 'none';
+    progress.style.width = '0%';
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        progress.style.transition = `width ${INTERVAL}ms linear`;
+        progress.style.width = '100%';
+      });
+    });
+  }
+
+  function startAuto(){
+    clearInterval(timer);
+    timer = setInterval(() => goTo(current + 1), INTERVAL);
+  }
+
+  document.getElementById('vcNext').addEventListener('click', () => { clearInterval(timer); goTo(current + 1); startAuto(); });
+  document.getElementById('vcPrev').addEventListener('click', () => { clearInterval(timer); goTo(current - 1); startAuto(); });
+
+  // Pause on hover
+  document.getElementById('videoCarousel').addEventListener('mouseenter', () => clearInterval(timer));
+  document.getElementById('videoCarousel').addEventListener('mouseleave', startAuto);
+
+  startProgress();
+  startAuto();
+})();
+</script>
+</body>
+</html>

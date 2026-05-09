@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research &amp; Development | Ramaiah Institute of Management</title>
+  <meta name="description" content="MSRIM R&D Cell — high-impact research across management science, patents, funded projects and global collaborations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <style>
+    :root {
+      --navy:#0a1f3d; --navy-700:#1a3a6b; --navy-100:#e8eef7;
+      --gold:#c9a961; --gold-dark:#b08f48; --gold-light:#f5ecd6;
+      --cream:#faf6ee; --crimson:#B5174B; --orange:#E03820;
+      --ink:#1a1a1a; --muted:#5a5a5a; --line:#e3dccd;
+      --serif:"Fraunces","Times New Roman",serif;
+      --sans:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      --shadow-sm:0 2px 12px rgba(10,31,61,.06);
+      --shadow-md:0 8px 30px rgba(10,31,61,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--sans);font-size:16px;line-height:1.65;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{color:inherit;text-decoration:none;transition:color .25s}
+    img{max-width:100%;display:block}
+    ul{list-style:none}
+
+    .utility-bar{background:linear-gradient(135deg,#B5174B 0%,#E03820 100%);color:#fff;font-size:13.5px;padding:11px 0}
+    .utility-bar .wrap{max-width:1400px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+    .utility-bar .brand-tag{font-weight:500}
+    .utility-bar a{color:#fff}
+    .utility-bar a:hover{color:rgba(255,255,255,.75)}
+    .utility-bar .right{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+    .utility-bar .right .ico{display:inline-flex;gap:7px;align-items:center}
+    .apply-pill{border:1px solid rgba(255,255,255,.5);padding:5px 14px;border-radius:999px;font-size:13px;font-weight:600;transition:all .3s}
+    .apply-pill:hover{background:rgba(255,255,255,.2)}
+
+    .site-header{background:#fff;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(10,31,61,.08)}
+    .header-inner{max-width:1400px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .logo-panel img{height:42px;width:auto;object-fit:contain}
+    .nav-links{display:flex;align-items:center;gap:4px}
+    .nav-links a{font-size:14px;font-weight:500;color:var(--ink);padding:8px 12px;border-radius:6px;transition:all .25s}
+    .nav-links a:hover{color:var(--navy);background:var(--navy-100)}
+    .nav-links a.active{color:var(--navy);font-weight:700;background:var(--gold-light);border-bottom:2px solid var(--gold)}
+    .header-cta{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#B5174B,#E03820);color:#fff;padding:9px 20px;border-radius:999px;font-size:13.5px;font-weight:600;transition:all .3s}
+    .header-cta:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(181,23,75,.35)}
+    .nav-toggle{display:none;background:none;border:none;font-size:22px;color:var(--navy);cursor:pointer;padding:6px}
+
+    .hero-curve{position:relative;background:#fff;overflow:hidden}
+    .hero-curve-inner{display:grid;grid-template-columns:40% 60%;min-height:420px}
+    .hero-left{background:linear-gradient(135deg,var(--navy-100) 0%,#f5efe1 60%,var(--cream) 100%);position:relative;display:flex;align-items:center;padding:60px 64px 60px 28px;z-index:2;clip-path:path('M 0 0 L 100% 0 Q 70% 50%, 100% 100% L 0 100% Z')}
+    .hero-left::before{content:"";position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(201,169,97,.18) 0%,transparent 60%);pointer-events:none}
+    .hero-title{position:relative;z-index:3;max-width:380px}
+    .hero-title .eyebrow{font-size:11.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-dark);font-weight:600;margin-bottom:14px;display:inline-flex;align-items:center;gap:10px}
+    .hero-title .eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
+    .hero-title h1{font-family:var(--serif);font-weight:300;line-height:1.05;font-size:clamp(2.2rem,4vw,3.4rem);letter-spacing:-.5px}
+    .hero-title h1 .gold{color:var(--gold-dark);font-weight:400;font-style:italic;display:block}
+    .hero-title h1 .navy{color:var(--navy);font-weight:400;display:block}
+    .hero-title .sub{margin-top:18px;font-size:14.5px;color:var(--muted);line-height:1.55;max-width:340px}
+    .hero-right{position:relative;background:var(--navy);overflow:hidden}
+    .hero-right img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .hero-right::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(240,233,218,.15) 0%,transparent 30%),linear-gradient(180deg,transparent 60%,rgba(10,31,61,.4) 100%)}
+    .badge-deco{position:absolute;bottom:30px;right:40px;color:rgba(255,255,255,.85);font-size:12px;letter-spacing:2px;text-transform:uppercase;z-index:3;display:flex;align-items:center;gap:10px;font-weight:500}
+    .badge-deco::before{content:"";width:30px;height:1px;background:var(--gold)}
+
+    .stats-bar{background:var(--navy);padding:18px 28px}
+    .stats-inner{max-width:1400px;margin:0 auto;display:flex;justify-content:center;gap:0;flex-wrap:wrap}
+    .stat-item{display:flex;align-items:center;gap:10px;padding:8px 28px;border-right:1px solid rgba(255,255,255,.15);color:#fff}
+    .stat-item:last-child{border-right:none}
+    .stat-item i{color:var(--gold);font-size:16px}
+    .stat-item span{font-size:13.5px;font-weight:500}
+
+    .main-section{max-width:1400px;margin:0 auto;padding:56px 28px 80px;display:grid;grid-template-columns:220px 1fr;gap:36px;align-items:flex-start}
+    .sidebar{position:sticky;top:84px}
+    .sidebar-card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:var(--shadow-sm)}
+    .sidebar-card h3{font-family:var(--serif);font-weight:600;font-size:13px;padding:13px 16px;background:var(--navy);color:#fff;letter-spacing:1.5px;text-transform:uppercase}
+    .sidebar-nav li{border-bottom:1px solid rgba(10,31,61,.06)}
+    .sidebar-nav li:last-child{border-bottom:none}
+    .sidebar-nav a{display:flex;justify-content:space-between;align-items:center;padding:11px 16px;font-size:12.5px;color:var(--muted);font-weight:500;transition:all .22s;border-left:3px solid transparent}
+    .sidebar-nav a:hover{background:var(--cream);color:var(--navy);padding-left:20px;border-left-color:rgba(201,169,97,.4)}
+    .sidebar-nav a.active{background:var(--gold-light);color:var(--navy);font-weight:700;padding-left:20px;border-left:3px solid var(--gold)}
+    .sidebar-nav .arrow{color:var(--gold);font-size:12px;transition:transform .22s;opacity:.7}
+    .sidebar-nav a:hover .arrow,.sidebar-nav a.active .arrow{transform:translateX(3px);opacity:1}
+
+    .content{min-width:0}
+    .content-section{padding:0 0 52px;border-bottom:1px solid var(--line);margin-bottom:52px}
+    .content-section:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+    .section-eyebrow{font-size:10.5px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+    .section-eyebrow::before{content:"";display:block;width:24px;height:2px;background:var(--gold)}
+    .section-title{font-family:var(--serif);font-size:clamp(20px,2.6vw,30px);font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:10px}
+    .section-title em{color:var(--gold);font-style:italic}
+    .section-sub{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:24px}
+
+    /* HIGHLIGHT CARDS */
+    .highlight-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}
+    .h-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 16px;text-align:center;border-top:3px solid var(--gold)}
+    .h-card i{font-size:24px;color:var(--navy);margin-bottom:8px;display:block}
+    .h-card .hnum{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--navy)}
+    .h-card .hlbl{font-size:11.5px;color:var(--muted);margin-top:3px;font-weight:500}
+
+    /* AREA GRID */
+    .area-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
+    .area-card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px 14px;display:flex;align-items:center;gap:10px;transition:all .3s}
+    .area-card:hover{border-color:var(--gold);box-shadow:var(--shadow-sm);transform:translateX(3px)}
+    .area-card i{color:var(--gold);font-size:13px;flex-shrink:0}
+    .area-card span{font-size:13.5px;font-weight:600;color:var(--navy)}
+
+    /* PUB CARDS */
+    .pub-cards{display:flex;flex-direction:column;gap:16px;margin-top:8px}
+    .pub-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px 20px;display:flex;gap:16px;align-items:flex-start}
+    .pub-icon{width:44px;height:44px;background:var(--gold-light);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--gold-dark);font-size:20px;flex-shrink:0}
+    .pub-card h5{font-family:var(--serif);font-size:16px;font-weight:600;color:var(--navy);margin-bottom:6px}
+    .pub-card p{font-size:13px;color:var(--muted);line-height:1.65}
+
+    /* PATENT CARDS */
+    .patent-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:8px}
+    .patent-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px 18px;display:flex;gap:14px;align-items:flex-start;transition:all .3s;border-left:3px solid var(--gold)}
+    .patent-card:hover{transform:translateX(4px);box-shadow:var(--shadow-sm)}
+    .pat-icon{width:40px;height:40px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:18px;flex-shrink:0}
+    .patent-card h5{font-family:var(--serif);font-size:14px;font-weight:600;color:var(--navy);margin-bottom:4px}
+    .patent-card p{font-size:12.5px;color:var(--muted)}
+
+    /* PROJECT ROWS */
+    .project-rows{display:flex;flex-direction:column;gap:14px;margin-top:8px}
+    .project-row{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center;transition:all .3s}
+    .project-row:hover{box-shadow:var(--shadow-md);border-color:var(--gold)}
+    .proj-year{background:var(--navy);color:#fff;font-family:var(--serif);font-size:13px;font-weight:600;padding:8px 10px;border-radius:6px;text-align:center;line-height:1.3}
+    .project-row h5{font-family:var(--serif);font-size:15px;font-weight:600;color:var(--navy);margin-bottom:4px}
+    .project-row p{font-size:13px;color:var(--muted)}
+
+    /* INITIATIVE CARDS */
+    .init-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:8px}
+    .init-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 20px;border-top:3px solid var(--navy);transition:all .3s}
+    .init-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-top-color:var(--gold)}
+    .init-card h4{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--gold-dark);margin-bottom:8px}
+    .init-card p{font-size:13.5px;color:var(--muted);line-height:1.65}
+
+    /* CENTRE CARDS */
+    .centre-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
+    .centre-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 16px;text-align:center;transition:all .3s;border-bottom:3px solid transparent}
+    .centre-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-bottom-color:var(--gold)}
+    .centre-card i{font-size:26px;color:var(--navy);margin-bottom:10px;display:block}
+    .centre-card h5{font-family:var(--serif);font-size:14px;font-weight:600;color:var(--navy)}
+
+    /* CONTACT CARD */
+    .contact-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:30px 28px;box-shadow:var(--shadow-sm)}
+    .contact-row{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px}
+    .contact-row:last-child{margin-bottom:0}
+    .contact-row i{color:var(--gold);font-size:18px;margin-top:2px;flex-shrink:0}
+    .contact-row div strong{display:block;font-size:13px;font-weight:600;color:var(--navy);text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px}
+    .contact-row div span{font-size:14px;color:var(--muted)}
+
+    /* CTA */
+    .cta-banner{background:var(--navy);position:relative;padding:64px 28px;text-align:center;overflow:hidden}
+    .cta-banner::before{content:"";position:absolute;inset:0;background:url('https://msrim.in/images/msrim_campus.jpg') center/cover no-repeat;opacity:.06}
+    .cta-banner-inner{position:relative;z-index:1;max-width:600px;margin:0 auto}
+    .cta-banner h2{font-family:var(--serif);font-size:clamp(24px,3vw,36px);font-weight:600;color:#fff;margin-bottom:12px}
+    .cta-banner p{font-size:15px;color:rgba(255,255,255,.75);margin-bottom:28px}
+    .cta-buttons{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+    .btn-gold{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--navy);padding:12px 28px;border-radius:999px;font-weight:700;font-size:14px;transition:all .3s}
+    .btn-gold:hover{background:var(--gold-dark);transform:translateY(-2px)}
+    .btn-ghost{display:inline-flex;align-items:center;gap:8px;border:2px solid rgba(255,255,255,.6);color:#fff;padding:12px 28px;border-radius:999px;font-weight:600;font-size:14px;transition:all .3s}
+    .btn-ghost:hover{background:rgba(255,255,255,.1);border-color:#fff}
+
+    .footer{background:var(--navy);color:rgba(255,255,255,.75);padding:64px 0 0;position:relative}
+    .footer::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(--gold),transparent)}
+    .footer-grid{max-width:1400px;margin:0 auto;padding:0 28px 48px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px}
+    .footer h6{color:#fff;font-family:var(--serif);font-size:16px;font-weight:600;margin-bottom:18px;padding-bottom:10px;position:relative}
+    .footer h6::after{content:"";position:absolute;bottom:0;left:0;width:28px;height:2px;background:var(--gold)}
+    .footer-brand img{max-height:50px;margin-bottom:16px;background:rgba(255,255,255,.95);padding:6px 12px;border-radius:4px}
+    .footer-brand p{font-size:13.5px;line-height:1.65;color:rgba(255,255,255,.7);margin-bottom:8px}
+    .contact-line{display:flex;align-items:flex-start;gap:10px;margin-bottom:8px;font-size:13px}
+    .contact-line i{color:var(--gold);margin-top:3px}
+    .footer ul li{margin-bottom:9px;font-size:13.5px}
+    .footer ul li a{color:rgba(255,255,255,.7);transition:all .25s;display:inline-flex;align-items:center;gap:7px}
+    .footer ul li a::before{content:"›";color:var(--gold);font-size:15px;line-height:1}
+    .footer ul li a:hover{color:var(--gold);transform:translateX(3px)}
+    .socials{display:flex;gap:10px;margin-top:16px}
+    .socials a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#fff;transition:all .3s}
+    .socials a:hover{background:var(--gold);color:var(--navy);transform:translateY(-3px)}
+    .footer-erp{border-top:1px solid rgba(255,255,255,.08);padding:14px 28px;max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap;font-size:13px;color:rgba(255,255,255,.5)}
+    .footer-erp a{color:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.2);padding:5px 14px;border-radius:999px;transition:all .3s}
+    .footer-erp a:hover{color:#fff;border-color:var(--gold)}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.2);padding:18px 0}
+    .footer-bottom .wrap{max-width:1400px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:rgba(255,255,255,.5);flex-wrap:wrap;gap:12px}
+    .footer-bottom a{color:var(--gold)}
+
+    .nav-links{display:flex;align-items:center;gap:2px}
+    .nav-links a{font-size:13.5px;font-weight:500;color:var(--navy);padding:6px 10px;border-radius:6px;transition:all .2s;white-space:nowrap}
+    .nav-links a:hover{background:var(--navy-100);color:var(--navy)}
+    .nav-links a.active{background:var(--gold-light);font-weight:700}
+    .nav-links .has-drop{position:relative}
+    .nav-links .has-drop > a{display:flex;align-items:center;gap:4px}
+    .nav-links .has-drop > a::after{content:"";display:inline-block;width:0;height:0;border:4px solid transparent;border-top-color:var(--navy);margin-top:2px;transition:transform .2s}
+    .nav-links .has-drop:hover > a::after{transform:rotate(180deg);margin-top:-2px}
+    .drop-menu{position:absolute;top:calc(100% + 8px);left:0;min-width:220px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 40px rgba(10,31,61,.14);opacity:0;visibility:hidden;transform:translateY(-8px);transition:all .25s;z-index:999;padding:6px}
+    .has-drop:hover .drop-menu{opacity:1;visibility:visible;transform:translateY(0)}
+    .drop-menu a{display:block;padding:9px 14px;font-size:13px;font-weight:500;color:var(--ink);border-radius:6px;transition:all .2s;white-space:nowrap}
+    .drop-menu a:hover{background:var(--navy-100);color:var(--navy);padding-left:18px}
+    .drop-menu .drop-divider{height:1px;background:var(--line);margin:4px 0}
+
+    .reveal{opacity:0;transform:translateY(20px);transition:.6s}
+    .reveal.visible{opacity:1;transform:none}
+
+    @media(max-width:1100px){.hero-curve-inner{grid-template-columns:45% 55%}.hero-left{padding:50px 40px 50px 24px}}
+    @media(max-width:1024px){.main-section{grid-template-columns:1fr}.sidebar{position:static}.footer-grid{grid-template-columns:1fr 1fr}.nav-links{display:none}.header-cta{display:none}.menu-pill{display:flex}}
+    @media(max-width:768px){
+      .utility-bar .brand-tag{display:none}.utility-bar .right{gap:12px}.utility-bar .right .ico{display:none}
+      .hero-curve-inner{grid-template-columns:1fr}.hero-left{clip-path:none;padding:40px 20px 60px}.hero-right{height:220px}
+      .highlight-cards{grid-template-columns:repeat(2,1fr)}.area-grid,.patent-grid,.init-grid,.centre-cards{grid-template-columns:1fr 1fr}
+      .project-row{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr;gap:28px}.main-section{padding:36px 18px 60px}
+      .stats-inner{justify-content:flex-start}.stat-item{padding:8px 16px}
+    }
+
+/* ── BURGER MENU PILL ── */
+.menu-pill{display:none;flex-direction:column;align-items:center;justify-content:center;gap:4px;background:linear-gradient(135deg,#B5174B 0%,#E03820 100%);color:#fff;border:none;border-radius:4px;padding:8px 14px;cursor:pointer;transition:all .3s;flex-shrink:0;margin-left:auto;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;min-width:58px}
+.menu-pill:hover{opacity:.88;transform:translateY(-1px)}
+.menu-pill .lines{display:flex;flex-direction:column;gap:4px;width:22px}
+.menu-pill .lines span{height:2px;background:#fff;border-radius:2px;transition:all .3s;display:block}
+.menu-pill .lines span:nth-child(2){width:70%;margin-left:auto}
+.menu-pill.open .lines span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.menu-pill.open .lines span:nth-child(2){opacity:0;width:0}
+.menu-pill.open .lines span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.mobile-nav{position:fixed;top:0;left:0;right:0;bottom:0;z-index:980;visibility:hidden;pointer-events:none}
+.mobile-nav-overlay{position:absolute;inset:0;background:rgba(10,31,61,.55);opacity:0;transition:opacity .35s;backdrop-filter:blur(3px)}
+.mobile-nav-panel{position:absolute;top:0;left:0;right:0;background:#fff;transform:translateY(-100%);transition:transform .4s cubic-bezier(.25,.8,.25,1);padding:20px 24px 32px;max-height:90vh;overflow-y:auto}
+.mobile-nav.open{visibility:visible;pointer-events:auto}
+.mobile-nav.open .mobile-nav-overlay{opacity:1}
+.mobile-nav.open .mobile-nav-panel{transform:translateY(0)}
+.mobile-nav-header{display:flex;align-items:center;justify-content:space-between;padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.mobile-nav-header .logo img{height:38px}
+.mobile-nav-close{width:36px;height:36px;border-radius:50%;background:var(--navy-100);border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;color:var(--navy);transition:all .25s}
+.mobile-nav-close:hover{background:var(--navy);color:#fff}
+.mobile-nav-links{display:flex;flex-direction:column;gap:2px;margin-top:8px}
+.mobile-nav-links a{display:block;padding:12px 14px;font-size:15px;font-weight:500;color:var(--navy);border-radius:8px;transition:all .2s}
+.mobile-nav-links a:hover{background:var(--navy-100)}
+.mobile-nav-links a.active{background:var(--gold-light);font-weight:700}
+.mobile-nav-group{border-radius:8px;overflow:hidden}
+.mobile-nav-group-title{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;font-size:15px;font-weight:600;color:var(--navy);cursor:pointer;transition:background .2s}
+.mobile-nav-group-title:hover{background:var(--navy-100)}
+.mobile-nav-group-title i{font-size:12px;transition:transform .25s;color:var(--gold)}
+.mobile-nav-group.open .mobile-nav-group-title i{transform:rotate(180deg)}
+.mobile-nav-sub{display:none;padding-left:14px;border-left:2px solid var(--gold-light);margin-left:14px}
+.mobile-nav-group.open .mobile-nav-sub{display:block}
+.mobile-nav-sub a{font-size:13.5px;color:var(--muted);padding:9px 10px}
+.mobile-nav-sub a:hover{color:var(--navy);background:var(--cream);border-radius:6px}
+.mobile-nav-cta{margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
+.mobile-nav-cta a{display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#B5174B 0%,#E03820 100%);color:#fff;padding:13px;border-radius:999px;font-weight:700;font-size:14.5px}
+  </style>
+</head>
+<body>
+
+<div class="utility-bar">
+  <div class="wrap">
+    <div class="brand-tag">Ramaiah Institute of Management | M.S.R.I.T. Post, Bengaluru</div>
+    <div class="right">
+      <a class="ico" href="tel:08023606640"><i class="bi bi-telephone-fill"></i> 080-2360-6640</a>
+      <a class="ico" href="mailto:support@msrim.org"><i class="bi bi-envelope-fill"></i> support@msrim.org</a>
+      <a href="https://alumni.msrim.in/">Alumni</a>
+      <a href="https://msrim.in/pdf/NIRF2026.pdf">NIRF</a>
+      <a class="apply-pill" href="https://admissions.msrim.in/"><i class="bi bi-arrow-right-circle-fill"></i> Apply Now</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo-panel">
+      <a href="home.html"><img src="https://msrim.in/images/logo-2.png" alt="MSRIM" /></a>
+    </div>
+    <nav class="nav-links">
+      <div class="has-drop">
+        <a href="about.html">About Us</a>
+        <div class="drop-menu">
+          <a href="about.html">About MSRIM</a>
+          <a href="https://msrim.in/dean">Dean's Message</a>
+          <a href="https://msrim.in/governance">Governance</a>
+          <a href="https://msrim.in/vision-mission">Vision &amp; Mission</a>
+          <a href="https://msrim.in/governingcouncil">Governing Council</a>
+          <a href="https://msrim.in/academiccouncil">Academic Council</a>
+          <a href="https://msrim.in/organizationalstructure">Organisational Structure</a>
+          <a href="https://msrim.in/iqac">IQAC Team</a>
+          <a href="https://msrim.in/images/Awards-Ranking.mp4" target="_blank">B-School Ranking</a>
+        </div>
+      </div>
+      <div class="has-drop">
+        <a href="programs.html">Programs</a>
+        <div class="drop-menu">
+          <a href="https://msrim.in/pgdm-two-year-full-time">PGDM — Two Year Full Time</a>
+          <a href="https://msrim.in/fpm">FPM</a>
+        </div>
+      </div>
+      <a href="faculty.html">Faculty</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="placements.html">Placements</a>
+      <div class="has-drop">
+        <a href="centres.html">Centres</a>
+        <div class="drop-menu">
+          <a href="https://msrim.in/centre-for-sustainability">Centre for Sustainability</a>
+          <a href="centre-for-leadership (2).html">Centre for Leadership</a>
+          <a href="https://msrim.in/case-centre">Case Centre</a>
+          <a href="https://msrim.in/bcic">BCIC</a>
+          <a href="https://msrim.in/consultancy">Consultancy</a>
+          <a href="https://msrim.in/industry-on-campus">Industry Institute Interaction Cell</a>
+          <a href="https://msrim.in/rim-innovation-incubation-centre">RIM Innovation &amp; Incubation</a>
+        </div>
+      </div>
+      <a href="research.html" class="active">R &amp; D Cell</a>
+    </nav>
+    <a class="header-cta" href="https://admissions.msrim.in/"><i class="bi bi-mortarboard-fill"></i> Admissions 2026</a>
+    <button class="menu-pill" id="menuBtn" aria-label="Open navigation">
+      Menu
+      <div class="lines"><span></span><span></span><span></span></div>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+  <div class="mobile-nav-panel">
+    <div class="mobile-nav-header">
+      <a href="home.html" class="logo"><img src="https://msrim.in/images/logo-2.png" alt="MSRIM"/></a>
+      <button class="mobile-nav-close" id="mobileClose"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="mobile-nav-links">
+      <div class="mobile-nav-group" id="mg-about">
+        <div class="mobile-nav-group-title" onclick="toggleGroup('mg-about')">About Us <i class="bi bi-chevron-down"></i></div>
+        <div class="mobile-nav-sub">
+          <a href="about.html#about">About MSRIM</a>
+          <a href="about.html#dean">Dean's Message</a>
+          <a href="about.html#vision">Vision &amp; Mission</a>
+          <a href="about.html#governance">Governance</a>
+          <a href="about.html#governing-council">Governing Council</a>
+          <a href="about.html#academic-council">Academic Council</a>
+          <a href="about.html#iqac">IQAC Team</a>
+          <a href="about.html#ranking">B-School Ranking</a>
+        </div>
+      </div>
+      <div class="mobile-nav-group" id="mg-progs">
+        <div class="mobile-nav-group-title" onclick="toggleGroup('mg-progs')">Programs <i class="bi bi-chevron-down"></i></div>
+        <div class="mobile-nav-sub">
+          <a href="programs.html#pgdm">PGDM — Two Year Full Time</a>
+          <a href="programs.html#fpm">FPM</a>
+        </div>
+      </div>
+      <a href="faculty.html">Faculty</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="placements.html">Placements</a>
+      <div class="mobile-nav-group" id="mg-centres">
+        <div class="mobile-nav-group-title" onclick="toggleGroup('mg-centres')">Centres <i class="bi bi-chevron-down"></i></div>
+        <div class="mobile-nav-sub">
+          <a href="https://msrim.in/centre-for-sustainability">Centre for Sustainability</a>
+          <a href="centre-for-leadership (2).html">Centre for Leadership</a>
+          <a href="https://msrim.in/case-centre">Case Centre</a>
+          <a href="https://msrim.in/bcic">BCIC</a>
+          <a href="https://msrim.in/consultancy">Consultancy</a>
+          <a href="https://msrim.in/industry-on-campus">Industry Institute Interaction Cell</a>
+          <a href="https://msrim.in/rim-innovation-incubation-centre">RIM Innovation &amp; Incubation</a>
+        </div>
+      </div>
+      <a href="research.html" class="active">R &amp; D Cell</a>
+    </div>
+    <div class="mobile-nav-cta">
+      <a href="https://admissions.msrim.in/"><i class="bi bi-mortarboard-fill"></i> Apply for PGDM 2026</a>
+    </div>
+  </div>
+</div>
+
+<section class="hero-curve">
+  <div class="hero-curve-inner">
+    <div class="hero-left">
+      <div class="hero-title">
+        <div class="eyebrow">Research &amp; Development</div>
+        <h1>
+          <span class="gold">Innovation Through</span>
+          <span class="navy">Research</span>
+        </h1>
+        <p class="sub">MSRIM's R&D Cell fosters a dynamic research ecosystem, enabling faculty and students to pursue high-impact research across management science and interdisciplinary domains.</p>
+      </div>
+    </div>
+    <div class="hero-right" id="heroRight">
+      <img src="https://msrim.in/images/msrim_campus.jpg" alt="MSRIM Campus" onerror="this.style.display='none'" />
+      <div class="badge-deco">Knowledge Creation</div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item"><i class="bi bi-lightbulb-fill"></i><span>10+ Patents</span></div>
+    <div class="stat-item"><i class="bi bi-journal-text"></i><span>Scopus Publications</span></div>
+    <div class="stat-item"><i class="bi bi-folder-fill"></i><span>4 Funded Projects</span></div>
+    <div class="stat-item"><i class="bi bi-building-fill"></i><span>5 Research Centres</span></div>
+    <div class="stat-item"><i class="bi bi-globe2"></i><span>Global Collaborations</span></div>
+  </div>
+</div>
+
+<div class="main-section">
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <h3>Research</h3>
+      <ul class="sidebar-nav">
+        <li><a href="#overview" class="active">Overview <span class="arrow">→</span></a></li>
+        <li><a href="#areas">Research Areas <span class="arrow">→</span></a></li>
+        <li><a href="#publications">Publications <span class="arrow">→</span></a></li>
+        <li><a href="#patents">Patents <span class="arrow">→</span></a></li>
+        <li><a href="#projects">Funded Projects <span class="arrow">→</span></a></li>
+        <li><a href="#initiatives">Initiatives <span class="arrow">→</span></a></li>
+        <li><a href="#centres">Research Centres <span class="arrow">→</span></a></li>
+        <li><a href="#contact">Contact <span class="arrow">→</span></a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="content">
+
+    <section id="overview" class="content-section reveal">
+      <div class="section-eyebrow">About R&amp;D</div>
+      <h2 class="section-title">Research &amp; <em>Development Cell</em></h2>
+      <p class="section-sub">The R&amp;D Cell at MSRIM drives a vibrant research culture, encouraging faculty and students to engage in meaningful, high-impact research. From Scopus-indexed publications and funded projects to patents and global collaborations, the cell provides infrastructure, mentorship, and resources to advance knowledge creation in management science and allied disciplines.</p>
+      <div class="highlight-cards">
+        <div class="h-card"><i class="bi bi-journal-text"></i><div class="hnum">Scopus</div><div class="hlbl">Publications · Indexed</div></div>
+        <div class="h-card"><i class="bi bi-lightbulb-fill"></i><div class="hnum">10+</div><div class="hlbl">Patents · Active</div></div>
+        <div class="h-card"><i class="bi bi-folder-fill"></i><div class="hnum">4</div><div class="hlbl">Projects · Funded</div></div>
+        <div class="h-card"><i class="bi bi-building-fill"></i><div class="hnum">5</div><div class="hlbl">Centres · Research</div></div>
+      </div>
+    </section>
+
+    <section id="areas" class="content-section reveal">
+      <div class="section-eyebrow">Focus Areas</div>
+      <h2 class="section-title">Research <em>Areas</em></h2>
+      <div class="area-grid">
+        <div class="area-card"><i class="bi bi-circle-fill"></i><span>Management Science</span></div>
+        <div class="area-card"><i class="bi bi-circle-fill"></i><span>Sustainability &amp; ESG</span></div>
+        <div class="area-card"><i class="bi bi-circle-fill"></i><span>Leadership Studies</span></div>
+        <div class="area-card"><i class="bi bi-circle-fill"></i><span>Technology &amp; Innovation</span></div>
+        <div class="area-card"><i class="bi bi-circle-fill"></i><span>Human Resource Management</span></div>
+        <div class="area-card"><i class="bi bi-circle-fill"></i><span>Supply Chain &amp; Mobility</span></div>
+        <div class="area-card"><i class="bi bi-circle-fill"></i><span>Healthcare &amp; Social Innovation</span></div>
+        <div class="area-card"><i class="bi bi-circle-fill"></i><span>Business Analytics</span></div>
+        <div class="area-card"><i class="bi bi-circle-fill"></i><span>Interdisciplinary Studies</span></div>
+      </div>
+    </section>
+
+    <section id="publications" class="content-section reveal">
+      <div class="section-eyebrow">Academic Output</div>
+      <h2 class="section-title"><em>Publications</em></h2>
+      <div class="pub-cards">
+        <div class="pub-card"><div class="pub-icon"><i class="bi bi-journal-richtext"></i></div><div><h5>Journal Articles</h5><p>Scopus-indexed journals including International Journal of Internet Marketing, Case Studies on Transport Policy, Transportation Letters, Journal of Urban Planning and Development, and more.</p></div></div>
+        <div class="pub-card"><div class="pub-icon"><i class="bi bi-mic-fill"></i></div><div><h5>Conference Proceedings</h5><p>Presented at BIO.Web.Conf 2025, International Conference on Advanced Computing 2024, ICAS 2025 and other national and international conferences.</p></div></div>
+        <div class="pub-card"><div class="pub-icon"><i class="bi bi-book-fill"></i></div><div><h5>Books &amp; Chapters</h5><p>10+ book chapters with leading publishers: Bentham Science, Apple Academic Press, IGI Global, Springer, and Emerald Publishing (2023–2025).</p></div></div>
+      </div>
+    </section>
+
+    <section id="patents" class="content-section reveal">
+      <div class="section-eyebrow">Intellectual Property</div>
+      <h2 class="section-title"><em>Patents</em></h2>
+      <div class="patent-grid">
+        <div class="patent-card"><div class="pat-icon"><i class="bi bi-robot"></i></div><div><h5>AI-Based Resume Writing System</h5><p>Automated intelligent system for generating professional resumes using AI algorithms.</p></div></div>
+        <div class="patent-card"><div class="pat-icon"><i class="bi bi-people-fill"></i></div><div><h5>CRM Processing Apparatus</h5><p>Advanced customer relationship management processing system for enterprise applications.</p></div></div>
+        <div class="patent-card"><div class="pat-icon"><i class="bi bi-kanban-fill"></i></div><div><h5>Project Management with AI Integration</h5><p>Intelligent project management framework integrating AI for planning and tracking.</p></div></div>
+        <div class="patent-card"><div class="pat-icon"><i class="bi bi-camera-fill"></i></div><div><h5>Food Spoilage Detection using AI</h5><p>AI-based system for detecting food spoilage through visual and sensor analysis.</p></div></div>
+        <div class="patent-card"><div class="pat-icon"><i class="bi bi-cpu-fill"></i></div><div><h5>Deep Learning Systems</h5><p>Proprietary deep learning architecture for management decision support systems.</p></div></div>
+        <div class="patent-card"><div class="pat-icon"><i class="bi bi-gear-fill"></i></div><div><h5>HR Strategy Implementation System</h5><p>Technology-enabled HR strategy implementation and workforce optimisation system.</p></div></div>
+      </div>
+    </section>
+
+    <section id="projects" class="content-section reveal">
+      <div class="section-eyebrow">Funded Research</div>
+      <h2 class="section-title">Funded <em>Projects</em></h2>
+      <div class="project-rows">
+        <div class="project-row"><div class="proj-year">2023–24</div><div><h5>Pradhan Mantri Awas Yojana Evaluation</h5><p>Funder: Pan India Network Global. Study evaluating the reach and impact of the PMAY housing scheme across multiple states.</p></div></div>
+        <div class="project-row"><div class="proj-year">2024</div><div><h5>Healthcare Market Survey</h5><p>Funder: Ramaiah Memorial Hospital. Comprehensive market survey on healthcare consumer behaviour and service delivery gaps.</p></div></div>
+        <div class="project-row"><div class="proj-year">2023</div><div><h5>Social Entrepreneurship Ontological Analysis</h5><p>Funder: Internal R&amp;D Fund. Ontological analysis of social entrepreneurship models in Indian context.</p></div></div>
+        <div class="project-row"><div class="proj-year">2024–25</div><div><h5>ESG Research Initiative</h5><p>Funder: ASSOCHAM. Research on Environmental, Social and Governance (ESG) adoption trends among Indian corporates.</p></div></div>
+      </div>
+    </section>
+
+    <section id="initiatives" class="content-section reveal">
+      <div class="section-eyebrow">R&amp;D Programmes</div>
+      <h2 class="section-title">Research <em>Initiatives</em></h2>
+      <div class="init-grid">
+        <div class="init-card"><h4>ReTalk</h4><p>Global research dialogue series featuring international scholars, fostering cross-cultural research conversations and collaborations.</p></div>
+        <div class="init-card"><h4>ReThink</h4><p>Faculty research integration programme that brings active research findings directly into classroom teaching and pedagogy.</p></div>
+        <div class="init-card"><h4>ReArt</h4><p>Internal research repository and archive that preserves and showcases the intellectual output of MSRIM faculty and scholars.</p></div>
+        <div class="init-card"><h4>Youth Research Community (YRC)</h4><p>Student-focused interdisciplinary research collaboration platform fostering curiosity and independent thinking among management students.</p></div>
+      </div>
+    </section>
+
+    <section id="centres" class="content-section reveal">
+      <div class="section-eyebrow">Infrastructure</div>
+      <h2 class="section-title">Research <em>Centres</em></h2>
+      <div class="centre-cards">
+        <div class="centre-card"><i class="bi bi-compass-fill"></i><h5>Centre for Sustainability</h5></div>
+        <div class="centre-card"><i class="bi bi-people-fill"></i><h5>Centre for Leadership</h5></div>
+        <div class="centre-card"><i class="bi bi-briefcase-fill"></i><h5>Case Centre</h5></div>
+        <div class="centre-card"><i class="bi bi-rocket-fill"></i><h5>BCIC</h5></div>
+        <div class="centre-card"><i class="bi bi-lightbulb-fill"></i><h5>RIM Innovation &amp; Incubation Centre</h5></div>
+      </div>
+    </section>
+
+    <section id="contact" class="content-section reveal">
+      <div class="section-eyebrow">Connect</div>
+      <h2 class="section-title">Research <em>Collaboration</em></h2>
+      <div class="contact-card">
+        <div class="contact-row"><i class="bi bi-person-badge-fill"></i><div><strong>Head — R&amp;D Cell</strong><span>Dr. Bikash Ranjan Debata, Professor &amp; Head R&amp;D, Department of Marketing &amp; International Business</span></div></div>
+        <div class="contact-row"><i class="bi bi-envelope-fill"></i><div><strong>Email</strong><span>support@msrim.org</span></div></div>
+        <div class="contact-row"><i class="bi bi-telephone-fill"></i><div><strong>Phone</strong><span>080-2360-6640</span></div></div>
+        <div class="contact-row"><i class="bi bi-geo-alt-fill"></i><div><strong>Location</strong><span>Gate No. 8, Ramaiah Group Campus, M.S.R.I.T. Post, Bengaluru — 560054</span></div></div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<section class="cta-banner">
+  <div class="cta-banner-inner">
+    <h2>Collaborate with MSRIM Research</h2>
+    <p>Partner with us for funded projects, research publications and industry studies.</p>
+    <div class="cta-buttons">
+      <a href="mailto:support@msrim.org" class="btn-gold"><i class="bi bi-envelope-fill"></i> Contact R&amp;D Cell</a>
+      <a href="faculty.html" class="btn-ghost"><i class="bi bi-people-fill"></i> Explore Faculty</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="https://msrim.in/images/logo-2.png" alt="MSRIM" />
+      <p><strong style="color:#fff">Ramaiah Institute of Management</strong></p>
+      <div class="contact-line"><i class="bi bi-geo-alt-fill"></i><span>Gate No. 8, Ramaiah Group Campus, 'C' Block, M.S.R.I.T. Post, Bengaluru — 560054</span></div>
+      <div class="contact-line"><i class="bi bi-telephone-fill"></i><span>080-2360-6640, 6641, 6642</span></div>
+      <div class="contact-line"><i class="bi bi-envelope-fill"></i><span>support@msrim.org</span></div>
+      <div class="socials">
+        <a href="https://www.facebook.com/RIMBangalore/" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://in.linkedin.com/school/m.s.-ramaiah-insitute-of-management/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.instagram.com/ramaiahinstituteofmanagement/" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.youtube.com/channel/UCjUnYNrmB5DAWtG6vGTaC7A" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+      </div>
+    </div>
+    <div>
+      <h6>Campus Info</h6>
+      <ul>
+        <li><a href="about.html">About MSRIM</a></li>
+        <li><a href="faculty.html">Our Faculty</a></li>
+        <li><a href="programs.html">Programmes</a></li>
+        <li><a href="research.html">Research &amp; R&D</a></li>
+        <li><a href="centres.html">Centres &amp; Cells</a></li>
+      </ul>
+    </div>
+    <div>
+      <h6>Important Info</h6>
+      <ul>
+        <li><a href="#">Our Policies</a></li>
+        <li><a href="#">Anti-Ragging</a></li>
+        <li><a href="#">Grievance Redressal</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+    <div>
+      <h6>Explore MSRIM</h6>
+      <ul>
+        <li><a href="placements.html">Placements</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="#">Photo Gallery</a></li>
+        <li><a href="#">Alumni Network</a></li>
+        <li><a href="https://msrim.in/pdf/NIRF2026.pdf">NIRF</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-erp">
+    <span>ERP Login:</span>
+    <a href="https://msrim.digiicampus.com/">Student Portal</a>
+    <a href="#">Faculty Portal</a>
+    <a href="#">Admin Portal</a>
+  </div>
+  <div class="footer-bottom">
+    <div class="wrap">
+      <div>© 2026 Ramaiah Institute of Management. All rights reserved.</div>
+      <div><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Mobile nav
+const menuBtn=document.getElementById('menuBtn'),mobileNav=document.getElementById('mobileNav'),mobileClose=document.getElementById('mobileClose'),mobileOverlay=document.getElementById('mobileOverlay');
+function openMenu(){mobileNav.classList.add('open');menuBtn.classList.add('open');document.body.style.overflow='hidden'}
+function closeMenu(){mobileNav.classList.remove('open');menuBtn.classList.remove('open');document.body.style.overflow=''}
+if(menuBtn)menuBtn.addEventListener('click',openMenu);
+if(mobileClose)mobileClose.addEventListener('click',closeMenu);
+if(mobileOverlay)mobileOverlay.addEventListener('click',closeMenu);
+function toggleGroup(id){const g=document.getElementById(id);if(g)g.classList.toggle('open')}
+
+  const navLinks = document.querySelectorAll('.sidebar-nav a');
+  const sectionIds = ['overview','areas','publications','patents','projects','initiatives','centres','contact'];
+  function updateActive() {
+    const y = window.scrollY + 120;
+    let active = 0;
+    sectionIds.forEach((id, i) => {
+      const el = document.getElementById(id);
+      if (el && el.offsetTop <= y) active = i;
+    });
+    navLinks.forEach((l, i) => l.classList.toggle('active', i === active));
+  }
+  window.addEventListener('scroll', updateActive, {passive:true});
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, {threshold:0.08});
+  reveals.forEach(r => io.observe(r));
+</script>
+</body>
+</html>
