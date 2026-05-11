@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:msrim.in)"
+      "WebFetch(domain:msrim.in)",
+      "Bash(python3 -c ' *)"
     ]
   }
 }
