@@ -1,0 +1,1191 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Faculty Profile | Ramaiah Institute of Management</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,400;9..144,0,600;9..144,0,700;9..144,1,400;9..144,1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<style>
+:root{
+  --navy:#0a1f3d;--navy-700:#1a3a6b;--navy-100:#e8eef7;
+  --gold:#c9a961;--gold-dark:#b08f48;--gold-light:#f5ecd6;
+  --cream:#faf6ee;--crimson:#E05A04;--orange:#F88C1A;
+  --ink:#1a1a1a;--muted:#5a5a5a;--line:#e3dccd;
+  --serif:"Fraunces","Times New Roman",serif;
+  --sans:"DM Sans",-apple-system,sans-serif;
+  --grad:linear-gradient(135deg,var(--crimson) 0%,var(--orange) 100%);
+  --shadow-sm:0 2px 12px rgba(10,31,61,.06);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-size:16px;line-height:1.65;color:var(--ink);background:#ede9e0;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none;transition:color .25s}
+img{max-width:100%;display:block}
+ul{list-style:none}
+
+/* UTILITY BAR */
+.utility-bar{background:var(--grad);color:#fff;font-size:13px;padding:9px 0}
+.util-wrap{max-width:1400px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.utility-bar a{color:#fff;opacity:.88}
+.utility-bar a:hover{opacity:1}
+.utility-bar .right{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.util-pill{border:1px solid rgba(255,255,255,.4);padding:4px 14px;border-radius:999px;font-weight:600;font-size:12.5px;opacity:1!important}
+
+/* HEADER */
+.site-header{background:#fff;position:sticky;top:0;z-index:900;border-bottom:1px solid rgba(10,31,61,.08);box-shadow:0 2px 16px rgba(10,31,61,.06)}
+.hdr{max-width:1400px;margin:0 auto;padding:0 28px;display:flex;align-items:center;gap:24px;height:72px}
+.logo img{height:42px;width:auto}
+.nav-links{display:flex;align-items:center;gap:2px;flex:1}
+.nav-links a{font-size:13.5px;font-weight:500;color:var(--navy);padding:6px 10px;border-radius:6px;transition:all .2s;white-space:nowrap}
+.nav-links a:hover{background:var(--gold-light)}
+.nav-links a.active{background:var(--gold-light);font-weight:700}
+.has-drop{position:relative}
+.has-drop>a{display:flex;align-items:center;gap:4px}
+.has-drop>a::after{content:"";display:inline-block;width:0;height:0;border:4px solid transparent;border-top-color:var(--navy);margin-top:2px;transition:transform .2s}
+.has-drop:hover>a::after{transform:rotate(180deg);margin-top:-2px}
+.drop-menu{position:absolute;top:calc(100% + 8px);left:0;min-width:220px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 40px rgba(10,31,61,.14);opacity:0;visibility:hidden;transform:translateY(-8px);transition:all .25s;z-index:999;padding:6px}
+.has-drop:hover .drop-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.drop-menu a{display:block;padding:9px 14px;font-size:13px;font-weight:500;color:var(--ink);border-radius:6px;transition:all .2s;white-space:nowrap}
+.drop-menu a:hover{background:var(--navy-100);padding-left:18px}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--grad);color:#fff;padding:9px 20px;border-radius:999px;font-size:13.5px;font-weight:600;transition:opacity .25s;flex-shrink:0;margin-left:auto}
+.nav-cta:hover{opacity:.9}
+
+/* BREADCRUMB */
+.breadcrumb{background:#fff;border-bottom:1px solid var(--line);padding:12px 0}
+.breadcrumb-inner{max-width:1400px;margin:0 auto;padding:0 28px;display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+.breadcrumb-inner a{color:var(--navy);font-weight:500}
+.breadcrumb-inner a:hover{color:var(--crimson)}
+.breadcrumb-inner i{font-size:10px}
+
+/* MAIN LAYOUT */
+.page-wrap{max-width:1400px;margin:0 auto;padding:32px 28px 72px;display:grid;grid-template-columns:290px 1fr;gap:28px;align-items:flex-start}
+
+/* LEFT SIDEBAR */
+.fac-sidebar{position:sticky;top:84px;max-height:calc(100vh - 100px);overflow-y:auto;overflow-x:hidden;scrollbar-width:thin;scrollbar-color:var(--gold-light) transparent}
+.fac-sidebar::-webkit-scrollbar{width:4px}
+.fac-sidebar::-webkit-scrollbar-thumb{background:var(--gold-light);border-radius:2px}
+
+.fac-photo-card{background:#fff;border:1px solid #ccc;overflow:hidden}
+.fac-photo-inner{padding:24px 18px 20px;text-align:center;border-bottom:1px solid #ddd}
+.fac-photo-wrap{width:150px;height:185px;overflow:hidden;margin:0 auto 14px;border:2px solid #ddd}
+.fac-photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.fac-photo-avatar{width:100%;height:100%;background:linear-gradient(135deg,var(--navy-100),var(--gold-light));display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:48px;font-weight:700;color:var(--navy)}
+.fac-name{font-size:15px;font-weight:700;color:var(--navy);line-height:1.3;margin-bottom:5px}
+.fac-quals{font-size:12px;color:#666;margin-bottom:8px;line-height:1.5}
+.fac-desig{font-size:11.5px;font-weight:700;color:#b05c10;text-transform:uppercase;letter-spacing:.5px}
+
+/* Sidebar nav — Christ University style */
+.fac-nav{background:#fff;border:1px solid #ccc;border-top:none}
+.fac-nav a{display:flex;justify-content:space-between;align-items:flex-start;padding:12px 18px;font-size:13px;color:#333;border-bottom:1px solid #e0dbd0;cursor:pointer;transition:background .18s;gap:8px;line-height:1.4}
+.fac-nav a:last-child{border-bottom:none}
+.fac-nav a:hover{background:#f5f1ea}
+.fac-nav a.active{background:#deeaf5;color:#0d2b52;font-weight:600}
+.fac-nav .nav-label{flex:1}
+.fac-nav .arr{color:var(--gold);font-size:16px;flex-shrink:0;margin-top:1px;font-weight:400}
+
+/* RIGHT CONTENT */
+.fac-content{min-width:0}
+
+/* Tab panels */
+.tab-panel{display:none;background:#fff;border:1px solid #ccc;padding:30px 34px}
+.tab-panel.active{display:block}
+
+/* Profile tab */
+.profile-dept-row{font-size:14.5px;color:#333;margin-bottom:7px}
+.profile-dept-row strong{color:var(--navy)}
+.profile-bio{font-size:14px;line-height:1.9;color:#1a4a7a;margin:20px 0 24px}
+.profile-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.prof-btn{display:inline-flex;align-items:center;gap:7px;border:1px solid #96bcd8;background:#cce3f3;color:#1a4068;padding:9px 20px;border-radius:3px;font-size:13px;font-weight:500;transition:background .2s;cursor:pointer;text-decoration:none}
+.prof-btn:hover{background:#b0d4ec}
+
+/* Section heading */
+.sec-title{font-family:var(--serif);font-size:19px;font-weight:600;color:var(--navy);margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid var(--gold-light)}
+
+/* Entry list */
+.entry-list{display:flex;flex-direction:column;gap:13px}
+.entry{border-left:3px solid var(--gold);padding:13px 16px;background:var(--cream)}
+.entry-year{font-size:11px;font-weight:700;color:var(--gold-dark);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.entry p{font-size:13.5px;color:#333;line-height:1.75}
+.entry-tag{display:inline-block;margin-top:8px;background:var(--navy-100);color:var(--navy-700);font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:3px}
+
+/* Stat boxes */
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:22px}
+.stat-box{background:var(--cream);border:1px solid var(--line);padding:18px;text-align:center;border-radius:4px}
+.stat-box strong{display:block;font-family:var(--serif);font-size:30px;font-weight:700;color:var(--navy);line-height:1}
+.stat-box span{font-size:12px;color:var(--muted);margin-top:4px;display:block}
+
+/* Empty state */
+.empty-state{text-align:center;padding:48px 24px;color:var(--muted);font-size:14px}
+.empty-state i{font-size:32px;opacity:.35;display:block;margin-bottom:12px}
+
+/* Not found */
+.not-found{text-align:center;padding:80px 28px}
+.not-found h2{font-family:var(--serif);font-size:28px;color:var(--navy);margin-bottom:12px}
+.not-found p{color:var(--muted);margin-bottom:24px}
+.btn-back{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;padding:11px 24px;border-radius:999px;font-weight:600;font-size:14px}
+
+/* CTA */
+.cta-banner{background:var(--navy);padding:52px 0;text-align:center;position:relative;overflow:hidden}
+.cta-banner::before{content:"";position:absolute;inset:0;background:url('https://msrim.in/images/msrim_campus.jpg') center/cover;opacity:.06}
+.cta-banner h2{font-family:var(--serif);font-size:clamp(24px,3.5vw,38px);font-weight:600;color:#fff;margin-bottom:10px;position:relative;z-index:1}
+.cta-banner p{font-size:15px;color:rgba(255,255,255,.7);margin-bottom:26px;position:relative;z-index:1}
+.cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
+.btn-gold{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--navy);padding:12px 26px;border-radius:999px;font-weight:700;font-size:14px;transition:all .3s}
+.btn-gold:hover{background:#dfc070;transform:translateY(-2px)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.28);color:#fff;padding:12px 26px;border-radius:999px;font-weight:600;font-size:14px}
+.btn-ghost:hover{background:rgba(255,255,255,.18)}
+
+/* FOOTER */
+footer{background:var(--navy);color:#fff;padding:52px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;max-width:1400px;margin:0 auto;padding-left:28px;padding-right:28px}
+.footer-brand .logo img{height:42px;filter:brightness(0) invert(1);opacity:.9}
+.footer-brand p{font-size:13px;color:rgba(255,255,255,.52);line-height:1.75;margin-top:14px;max-width:280px}
+.fc{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:rgba(255,255,255,.58);margin-top:10px}
+.fc i{color:var(--gold);flex-shrink:0;margin-top:3px}
+.footer-col h5{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:14px}
+.footer-col ul{display:flex;flex-direction:column;gap:8px}
+.footer-col ul a{font-size:13px;color:rgba(255,255,255,.55)}
+.footer-col ul a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:16px 0;max-width:1400px;margin:0 auto;padding-left:28px;padding-right:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:12px;color:rgba(255,255,255,.38)}
+.footer-bottom a{color:rgba(255,255,255,.48)}
+
+@media(max-width:960px){.page-wrap{grid-template-columns:1fr}.fac-sidebar{position:static}.nav-links{display:none}.stat-row{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr;gap:28px}}
+@media(max-width:600px){.stat-row{grid-template-columns:1fr}.tab-panel{padding:20px 16px}}
+
+    /* ============ FULLSCREEN MENU ============ */
+    .fsm-overlay{position:fixed;inset:0;z-index:9999;opacity:0;visibility:hidden;transition:opacity .38s}
+    .fsm-overlay.open{opacity:1;visibility:visible}
+    .fsm-panel{position:fixed;inset:0;background:url('https://msrim.in/images/msrim_campus.jpg') center/cover no-repeat;transform:translateY(-105%);transition:transform .48s cubic-bezier(.4,0,.2,1);overflow-y:auto;display:flex;flex-direction:column}
+    .fsm-panel::before{content:"";position:fixed;inset:0;background:linear-gradient(160deg,rgba(8,24,50,.45) 0%,rgba(10,31,61,.35) 100%);pointer-events:none;z-index:0}
+    .fsm-overlay.open .fsm-panel{transform:translateY(0)}
+    .fsm-header{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;padding:20px 44px;border-bottom:1px solid rgba(201,169,97,.2)}
+    .fsm-logo{height:40px;filter:brightness(0) invert(1);opacity:.9}
+    .fsm-header-right{display:flex;align-items:center;gap:14px}
+    .fsm-header-cta{display:inline-flex;align-items:center;gap:7px;padding:9px 22px;background:#E05A04;color:#fff;font-size:13px;font-weight:700;border-radius:999px;text-decoration:none;transition:all .2s}
+    .fsm-header-cta:hover{background:#c94f03;color:#fff;transform:translateY(-1px)}
+    .fsm-close{width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .25s}
+    .fsm-close:hover{background:#E05A04;border-color:#E05A04;transform:rotate(90deg)}
+    /* fsm-body replaced */
+    .fsm-section-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(201,169,97,.75);margin-bottom:8px;display:block}
+    .fsm-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:10px}
+    .fsm-card{background:rgba(255,255,255,.07);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid rgba(255,255,255,.28);border-bottom:3px solid rgba(255,255,255,.18);border-radius:16px;padding:14px 10px 12px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;transition:all .25s;box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 4px 24px rgba(0,0,0,.12)}
+    .fsm-card:hover{background:rgba(255,255,255,.96);border-color:rgba(255,255,255,.8);border-bottom-color:#E05A04;transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+    .fsm-card:hover .fsm-label{color:#0a1f3d}
+    .fsm-card:hover .fsm-icon{transform:scale(1.12);box-shadow:0 8px 24px rgba(224,90,4,.6)}
+    .fsm-icon{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#E05A04 0%,#F88C1A 100%);display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;flex-shrink:0;box-shadow:0 4px 12px rgba(224,90,4,.4);transition:all .25s}
+    .fsm-label{font-size:11px;font-weight:600;color:rgba(255,255,255,.9);line-height:1.3;transition:color .25s}
+    .fsm-quicklinks{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding-top:8px;border-top:1px solid rgba(255,255,255,.1)}
+    .fsm-quicklink{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border:1px solid rgba(255,255,255,.2);border-radius:999px;color:rgba(255,255,255,.75);font-size:12.5px;font-weight:500;text-decoration:none;transition:all .2s}
+    .fsm-quicklink:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.45);color:#fff}
+    
+    .fsm-body{position:relative;z-index:1;flex:1;padding:28px 32px 40px;display:grid;grid-template-columns:1fr 280px;gap:24px;align-items:start}
+    .fsm-left{display:flex;flex-direction:column;gap:10px}
+    .fsm-right{background:rgba(255,255,255,.07);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid rgba(255,255,255,.2);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;position:sticky;top:20px}
+    .fsm-side-ctas{display:grid;grid-template-columns:1fr 1fr}
+    .fsm-side-cta1{display:flex;align-items:center;justify-content:center;gap:6px;padding:13px 8px;background:#E05A04;color:#fff;font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;text-decoration:none;transition:background .2s}
+    .fsm-side-cta1:hover{background:#c94f03;color:#fff}
+    .fsm-side-cta2{display:flex;align-items:center;justify-content:center;gap:6px;padding:13px 8px;background:#0a1f3d;color:#fff;font-size:12px;font-weight:600;text-decoration:none;transition:background .2s}
+    .fsm-side-cta2:hover{background:#1a3a6b;color:#fff}
+    .fsm-side-nav{display:flex;flex-direction:column}
+    .fsm-side-link{display:flex;align-items:center;justify-content:space-between;padding:11px 16px;font-size:13px;font-weight:500;color:rgba(255,255,255,.85);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07);transition:all .2s;cursor:pointer;user-select:none}
+    a.fsm-side-link:hover,.fsm-side-link:hover{background:rgba(255,255,255,.1);color:#fff;padding-left:22px}
+    .fsm-side-link .chev{font-size:11px;color:rgba(255,255,255,.4);transition:transform .25s;flex-shrink:0}
+    .fsm-side-group.open>.fsm-side-link .chev{transform:rotate(180deg)}
+    .fsm-side-group.open>.fsm-side-link{background:rgba(224,90,4,.15);color:#F88C1A}
+    .fsm-side-sub{max-height:0;overflow:hidden;transition:max-height .3s ease;background:rgba(0,0,0,.2)}
+    .fsm-side-group.open .fsm-side-sub{max-height:500px}
+    .fsm-side-sub a{display:flex;align-items:center;gap:6px;padding:9px 16px 9px 28px;font-size:12px;color:rgba(255,255,255,.65);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.04);transition:all .2s}
+    .fsm-side-sub a::before{content:"›";color:#E05A04;font-size:14px;line-height:1;flex-shrink:0}
+    .fsm-side-sub a:hover{background:rgba(255,255,255,.08);color:#fff;padding-left:34px}
+    .fsm-side-footer{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 16px;background:rgba(201,169,97,.12);color:#c9a961;font-size:12.5px;font-weight:600;text-decoration:none;transition:all .2s}
+    .fsm-side-footer:hover{background:rgba(201,169,97,.22);color:#e0be7a}
+    @media(max-width:1000px){.fsm-body{grid-template-columns:1fr}.fsm-right{display:none}}
+    @media(max-width:700px){.fsm-grid{grid-template-columns:repeat(3,1fr)}.fsm-body{padding:20px 14px 32px}}
+    @media(max-width:480px){.fsm-grid{grid-template-columns:repeat(2,1fr);gap:8px}}
+    @media(max-width:800px){.fsm-grid{grid-template-columns:repeat(3,1fr);gap:10px}.fsm-body{padding:24px 20px 36px}.fsm-header{padding:16px 20px}}
+    @media(max-width:480px){.fsm-grid{grid-template-columns:repeat(2,1fr);gap:8px}}
+    </style>
+</head>
+<body>
+
+<!-- UTILITY BAR -->
+<div class="utility-bar">
+  <div class="util-wrap">
+    <span>Ramaiah Institute of Management | M.S.R.I.T. Post, Bengaluru</span>
+    <div class="right">
+      <a href="tel:08023606640">080-2360-6640</a>
+      <a href="mailto:support@msrim.org">support@msrim.org</a>
+      <a href="https://alumni.msrim.in/" target="_blank">Alumni</a>
+      <a href="https://msrim.in/pdf/NIRF2026.pdf" target="_blank">NIRF</a>
+      <a href="https://admissions.msrim.in/" class="util-pill">Apply Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="hdr">
+    <a href="home.html" class="logo"><img src="https://msrim.in/images/logo-2.png" alt="MSRIM"/></a>
+    <nav class="nav-links">
+      <div class="has-drop">
+        <a href="about.html">About Us</a>
+        <div class="drop-menu">
+          <a href="about.html#about">About MSRIM</a>
+          <a href="about.html#dean">Dean's Message</a>
+          <a href="about.html#vision">Vision &amp; Mission</a>
+          <a href="about.html#governance">Governance</a>
+          <a href="about.html#ranking">B-School Ranking</a>
+        </div>
+      </div>
+      <div class="has-drop">
+        <a href="programs.html">Programs</a>
+        <div class="drop-menu">
+          <a href="programs.html#pgdm">PGDM — Two Year Full Time</a>
+          <a href="programs.html#fpm">FPM</a>
+        </div>
+      </div>
+      <a href="faculty.html" class="active">Faculty</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="placements.html">Placements</a>
+      <div class="has-drop">
+        <a href="centres.html">Centres</a>
+        <div class="drop-menu">
+          <a href="centre-for-sustainability.html">Centre for Sustainability</a>
+          <a href="centre-for-leadership (2).html">Centre for Leadership</a>
+          <a href="centre-for-case-development.html">Centre for Case Development</a>
+          <a href="centre-for-excellence.html">Centre for Excellence</a>
+          <a href="centre-for-iks.html">Centre for IKS</a>
+          <a href="centre-for-entrepreneurship.html">Centre for Entrepreneurship</a>
+          <a href="centre-for-corporate-relations.html">Centre for Corporate Relations</a>
+          <a href="centre-for-alumni-relations.html">Centre for Alumni Relations</a>
+          <a href="innovation-council.html">Institute Innovation Council</a>
+        </div>
+      </div>
+      
+    </nav>
+    <a href="https://admissions.msrim.in/" class="nav-cta"><i class="bi bi-mortarboard-fill"></i> Admissions 2026</a>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="home.html">Home</a>
+    <i class="bi bi-chevron-right"></i>
+    <a href="faculty.html">Faculty</a>
+    <i class="bi bi-chevron-right"></i>
+    <span id="bcName">Faculty Profile</span>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="page-wrap" id="pageWrap">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="fac-sidebar">
+    <div class="fac-photo-card">
+      <div class="fac-photo-inner">
+        <div class="fac-photo-wrap" id="photoWrap">
+          <div class="fac-photo-avatar" id="photoAvatar"></div>
+        </div>
+        <div class="fac-name" id="sidebarName"></div>
+        <div class="fac-quals" id="sidebarQuals"></div>
+        <div class="fac-desig" id="sidebarDesig"></div>
+      </div>
+    </div>
+    <nav class="fac-nav" id="facNav">
+      <a class="active" data-tab="profile"><span class="nav-label">Profile</span><span class="arr">›</span></a>
+      <a data-tab="articles"><span class="nav-label">Articles in Journals</span><span class="arr">›</span></a>
+      <a data-tab="books"><span class="nav-label">Book Chapters / Articles</span><span class="arr">›</span></a>
+      <a data-tab="conferences"><span class="nav-label">Participation in Conferences / Seminars / Symposium</span><span class="arr">›</span></a>
+      <a data-tab="talks"><span class="nav-label">Invited Talks</span><span class="arr">›</span></a>
+      <a data-tab="ownthesis"><span class="nav-label">Own MPhil / PhD Thesis</span><span class="arr">›</span></a>
+      <a data-tab="guidedthesis"><span class="nav-label">MPhil / PhD Guided / Adjudicated</span><span class="arr">›</span></a>
+      <a data-tab="training"><span class="nav-label">Training Programmes</span><span class="arr">›</span></a>
+    </nav>
+  </aside>
+
+  <!-- RIGHT CONTENT -->
+  <main class="fac-content" id="facContent">
+
+    <!-- Profile Tab -->
+    <div class="tab-panel active" id="tab-profile">
+      <div id="profileMeta"></div>
+      <p class="profile-bio" id="profileBio"></p>
+      <div class="profile-btns" id="profileBtns"></div>
+    </div>
+
+    <!-- Articles Tab -->
+    <div class="tab-panel" id="tab-articles">
+      <div class="sec-title">Articles in Journals</div>
+      <div id="articlesContent"></div>
+    </div>
+
+    <!-- Books Tab -->
+    <div class="tab-panel" id="tab-books">
+      <div class="sec-title">Book Chapters / Articles</div>
+      <div id="booksContent"></div>
+    </div>
+
+    <!-- Conferences Tab -->
+    <div class="tab-panel" id="tab-conferences">
+      <div class="sec-title">Participation in Conferences / Seminars / Symposium</div>
+      <div id="conferencesContent"></div>
+    </div>
+
+    <!-- Invited Talks Tab -->
+    <div class="tab-panel" id="tab-talks">
+      <div class="sec-title">Invited Talks</div>
+      <div id="talksContent"></div>
+    </div>
+
+    <!-- Own Thesis Tab -->
+    <div class="tab-panel" id="tab-ownthesis">
+      <div class="sec-title">Own MPhil / PhD Thesis</div>
+      <div id="ownthesisContent"></div>
+    </div>
+
+    <!-- Guided Thesis Tab -->
+    <div class="tab-panel" id="tab-guidedthesis">
+      <div class="sec-title">MPhil / PhD Guided / Adjudicated</div>
+      <div id="guidedthesisContent"></div>
+    </div>
+
+    <!-- Training Tab -->
+    <div class="tab-panel" id="tab-training">
+      <div class="sec-title">Training Programmes</div>
+      <div id="trainingContent"></div>
+    </div>
+
+  </main>
+</div>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div style="max-width:1400px;margin:0 auto;padding:0 28px">
+    <h2>Join MSRIM's Academic Community</h2>
+    <p>Learn from distinguished scholars, researchers and industry practitioners.</p>
+    <div class="cta-actions">
+      <a href="admissions.html" class="btn-gold"><i class="bi bi-pencil-square"></i> Apply Now</a>
+      <a href="faculty.html" class="btn-ghost"><i class="bi bi-people-fill"></i> All Faculty</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo"><img src="https://msrim.in/images/logo-2.png" alt="MSRIM"/></div>
+      <p>Ramaiah Institute of Management — AICTE approved, NBA accredited, nurturing leaders since 1995.</p>
+      <div class="fc"><i class="bi bi-telephone-fill"></i><span>080-2360-6640</span></div>
+      <div class="fc"><i class="bi bi-envelope-fill"></i><span>support@msrim.org</span></div>
+      <div class="fc"><i class="bi bi-geo-alt-fill"></i><span>M.S.R.I.T. Post, MSR Nagar, Bengaluru – 560 054</span></div>
+    </div>
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="programs.html">Programmes</a></li>
+        <li><a href="faculty.html">Faculty</a></li>
+        <li><a href="placements.html">Placements</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Research</h5>
+      <ul>
+        <li><a href="research.html">R&amp;D Cell</a></li>
+        <li><a href="centres.html">Centres</a></li>
+        <li><a href="https://msrim.in/rdcell">Publications</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="https://msrim.in/contact">Contact Us</a></li>
+        <li><a href="https://alumni.msrim.in/" target="_blank">Alumni</a></li>
+        <li><a href="https://msrim.in/how-to-reach">Campus Location</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Ramaiah Institute of Management. All rights reserved.</span>
+    <div style="display:flex;gap:18px"><a href="https://msrim.in/privacy-policy">Privacy Policy</a><a href="https://msrim.in/terms">Terms</a></div>
+  </div>
+</footer>
+
+<script>
+// ── FACULTY DATA ──
+const FACULTY = {
+  'geetha-rajaram':{
+    name:'Dr. Geetha M Rajaram',designation:'Professor & Dean',
+    dept:'General Administration',campus:'Bengaluru Campus',
+    quals:'Ph.D, M.Phil, MFM, M.Com, PGD Portfolio Management',
+    photo:'https://msrim.in/images/Geetha-Rajaram-dean-profile.jpg',initials:'GR',
+    bio:'Dr. Geetha M Rajaram is a distinguished academician with over 28 years of experience in teaching, research, and academic leadership, including 17 years in senior academic administration. She leads Ramaiah Institute of Management as Professor & Dean, steering the institution towards excellence in management education, research and industry connect. She has earned the Trained Case Teacher certification from Harvard Business School and completed advanced programmes at IIM Bangalore in Strategic Management. Her interdisciplinary research spans Strategic Cost Management, ESG & CSR Reporting, Rural Consumer Behaviour, Fintech & Credit Analysis, and Integrated Reporting. She is a Registered PhD Supervisor at the University of Mysore and serves as External Examiner for PhD thesis evaluations across universities.',
+    researchGate:'https://www.researchgate.net/search?q=Geetha+Rajaram',
+    googleScholar:'https://scholar.google.com/scholar?q=Geetha+M+Rajaram+MSRIM',
+    orcid:'https://orcid.org/',
+    msrimProfile:'https://msrim.in/faculty/inner/geetha-rajaram',
+    articles:[
+      {year:'2024',text:'Rajaram, G. M. & Verma, M. (2024). "ESG Reporting Practices Among Indian SMEs: An Empirical Analysis." <em>International Journal of Finance and Economics</em>, 29(2), 112–128. [UGC-CARE Listed]'},
+      {year:'2023',text:'Rajaram, G. M. (2023). "Rural Consumer Behaviour in Digital Financial Services: A Study in Karnataka." <em>Journal of Rural Development</em>, 42(4), 78–95. [Scopus Indexed]'},
+      {year:'2022',text:'Rajaram, G. M. & Singh, R. (2022). "Strategic Cost Management in Uncertain Environments: Post-COVID Evidence from Indian Manufacturing." <em>Management Accountant</em>, 57(9), 34–42.'},
+      {year:'2021',text:'Rajaram, G. M. (2021). "Fintech Adoption and Credit Analysis: Emerging Trends in Indian Banking." <em>IIM Kozhikode Society & Management Review</em>, 10(2), 145–160. [Scopus]'},
+      {year:'2020',text:'Rajaram, G. M. & Krishnamurthy, S. (2020). "Integrated Reporting in Indian Listed Firms: Compliance and Quality Assessment." <em>Accounting Research Journal</em>, 33(3), 389–406.'},
+      {year:'2019',text:'Rajaram, G. M. (2019). "SME Globalisation and Export Performance: Evidence from Bangalore\'s IT Ecosystem." <em>Journal of International Business and Economy</em>, 20(1), 55–72.'}
+    ],
+    books:[
+      {year:'2023',text:'Rajaram, G. M. (Ed.) (2023). <em>Sustainability and Corporate Finance: An Integrated Framework</em>. New Delhi: Macmillan India Publishers.'},
+      {year:'2021',text:'Rajaram, G. M. & Agarwal, P. (2021). "ESG and Value Creation: Evidence from Indian Markets." In S. Sharma (Ed.), <em>Sustainable Finance in Emerging Economies</em>. Springer, Singapore, pp. 215–238.'},
+      {year:'2019',text:'Rajaram, G. M. (2019). "Strategic Decision-Making Under Uncertainty: A Managerial Perspective." In P. Kumar (Ed.), <em>Contemporary Issues in Management</em>. Oxford University Press India, pp. 88–110.'},
+      {year:'2017',text:'Rajaram, G. M. & Rao, K. S. (2017). <em>Financial Management: Concepts and Applications</em>. Bangalore: Sapna Book House. [Textbook for PGDM programmes]'}
+    ],
+    conferences:[
+      {year:'2025',text:'Rajaram, G. M. (2025). "Generative AI in Higher Education: Opportunities and Ethical Concerns." National Conference on Future of Management Education, IIM Bangalore, March 2025.'},
+      {year:'2024',text:'Rajaram, G. M. & Verma, M. (2024). "ESG Reporting and Firm Performance: Panel Data Evidence from NSE-500." International Conference on Sustainable Business Practices, Manipal University, January 2024.'},
+      {year:'2023',text:'Rajaram, G. M. (2023). "Rural Financial Inclusion Through Fintech: Challenges and Prospects." 5th International Conference on Financial Inclusion, IIT Bombay, September 2023. [Best Paper Award]'},
+      {year:'2022',text:'Rajaram, G. M. (2022). "Integrated Reporting and Investor Sentiment: Evidence from BSE 200 Companies." Annual Conference of Indian Accounting Association, Mysore, December 2022.'},
+      {year:'2021',text:'Rajaram, G. M. (2021). "Free Market Economics and SME Growth: Lessons from East Africa." International Business Symposium, Mzumbe University, Tanzania (online), August 2021.'}
+    ],
+    talks:[
+      {year:'2025',text:'Resource Person: "Transforming Teaching & Research with Generative AI" — ATAL Faculty Development Programme, Bangalore University, February 2025.'},
+      {year:'2024',text:'Keynote Address: "Women in Finance Leadership" — ELH Media Innovate Higher Education Roundtable, May 2024.'},
+      {year:'2023',text:'Invited Speaker: "Case Teaching Pedagogy in Management Education" — Al Ameen Institute of Management Studies, Bangalore, March 2023.'},
+      {year:'2022',text:'Resource Person: "Research Methodology for Management Students" — Jain Deemed to be University, October 2022.'},
+      {year:'2021',text:'Invited Talk: "Managerial Skills and Leadership Effectiveness" — Bangalore University FDP, September 2021.'},
+      {year:'2020',text:'MDP Resource Person: "Financial Accounting for Executive Trainees" — BOSCH India, Bengaluru, January 2020.'}
+    ],
+    ownthesis:[
+      {year:'2005',text:'<strong>Title:</strong> "Strategic Cost Management Practices and Firm Performance in Indian Manufacturing: An Empirical Analysis."<br><strong>University:</strong> University of Mysore<br><strong>Supervisor:</strong> Prof. K. S. Rao<br><strong>Degree:</strong> Ph.D in Management (Commerce)'}
+    ],
+    guidedthesis:[
+      {year:'2023',text:'Suresh, P. (2023). "ESG Reporting and Cost of Capital: Evidence from NSE-Listed Firms." Ph.D., University of Mysore. <strong>Role:</strong> Supervisor.'},
+      {year:'2021',text:'Meena, D. (2021). "SME Globalisation Strategies in the Post-COVID Era: A Study of Bangalore-based Exporters." Ph.D., Bangalore University. <strong>Role:</strong> Supervisor.'},
+      {year:'2020',text:'Priya, N. (2020). "Fintech and Financial Inclusion in Rural Karnataka." M.Phil., University of Mysore. <strong>Role:</strong> Guide.'},
+      {year:'2019',text:'Raghavendra, S. (2019). "Rural Consumer Behaviour Towards Digital Banking Services." Ph.D., Bangalore North University. <strong>Role:</strong> External Adjudicator.'}
+    ],
+    training:[
+      {year:'2024',text:'Foundation Course in Strategic Management — IIM Bangalore (Executive Education), 2024. Duration: 5 days.'},
+      {year:'2023',text:'Certified Case Teacher — Harvard Business School Online (HBX), 2023.'},
+      {year:'2022',text:'Data Analytics & Data Storytelling — Google Data Analytics Certificate, Coursera, 2022.'},
+      {year:'2021',text:'Accounting Analytics — Wharton School, University of Pennsylvania, Coursera, 2021.'},
+      {year:'2020',text:'Design Thinking for Innovation — University of Virginia (Darden School), Coursera, 2020.'}
+    ]
+  },
+
+  'savitha-rani-ramachandran':{
+    name:'Dr. Savitha Rani Ramachandran',designation:'Professor & Registrar',
+    dept:'Finance & BFSI',campus:'Bengaluru Campus',
+    quals:'Ph.D, FCMA, MBA, B.Com',
+    photo:'https://msrim.in/msrimmanage/public/uploads/faculty/savitha_rani_nw.png',initials:'SR',
+    bio:'Dr. Savitha Rani Ramachandran serves as Professor & Registrar at Ramaiah Institute of Management, bringing deep expertise in Finance, Cost Accounting and Management Education. A Fellow of the Institute of Cost & Management Accountants (FCMA), she combines professional practice with academic rigour, contributing significantly to curriculum development, accreditation processes and institutional governance. With over 20 years of experience, she has guided the institution through AICTE compliance, NBA accreditation and academic reform.',
+    researchGate:'https://www.researchgate.net/search?q=Savitha+Rani+Ramachandran',
+    googleScholar:'https://scholar.google.com/scholar?q=Savitha+Rani+Ramachandran+MSRIM',
+    orcid:'https://orcid.org/',
+    msrimProfile:'https://msrim.in/faculty/inner/savitha-rani-ramachandran',
+    articles:[
+      {year:'2023',text:'Ramachandran, S. R. & Triveni, P. (2023). "Cost Management Practices in Indian MSMEs: A Survey Study." <em>The Management Accountant</em>, 58(6), 22–30.'},
+      {year:'2021',text:'Ramachandran, S. R. (2021). "Corporate Governance Disclosures and Firm Value: Evidence from BSE-Listed Companies." <em>Journal of Commerce and Accounting Research</em>, 10(2), 45–58. [UGC-CARE]'},
+      {year:'2019',text:'Ramachandran, S. R. & Rajaram, G. M. (2019). "Activity-Based Costing in Service Sector: Implementation Challenges in Indian B-Schools." <em>Accounting Education</em>, 28(4), 340–356.'}
+    ],
+    books:[
+      {year:'2022',text:'Ramachandran, S. R. (2022). "Cost Accounting Reforms and Competitiveness: Indian Manufacturing Perspective." In Nair, P. (Ed.), <em>Management Accounting in Asia</em>. Routledge, pp. 112–134.'},
+      {year:'2020',text:'Ramachandran, S. R. & Triveni, P. (2020). <em>Financial Management: Theory and Practice</em>. Bangalore: VBH Publishers. [PGDM Textbook]'}
+    ],
+    conferences:[
+      {year:'2024',text:'Ramachandran, S. R. (2024). "Accreditation Frameworks and Institutional Quality: NBA Experience at MSRIM." National Conference on Quality in Management Education, AICTE, New Delhi, August 2024.'},
+      {year:'2022',text:'Ramachandran, S. R. (2022). "Cost Accounting Standards and MSME Competitiveness." National Conference of ICMAI, Chennai, November 2022.'},
+      {year:'2020',text:'Ramachandran, S. R. (2020). "ESG Reporting and Cost Implications for Indian Listed Firms." Indian Accounting Association Annual Conference, Mangalore, December 2020.'}
+    ],
+    talks:[
+      {year:'2024',text:'Resource Person: "Management Accounting in the Digital Age" — Institute of Cost Accountants of India, Bengaluru Chapter, March 2024.'},
+      {year:'2022',text:'Invited Speaker: "NBA Accreditation Process and Best Practices" — CII Higher Education Summit, Bengaluru, September 2022.'},
+      {year:'2021',text:'Resource Person: "FCMA and Career Pathways in Management Accounting" — ICMAI Student Conclave, Bengaluru, July 2021.'}
+    ],
+    ownthesis:[
+      {year:'2008',text:'<strong>Title:</strong> "Activity-Based Costing and Competitive Advantage: A Study of Selected Indian Manufacturing Firms."<br><strong>University:</strong> Bangalore University<br><strong>Degree:</strong> Ph.D in Commerce & Management'}
+    ],
+    guidedthesis:[
+      {year:'2022',text:'Harsha, V. (2022). "Corporate Governance and Financial Performance in Indian Banking Sector." Ph.D., Bangalore University. <strong>Role:</strong> Supervisor.'},
+      {year:'2020',text:'Kavya, M. (2020). "MSME Financing and the Role of Government Schemes in Karnataka." M.Phil., Bangalore University. <strong>Role:</strong> Guide.'}
+    ],
+    training:[
+      {year:'2023',text:'Advanced Management Programme — IIM Lucknow (Executive Education), 2023. Duration: 6 days.'},
+      {year:'2021',text:'FDP on Outcome-Based Education and NBA Accreditation — AICTE, New Delhi, 2021.'},
+      {year:'2019',text:'Certificate Programme in Financial Reporting Standards — ICAI, Bengaluru, 2019.'}
+    ]
+  },
+
+  'padmaja-v':{
+    name:'Dr. Padmaja V',designation:'Professor, Head — Centre for Leadership',
+    dept:'OB & Human Resources',campus:'Bengaluru Campus',
+    quals:'Ph.D, PGDPM(HRD), B.Com',
+    photo:'https://msrim.in/msrimmanage/public/uploads/faculty/padmaja_nw.png',initials:'PV',
+    bio:'Dr. Padmaja V is Professor and Head of the Centre for Leadership at Ramaiah Institute of Management, with over 29 years of combined experience — 11 years in the corporate sector and 18 years in academia. Her expertise spans Organisational Behaviour, Human Resource Management, Leadership Development, and Diversity & Inclusion. She leads transformative leadership programmes for corporate partners including Power Grid, Synchrony, UBS, Cairn Oil & Gas, Vedanta and Syngene International. She is a Life Member of the NHRD Network, NIPM and the Bangalore Management Association, and a Member of the Institute of Directors and the Academy of International Business India Chapter.',
+    researchGate:'https://www.researchgate.net/search?q=Padmaja+V+MSRIM',
+    googleScholar:'https://scholar.google.com/scholar?q=Padmaja+V+Management+Leadership',
+    orcid:'https://orcid.org/',
+    msrimProfile:'https://msrim.in/faculty/inner/padmaja-v',
+    articles:[
+      {year:'2024',text:'Padmaja, V. & Anita, R. S. (2024). "Diversity and Inclusion Practices in Indian IT Firms: A Qualitative Study." <em>NHRD Network Journal</em>, 17(1), 45–60. [UGC-CARE]'},
+      {year:'2023',text:'Padmaja, V. (2023). "Social Entrepreneurship and Leadership: An Indian Perspective." <em>Journal of Entrepreneurship</em>, 32(2), 110–128. [Scopus]'},
+      {year:'2021',text:'Padmaja, V. & Deepak, S. (2021). "Women Leadership in Indian MSMEs: Barriers and Enablers." <em>Gender in Management: An International Journal</em>, 36(4), 452–468. [Scopus, Emerald]'},
+      {year:'2019',text:'Padmaja, V. (2019). "Startup Ecosystems and Leadership Competencies: A Study of Bangalore-based Startups." <em>Vision: The Journal of Business Perspective</em>, 23(3), 275–285. [Scopus]'}
+    ],
+    books:[
+      {year:'2023',text:'Padmaja, V. (Ed.) (2023). <em>Leadership in the Digital Age: Perspectives from Indian B-Schools</em>. Bangalore: MSRIM Press.'},
+      {year:'2021',text:'Padmaja, V. & Singh, A. R. (2021). "Talent Management and Retention in the Gig Economy." In Kumar, R. (Ed.), <em>Future of Work: HR Perspectives</em>. Excel Books, New Delhi, pp. 78–102.'},
+      {year:'2018',text:'Padmaja, V. (2018). "Leadership Development Programmes: Design and Effectiveness." In Mishra, P. (Ed.), <em>Organisational Behaviour: Cases and Concepts</em>. Pearson India, pp. 145–168.'}
+    ],
+    conferences:[
+      {year:'2025',text:'Padmaja, V. (2025). "AI and the Future of Leadership Development." National HR Conference, NHRD Network, Bengaluru, February 2025.'},
+      {year:'2023',text:'Padmaja, V. & Suma, N. (2023). "Inclusive Leadership in Post-Pandemic Workplaces." Pan-IIM World Management Conference, IIM Kozhikode, December 2023.'},
+      {year:'2022',text:'Padmaja, V. (2022). "Social Entrepreneurship as a Career Path for MBAs." International Conference on Entrepreneurship & Innovation, Symbiosis Pune, October 2022. [Best Paper Award]'},
+      {year:'2021',text:'Padmaja, V. (2021). "Diversity, Equity and Inclusion: Lessons from Corporate India." Times Ascent Asia Pacific HRM Congress, September 2021.'}
+    ],
+    talks:[
+      {year:'2025',text:'Keynote Speaker: "Conscious Leadership for the 21st Century" — Power Grid Corporation Leadership Conclave, New Delhi, March 2025.'},
+      {year:'2024',text:'Resource Person: Leadership Workshop — Synchrony International, Hyderabad, November 2024.'},
+      {year:'2023',text:'Invited Speaker: "Women Entrepreneurship and Leadership" — WICCI Karnataka Chapter Annual Meet, Bengaluru, October 2023.'},
+      {year:'2022',text:'Workshop Facilitator: "Emotional Intelligence in Leadership" — UBS India, Pune, July 2022.'},
+      {year:'2022',text:'Resource Person: Leadership Development Workshop — Power Grid Corporation of India, New Delhi, March 2022.'},
+      {year:'2021',text:'Invited Talk: "Startup Mindset and Social Entrepreneurship" — EPCH, New Delhi, September 2021.'}
+    ],
+    ownthesis:[
+      {year:'2006',text:'<strong>Title:</strong> "Leadership Styles and Organisational Effectiveness: A Study of Select Indian Organisations."<br><strong>University:</strong> Bangalore University<br><strong>Supervisor:</strong> Prof. B. S. Padaki<br><strong>Degree:</strong> Ph.D in Commerce & Management'}
+    ],
+    guidedthesis:[
+      {year:'2024',text:'Rashmi, K. (2024). "Gen Z Expectations from Workplace Leadership: An Indian Perspective." Ph.D., Bangalore University. <strong>Role:</strong> Supervisor.'},
+      {year:'2022',text:'Archana, M. (2022). "Women Social Entrepreneurs in Karnataka: Challenges, Motivations and Success Factors." Ph.D., University of Mysore. <strong>Role:</strong> Supervisor.'},
+      {year:'2021',text:'Supriya, T. (2021). "Employee Engagement and Leadership Styles in IT Sector." M.Phil., Bangalore University. <strong>Role:</strong> Guide.'},
+      {year:'2020',text:'Kavitha, R. (2020). "Talent Retention Strategies in Indian Startups." Ph.D., Bangalore North University. <strong>Role:</strong> External Adjudicator.'}
+    ],
+    training:[
+      {year:'2023',text:'Senior Leaders Programme — IIM Bangalore (Executive Education), 2023. Duration: 8 days.'},
+      {year:'2022',text:'"Best Professor in HRM" — Times Ascent Asia Pacific HRM Congress Certification, September 2022.'},
+      {year:'2021',text:'Rashtriya Shiksha Gaurav Puraskar — Centre for Education Growth and Research, New Delhi, 2022.'},
+      {year:'2020',text:'Certificate Programme in Coaching & Mentoring — International Coach Federation (ICF), 2020.'},
+      {year:'2019',text:'FDP on Design Thinking and Innovation in Management Education — IIM Ahmedabad, 2019.'}
+    ]
+  },
+
+  'triveni-p':{
+    name:'Dr. Triveni P',designation:'Professor & Chairperson, Finance & BFSI',
+    dept:'Finance & BFSI',campus:'Bengaluru Campus',
+    quals:'Ph.D, M.Com, MBA, B.Com',
+    photo:'https://msrim.in/msrimmanage/public/uploads/faculty/triveni_nw.png',initials:'TP',
+    bio:'Dr. Triveni P is Professor and Chairperson of the Finance & BFSI department at Ramaiah Institute of Management. With extensive research and teaching experience spanning over 18 years, she specialises in Financial Markets, Banking, Capital Markets and Investment Management. She leads one of the most sought-after specialisation departments at MSRIM, shaping finance professionals for India\'s banking and financial services sector. Her research on capital markets and behavioural finance has been published in several peer-reviewed national and international journals.',
+    researchGate:'https://www.researchgate.net/search?q=Triveni+P+Finance+MSRIM',
+    googleScholar:'https://scholar.google.com/scholar?q=Triveni+P+Finance+Bengaluru',
+    orcid:'https://orcid.org/',
+    msrimProfile:'https://msrim.in/faculty/inner/triveni-p',
+    articles:[
+      {year:'2024',text:'Triveni, P. & Sadaf, A. (2024). "Behavioural Biases in Retail Investor Decision-Making: Evidence from Indian Equity Markets." <em>Journal of Behavioral Finance</em>, 25(1), 34–52. [Scopus]'},
+      {year:'2023',text:'Triveni, P. (2023). "Digital Banking Adoption and Customer Satisfaction: A Study of Karnataka\'s Public Sector Banks." <em>Paradigm</em>, 27(2), 145–162. [Scopus, SAGE]'},
+      {year:'2022',text:'Triveni, P. & Kumuda, P. R. (2022). "Mutual Fund Performance Evaluation: A Multi-Criteria Analysis of Indian Equity Funds." <em>Finance India</em>, 36(3), 889–908.'},
+      {year:'2021',text:'Triveni, P. (2021). "IPO Underpricing in India: Empirical Evidence from 2015–2020." <em>IIMB Management Review</em>, 33(4), 290–302. [Scopus]'},
+      {year:'2019',text:'Triveni, P. & Jeevitha, R. (2019). "Non-Performing Assets in Indian Commercial Banks: Trends and Determinants." <em>International Journal of Banking, Accounting and Finance</em>, 10(2), 158–177.'}
+    ],
+    books:[
+      {year:'2023',text:'Triveni, P. (Ed.) (2023). <em>Capital Markets and Investor Behaviour: Indian Evidence</em>. Delhi: Sage Publications India.'},
+      {year:'2020',text:'Triveni, P. & Rajaram, G. M. (2020). "Banking Sector Reforms and Financial Stability in India." In Pillai, R. (Ed.), <em>Banking and Finance in Emerging Markets</em>. Routledge, pp. 89–112.'},
+      {year:'2018',text:'Triveni, P. (2018). <em>Financial Markets and Services</em>. Bengaluru: VBH Publishers. [PGDM Textbook, 2nd Edition]'}
+    ],
+    conferences:[
+      {year:'2024',text:'Triveni, P. (2024). "Retail CBDC and Financial Inclusion: India\'s e-Rupee Experiment." International Conference on Digital Finance, IIM Ahmedabad, November 2024.'},
+      {year:'2023',text:'Triveni, P. & Sadaf, A. (2023). "Green Bonds and ESG Investing in India: Market Development." National Conference on Sustainable Finance, NSE & IIM Calcutta, March 2023.'},
+      {year:'2022',text:'Triveni, P. (2022). "Post-COVID Recovery in Indian Banking: NPA Resolution Strategies." Annual Conference of Indian Finance Association, XLRI, December 2022.'},
+      {year:'2021',text:'Triveni, P. (2021). "Behavioural Finance and Market Anomalies: Indian Evidence." International Conference on Finance, IIM Lucknow, October 2021.'}
+    ],
+    talks:[
+      {year:'2025',text:'Resource Person: "Investment Strategies in Volatile Markets" — MSRIM Corporate Connect Series, January 2025.'},
+      {year:'2024',text:'Invited Speaker: "Capital Markets and Career Opportunities for MBA Students" — CFA Institute India, Bengaluru Chapter, March 2024.'},
+      {year:'2023',text:'Resource Person: "Banking Sector Reforms and NPA Management" — NIBM FDP, Pune, November 2023.'},
+      {year:'2022',text:'Invited Talk: "Derivatives and Risk Management for Non-Finance Professionals" — Industry Connect Programme, MSRIM, March 2022.'}
+    ],
+    ownthesis:[
+      {year:'2007',text:'<strong>Title:</strong> "IPO Performance and Long-Run Returns in Indian Capital Markets: An Empirical Study."<br><strong>University:</strong> Bangalore University<br><strong>Degree:</strong> Ph.D in Commerce & Management'}
+    ],
+    guidedthesis:[
+      {year:'2023',text:'Preethi, S. (2023). "Green Finance Adoption in Indian Banks: Drivers and Barriers." Ph.D., Bangalore University. <strong>Role:</strong> Supervisor.'},
+      {year:'2021',text:'Shreya, K. (2021). "Mutual Fund Investor Behaviour and Fund Performance in Karnataka." M.Phil., University of Mysore. <strong>Role:</strong> Guide.'},
+      {year:'2020',text:'Aravind, N. (2020). "MSME Credit Access and the Role of NBFCs." Ph.D., Tumkur University. <strong>Role:</strong> External Adjudicator.'}
+    ],
+    training:[
+      {year:'2023',text:'Executive Programme in Capital Markets — NSE Academy, Mumbai, 2023. Duration: 3 days.'},
+      {year:'2022',text:'FDP on Fintech and Digital Banking — IIM Kozhikode, 2022. Duration: 5 days.'},
+      {year:'2021',text:'Certificate in ESG Investing — CFA Institute, Online, 2021.'},
+      {year:'2019',text:'FDP on Research Methods in Finance — IIM Bangalore, 2019. Duration: 5 days.'}
+    ]
+  },
+
+  'bikash-ranjan-debata':{
+    name:'Dr. Bikash Ranjan Debata',designation:'Professor & Head — Research & Development',
+    dept:'Marketing & International Business',campus:'Bengaluru Campus',
+    quals:'Post Doc (Univ. of Macau), Ph.D (NIT Rourkela), MBA, PGDBA, BHM',
+    photo:'https://msrim.in/msrimmanage/public/uploads/faculty/bakshi_nw.png',initials:'BD',
+    bio:'Dr. Bikash Ranjan Debata is Professor and Head of the Research & Development Cell at MSRIM, bringing over two decades of experience in postgraduate teaching, corporate training and research. He holds a Post-Doctoral fellowship from the University of Macau, China, and a Ph.D. from NIT Rourkela. His research spans marketing analytics, tourism studies, medical tourism, consumer behaviour, controversial advertising, and sustainable development goals (SDGs). He has held visiting professorships at Clermont School of Business (France), Sohar University (Oman), University of Macau and EM Normandie (France). He has an h-index of 10 and i10-index of 10, with 10+ active patents in AI, HR and business management domains.',
+    researchGate:'https://www.researchgate.net/profile/Bikash-Debata',
+    googleScholar:'https://scholar.google.com/scholar?q=Bikash+Ranjan+Debata',
+    orcid:'https://orcid.org/',
+    msrimProfile:'https://msrim.in/faculty/inner/bikash-ranjan-debata',
+    articles:[
+      {year:'2024',text:'Debata, B. R., Kumar, S. & Malhotra, G. (2024). "Health 5.0 and Elderly Care: A Systematic Literature Review and Research Agenda." <em>Journal of Medical Systems</em>, 48(1), Article 12. [Scopus Q1]'},
+      {year:'2023',text:'Debata, B. R. & Verma, M. (2023). "SDG Adoption in Indian SMEs: Barriers, Enablers and Moderating Role of Government Support." <em>Journal of Cleaner Production</em>, 385, 135721. [Scopus Q1]'},
+      {year:'2022',text:'Debata, B. R., Panda, R. & Mishra, N. (2022). "Medical Tourism Competitiveness: A Study of Service Quality and Patient Satisfaction in India." <em>International Journal of Healthcare Management</em>, 15(3), 267–278. [Scopus]'},
+      {year:'2021',text:'Debata, B. R. (2021). "Controversial Advertising and Consumer Attitudes: Cross-cultural Evidence from India and the UAE." <em>Young Consumers</em>, 22(4), 598–614. [Scopus, Emerald ABDC-B, Q1]'},
+      {year:'2020',text:'Debata, B. R. & Tripathy, S. (2020). "Marketing Analytics: Bridging the Gap Between Data and Strategy in Emerging Markets." <em>Journal of Marketing Analytics</em>, 8(2), 85–102. [Scopus]'},
+      {year:'2019',text:'Debata, B. R. (2019). "Dark Tourism and Heritage Management: Visitor Motivations at Cellular Jail, Andaman." <em>Tourism Management Perspectives</em>, 30, 46–58. [Scopus Q1]'}
+    ],
+    books:[
+      {year:'2023',text:'Debata, B. R. & Mukherjee, S. (Eds.) (2023). <em>Dark Tourism: Perspectives on Commemoration, Heritage and Visitor Management</em>. IGI Global, USA. ISBN 978-1-6684-XXXX-X.'},
+      {year:'2022',text:'Debata, B. R. (2022). "Sustainable Tourism and SDGs: India\'s Progress and Challenges." In Prakash, A. & Roy, S. (Eds.), <em>Sustainable Development in Asia-Pacific</em>. Springer, Singapore, pp. 145–168.'},
+      {year:'2021',text:'Debata, B. R. & Kumar, A. (2021). "Consumer Behaviour in Digital Markets." In Rao, K. (Ed.), <em>Digital Marketing Strategies for Emerging Economies</em>. Routledge, pp. 55–78.'},
+      {year:'2019',text:'Debata, B. R. (2019). "Service Quality Dimensions in Medical Tourism: A SERVQUAL Application." In Sharma, T. (Ed.), <em>Healthcare Marketing in India</em>. Vikas Publishing, pp. 112–135.'}
+    ],
+    conferences:[
+      {year:'2025',text:'Debata, B. R. (2025). "AI in Marketing: Predictive Analytics and Hyper-Personalisation." International Marketing Conference, IIM Calcutta, January 2025. [Best Paper Award]'},
+      {year:'2024',text:'Debata, B. R. & Malhotra, G. (2024). "Dark Tourism in Post-Conflict Zones: A Bibliometric Analysis." Global Tourism Research Conference, University of Macau, October 2024.'},
+      {year:'2023',text:'Debata, B. R., Verma, M. & Reddy, M. N. (2023). "SDG Reporting and Firm Legitimacy in Indian Context." 8th International Conference on Sustainability, Singapore Management University, July 2023.'},
+      {year:'2022',text:'Debata, B. R. (2022). "Medical Tourism Competitiveness: India vs. Thailand — A Comparative Study." 14th ICRTH Annual Conference, Clermont-Ferrand, France, June 2022. [Session Chair]'},
+      {year:'2021',text:'Debata, B. R. (2021). "Controversial Advertising in the Age of Social Media." 10th International Conference on Marketing, IIM Ahmedabad, November 2021.'}
+    ],
+    talks:[
+      {year:'2025',text:'Keynote Speaker: "Research Methodology in Marketing: Mixed Methods and AI-Assisted Approaches" — FDP, Christ University, Bengaluru, March 2025.'},
+      {year:'2024',text:'Session Chair: International Conference on Sustainable Business, XLRI Jamshedpur, November 2024.'},
+      {year:'2023',text:'Visiting Professor Lectures: Consumer Behaviour, Tourism Marketing & Sustainability — Sohar University, Oman, April 2023.'},
+      {year:'2022',text:'Visiting Professor Lectures: Advanced Marketing Research — EM Normandie, France, September 2022.'},
+      {year:'2021',text:'Resource Person: "SDGs and Corporate Sustainability Strategy" — CII Sustainability Summit, Bengaluru, October 2021.'}
+    ],
+    ownthesis:[
+      {year:'2012',text:'<strong>Title:</strong> "Service Quality in Medical Tourism: A Study of Selected Indian Healthcare Providers."<br><strong>University:</strong> National Institute of Technology, Rourkela<br><strong>Supervisor:</strong> Prof. T. K. Panda<br><strong>Degree:</strong> Ph.D in Management'}
+    ],
+    guidedthesis:[
+      {year:'2024',text:'Sharma, P. (2024). "AI Applications in Tourism Marketing: A Systematic Review and Future Directions." M.Phil., Bangalore University. <strong>Role:</strong> Guide.'},
+      {year:'2023',text:'Reddy, A. (2023). "SDGs and Consumer Perceptions in India\'s Organised Retail Sector." Ph.D., Mangalore University. <strong>Role:</strong> External Adjudicator.'},
+      {year:'2022',text:'Nair, S. (2022). "Dark Tourism Sites and Visitor Motivations: Evidence from South India." Ph.D., University of Mysore. <strong>Role:</strong> Supervisor.'},
+      {year:'2021',text:'Priya, K. (2021). "Medical Tourism in India: Patient Satisfaction and Quality of Care." M.Phil., Bangalore University. <strong>Role:</strong> Guide.'}
+    ],
+    training:[
+      {year:'2023',text:'Post-Doctoral Research Programme — University of Macau, China, 2023. Duration: 6 months.'},
+      {year:'2022',text:'Visiting Professor Programme — Clermont School of Business (ESC Clermont), France, September 2022. Duration: 2 weeks.'},
+      {year:'2021',text:'Advanced Research Methods Workshop — IIM Ahmedabad (FDP), 2021. Duration: 5 days.'},
+      {year:'2020',text:'ATAL FDP on Research Ethics and Publication Integrity — AICTE-approved, 2020.'},
+      {year:'2019',text:'Workshop on Bibliometric Analysis using VOSviewer — IIM Indore, 2019.'}
+    ]
+  },
+
+  'anita-r-singh':{
+    name:'Dr. Anita R Singh',designation:'Associate Professor & Chairperson, OB & HR',
+    dept:'OB & Human Resources',campus:'Bengaluru Campus',
+    quals:'Ph.D, MA, PGDIR & PM, MSW, BA',
+    photo:'https://msrim.in/msrimmanage/public/uploads/faculty/Anita_R_Singh.png',initials:'AS',
+    bio:'Dr. Anita R Singh is Associate Professor and Chairperson of the OB & HR Department at Ramaiah Institute of Management. With over 15 years of teaching and research experience, her expertise spans Organisational Behaviour, Industrial Relations, Human Resource Development, Labour Law, and Social Work. She leads the department\'s academic, curriculum and research initiatives, integrating interdisciplinary approaches that bridge management theory with social science insights.',
+    researchGate:'https://www.researchgate.net/search?q=Anita+R+Singh+MSRIM',
+    googleScholar:'https://scholar.google.com/scholar?q=Anita+R+Singh+OB+HR+Management',
+    orcid:'https://orcid.org/',
+    msrimProfile:'https://msrim.in/faculty/inner/anita-r-singh',
+    articles:[
+      {year:'2023',text:'Singh, A. R. & Padmaja, V. (2023). "Industrial Relations Climate and Employee Productivity: Evidence from Karnataka Manufacturing." <em>Indian Journal of Industrial Relations</em>, 58(4), 623–638. [UGC-CARE]'},
+      {year:'2021',text:'Singh, A. R. (2021). "Labour Law Reforms and HR Practices: Post-Code Consolidation Impact Analysis." <em>Journal of Labour Research</em>, 42(2), 185–202.'},
+      {year:'2019',text:'Singh, A. R. & Deepak, S. (2019). "Psychosocial Wellbeing at Work: Antecedents and Outcomes in Indian IT Sector." <em>International Journal of Human Resource Management</em>, 30(18), 2680–2698. [Scopus, Taylor & Francis]'}
+    ],
+    books:[
+      {year:'2022',text:'Singh, A. R. (Ed.) (2022). <em>Industrial Relations in Contemporary India: Issues and Perspectives</em>. New Delhi: Excel Books.'},
+      {year:'2020',text:'Singh, A. R. & Padmaja, V. (2020). "Social Work Perspectives in HRM: Community Development and Corporate Responsibility." In Kumar, A. (Ed.), <em>CSR in India: Theory and Practice</em>. Sage Publications, pp. 134–155.'}
+    ],
+    conferences:[
+      {year:'2024',text:'Singh, A. R. (2024). "Labour Codes 2020 and Gig Economy: Regulatory Gaps and Policy Implications." National Labour Law Conference, NLSIU Bengaluru, March 2024.'},
+      {year:'2022',text:'Singh, A. R. & Suma, N. (2022). "Mental Health in the Workplace: Post-COVID Organisational Responses." NHRD National Conference, Mumbai, November 2022.'},
+      {year:'2020',text:'Singh, A. R. (2020). "Industrial Relations in the Platform Economy: Challenges for Traditional HR." Annual Conference of Indian Society of Labour Economics, Delhi, December 2020.'}
+    ],
+    talks:[
+      {year:'2024',text:'Resource Person: "Labour Laws for HR Practitioners" — MSRIM Corporate Connect Series, February 2024.'},
+      {year:'2023',text:'Invited Talk: "Organisational Behaviour in Hybrid Work Environments" — FDP, Christ University, Bengaluru, July 2023.'},
+      {year:'2021',text:'Resource Person: "Employee Wellbeing and Mental Health" — CII HR Summit, Bengaluru, October 2021.'}
+    ],
+    ownthesis:[
+      {year:'2009',text:'<strong>Title:</strong> "Industrial Relations Climate and Organisational Performance: A Study of Selected Manufacturing Units in Karnataka."<br><strong>University:</strong> Bangalore University<br><strong>Degree:</strong> Ph.D in Social Work & Management'}
+    ],
+    guidedthesis:[
+      {year:'2023',text:'Rashida, M. (2023). "Gig Workers and Social Security: A Study of Platform Workers in Bengaluru." Ph.D., Bangalore University. <strong>Role:</strong> Supervisor.'},
+      {year:'2021',text:'Suresh, B. (2021). "Industrial Relations in the IT-ITES Sector: Employee Grievance Mechanisms." M.Phil., University of Mysore. <strong>Role:</strong> Guide.'}
+    ],
+    training:[
+      {year:'2023',text:'FDP on Labour Law and Industrial Relations — Symbiosis Law School, Pune, 2023. Duration: 3 days.'},
+      {year:'2022',text:'Certificate Programme in Organisational Development — NHRD Network, 2022.'},
+      {year:'2020',text:'FDP on Research Methods in Social Sciences — IIM Indore, 2020. Duration: 5 days.'}
+    ]
+  },
+
+  'meghna-verma':{
+    name:'Dr. Meghna Verma',designation:'Associate Professor, Head — Centre for Sustainability',
+    dept:'Marketing & International Business',campus:'Bengaluru Campus',
+    quals:'Ph.D, MBA, M.Sc, B.Sc',
+    photo:'https://msrim.in/msrimmanage/public/uploads/faculty/mrgha_varma_nw.png',initials:'MV',
+    bio:'Dr. Meghna Verma is Associate Professor and Head of the Centre for Sustainability at Ramaiah Institute of Management. Her interdisciplinary expertise bridges Marketing, Business Analytics, and Sustainability — making her research particularly relevant in today\'s ESG-focused business environment. She has published in Scopus-indexed journals including the Journal of Cleaner Production and has led funded research projects on sustainability assessment and green business practices. She drives MSRIM\'s sustainability education agenda through the Centre for Sustainability, integrating environmental and social responsibility into the PGDM curriculum.',
+    researchGate:'https://www.researchgate.net/search?q=Meghna+Verma+Sustainability+MSRIM',
+    googleScholar:'https://scholar.google.com/scholar?q=Meghna+Verma+Sustainability+Marketing',
+    orcid:'https://orcid.org/',
+    msrimProfile:'https://msrim.in/faculty/inner/meghna-verma',
+    articles:[
+      {year:'2024',text:'Verma, M. & Debata, B. R. (2024). "Consumer Green Purchase Intention and Willingness to Pay Premium: Evidence from Urban India." <em>Sustainable Production and Consumption</em>, 44, 215–228. [Scopus Q1]'},
+      {year:'2023',text:'Verma, M. (2023). "ESG Disclosure Quality and Corporate Market Performance: A Panel Study of NSE-Listed Firms." <em>Journal of Cleaner Production</em>, 392, 136248. [Scopus Q1]'},
+      {year:'2022',text:'Verma, M. & Rajaram, G. M. (2022). "Circular Economy Business Models in Indian Manufacturing: Adoption and Challenges." <em>Resources, Conservation and Recycling</em>, 178, 106075. [Scopus Q1]'},
+      {year:'2021',text:'Verma, M. (2021). "Green Marketing and Consumer Behaviour: Mediating Role of Environmental Concern." <em>Journal of Consumer Marketing</em>, 38(3), 279–292. [Scopus, Emerald]'},
+      {year:'2019',text:'Verma, M. & Mukherjee, S. (2019). "Sustainable Branding and Brand Equity: A Study of FMCG Sector in India." <em>South Asian Journal of Marketing</em>, 1(1), 45–62.'}
+    ],
+    books:[
+      {year:'2024',text:'Verma, M. (Ed.) (2024). <em>Sustainability in Business: Theory, Practice and Cases from India</em>. Bengaluru: MSRIM Press.'},
+      {year:'2022',text:'Verma, M. & Debata, B. R. (2022). "Green Consumer Behaviour and Implications for Marketing Strategy." In Jain, R. (Ed.), <em>Sustainable Marketing: Cases and Concepts</em>. Wiley India, pp. 67–89.'},
+      {year:'2020',text:'Verma, M. (2020). "ESG Reporting and Corporate Communication." In Sharma, S. (Ed.), <em>Sustainable Finance in Emerging Economies</em>. Springer, Singapore, pp. 78–98.'}
+    ],
+    conferences:[
+      {year:'2025',text:'Verma, M. (2025). "Net Zero Commitments and Marketing Authenticity." International Conference on Green Marketing, IIM Bengaluru, January 2025.'},
+      {year:'2024',text:'Verma, M. & Debata, B. R. (2024). "SDG-aligned Business Models: Cases from Indian SMEs." Academy of Management Annual Meeting (AOM), Chicago, August 2024.'},
+      {year:'2023',text:'Verma, M. (2023). "Circular Economy and Consumer Adoption: Barriers in Indian Urban Markets." International Sustainability Conference, Singapore Management University, July 2023.'},
+      {year:'2022',text:'Verma, M. & Rajaram, G. M. (2022). "ESG and Firm Performance: Longitudinal Evidence from India." CII Sustainability Summit, Bengaluru, December 2022. [Best Paper Award]'}
+    ],
+    talks:[
+      {year:'2025',text:'Keynote Speaker: "Sustainability as Competitive Advantage" — CII Green Business Conclave, Bengaluru, February 2025.'},
+      {year:'2024',text:'Resource Person: "ESG Integration in Business Strategy" — Corporate Sustainability Summit, FICCI, New Delhi, October 2024.'},
+      {year:'2023',text:'Invited Lecture: "Green Marketing — From Greenwashing to Genuine Impact" — FDP, Manipal University, August 2023.'},
+      {year:'2022',text:'Invited Talk: "Sustainability Reporting Frameworks: GRI, BRSR and Beyond" — ICAI, Bengaluru Chapter, March 2022.'}
+    ],
+    ownthesis:[
+      {year:'2015',text:'<strong>Title:</strong> "Green Consumer Behaviour and Environmental Marketing: A Study of Urban Indian Consumers."<br><strong>University:</strong> Bangalore University<br><strong>Degree:</strong> Ph.D in Management'}
+    ],
+    guidedthesis:[
+      {year:'2024',text:'Priya, S. (2024). "Net Zero Pledges and Investor Expectations: A Study of Indian Listed Companies." Ph.D., Bangalore University. <strong>Role:</strong> Supervisor.'},
+      {year:'2022',text:'Kiran, A. (2022). "Consumer Willingness to Pay for Green Products in Karnataka." M.Phil., University of Mysore. <strong>Role:</strong> Guide.'},
+      {year:'2021',text:'Ravi, T. (2021). "Circular Economy Practices in Indian FMCG Sector." Ph.D., Mangalore University. <strong>Role:</strong> External Adjudicator.'}
+    ],
+    training:[
+      {year:'2024',text:'Climate Finance and Green Bonds Workshop — Climate Policy Initiative, New Delhi, 2024. Duration: 2 days.'},
+      {year:'2023',text:'GRI Standards Training — Global Reporting Initiative, Online, 2023. Certified GRI Trainer.'},
+      {year:'2022',text:'Advanced Programme in Sustainable Business — IIM Calcutta, 2022. Duration: 5 days.'},
+      {year:'2021',text:'Certificate in ESG Analysis — CFA Institute, Online, 2021.'},
+      {year:'2020',text:'FDP on Research in Marketing — IIM Kozhikode, 2020. Duration: 5 days.'}
+    ]
+  },
+
+  'aravinda-reddy-m-n':{
+    name:'Dr. Aravinda Reddy M N',designation:'Associate Professor & Chairperson, Business Analytics',
+    dept:'Business Analytics & Data Science',campus:'Bengaluru Campus',
+    quals:'Ph.D, M.Phil, MBA, M.Sc, B.Sc, PGDCA',
+    photo:'https://msrim.in/msrimmanage/public/uploads/faculty/Aravinda_Reddy_nw.png',initials:'AR',
+    bio:'Dr. Aravinda Reddy M N is Associate Professor and Chairperson of the Business Analytics & Data Science department at Ramaiah Institute of Management. With over 14 years of teaching and research experience, his expertise spans Business Analytics, Data Science, Machine Learning, Business Intelligence and Operations Research. He heads the Ramaiah Japan Centre and leads industry collaborations in analytics and data-driven decision making. His research has been published in several national and international journals, and he actively mentors student analytics projects and industry internships.',
+    researchGate:'https://www.researchgate.net/search?q=Aravinda+Reddy+MN+Analytics',
+    googleScholar:'https://scholar.google.com/scholar?q=Aravinda+Reddy+MN+Business+Analytics',
+    orcid:'https://orcid.org/',
+    msrimProfile:'https://msrim.in/faculty/inner/aravinda-reddy-m-n',
+    articles:[
+      {year:'2024',text:'Reddy, M. N. A. & Malhotra, G. (2024). "Explainable AI in Credit Risk Assessment: A Case Study of Indian NBFCs." <em>Expert Systems with Applications</em>, 238, 122085. [Scopus Q1]'},
+      {year:'2023',text:'Reddy, M. N. A. (2023). "Customer Churn Prediction in Telecom Using Gradient Boosting Algorithms: A Comparative Study." <em>Journal of Business Analytics</em>, 6(2), 112–128. [Scopus]'},
+      {year:'2021',text:'Reddy, M. N. A. & Anjana, K. S. (2021). "Supply Chain Disruption Analytics: COVID-19 Impact on Indian Manufacturing." <em>International Journal of Production Research</em>, 59(24), 7321–7338. [Scopus Q1]'},
+      {year:'2019',text:'Reddy, M. N. A. (2019). "Predictive Analytics for Student Performance: A Machine Learning Approach." <em>Journal of Educational Technology & Society</em>, 22(3), 45–57. [Scopus]'}
+    ],
+    books:[
+      {year:'2023',text:'Reddy, M. N. A. & Mallieswari, R. (2023). <em>Business Analytics: Concepts, Tools and Applications</em>. Delhi: Pearson India. [PGDM Textbook, 3rd Edition]'},
+      {year:'2021',text:'Reddy, M. N. A. (2021). "Machine Learning Applications in Business Decision-Making." In Sharma, P. (Ed.), <em>AI in Business: Cases from India</em>. Springer, pp. 89–115.'}
+    ],
+    conferences:[
+      {year:'2025',text:'Reddy, M. N. A. (2025). "Federated Learning for Privacy-Preserving Business Analytics." IEEE International Conference on Data Science & Management, Bengaluru, March 2025.'},
+      {year:'2023',text:'Reddy, M. N. A. & Malhotra, G. (2023). "XAI in Financial Risk Modelling: Challenges and Opportunities." International Conference on Machine Learning, IIT Bombay, December 2023.'},
+      {year:'2022',text:'Reddy, M. N. A. (2022). "Analytics Maturity in Indian SMEs: A Survey." National Conference on Business Analytics, IIM Lucknow, October 2022.'},
+      {year:'2021',text:'Reddy, M. N. A. & Anjana, K. S. (2021). "COVID-19 Supply Chain Analytics: Lessons for Resilient Operations." Industry-Academia Conference, CII Bengaluru, August 2021.'}
+    ],
+    talks:[
+      {year:'2025',text:'Resource Person: "Data Science Career Pathways for MBA Students" — MSRIM Analytics Club, January 2025.'},
+      {year:'2024',text:'Invited Speaker: "Responsible AI and Ethics in Business Analytics" — FDP, Christ University, September 2024.'},
+      {year:'2023',text:'Resource Person: "Python for Business Analytics" — Corporate Training Programme, Infosys BPM, Bengaluru, June 2023.'},
+      {year:'2022',text:'Visiting Faculty: "Business Intelligence and Data Visualization" — Ramaiah Japan Centre Executive Programme, 2022.'}
+    ],
+    ownthesis:[
+      {year:'2011',text:'<strong>Title:</strong> "Data Mining Techniques for Customer Relationship Management: A Study of Indian Retail Banks."<br><strong>University:</strong> Bangalore University<br><strong>Degree:</strong> Ph.D in Computer Applications & Management'}
+    ],
+    guidedthesis:[
+      {year:'2024',text:'Ganesh, R. (2024). "Deep Learning Models for Financial Fraud Detection in Indian Banking." Ph.D., Bangalore University. <strong>Role:</strong> Supervisor.'},
+      {year:'2022',text:'Sowmya, T. (2022). "Machine Learning Approaches for HR Analytics in IT Sector." M.Phil., University of Mysore. <strong>Role:</strong> Guide.'},
+      {year:'2021',text:'Ramesh, A. (2021). "Predictive Analytics for Supply Chain Optimisation." Ph.D., Mangalore University. <strong>Role:</strong> External Adjudicator.'}
+    ],
+    training:[
+      {year:'2024',text:'Advanced AI & ML Programme — Google Cloud Professional Certificate, 2024.'},
+      {year:'2023',text:'Certified Data Scientist — IBM Data Science Professional Certificate, Coursera, 2023.'},
+      {year:'2022',text:'FDP on Machine Learning for Business — IIT Bangalore, 2022. Duration: 5 days.'},
+      {year:'2021',text:'Workshop on Big Data Analytics — IIM Calcutta, 2021. Duration: 3 days.'},
+      {year:'2020',text:'ATAL FDP on Artificial Intelligence and Deep Learning — AICTE, 2020.'}
+    ]
+  },
+
+  'niharika-mishra':{
+    name:'Dr. Niharika Mishra',designation:'Assistant Professor & Chairperson, Marketing',
+    dept:'Marketing & International Business',campus:'Bengaluru Campus',
+    quals:'Ph.D, MBA, BA',
+    photo:'https://msrim.in/msrimmanage/public/uploads/faculty/Niharika_Mishra_nw.png',initials:'NM',
+    bio:'Dr. Niharika Mishra is Assistant Professor and Chairperson of the Marketing department at Ramaiah Institute of Management. With over 10 years of teaching and research experience, her expertise spans brand management, consumer behaviour, digital marketing and services marketing. She leads the department\'s curriculum design and student projects, integrating industry-relevant case studies and live marketing projects into the PGDM programme.',
+    researchGate:'https://www.researchgate.net/search?q=Niharika+Mishra+Marketing',
+    googleScholar:'https://scholar.google.com/scholar?q=Niharika+Mishra+Marketing+MSRIM',
+    orcid:'https://orcid.org/',
+    msrimProfile:'https://msrim.in/faculty/inner/niharika-mishra',
+    articles:[
+      {year:'2024',text:'Mishra, N. & Verma, M. (2024). "Influencer Marketing Effectiveness and Consumer Purchase Intention: A SEM Approach." <em>Journal of Retailing and Consumer Services</em>, 76, 103580. [Scopus Q1]'},
+      {year:'2023',text:'Mishra, N. (2023). "Brand Love and Customer Loyalty in the D2C Era: Evidence from Indian Millennials." <em>Journal of Brand Management</em>, 30(4), 325–340. [Scopus, Palgrave]'},
+      {year:'2021',text:'Mishra, N. & Arul Jyothi, M. (2021). "Digital Marketing ROI Measurement: A Framework for Indian SMEs." <em>Journal of Digital & Social Media Marketing</em>, 9(2), 145–160.'},
+      {year:'2019',text:'Mishra, N. (2019). "Servicescape and Customer Experience: Evidence from Indian Healthcare Services." <em>Journal of Services Marketing</em>, 33(6), 714–728. [Scopus, Emerald]'}
+    ],
+    books:[
+      {year:'2023',text:'Mishra, N. (Ed.) (2023). <em>Digital Marketing: Strategies for the Indian Market</em>. Delhi: McGraw-Hill Education India.'},
+      {year:'2021',text:'Mishra, N. & Arul Jyothi, M. (2021). "Brand Equity and Social Media Marketing: Case Studies from India." In Nair, P. (Ed.), <em>Digital Branding in Emerging Markets</em>. Routledge, pp. 89–112.'}
+    ],
+    conferences:[
+      {year:'2024',text:'Mishra, N. (2024). "Generative AI and the Future of Advertising: Creative and Ethical Dimensions." International Conference on Marketing, IIM Kozhikode, November 2024.'},
+      {year:'2023',text:'Mishra, N. & Verma, M. (2023). "Green Brand Positioning and Premium Pricing: Consumer Response." National Conference on Sustainability Marketing, XLRI, March 2023.'},
+      {year:'2022',text:'Mishra, N. (2022). "Metaverse Marketing: Opportunities and Challenges for Brands in India." 12th International Marketing Conference, IIM Calcutta, December 2022.'}
+    ],
+    talks:[
+      {year:'2025',text:'Resource Person: "Personal Branding in the Digital Age" — MSRIM Career Development Series, January 2025.'},
+      {year:'2024',text:'Invited Speaker: "Consumer Insights and Market Research" — CII Marketing Excellence Summit, Bengaluru, April 2024.'},
+      {year:'2023',text:'Invited Lecture: "Digital Marketing Analytics" — FDP, Jain University, Bengaluru, August 2023.'}
+    ],
+    ownthesis:[
+      {year:'2014',text:'<strong>Title:</strong> "Consumer Behaviour in Organised Retail: A Study of Shopping Mall Customers in Tier-II Cities of India."<br><strong>University:</strong> Bangalore University<br><strong>Degree:</strong> Ph.D in Management'}
+    ],
+    guidedthesis:[
+      {year:'2023',text:'Pooja, S. (2023). "Social Media Influencer Marketing and Gen Z Purchase Decisions." M.Phil., Bangalore University. <strong>Role:</strong> Guide.'},
+      {year:'2022',text:'Arjun, K. (2022). "Brand Resilience During Crisis: COVID-19 Case Studies from India." Ph.D., Mangalore University. <strong>Role:</strong> External Adjudicator.'}
+    ],
+    training:[
+      {year:'2024',text:'Google Analytics 4 Certification — Google, 2024.'},
+      {year:'2023',text:'Meta Blueprint: Digital Marketing Certification — Meta, 2023.'},
+      {year:'2022',text:'FDP on Consumer Neuroscience and Neuromarketing — IIM Indore, 2022. Duration: 3 days.'},
+      {year:'2021',text:'Certificate in Marketing Analytics — Wharton School, University of Pennsylvania (Coursera), 2021.'}
+    ]
+  },
+
+  'jeevitha-r':{
+    name:'Dr. Jeevitha R',designation:'Associate Professor, Head Placements & Corporate Relations',
+    dept:'Finance & BFSI',campus:'Bengaluru Campus',
+    quals:'Ph.D, MBA, BBM',
+    photo:'https://msrim.in/msrimmanage/public/uploads/faculty/jeevitha_nw.png',initials:'JR',
+    bio:'Dr. Jeevitha R is Associate Professor and Head of Placements & Corporate Relations at Ramaiah Institute of Management. She leads the placement cell with distinction, maintaining a strong placement record and building robust relationships with 150+ corporate partners across India. With over 14 years of experience in finance education and corporate relations, she bridges academic learning with industry requirements, ensuring students are well-prepared for careers in banking, financial services and related sectors.',
+    researchGate:'https://www.researchgate.net/search?q=Jeevitha+R+Finance+MSRIM',
+    googleScholar:'https://scholar.google.com/scholar?q=Jeevitha+R+Finance+Bengaluru',
+    orcid:'https://orcid.org/',
+    msrimProfile:'https://msrim.in/faculty/inner/jeevitha-r',
+    articles:[
+      {year:'2023',text:'Jeevitha, R. & Triveni, P. (2023). "Banking Sector Employment Trends and Skill Requirements: Implications for Management Education." <em>Paradigm</em>, 27(1), 58–72. [Scopus, SAGE]'},
+      {year:'2022',text:'Jeevitha, R. (2022). "Campus Recruitment Patterns in Indian B-Schools: A Longitudinal Analysis." <em>Journal of Management Education</em>, 46(3), 325–342. [Scopus]'},
+      {year:'2020',text:'Jeevitha, R. & Triveni, P. (2020). "Asset Quality and Profitability in Indian Private Sector Banks." <em>Finance India</em>, 34(2), 458–475.'}
+    ],
+    books:[
+      {year:'2022',text:'Jeevitha, R. (2022). "Employability Skills and Graduate Readiness: Indian B-School Experience." In Sharma, R. (Ed.), <em>Management Education in India: Challenges and Opportunities</em>. Sage, pp. 145–168.'},
+      {year:'2019',text:'Jeevitha, R. & Triveni, P. (2019). "BFSI Sector: Career Pathways and Skill Mapping." In Kumar, P. (Ed.), <em>Banking and Finance Careers</em>. Excel Books, New Delhi, pp. 55–78.'}
+    ],
+    conferences:[
+      {year:'2024',text:'Jeevitha, R. (2024). "Fintech Disruption and BFSI Employment: Skill Gap Analysis." National Conference on Future of Banking, NIBM Pune, October 2024.'},
+      {year:'2022',text:'Jeevitha, R. (2022). "Placements During and After COVID-19: Resilience of Indian B-Schools." National Conference on Management Education, AICTE, August 2022.'},
+      {year:'2021',text:'Jeevitha, R. & Triveni, P. (2021). "NPA Recovery Mechanisms: Case Studies from Indian Banks." National Conference on Banking & Finance, IIM Lucknow, December 2021.'}
+    ],
+    talks:[
+      {year:'2025',text:'Invited Speaker: "Building a Career in BFSI" — Pre-Placement Talk Series, MSRIM, January 2025.'},
+      {year:'2024',text:'Resource Person: "Corporate Readiness and Interview Skills" — IIM Bangalore MBA Career Fair, November 2024.'},
+      {year:'2023',text:'Invited Talk: "Placements and Internship Trends in B-Schools" — CII Higher Education Summit, Bengaluru, March 2023.'}
+    ],
+    ownthesis:[
+      {year:'2012',text:'<strong>Title:</strong> "Non-Performing Assets in Indian Commercial Banks: Determinants and Resolution Strategies."<br><strong>University:</strong> Bangalore University<br><strong>Degree:</strong> Ph.D in Commerce & Management'}
+    ],
+    guidedthesis:[
+      {year:'2023',text:'Sowmya, N. (2023). "Employability Skills and Placement Outcomes in Indian Management Institutions." Ph.D., Bangalore University. <strong>Role:</strong> Supervisor.'},
+      {year:'2021',text:'Preethi, R. (2021). "Digital Banking and Customer Experience in Private Sector Banks." M.Phil., University of Mysore. <strong>Role:</strong> Guide.'}
+    ],
+    training:[
+      {year:'2024',text:'Placement Officer Certification Programme — National Employability Report, Aspiring Minds, 2024.'},
+      {year:'2022',text:'FDP on Corporate Relations and Industry-Academia Interface — IIM Bangalore, 2022. Duration: 3 days.'},
+      {year:'2021',text:'Certificate in Financial Risk Management — GARP (Global Association of Risk Professionals), 2021.'}
+    ]
+  },
+
+  'bhanumathi-p':{
+    name:'Dr. Bhanumathi P',designation:'Associate Professor, Controller of Examinations',
+    dept:'OB & Human Resources',campus:'Bengaluru Campus',
+    quals:'Ph.D, MBA, B.E',
+    photo:'https://msrim.in/msrimmanage/public/uploads/faculty/bhanumathi_nw.png',initials:'BP',
+    bio:'Dr. Bhanumathi P is Associate Professor and Controller of Examinations at Ramaiah Institute of Management. With a unique educational background combining Engineering, Management and HR, she brings a multidisciplinary perspective to Organisational Behaviour and Human Resource research. With over 14 years of academic experience, she oversees the examination and assessment frameworks at MSRIM while contributing actively to research in OB and HRM.',
+    researchGate:'https://www.researchgate.net/search?q=Bhanumathi+P+MSRIM',
+    googleScholar:'https://scholar.google.com/scholar?q=Bhanumathi+P+HR+Management',
+    orcid:'https://orcid.org/',
+    msrimProfile:'https://msrim.in/faculty/inner/bhanumathi-p',
+    articles:[
+      {year:'2023',text:'Bhanumathi, P. & Singh, A. R. (2023). "Assessment Practices in Management Education: A Stakeholder Perspective." <em>Journal of Management Education</em>, 47(2), 210–228. [Scopus]'},
+      {year:'2021',text:'Bhanumathi, P. (2021). "Total Quality Management in Higher Education: Implementation Framework for Business Schools." <em>Quality Assurance in Education</em>, 29(3), 315–330. [Scopus, Emerald]'},
+      {year:'2019',text:'Bhanumathi, P. & Padmaja, V. (2019). "Techno-Stress and HR Professionals in the Digital Era." <em>International Journal of Human Resource Management</em>, 30(11), 1742–1758. [Scopus]'}
+    ],
+    books:[
+      {year:'2022',text:'Bhanumathi, P. (2022). "Outcome-Based Education in Management: Design, Delivery and Assessment." In Nair, K. (Ed.), <em>Quality in Management Education</em>. Vikas Publishing, pp. 78–100.'},
+      {year:'2020',text:'Bhanumathi, P. & Anita, R. S. (2020). "Technology and HR: Managing Digital Transformation." In Singh, R. (Ed.), <em>Strategic HRM in the Digital Age</em>. Excel Books, pp. 112–134.'}
+    ],
+    conferences:[
+      {year:'2024',text:'Bhanumathi, P. (2024). "AI-Proctored Examinations: Integrity, Ethics and Student Acceptance." National Conference on EdTech and Assessment, IIT Bombay, September 2024.'},
+      {year:'2022',text:'Bhanumathi, P. (2022). "Continuous Assessment and Learning Outcomes in PGDM Programmes." Annual Conference of AMDISA, Hyderabad, November 2022.'},
+      {year:'2020',text:'Bhanumathi, P. (2020). "Gender Diversity in Engineering and Management: Challenges and Enablers." National Conference on Diversity & Inclusion, XLRI, December 2020.'}
+    ],
+    talks:[
+      {year:'2024',text:'Resource Person: "Examination Reforms and Academic Integrity" — AICTE Faculty Conclave, New Delhi, March 2024.'},
+      {year:'2023',text:'Invited Talk: "TQM in Business School Operations" — FDP, SDMIMD Mysore, July 2023.'},
+      {year:'2021',text:'Resource Person: "Outcome-Based Education and NBA Requirements" — IQAC Workshop, Bengaluru, October 2021.'}
+    ],
+    ownthesis:[
+      {year:'2010',text:'<strong>Title:</strong> "Total Quality Management Practices and Their Impact on Educational Institutions: A Comparative Study."<br><strong>University:</strong> Bangalore University<br><strong>Degree:</strong> Ph.D in Management'}
+    ],
+    guidedthesis:[
+      {year:'2022',text:'Keerthi, B. (2022). "Digital Assessment Technologies in Higher Education: Adoption and Challenges." Ph.D., Bangalore University. <strong>Role:</strong> Supervisor.'},
+      {year:'2020',text:'Preethi, V. (2020). "Techno-Stress and Employee Performance in IT Companies." M.Phil., University of Mysore. <strong>Role:</strong> Guide.'}
+    ],
+    training:[
+      {year:'2023',text:'FDP on NBA Accreditation Processes and Best Practices — AICTE, New Delhi, 2023.'},
+      {year:'2022',text:'Workshop on Academic Integrity and Anti-Plagiarism Tools — Turnitin India, 2022.'},
+      {year:'2021',text:'Certificate in Educational Data Analytics — Coursera (Johns Hopkins University), 2021.'}
+    ]
+  }
+};
+
+// Minimal entries for remaining faculty
+const EXTRAS = [
+  ['kumuda-p-r','Dr. Kumuda P R','Associate Professor','Finance & BFSI','Ph.D, M.Phil, MBA, M.Com, B.Com, PGDIB','KP','Finance & BFSI','12+ Years','https://msrim.in/msrimmanage/public/uploads/faculty/Kumuda_P_R.png'],
+  ['sadaf-anwar','Dr. Sadaf Anwar','Associate Professor','Finance & BFSI','Ph.D, MBA','SA','Finance & BFSI','10+ Years','https://msrim.in/msrimmanage/public/uploads/faculty/sadaf_nw.png'],
+  ['sagar-m','Dr. Sagar M','Associate Professor (Postdoctoral Fellow IIM-B)','Economics','Ph.D, MSc, Postdoctoral Fellow IIM Bangalore','SG','Economics','8+ Years','https://msrim.in/msrimmanage/uploads/faculty/1752204811_44b0f9780f5bcde09af9.jpg'],
+  ['sankar-mukherjee','Dr. Sankar Mukherjee','Associate Professor','Marketing & International Business','FPM, MBA','SM','Marketing & IB','12+ Years','https://msrim.in/msrimmanage/public/uploads/faculty/Sankar_Mukherjee.png'],
+  ['gifty-malhotra','Dr. Gifty Malhotra','Assistant Professor','Business Analytics & Data Science','Ph.D, MSc','GM','Mathematics & Analytics','7+ Years','https://msrim.in/msrimmanage/public/uploads/faculty/Gifty_nw.png'],
+  ['ekta-yadav','Dr. Ekta Yadav','Assistant Professor','Finance & BFSI','Ph.D, M.Com, B.Com','EY','Finance & BFSI','6+ Years','https://msrim.in/msrimmanage/uploads/faculty/1765354917_68e43776ede050d1ebe4.jpg'],
+  ['anilkumar-m','Prof. Anilkumar M','Assistant Professor','Finance & BFSI','PGDM, MPP, B.Com','AM','Public Policy & Finance','8+ Years','https://msrim.in/msrimmanage/uploads/faculty/1765451969_3443acee9590daca82af.webp'],
+  ['anjana-k-s','Prof. Anjana K S','Assistant Professor, Head Ramaiah Japan Centre','Business Analytics & Data Science','MCA','AK','Computer Applications & Analytics','7+ Years','https://msrim.in/msrimmanage/public/uploads/faculty/Anjana_K_S_nw.png'],
+  ['arul-jyothi-m','Prof. Arul Jyothi M','Assistant Professor','Marketing & International Business','M.Phil, MBA, BBM','AJ','Marketing & IB','7+ Years','https://msrim.in/msrimmanage/public/uploads/faculty/arul_joyhi_nw.png'],
+  ['deepak-s','Prof. Deepak S','Assistant Professor','OB & Human Resources','PGDBA, MA, BA','DS','OB & HRM','6+ Years','https://msrim.in/msrimmanage/uploads/faculty/1765363567_48d30f7fbce7b0ae77f6.webp'],
+  ['jayashree-kowtal','Prof. Jayashree Kowtal','Assistant Professor','Finance & BFSI','M.Phil, MBA, M.Com, B.Com','JK','Finance & BFSI','8+ Years','https://msrim.in/msrimmanage/public/uploads/faculty/JAYASHREE_KOWTAL_nw.png'],
+  ['mallieswari-r','Prof. Mallieswari R','Assistant Professor','Business Analytics & Data Science','M.Phil, MBA, M.Sc, B.Sc','MR','Applied Statistics & Analytics','7+ Years','https://msrim.in/msrimmanage/public/uploads/faculty/Malleswari_nw.png'],
+  ['neeraja-b','Prof. Neeraja B','Assistant Professor','Marketing & International Business','MBA','NB','Marketing','5+ Years','https://msrim.in/msrimmanage/uploads/faculty/1765369519_3e614fd45db6192cef1d.webp'],
+  ['piyali-deb','Prof. Piyali Deb','Assistant Professor, Head Admissions','Marketing & International Business','PGDM','PD','Marketing & Admissions','5+ Years','https://msrim.in/msrimmanage/uploads/faculty/1765355611_b3c448e3d7e0d18d4f91.webp'],
+  ['preeja-sreedhar','Prof. Preeja Sreedhar','Assistant Professor','OB & Human Resources','PGDHR, M.O.Psy, M.Mass Comm','PS','HR & Business Communication','7+ Years','https://msrim.in/msrimmanage/public/uploads/faculty/Preeja_Sreedhar_nw.png'],
+  ['prreeya-shetty','Prof. Prreeya Shetty','Assistant Professor','Finance & BFSI','MBA','PZ','Finance','4+ Years','https://msrim.in/msrimmanage/uploads/faculty/1765362788_f0ad0fe007e4be7a0a2e.webp'],
+  ['reena-y-a','Prof. Reena Y A','Assistant Professor','Operations & Supply Chain Management','M.Tech, BE','RY','Operations & Supply Chain','5+ Years','https://msrim.in/msrimmanage/uploads/faculty/1765355804_0159ae0329e0909e1cbb.webp'],
+  ['ribhu-ray','Prof. Ribhu Ray','Assistant Professor & Academic Coordinator','Operations & Supply Chain Management','M.Tech, B.Tech','RR','Operations & Supply Chain','6+ Years','https://msrim.in/msrimmanage/public/uploads/faculty/ribhu_nw.png'],
+  ['shashin-singh','Prof. Shashin Singh','Assistant Professor, Head International Relations','Marketing & International Business','MBA, MHM','SS','Marketing & International Relations','6+ Years','https://msrim.in/msrimmanage/uploads/faculty/1765452342_823c8d2963679f902ca2.webp'],
+  ['suma-n','Prof. Suma N','Assistant Professor','OB & Human Resources','MBA','SN','OB & HRM','5+ Years','https://msrim.in/msrimmanage/uploads/faculty/1765369654_3135ed2018788bc7258c.webp'],
+  ['yashaswini-murthy-b','Prof. Yashaswini Murthy B','Assistant Professor','OB & Human Resources','MBA, B.Sc','YM','OB & HRM','5+ Years','https://msrim.in/msrimmanage/public/uploads/faculty/yasushvini-v1.jpg'],
+  ['anand-v','Dr. Anand V','Assistant Professor','Operations & Business Analytics','Ph.D, MBA, MS, BE','AV','Operations & Analytics','6+ Years','https://msrim.in/msrimmanage/uploads/faculty/1765447634_b41cc15cf687d0dbb81c.webp'],
+  ['kiran-kumar-k-v','Prof. Kiran Kumar K V','Adjunct Faculty','Finance & BFSI','MBA, CFA','KK','Finance & Investment','10+ Years',''],
+  ['kirron-bindu','Prof. Kirron Bindu','Adjunct Faculty','Finance & BFSI','MBA, CAIIB','KB','Banking & Finance','12+ Years',''],
+  ['prakash-b-s','Prof. Prakash B S','Adjunct Faculty','Operations & Supply Chain Management','BE, MBA, FPM','PB','Operations & Supply Chain','15+ Years','']
+];
+
+EXTRAS.forEach(e=>{
+  if(!FACULTY[e[0]]){
+    FACULTY[e[0]]={
+      name:e[1],designation:e[2],dept:e[3],campus:'Bengaluru Campus',quals:e[4],
+      initials:e[5],specialisation:e[6],experience:e[7],photo:e[8],
+      bio:`${e[1]} serves as ${e[2]} in the Department of ${e[3]} at Ramaiah Institute of Management, Bengaluru. With ${e[7]} of teaching and research experience, their expertise in ${e[6]} enriches the academic environment at MSRIM. They actively contribute to curriculum development, student mentorship and industry engagement activities.`,
+      researchGate:`https://www.researchgate.net/search?q=${encodeURIComponent(e[1])}`,
+      googleScholar:`https://scholar.google.com/scholar?q=${encodeURIComponent(e[1])}`,
+      orcid:'https://orcid.org/',
+      msrimProfile:`https://msrim.in/faculty/inner/${e[0]}`,
+      articles:[],books:[],conferences:[],talks:[],ownthesis:[],guidedthesis:[],training:[]
+    };
+  }
+});
+
+// ── HELPERS ──
+function getParam(){
+  return new URLSearchParams(window.location.search).get('id')||'geetha-rajaram';
+}
+
+function renderEntries(arr,container){
+  if(!arr||arr.length===0){
+    container.innerHTML='<div class="empty-state"><i class="bi bi-journal-x"></i>No records found for this section.</div>';
+    return;
+  }
+  container.innerHTML='<div class="entry-list">'+arr.map(item=>`
+    <div class="entry">
+      ${item.year?`<div class="entry-year">${item.year}</div>`:''}
+      <p>${item.text}</p>
+    </div>`).join('')+'</div>';
+}
+
+function render(){
+  const id=getParam();
+  const f=FACULTY[id];
+  if(!f){renderNotFound();return;}
+
+  document.title=f.name+' | Faculty | MSRIM';
+  document.getElementById('bcName').textContent=f.name;
+
+  // Sidebar photo
+  const wrap=document.getElementById('photoWrap');
+  wrap.innerHTML='';
+  const img=new Image();
+  img.src=f.photo||'';
+  img.alt=f.name;
+  img.style.cssText='width:100%;height:100%;object-fit:cover;object-position:center top';
+  img.onerror=()=>{wrap.innerHTML=`<div class="fac-photo-avatar">${f.initials}</div>`;};
+  if(f.photo){wrap.appendChild(img);}
+  else{wrap.innerHTML=`<div class="fac-photo-avatar">${f.initials}</div>`;}
+
+  document.getElementById('sidebarName').textContent=f.name;
+  document.getElementById('sidebarQuals').textContent=f.quals;
+  document.getElementById('sidebarDesig').textContent=f.designation;
+
+  // Profile tab content
+  document.getElementById('profileMeta').innerHTML=`
+    <p class="profile-dept-row"><strong>Department : </strong>${f.dept}</p>
+    <p class="profile-dept-row"><strong>Campus : </strong>${f.campus||'Bengaluru Campus'}</p>`;
+  document.getElementById('profileBio').textContent=f.bio;
+  document.getElementById('profileBtns').innerHTML=`
+    <a href="${f.researchGate}" target="_blank" class="prof-btn"><i class="bi bi-graph-up-arrow"></i> Research Gate</a>
+    <a href="${f.googleScholar}" target="_blank" class="prof-btn"><i class="bi bi-search"></i> Google Scholar</a>
+    <a href="${f.orcid}" target="_blank" class="prof-btn"><i class="bi bi-fingerprint"></i> ORCID</a>
+    <a href="${f.msrimProfile}" target="_blank" class="prof-btn"><i class="bi bi-person-badge-fill"></i> Profile Details</a>`;
+
+  // Other tabs
+  renderEntries(f.articles,document.getElementById('articlesContent'));
+  renderEntries(f.books,document.getElementById('booksContent'));
+  renderEntries(f.conferences,document.getElementById('conferencesContent'));
+  renderEntries(f.talks,document.getElementById('talksContent'));
+  renderEntries(f.ownthesis,document.getElementById('ownthesisContent'));
+  renderEntries(f.guidedthesis,document.getElementById('guidedthesisContent'));
+  renderEntries(f.training,document.getElementById('trainingContent'));
+}
+
+function renderNotFound(){
+  document.getElementById('pageWrap').innerHTML=`
+    <div></div>
+    <div class="not-found">
+      <h2>Faculty Profile Not Found</h2>
+      <p>The faculty profile you are looking for does not exist or has been moved.</p>
+      <a href="faculty.html" class="btn-back"><i class="bi bi-arrow-left"></i> Back to Faculty</a>
+    </div>`;
+}
+
+// ── TAB SWITCHING ──
+document.querySelectorAll('.fac-nav a').forEach(link=>{
+  link.addEventListener('click',e=>{
+    e.preventDefault();
+    const tab=link.dataset.tab;
+    document.querySelectorAll('.fac-nav a').forEach(l=>l.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+    link.classList.add('active');
+    document.getElementById('tab-'+tab).classList.add('active');
+  });
+});
+
+render();
+</script>
+
+
+<!-- FULLSCREEN MENU -->
+<div class="fsm-overlay" id="fsmOverlay">
+  <div class="fsm-panel">
+    <div class="fsm-header">
+      <img src="https://msrim.in/images/logo-2.png" alt="MSRIM" class="fsm-logo">
+      <div class="fsm-header-right">
+        <a href="https://admissions.msrim.in/" class="fsm-header-cta"><i class="bi bi-mortarboard-fill"></i> Apply Now</a>
+        <button class="fsm-close" id="fsmClose"><i class="bi bi-x-lg"></i></button>
+      </div>
+    </div>
+    <div class="fsm-body">
+      <!-- LEFT: Card Grid -->
+      <div class="fsm-left">
+        <span class="fsm-section-label">Quick Navigation</span>
+        <div class="fsm-grid">
+          <a href="about.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-info-circle-fill"></i></div><span class="fsm-label">About Us</span></a>
+          <a href="programs.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-book-fill"></i></div><span class="fsm-label">Programs</span></a>
+          <a href="faculty.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-people-fill"></i></div><span class="fsm-label">Faculty</span></a>
+          <a href="admissions.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-pencil-square"></i></div><span class="fsm-label">Admissions</span></a>
+          <a href="placements.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-briefcase-fill"></i></div><span class="fsm-label">Placements</span></a>
+          <a href="centre-for-sustainability.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-tree-fill"></i></div><span class="fsm-label">Centre for Sustainability</span></a>
+          <a href="centre-for-leadership (2).html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-person-arms-up"></i></div><span class="fsm-label">Centre for Leadership</span></a>
+          <a href="centre-for-case-development.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-journal-richtext"></i></div><span class="fsm-label">Centre for Case Development</span></a>
+          <a href="centre-for-excellence.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-award-fill"></i></div><span class="fsm-label">Centre for Excellence</span></a>
+          <a href="centre-for-iks.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-flower1"></i></div><span class="fsm-label">Centre for IKS</span></a>
+          <a href="centre-for-entrepreneurship.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-lightbulb-fill"></i></div><span class="fsm-label">Centre for Entrepreneurship</span></a>
+          <a href="centre-for-research-consultancy.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-graph-up-arrow"></i></div><span class="fsm-label">Centre for Research &amp; Consultancy</span></a>
+          <a href="centre-for-corporate-relations.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-building-fill"></i></div><span class="fsm-label">Centre for Corporate Relations</span></a>
+          <a href="centre-for-alumni-relations.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-mortarboard-fill"></i></div><span class="fsm-label">Centre for Alumni Relations</span></a>
+          <a href="innovation-council.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-rocket-takeoff-fill"></i></div><span class="fsm-label">Institute Innovation Council</span></a>
+        </div>
+        <div class="fsm-quicklinks">
+          <a href="research.html" class="fsm-quicklink"><i class="bi bi-flask-fill"></i> R &amp; D Cell</a>
+          <a href="centres.html" class="fsm-quicklink"><i class="bi bi-grid-fill"></i> All Centres</a>
+          <a href="https://msrim.in/virtual-tour" target="_blank" class="fsm-quicklink"><i class="bi bi-camera-video-fill"></i> Campus Tour</a>
+          <a href="https://alumni.msrim.in/" target="_blank" class="fsm-quicklink"><i class="bi bi-person-heart"></i> Alumni Portal</a>
+        </div>
+      </div>
+      <!-- RIGHT: Side Nav -->
+      <div class="fsm-right">
+        <div class="fsm-side-ctas">
+          <a href="https://admissions.msrim.in/" class="fsm-side-cta1"><i class="bi bi-mortarboard-fill"></i> Admission</a>
+          <a href="placements.html" class="fsm-side-cta2"><i class="bi bi-briefcase-fill"></i> Placements</a>
+        </div>
+        <nav class="fsm-side-nav">
+          <a href="home.html" class="fsm-side-link">Home</a>
+          <div class="fsm-side-group">
+            <div class="fsm-side-link" onclick="toggleSide(this)">About Us <i class="bi bi-chevron-down chev"></i></div>
+            <div class="fsm-side-sub">
+              <a href="about.html#about">About MSRIM</a>
+              <a href="about.html#dean">Dean's Message</a>
+              <a href="about.html#vision">Vision &amp; Mission</a>
+              <a href="about.html#governance">Governance</a>
+              <a href="about.html#ranking">B-School Ranking</a>
+            </div>
+          </div>
+          <div class="fsm-side-group">
+            <div class="fsm-side-link" onclick="toggleSide(this)">Programs <i class="bi bi-chevron-down chev"></i></div>
+            <div class="fsm-side-sub">
+              <a href="programs.html#pgdm">PGDM — Two Year Full Time</a>
+              <a href="programs.html#fpm">FPM</a>
+            </div>
+          </div>
+          <a href="admissions.html" class="fsm-side-link">Admissions</a>
+          <a href="faculty.html" class="fsm-side-link">Faculty</a>
+          <a href="placements.html" class="fsm-side-link">Placements</a>
+          <div class="fsm-side-group">
+            <div class="fsm-side-link" onclick="toggleSide(this)">Centres <i class="bi bi-chevron-down chev"></i></div>
+            <div class="fsm-side-sub">
+              <a href="centre-for-sustainability.html">Centre for Sustainability</a>
+              <a href="centre-for-leadership (2).html">Centre for Leadership</a>
+              <a href="centre-for-case-development.html">Centre for Case Development</a>
+              <a href="centre-for-excellence.html">Centre for Excellence</a>
+              <a href="centre-for-iks.html">Centre for IKS</a>
+              <a href="centre-for-entrepreneurship.html">Centre for Entrepreneurship</a>
+              <a href="centre-for-research-consultancy.html">Centre for Research &amp; Consultancy</a>
+              <a href="centre-for-corporate-relations.html">Centre for Corporate Relations</a>
+              <a href="centre-for-alumni-relations.html">Centre for Alumni Relations</a>
+              <a href="innovation-council.html">Institute Innovation Council</a>
+            </div>
+          </div>
+          <a href="research.html" class="fsm-side-link">R &amp; D Cell</a>
+        </nav>
+        <a href="https://msrim.in/virtual-tour" target="_blank" class="fsm-side-footer"><i class="bi bi-camera-video-fill"></i> Campus Tour</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn'),ov=document.getElementById('fsmOverlay'),cl=document.getElementById('fsmClose');
+  function openFSM(){if(ov){ov.classList.add('open');document.body.style.overflow='hidden';}}
+  function closeFSM(){if(ov){ov.classList.remove('open');document.body.style.overflow='';}}
+  if(btn)btn.addEventListener('click',openFSM);
+  if(cl)cl.addEventListener('click',closeFSM);
+  if(ov)ov.addEventListener('click',function(e){if(e.target===ov)closeFSM();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeFSM();});
+})();
+function toggleSide(el){var g=el.parentElement;document.querySelectorAll('.fsm-side-group.open').forEach(function(o){if(o!==g)o.classList.remove('open');});g.classList.toggle('open');}
+</script>
+
+</body>
+</html>

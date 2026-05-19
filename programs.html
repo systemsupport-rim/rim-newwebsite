@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
@@ -14,7 +14,7 @@
   --navy:#0a1f3d;--navy-800:#102b52;--navy-700:#1a3a6b;--navy-100:#e8eef7;
   --gold:#c9a961;--gold-dark:#b08f48;--gold-light:#f5ecd6;
   --cream:#faf6ee;--cream-2:#f3ece0;--hero-cream:#f0e9da;--hero-blue:#e8eef7;
-  --crimson:#B5174B;--orange:#E03820;
+  --crimson:#E05A04;--orange:#F88C1A;
   --ink:#1a1a1a;--muted:#5a5a5a;--line:#e3dccd;
   --serif:"Fraunces","Times New Roman",serif;
   --sans:"DM Sans",-apple-system,sans-serif;
@@ -41,18 +41,19 @@ ul{list-style:none}
 .apply-pill:hover{background:rgba(255,255,255,.18)}
 
 /* ── HEADER ── */
-.site-header{background:#fff;position:sticky;top:0;z-index:900;border-bottom:1px solid rgba(10,31,61,.08);box-shadow:0 2px 16px rgba(10,31,61,.06)}
+.site-header{background:#FDF9F4;position:sticky;top:0;z-index:900;border-bottom:1px solid rgba(10,31,61,.08);box-shadow:0 2px 16px rgba(10,31,61,.06)}
 .header-inner{max-width:1400px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:24px;height:72px}
 .logo img{height:42px;width:auto}
-.nav-links{display:flex;align-items:center;gap:2px}
+.nav-links{display:flex;align-items:center;gap:2px;flex:1;justify-content:center}
 .nav-links a{font-size:13.5px;font-weight:500;color:var(--navy);padding:6px 10px;border-radius:6px;transition:all .2s;white-space:nowrap}
-.nav-links a:hover{background:var(--navy-100)}
+.nav-links a:hover{background:var(--gold-light)}
 .nav-links a.active{background:var(--gold-light);font-weight:700}
+.drop-menu a.active{background:transparent!important;font-weight:500!important;border-bottom:none!important;color:#1a1a1a!important}
 .has-drop{position:relative}
 .has-drop>a{display:flex;align-items:center;gap:4px}
 .has-drop>a::after{content:"";display:inline-block;width:0;height:0;border:4px solid transparent;border-top-color:var(--navy);margin-top:2px;transition:transform .2s}
 .has-drop:hover>a::after{transform:rotate(180deg);margin-top:-2px}
-.drop-menu{position:absolute;top:calc(100% + 8px);left:0;min-width:220px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 40px rgba(10,31,61,.14);opacity:0;visibility:hidden;transform:translateY(-8px);transition:all .25s;z-index:999;padding:6px}
+.drop-menu{position:absolute;top:calc(100% + 8px);left:0;min-width:220px;background:#FDF9F4;border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 40px rgba(10,31,61,.14);opacity:0;visibility:hidden;transform:translateY(-8px);transition:all .25s;z-index:999;padding:6px}
 .has-drop:hover .drop-menu{opacity:1;visibility:visible;transform:translateY(0)}
 .drop-menu a{display:block;padding:9px 14px;font-size:13px;font-weight:500;color:var(--ink);border-radius:6px;transition:all .2s;white-space:nowrap}
 .drop-menu a:hover{background:var(--navy-100);color:var(--navy);padding-left:18px}
@@ -60,7 +61,7 @@ ul{list-style:none}
 .nav-cta:hover{opacity:.9}
 
 /* ── HERO — CFL CURVED ── */
-.hero-curve{position:relative;background:#fff;overflow:hidden}
+.hero-curve{position:relative;background:#FDF9F4;overflow:hidden}
 .hero-curve-inner{position:relative;display:grid;grid-template-columns:38% 62%;min-height:420px}
 .hero-left{background:linear-gradient(135deg,var(--hero-blue) 0%,#f5efe1 60%,var(--hero-cream) 100%);position:relative;display:flex;align-items:center;padding:60px 64px 60px 28px;z-index:2;clip-path:path('M 0 0 L 100% 0 Q 70% 50%, 100% 100% L 0 100% Z')}
 .hero-left::before{content:"";position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(201,169,97,.18) 0%,transparent 60%);pointer-events:none}
@@ -83,7 +84,7 @@ ul{list-style:none}
 
 /* ── SIDEBAR ── */
 .sidebar{position:sticky;top:88px}
-.sidebar-card{background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden;box-shadow:var(--shadow-sm)}
+.sidebar-card{background:#FDF9F4;border:1px solid var(--line);border-radius:4px;overflow:hidden;box-shadow:var(--shadow-sm)}
 .sidebar-card h3{font-family:var(--serif);font-weight:500;font-size:18px;padding:18px 24px;background:var(--navy);color:#fff;letter-spacing:.3px}
 .sidebar-nav li{border-bottom:1px solid var(--line)}
 .sidebar-nav li:last-child{border-bottom:none}
@@ -120,31 +121,31 @@ ul{list-style:none}
 
 /* Info chips */
 .info-chips{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:20px 0}
-.info-chip{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:flex;align-items:center;gap:12px}
+.info-chip{background:#FDF9F4;border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:flex;align-items:center;gap:12px}
 .info-chip i{color:var(--gold);font-size:18px;flex-shrink:0}
 .info-chip-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;font-weight:600;margin-bottom:2px}
 .info-chip-val{font-size:14px;font-weight:700;color:var(--navy)}
 
 /* Specialisation pills */
-.spec-wrap{margin:20px 0}
-.spec-label{font-size:12px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
-.spec-pills{display:flex;flex-wrap:wrap;gap:8px}
-.spec-pill{background:var(--navy-100);color:var(--navy);font-size:12px;font-weight:600;padding:6px 14px;border-radius:4px;letter-spacing:.3px;transition:all .25s;cursor:default}
-.spec-pill:hover{background:var(--navy);color:#fff}
+.spec-wrap{margin:28px 0;text-align:center}
+.spec-label{font-size:11px;font-weight:700;color:var(--gold-dark);text-transform:uppercase;letter-spacing:2.5px;margin-bottom:16px}
+.spec-pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.spec-pill{background:var(--navy-100);color:var(--navy);font-size:14px;font-weight:700;padding:10px 20px;border-radius:999px;letter-spacing:.3px;transition:all .3s;cursor:default;border:1.5px solid transparent;box-shadow:0 2px 8px rgba(10,31,61,.07)}
+.spec-pill:hover{background:var(--grad);color:#fff;border-color:transparent;transform:translateY(-2px);box-shadow:0 6px 18px rgba(224,90,4,.25)}
 
 /* Highlights */
 .highlights{display:flex;flex-direction:column;gap:10px;margin:20px 0}
-.highlight-item{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--ink);line-height:1.6;background:#fff;border:1px solid var(--line);border-radius:8px;padding:12px 16px}
+.highlight-item{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--ink);line-height:1.6;background:#FDF9F4;border:1px solid var(--line);border-radius:8px;padding:12px 16px}
 .highlight-item i{color:var(--gold);font-size:15px;flex-shrink:0;margin-top:2px}
 
 /* Curriculum */
 .curr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
-.curr-card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 16px;font-size:13px;font-weight:600;color:var(--navy);display:flex;align-items:center;gap:8px;transition:all .25s}
+.curr-card{background:#FDF9F4;border:1px solid var(--line);border-radius:8px;padding:14px 16px;font-size:13px;font-weight:600;color:var(--navy);display:flex;align-items:center;gap:8px;transition:all .25s}
 .curr-card:hover{border-color:rgba(201,169,97,.4);box-shadow:var(--shadow-sm)}
 .curr-card i{color:var(--gold);font-size:14px;flex-shrink:0}
 
 /* Fee table */
-.fee-table{width:100%;border-collapse:collapse;margin-top:16px;background:#fff;border-radius:10px;overflow:hidden;box-shadow:var(--shadow-sm)}
+.fee-table{width:100%;border-collapse:collapse;margin-top:16px;background:#FDF9F4;border-radius:10px;overflow:hidden;box-shadow:var(--shadow-sm)}
 .fee-table thead{background:var(--navy)}
 .fee-table thead th{padding:12px 18px;text-align:left;font-size:11.5px;font-weight:700;color:rgba(255,255,255,.85);letter-spacing:.5px;text-transform:uppercase}
 .fee-table tbody tr{border-bottom:1px solid var(--line)}
@@ -162,8 +163,8 @@ ul{list-style:none}
 .fellowship-highlight{display:inline-flex;align-items:center;gap:8px;background:rgba(201,169,97,.18);border:1px solid rgba(201,169,97,.35);color:var(--gold);padding:7px 16px;border-radius:4px;font-size:14px;font-weight:700}
 
 /* Apply btn */
-.apply-btn{display:inline-flex;align-items:center;gap:8px;background:var(--grad);color:#fff;padding:11px 24px;border-radius:999px;font-weight:700;font-size:14px;transition:all .3s;margin-top:20px;box-shadow:0 4px 16px rgba(181,23,75,.3)}
-.apply-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(181,23,75,.4)}
+.apply-btn{display:inline-flex;align-items:center;gap:8px;background:var(--grad);color:#fff;padding:11px 24px;border-radius:999px;font-weight:700;font-size:14px;transition:all .3s;margin-top:20px;box-shadow:0 4px 16px rgba(224,90,4,.3)}
+.apply-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(224,90,4,.4)}
 
 /* Info box */
 .info-box{background:linear-gradient(135deg,rgba(10,31,61,.04),rgba(201,169,97,.06));border:1px solid rgba(201,169,97,.2);border-radius:10px;padding:18px 22px;margin-top:16px}
@@ -188,7 +189,7 @@ ul{list-style:none}
 /* ── FOOTER ── */
 footer{background:var(--navy);color:#fff;padding:60px 0 0}
 .footer-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:44px;padding-bottom:44px;max-width:1400px;margin:0 auto;padding-left:28px;padding-right:28px}
-.footer-brand .logo img{height:38px;filter:brightness(10)}
+.footer-brand .logo img{height:42px;filter:brightness(0) invert(1);opacity:.9}
 .footer-brand p{font-size:13px;color:rgba(255,255,255,.52);line-height:1.75;margin-top:16px;max-width:280px}
 .footer-contact{margin-top:18px;display:flex;flex-direction:column;gap:10px}
 .fc{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:rgba(255,255,255,.58)}
@@ -214,11 +215,11 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
 
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){.main-section{grid-template-columns:250px 1fr;gap:32px}}
-@media(max-width:900px){.main-section{grid-template-columns:1fr;padding:36px 20px 56px}.sidebar{position:static}.hero-curve-inner{grid-template-columns:1fr}.hero-left{clip-path:none;padding:48px 28px}.hero-right{min-height:260px}.nav-links{display:none}.nav-cta{display:none}.menu-pill{display:flex}.footer-grid{grid-template-columns:1fr 1fr;gap:32px}.info-chips{grid-template-columns:1fr}.curr-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.main-section{grid-template-columns:1fr;padding:36px 20px 56px}.sidebar{position:static}.hero-curve-inner{grid-template-columns:1fr}.hero-left{clip-path:none;padding:48px 28px}.hero-right{min-height:260px}.nav-links{display:none}.nav-cta{display:none}.footer-grid{grid-template-columns:1fr 1fr;gap:32px}.info-chips{grid-template-columns:1fr}.curr-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.curr-grid{grid-template-columns:1fr}}
 
 /* ── BURGER MENU PILL ── */
-.menu-pill{display:none;flex-direction:column;align-items:center;justify-content:center;gap:4px;background:linear-gradient(135deg,#B5174B 0%,#E03820 100%);color:#fff;border:none;border-radius:4px;padding:8px 14px;cursor:pointer;transition:all .3s;flex-shrink:0;margin-left:auto;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;min-width:58px}
+.menu-pill{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;background:#E05A04;color:#fff;border:none;border-radius:6px;padding:10px 16px;cursor:pointer;transition:all .3s;flex-shrink:0;margin-left:24px;font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;min-width:64px;box-shadow:0 3px 12px rgba(224,90,4,.35)}
 .menu-pill:hover{opacity:.88;transform:translateY(-1px)}
 .menu-pill .lines{display:flex;flex-direction:column;gap:4px;width:22px}
 .menu-pill .lines span{height:2px;background:#fff;border-radius:2px;transition:all .3s;display:block}
@@ -228,17 +229,17 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
 .menu-pill.open .lines span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
 .mobile-nav{position:fixed;top:0;left:0;right:0;bottom:0;z-index:980;visibility:hidden;pointer-events:none}
 .mobile-nav-overlay{position:absolute;inset:0;background:rgba(10,31,61,.55);opacity:0;transition:opacity .35s;backdrop-filter:blur(3px)}
-.mobile-nav-panel{position:absolute;top:0;left:0;right:0;background:#fff;transform:translateY(-100%);transition:transform .4s cubic-bezier(.25,.8,.25,1);padding:20px 24px 32px;max-height:90vh;overflow-y:auto}
+.mobile-nav-panel{position:fixed;top:0;right:0;bottom:0;width:300px;background:#FDF9F4;transform:translateX(100%);transition:transform .4s cubic-bezier(.25,.8,.25,1);padding:24px 22px 36px;overflow-y:auto;box-shadow:-6px 0 28px rgba(10,31,61,.14);z-index:999}
 .mobile-nav.open{visibility:visible;pointer-events:auto}
 .mobile-nav.open .mobile-nav-overlay{opacity:1}
-.mobile-nav.open .mobile-nav-panel{transform:translateY(0)}
+.mobile-nav.open .mobile-nav-panel{transform:translateX(0)}
 .mobile-nav-header{display:flex;align-items:center;justify-content:space-between;padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:8px}
 .mobile-nav-header .logo img{height:38px}
 .mobile-nav-close{width:36px;height:36px;border-radius:50%;background:var(--navy-100);border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;color:var(--navy);transition:all .25s}
 .mobile-nav-close:hover{background:var(--navy);color:#fff}
 .mobile-nav-links{display:flex;flex-direction:column;gap:2px;margin-top:8px}
 .mobile-nav-links a{display:block;padding:12px 14px;font-size:15px;font-weight:500;color:var(--navy);border-radius:8px;transition:all .2s}
-.mobile-nav-links a:hover{background:var(--navy-100)}
+.mobile-nav-links a:hover{background:var(--gold-light)}
 .mobile-nav-links a.active{background:var(--gold-light);font-weight:700}
 .mobile-nav-group{border-radius:8px;overflow:hidden}
 .mobile-nav-group-title{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;font-size:15px;font-weight:600;color:var(--navy);cursor:pointer;transition:background .2s}
@@ -250,8 +251,61 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
 .mobile-nav-sub a{font-size:13.5px;color:var(--muted);padding:9px 10px}
 .mobile-nav-sub a:hover{color:var(--navy);background:var(--cream);border-radius:6px}
 .mobile-nav-cta{margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
-.mobile-nav-cta a{display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#B5174B 0%,#E03820 100%);color:#fff;padding:13px;border-radius:999px;font-weight:700;font-size:14.5px}
-</style>
+.mobile-nav-cta a{display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#E05A04 0%,#F88C1A 100%);color:#fff;padding:13px;border-radius:999px;font-weight:700;font-size:14.5px}
+
+    /* ============ FULLSCREEN MENU ============ */
+    .fsm-overlay{position:fixed;inset:0;z-index:9999;opacity:0;visibility:hidden;transition:opacity .38s}
+    .fsm-overlay.open{opacity:1;visibility:visible}
+    .fsm-panel{position:fixed;inset:0;background:url('https://msrim.in/images/msrim_campus.jpg') center/cover no-repeat;transform:translateY(-105%);transition:transform .48s cubic-bezier(.4,0,.2,1);overflow-y:auto;display:flex;flex-direction:column}
+    .fsm-panel::before{content:"";position:fixed;inset:0;background:linear-gradient(160deg,rgba(8,24,50,.45) 0%,rgba(10,31,61,.35) 100%);pointer-events:none;z-index:0}
+    .fsm-overlay.open .fsm-panel{transform:translateY(0)}
+    .fsm-header{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;padding:20px 44px;border-bottom:1px solid rgba(201,169,97,.2)}
+    .fsm-logo{height:40px;filter:brightness(0) invert(1);opacity:.9}
+    .fsm-header-right{display:flex;align-items:center;gap:14px}
+    .fsm-header-cta{display:inline-flex;align-items:center;gap:7px;padding:9px 22px;background:#E05A04;color:#fff;font-size:13px;font-weight:700;border-radius:999px;text-decoration:none;transition:all .2s}
+    .fsm-header-cta:hover{background:#c94f03;color:#fff;transform:translateY(-1px)}
+    .fsm-close{width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .25s}
+    .fsm-close:hover{background:#E05A04;border-color:#E05A04;transform:rotate(90deg)}
+    /* fsm-body replaced */
+    .fsm-section-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(201,169,97,.75);margin-bottom:8px;display:block}
+    .fsm-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:10px}
+    .fsm-card{background:rgba(255,255,255,.07);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid rgba(255,255,255,.28);border-bottom:3px solid rgba(255,255,255,.18);border-radius:16px;padding:14px 10px 12px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;transition:all .25s;box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 4px 24px rgba(0,0,0,.12)}
+    .fsm-card:hover{background:rgba(255,255,255,.96);border-color:rgba(255,255,255,.8);border-bottom-color:#E05A04;transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+    .fsm-card:hover .fsm-label{color:#0a1f3d}
+    .fsm-card:hover .fsm-icon{transform:scale(1.12);box-shadow:0 8px 24px rgba(224,90,4,.6)}
+    .fsm-icon{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#E05A04 0%,#F88C1A 100%);display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;flex-shrink:0;box-shadow:0 4px 12px rgba(224,90,4,.4);transition:all .25s}
+    .fsm-label{font-size:11px;font-weight:600;color:rgba(255,255,255,.9);line-height:1.3;transition:color .25s}
+    .fsm-quicklinks{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding-top:8px;border-top:1px solid rgba(255,255,255,.1)}
+    .fsm-quicklink{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border:1px solid rgba(255,255,255,.2);border-radius:999px;color:rgba(255,255,255,.75);font-size:12.5px;font-weight:500;text-decoration:none;transition:all .2s}
+    .fsm-quicklink:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.45);color:#fff}
+    
+    .fsm-body{position:relative;z-index:1;flex:1;padding:28px 32px 40px;display:grid;grid-template-columns:1fr 280px;gap:24px;align-items:start}
+    .fsm-left{display:flex;flex-direction:column;gap:10px}
+    .fsm-right{background:rgba(255,255,255,.07);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid rgba(255,255,255,.2);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;position:sticky;top:20px}
+    .fsm-side-ctas{display:grid;grid-template-columns:1fr 1fr}
+    .fsm-side-cta1{display:flex;align-items:center;justify-content:center;gap:6px;padding:13px 8px;background:#E05A04;color:#fff;font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;text-decoration:none;transition:background .2s}
+    .fsm-side-cta1:hover{background:#c94f03;color:#fff}
+    .fsm-side-cta2{display:flex;align-items:center;justify-content:center;gap:6px;padding:13px 8px;background:#0a1f3d;color:#fff;font-size:12px;font-weight:600;text-decoration:none;transition:background .2s}
+    .fsm-side-cta2:hover{background:#1a3a6b;color:#fff}
+    .fsm-side-nav{display:flex;flex-direction:column}
+    .fsm-side-link{display:flex;align-items:center;justify-content:space-between;padding:11px 16px;font-size:13px;font-weight:500;color:rgba(255,255,255,.85);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07);transition:all .2s;cursor:pointer;user-select:none}
+    a.fsm-side-link:hover,.fsm-side-link:hover{background:rgba(255,255,255,.1);color:#fff;padding-left:22px}
+    .fsm-side-link .chev{font-size:11px;color:rgba(255,255,255,.4);transition:transform .25s;flex-shrink:0}
+    .fsm-side-group.open>.fsm-side-link .chev{transform:rotate(180deg)}
+    .fsm-side-group.open>.fsm-side-link{background:rgba(224,90,4,.15);color:#F88C1A}
+    .fsm-side-sub{max-height:0;overflow:hidden;transition:max-height .3s ease;background:rgba(0,0,0,.2)}
+    .fsm-side-group.open .fsm-side-sub{max-height:500px}
+    .fsm-side-sub a{display:flex;align-items:center;gap:6px;padding:9px 16px 9px 28px;font-size:12px;color:rgba(255,255,255,.65);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.04);transition:all .2s}
+    .fsm-side-sub a::before{content:"›";color:#E05A04;font-size:14px;line-height:1;flex-shrink:0}
+    .fsm-side-sub a:hover{background:rgba(255,255,255,.08);color:#fff;padding-left:34px}
+    .fsm-side-footer{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 16px;background:rgba(201,169,97,.12);color:#c9a961;font-size:12.5px;font-weight:600;text-decoration:none;transition:all .2s}
+    .fsm-side-footer:hover{background:rgba(201,169,97,.22);color:#e0be7a}
+    @media(max-width:1000px){.fsm-body{grid-template-columns:1fr}.fsm-right{display:none}}
+    @media(max-width:700px){.fsm-grid{grid-template-columns:repeat(3,1fr)}.fsm-body{padding:20px 14px 32px}}
+    @media(max-width:480px){.fsm-grid{grid-template-columns:repeat(2,1fr);gap:8px}}
+    @media(max-width:800px){.fsm-grid{grid-template-columns:repeat(3,1fr);gap:10px}.fsm-body{padding:24px 20px 36px}.fsm-header{padding:16px 20px}}
+    @media(max-width:480px){.fsm-grid{grid-template-columns:repeat(2,1fr);gap:8px}}
+    </style>
 </head>
 <body>
 
@@ -300,16 +354,20 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
       <div class="has-drop">
         <a href="centres.html">Centres</a>
         <div class="drop-menu">
-          <a href="https://msrim.in/centre-for-sustainability">Centre for Sustainability</a>
+          <a href="centre-for-sustainability.html">Centre for Sustainability</a>
           <a href="centre-for-leadership (2).html">Centre for Leadership</a>
-          <a href="https://msrim.in/case-centre">Case Centre</a>
-          <a href="https://msrim.in/bcic">BCIC</a>
-          <a href="https://msrim.in/consultancy">Consultancy</a>
-          <a href="https://msrim.in/industry-on-campus">Industry Institute Interaction Cell</a>
-          <a href="https://msrim.in/rim-innovation-incubation-centre">RIM Innovation &amp; Incubation</a>
+          <a href="centre-for-case-development.html">Centre for Case Development</a>
+          <a href="centre-for-excellence.html">Centre for Excellence</a>
+          <a href="centre-for-iks.html">Centre for IKS</a>
+          <a href="centre-for-entrepreneurship.html">Centre for Entrepreneurship</a>
+          <a href="centre-for-research-consultancy.html">Centre for Research &amp; Consultancy</a>
+          <a href="centre-for-corporate-relations.html">Centre for Corporate Relations</a>
+          <a href="centre-for-alumni-relations.html">Centre for Alumni Relations</a>
+          <a href="innovation-council.html">Institute Innovation Council</a>
+          
         </div>
       </div>
-      <a href="research.html">R &amp; D Cell</a>
+      
     </nav>
     <a href="https://admissions.msrim.in/" class="nav-cta"><i class="bi bi-mortarboard-fill"></i> Admissions 2026</a>
     <button class="menu-pill" id="menuBtn" aria-label="Open navigation">
@@ -354,16 +412,20 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
       <div class="mobile-nav-group" id="mg-centres">
         <div class="mobile-nav-group-title" onclick="toggleGroup('mg-centres')">Centres <i class="bi bi-chevron-down"></i></div>
         <div class="mobile-nav-sub">
-          <a href="https://msrim.in/centre-for-sustainability">Centre for Sustainability</a>
+          <a href="centre-for-sustainability.html">Centre for Sustainability</a>
           <a href="centre-for-leadership (2).html">Centre for Leadership</a>
-          <a href="https://msrim.in/case-centre">Case Centre</a>
-          <a href="https://msrim.in/bcic">BCIC</a>
-          <a href="https://msrim.in/consultancy">Consultancy</a>
-          <a href="https://msrim.in/industry-on-campus">Industry Institute Interaction Cell</a>
-          <a href="https://msrim.in/rim-innovation-incubation-centre">RIM Innovation &amp; Incubation</a>
+          <a href="centre-for-case-development.html">Centre for Case Development</a>
+          <a href="centre-for-excellence.html">Centre for Excellence</a>
+          <a href="centre-for-iks.html">Centre for IKS</a>
+          <a href="centre-for-entrepreneurship.html">Centre for Entrepreneurship</a>
+          <a href="centre-for-research-consultancy.html">Centre for Research &amp; Consultancy</a>
+          <a href="centre-for-corporate-relations.html">Centre for Corporate Relations</a>
+          <a href="centre-for-alumni-relations.html">Centre for Alumni Relations</a>
+          <a href="innovation-council.html">Institute Innovation Council</a>
+          
         </div>
       </div>
-      <a href="research.html">R &amp; D Cell</a>
+      
       <a href="programs.html" class="active">Programs</a>
     </div>
     <div class="mobile-nav-cta">
@@ -430,7 +492,7 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
       <div class="spec-wrap">
         <div class="spec-label">Specialisation Tracks</div>
         <div class="spec-pills">
-          <span class="spec-pill">Finance</span><span class="spec-pill">Marketing</span><span class="spec-pill">Human Resources</span><span class="spec-pill">Operations</span><span class="spec-pill">Business Analytics</span><span class="spec-pill">BFSI</span><span class="spec-pill">International Business</span><span class="spec-pill">Entrepreneurship</span><span class="spec-pill">Supply Chain Mgmt</span><span class="spec-pill">Hospitality Mgmt</span><span class="spec-pill">Travel &amp; Tourism</span><span class="spec-pill">Aviation Management</span><span class="spec-pill">Logistics &amp; SCM</span>
+          <span class="spec-pill">Finance</span><span class="spec-pill">Marketing</span><span class="spec-pill">Human Resources</span><span class="spec-pill">Operations</span><span class="spec-pill">Business Analytics</span><span class="spec-pill">BFSI</span><span class="spec-pill">International Business</span><span class="spec-pill">Entrepreneurship</span><span class="spec-pill">Supply Chain Mgmt</span><span class="spec-pill">Logistics &amp; SCM</span>
         </div>
       </div>
       <div class="spec-label" style="margin-top:20px;margin-bottom:12px">Curriculum Highlights</div>
@@ -479,14 +541,6 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
         <div class="highlight-item"><i class="bi bi-check-circle-fill"></i> Valid CAT / GATE / GRE / GMAT / UGC-NET score required</div>
         <div class="highlight-item"><i class="bi bi-check-circle-fill"></i> Research proposal presentation (10–15 mins) + Personal Interview</div>
       </div>
-      <table class="fee-table" style="margin-top:20px">
-        <thead><tr><th>Fee Component</th><th>Amount</th></tr></thead>
-        <tbody>
-          <tr><td>Registration Fee</td><td>₹ 5,000</td></tr>
-          <tr><td>Annual Fee (per year × 4 years)</td><td>₹ 50,000 / year</td></tr>
-          <tr class="fee-total"><td><strong>Total Programme Fee</strong></td><td><strong>₹ 2,05,000</strong></td></tr>
-        </tbody>
-      </table>
       <div class="fellowship-box">
         <h5>Institute Fellowship Support</h5>
         <p>Full-time FPM scholars are eligible for the Institute Fellowship — providing financial support throughout the research journey. Up to 4 years with 6 hours of weekly administrative contribution.</p>
@@ -556,7 +610,7 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
         <li><a href="about.html">About Us</a></li>
         <li><a href="faculty.html">Faculty</a></li>
         <li><a href="placements.html">Placements</a></li>
-        <li><a href="research.html">R &amp; D Cell</a></li>
+        <li></li>
         <li><a href="https://alumni.msrim.in/" target="_blank">Alumni</a></li>
         <li><a href="https://msrim.in/contact">Contact</a></li>
       </ul>
@@ -592,9 +646,9 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
 
 <script>
 // Mobile nav
-const menuBtn=document.getElementById('menuBtn'),mobileNav=document.getElementById('mobileNav'),mobileClose=document.getElementById('mobileClose'),mobileOverlay=document.getElementById('mobileOverlay');
-function openMenu(){mobileNav.classList.add('open');menuBtn.classList.add('open');document.body.style.overflow='hidden'}
-function closeMenu(){mobileNav.classList.remove('open');menuBtn.classList.remove('open');document.body.style.overflow=''}
+// legacy menu replaced
+function openMenu(){document.getElementById('fsmOverlay').classList.add('open');document.body.style.overflow='hidden'}
+function closeMenu(){document.getElementById('fsmOverlay').classList.remove('open');document.body.style.overflow=''}
 if(menuBtn)menuBtn.addEventListener('click',openMenu);
 if(mobileClose)mobileClose.addEventListener('click',closeMenu);
 if(mobileOverlay)mobileOverlay.addEventListener('click',closeMenu);
@@ -616,5 +670,108 @@ const sectionObs = new IntersectionObserver((entries) => {
 }, {threshold:0.3, rootMargin:'-80px 0px -55% 0px'});
 sections.forEach(s => sectionObs.observe(s));
 </script>
+
+
+<!-- FULLSCREEN MENU -->
+<div class="fsm-overlay" id="fsmOverlay">
+  <div class="fsm-panel">
+    <div class="fsm-header">
+      <img src="https://msrim.in/images/logo-2.png" alt="MSRIM" class="fsm-logo">
+      <div class="fsm-header-right">
+        <a href="https://admissions.msrim.in/" class="fsm-header-cta"><i class="bi bi-mortarboard-fill"></i> Apply Now</a>
+        <button class="fsm-close" id="fsmClose"><i class="bi bi-x-lg"></i></button>
+      </div>
+    </div>
+    <div class="fsm-body">
+      <!-- LEFT: Card Grid -->
+      <div class="fsm-left">
+        <span class="fsm-section-label">Quick Navigation</span>
+        <div class="fsm-grid">
+          <a href="about.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-info-circle-fill"></i></div><span class="fsm-label">About Us</span></a>
+          <a href="programs.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-book-fill"></i></div><span class="fsm-label">Programs</span></a>
+          <a href="faculty.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-people-fill"></i></div><span class="fsm-label">Faculty</span></a>
+          <a href="admissions.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-pencil-square"></i></div><span class="fsm-label">Admissions</span></a>
+          <a href="placements.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-briefcase-fill"></i></div><span class="fsm-label">Placements</span></a>
+          <a href="centre-for-sustainability.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-tree-fill"></i></div><span class="fsm-label">Centre for Sustainability</span></a>
+          <a href="centre-for-leadership (2).html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-person-arms-up"></i></div><span class="fsm-label">Centre for Leadership</span></a>
+          <a href="centre-for-case-development.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-journal-richtext"></i></div><span class="fsm-label">Centre for Case Development</span></a>
+          <a href="centre-for-excellence.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-award-fill"></i></div><span class="fsm-label">Centre for Excellence</span></a>
+          <a href="centre-for-iks.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-flower1"></i></div><span class="fsm-label">Centre for IKS</span></a>
+          <a href="centre-for-entrepreneurship.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-lightbulb-fill"></i></div><span class="fsm-label">Centre for Entrepreneurship</span></a>
+          <a href="centre-for-research-consultancy.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-graph-up-arrow"></i></div><span class="fsm-label">Centre for Research &amp; Consultancy</span></a>
+          <a href="centre-for-corporate-relations.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-building-fill"></i></div><span class="fsm-label">Centre for Corporate Relations</span></a>
+          <a href="centre-for-alumni-relations.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-mortarboard-fill"></i></div><span class="fsm-label">Centre for Alumni Relations</span></a>
+          <a href="innovation-council.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-rocket-takeoff-fill"></i></div><span class="fsm-label">Institute Innovation Council</span></a>
+        </div>
+        <div class="fsm-quicklinks">
+          <a href="research.html" class="fsm-quicklink"><i class="bi bi-flask-fill"></i> R &amp; D Cell</a>
+          <a href="centres.html" class="fsm-quicklink"><i class="bi bi-grid-fill"></i> All Centres</a>
+          <a href="https://msrim.in/virtual-tour" target="_blank" class="fsm-quicklink"><i class="bi bi-camera-video-fill"></i> Campus Tour</a>
+          <a href="https://alumni.msrim.in/" target="_blank" class="fsm-quicklink"><i class="bi bi-person-heart"></i> Alumni Portal</a>
+        </div>
+      </div>
+      <!-- RIGHT: Side Nav -->
+      <div class="fsm-right">
+        <div class="fsm-side-ctas">
+          <a href="https://admissions.msrim.in/" class="fsm-side-cta1"><i class="bi bi-mortarboard-fill"></i> Admission</a>
+          <a href="placements.html" class="fsm-side-cta2"><i class="bi bi-briefcase-fill"></i> Placements</a>
+        </div>
+        <nav class="fsm-side-nav">
+          <a href="home.html" class="fsm-side-link">Home</a>
+          <div class="fsm-side-group">
+            <div class="fsm-side-link" onclick="toggleSide(this)">About Us <i class="bi bi-chevron-down chev"></i></div>
+            <div class="fsm-side-sub">
+              <a href="about.html#about">About MSRIM</a>
+              <a href="about.html#dean">Dean's Message</a>
+              <a href="about.html#vision">Vision &amp; Mission</a>
+              <a href="about.html#governance">Governance</a>
+              <a href="about.html#ranking">B-School Ranking</a>
+            </div>
+          </div>
+          <div class="fsm-side-group">
+            <div class="fsm-side-link" onclick="toggleSide(this)">Programs <i class="bi bi-chevron-down chev"></i></div>
+            <div class="fsm-side-sub">
+              <a href="programs.html#pgdm">PGDM — Two Year Full Time</a>
+              <a href="programs.html#fpm">FPM</a>
+            </div>
+          </div>
+          <a href="admissions.html" class="fsm-side-link">Admissions</a>
+          <a href="faculty.html" class="fsm-side-link">Faculty</a>
+          <a href="placements.html" class="fsm-side-link">Placements</a>
+          <div class="fsm-side-group">
+            <div class="fsm-side-link" onclick="toggleSide(this)">Centres <i class="bi bi-chevron-down chev"></i></div>
+            <div class="fsm-side-sub">
+              <a href="centre-for-sustainability.html">Centre for Sustainability</a>
+              <a href="centre-for-leadership (2).html">Centre for Leadership</a>
+              <a href="centre-for-case-development.html">Centre for Case Development</a>
+              <a href="centre-for-excellence.html">Centre for Excellence</a>
+              <a href="centre-for-iks.html">Centre for IKS</a>
+              <a href="centre-for-entrepreneurship.html">Centre for Entrepreneurship</a>
+              <a href="centre-for-research-consultancy.html">Centre for Research &amp; Consultancy</a>
+              <a href="centre-for-corporate-relations.html">Centre for Corporate Relations</a>
+              <a href="centre-for-alumni-relations.html">Centre for Alumni Relations</a>
+              <a href="innovation-council.html">Institute Innovation Council</a>
+            </div>
+          </div>
+          <a href="research.html" class="fsm-side-link">R &amp; D Cell</a>
+        </nav>
+        <a href="https://msrim.in/virtual-tour" target="_blank" class="fsm-side-footer"><i class="bi bi-camera-video-fill"></i> Campus Tour</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn'),ov=document.getElementById('fsmOverlay'),cl=document.getElementById('fsmClose');
+  function openFSM(){if(ov){ov.classList.add('open');document.body.style.overflow='hidden';}}
+  function closeFSM(){if(ov){ov.classList.remove('open');document.body.style.overflow='';}}
+  if(btn)btn.addEventListener('click',openFSM);
+  if(cl)cl.addEventListener('click',closeFSM);
+  if(ov)ov.addEventListener('click',function(e){if(e.target===ov)closeFSM();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeFSM();});
+})();
+function toggleSide(el){var g=el.parentElement;document.querySelectorAll('.fsm-side-group.open').forEach(function(o){if(o!==g)o.classList.remove('open');});g.classList.toggle('open');}
+</script>
+
 </body>
 </html>
