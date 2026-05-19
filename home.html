@@ -47,7 +47,7 @@ ul{list-style:none}
 .logo img{height:44px;width:auto}
 .nav-links{display:flex;align-items:center;gap:2px;flex:1;justify-content:center}
 .nav-links a{font-size:13.5px;font-weight:500;color:var(--navy);padding:6px 10px;border-radius:6px;transition:all .2s;white-space:nowrap}
-.nav-links a:hover{background:var(--navy-100);color:var(--navy)}
+.nav-links a:hover{background:var(--gold-light);color:var(--navy)}
 .nav-links a.active{background:var(--gold-light);font-weight:700}
 /* Dropdown */
 .nav-links .has-drop{position:relative}
@@ -80,7 +80,7 @@ ul{list-style:none}
 .mobile-nav-close:hover{background:var(--navy);color:#fff}
 .mobile-nav-links{display:flex;flex-direction:column;gap:2px;margin-top:8px}
 .mobile-nav-links a{display:block;padding:12px 14px;font-size:15px;font-weight:500;color:var(--navy);border-radius:8px;transition:all .2s}
-.mobile-nav-links a:hover{background:var(--navy-100)}
+.mobile-nav-links a:hover{background:var(--gold-light)}
 .mobile-nav-links a.active{background:var(--gold-light);font-weight:700}
 .mobile-nav-group{border-radius:8px;overflow:hidden}
 .mobile-nav-group-title{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;font-size:15px;font-weight:600;color:var(--navy);cursor:pointer;transition:background .2s}
@@ -148,8 +148,8 @@ ul{list-style:none}
 .section.bg-navy{background:var(--navy)}
 .section.bg-dark{background:#071428}
 .wrap{max-width:1380px;margin:0 auto;padding:0 28px}
-.eyebrow{font-size:11.5px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:flex;align-items:center;gap:10px}
-.eyebrow::before{content:"";display:block;width:28px;height:2px;background:var(--gold)}
+.eyebrow{font-size:13.5px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{display:none}
 .eyebrow-lg{font-size:22px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--crimson);margin-bottom:12px}
 .eyebrow-lg::before{display:none}
 .section-heading{font-family:var(--serif);font-size:clamp(28px,4vw,44px);font-weight:600;color:var(--navy);line-height:1.15;margin-bottom:16px}
@@ -409,28 +409,28 @@ ul{list-style:none}
 .news-body h4{font-size:14px;font-weight:600;color:var(--navy);line-height:1.4;margin-bottom:0}
 /* Calendar View */
 .cal-wrap{display:none}
-.cal-wrap.active{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start}
-.cal-box{background:#FDF9F4;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow-sm)}
-.cal-header{background:linear-gradient(135deg,var(--navy),var(--navy-700));padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
-.cal-header h3{font-family:var(--serif);font-size:17px;font-weight:600;color:#fff;letter-spacing:.3px}
-.cal-nav{display:flex;gap:8px}
-.cal-nav button{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:13px;transition:all .3s}
+.cal-wrap.active{display:grid;grid-template-columns:1fr 280px;gap:16px;align-items:start}
+.cal-box{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow-sm)}
+.cal-header{background:linear-gradient(135deg,var(--navy),var(--navy-700));padding:12px 16px;display:flex;justify-content:space-between;align-items:center}
+.cal-header h3{font-family:var(--serif);font-size:15px;font-weight:600;color:#fff;letter-spacing:.3px}
+.cal-nav{display:flex;gap:6px}
+.cal-nav button{width:28px;height:28px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:12px;transition:all .3s}
 .cal-nav button:hover{background:var(--gold);border-color:var(--gold);color:var(--navy)}
 .cal-days-hdr{display:grid;grid-template-columns:repeat(7,1fr);background:var(--navy-100)}
-.cal-days-hdr span{padding:8px 4px;text-align:center;font-size:10.5px;font-weight:700;color:var(--navy);letter-spacing:.5px;text-transform:uppercase}
+.cal-days-hdr span{padding:6px 2px;text-align:center;font-size:9.5px;font-weight:700;color:var(--navy);letter-spacing:.5px;text-transform:uppercase}
 .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:var(--line)}
-.cal-day{background:#FDF9F4;min-height:60px;padding:6px;cursor:pointer;transition:all .2s;position:relative}
-.cal-day:hover{background:#F5EEE4}
+.cal-day{background:#fff;min-height:44px;padding:5px 5px 4px;cursor:pointer;transition:all .2s;position:relative}
+.cal-day:hover{background:var(--gold-light)}
 .cal-day.other-month{background:#fafafa}
 .cal-day.other-month .cal-day-num{color:#ccc}
-.cal-day.today{background:rgba(201,169,97,.08)}
-.cal-day.today .cal-day-num{color:var(--navy);font-weight:700;background:var(--gold);width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px}
-.cal-day.has-event{background:#FEF6EC}
-.cal-day.has-event:hover{background:#FDEEDD}
-.cal-day.selected{background:rgba(10,31,61,.06);box-shadow:inset 0 0 0 2px var(--navy)}
-.cal-day-num{font-size:11.5px;font-weight:500;color:var(--ink);margin-bottom:4px}
-.cal-dots{display:flex;gap:3px;flex-wrap:wrap;margin-top:2px}
-.cal-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.cal-day.today{background:rgba(201,169,97,.1)}
+.cal-day.today .cal-day-num{color:var(--navy);font-weight:700;background:var(--gold);width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px}
+.cal-day.has-event{background:#fffbf4}
+.cal-day.has-event:hover{background:var(--gold-light)}
+.cal-day.selected{background:rgba(10,31,61,.05);box-shadow:inset 0 0 0 2px var(--navy)}
+.cal-day-num{font-size:10.5px;font-weight:500;color:var(--ink);margin-bottom:3px}
+.cal-dots{display:flex;gap:2px;flex-wrap:wrap;margin-top:2px}
+.cal-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
 .dot-news{background:var(--orange)}
 .dot-guest{background:#E05A04}
 .dot-student{background:#2e7d32}
@@ -438,23 +438,23 @@ ul{list-style:none}
 .dot-conclave{background:#6a1b9a}
 .dot-mdp{background:#5D4037}
 /* Event detail panel */
-.cal-panel{background:#FDF9F4;border:1px solid var(--line);border-radius:16px;overflow:hidden;position:sticky;top:100px;box-shadow:var(--shadow-sm)}
-.cal-panel-hdr{background:linear-gradient(135deg,var(--navy),var(--navy-700));padding:16px 20px}
-.cal-panel-hdr h4{font-size:14px;font-weight:700;color:#fff}
-.cal-panel-hdr p{font-size:11.5px;color:rgba(255,255,255,.6);margin-top:3px}
-.cal-event-list{max-height:380px;overflow-y:auto}
-.cal-event-item{padding:12px 16px;border-bottom:1px solid var(--line);display:flex;gap:10px;align-items:flex-start;transition:background .2s;text-decoration:none}
+.cal-panel{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;position:sticky;top:100px;box-shadow:var(--shadow-sm)}
+.cal-panel-hdr{background:linear-gradient(135deg,var(--navy),var(--navy-700));padding:12px 16px}
+.cal-panel-hdr h4{font-size:13px;font-weight:700;color:#fff}
+.cal-panel-hdr p{font-size:10.5px;color:rgba(255,255,255,.6);margin-top:2px}
+.cal-event-list{max-height:320px;overflow-y:auto}
+.cal-event-item{padding:10px 14px;border-bottom:1px solid var(--line);display:flex;gap:9px;align-items:flex-start;transition:background .2s;text-decoration:none}
 .cal-event-item:hover{background:var(--cream)}
 .cal-event-item:last-child{border-bottom:none}
-.cal-event-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:4px}
-.cal-event-title{font-size:12.5px;font-weight:600;color:var(--navy);line-height:1.35;margin-bottom:2px}
-.cal-event-cat{font-size:10.5px;color:var(--muted)}
-.cal-no-events{padding:28px;text-align:center;color:var(--muted);font-size:13px}
-.cal-no-events i{font-size:28px;display:block;margin-bottom:8px;color:var(--gold);opacity:.4}
+.cal-event-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.cal-event-title{font-size:12px;font-weight:600;color:var(--navy);line-height:1.35;margin-bottom:2px}
+.cal-event-cat{font-size:10px;color:var(--muted)}
+.cal-no-events{padding:22px;text-align:center;color:var(--muted);font-size:12px}
+.cal-no-events i{font-size:22px;display:block;margin-bottom:6px;color:var(--gold);opacity:.4}
 /* Legend row */
-.cal-legend{display:flex;gap:12px;flex-wrap:wrap;padding:12px 16px;background:var(--cream);border-top:1px solid var(--line)}
-.cal-legend-item{display:flex;align-items:center;gap:5px;font-size:10.5px;color:var(--muted);font-weight:500}
-.cal-legend-dot{width:8px;height:8px;border-radius:50%}
+.cal-legend{display:flex;gap:10px;flex-wrap:wrap;padding:10px 14px;background:var(--cream);border-top:1px solid var(--line)}
+.cal-legend-item{display:flex;align-items:center;gap:4px;font-size:9.5px;color:var(--muted);font-weight:500}
+.cal-legend-dot{width:7px;height:7px;border-radius:50%}
 /* News list hidden class */
 .news-list-wrap{display:block}
 .news-list-wrap.hidden{display:none}
@@ -1431,7 +1431,7 @@ footer{background:var(--navy);color:#fff;padding:48px 0 0}
         </a>
 
         <a href="https://msrim.in/happenings/neinfo/report-on-industrial-visit-to-the-times-of-india-plant-bommasandra-on-15th-april-2026" target="_blank" class="news-card" data-cat="industrial">
-          <div class="news-img"><img src="https://msrim.in/images/cfl2.webp" alt="Event" onerror="this.parentElement.style.background='var(--navy-100)'"/></div>
+          <div class="news-img"><img src="times of india.webp" alt="Industrial Visit to The Times of India Plant" onerror="this.parentElement.style.background='var(--navy-100)'"/></div>
           <div class="news-body">
             <div class="news-meta"><span class="news-tag industrial">Industrial Visit</span><span class="news-date"><i class="bi bi-calendar3"></i> 15 Apr 2026</span></div>
             <h4>Industrial Visit to The Times of India Plant, Bommasandra</h4>
@@ -1455,7 +1455,7 @@ footer{background:var(--navy);color:#fff;padding:48px 0 0}
         </a>
 
         <a href="https://msrim.in/happenings/neinfo/iks-concepts-to-contemporary-business-practices" target="_blank" class="news-card" data-cat="guest">
-          <div class="news-img"><img src="https://msrim.in/images/cfl5.webp" alt="Event" onerror="this.parentElement.style.background='var(--navy-100)'"/></div>
+          <div class="news-img"><img src="iks.webp" alt="IKS Concepts to Contemporary Business Practices" onerror="this.parentElement.style.background='var(--navy-100)'"/></div>
           <div class="news-body">
             <div class="news-meta"><span class="news-tag guest">Guest Lecture</span><span class="news-date"><i class="bi bi-calendar3"></i> 31 Mar 2026</span></div>
             <h4>IKS Concepts to Contemporary Business Practices</h4>
@@ -1463,7 +1463,7 @@ footer{background:var(--navy);color:#fff;padding:48px 0 0}
         </a>
 
         <a href="https://msrim.in/happenings/neinfo/perceptions-sangama-2k26" target="_blank" class="news-card" data-cat="conclave">
-          <div class="news-img"><img src="https://msrim.in/images/Top-Cities-for-Women-in-India-2024.jpg" alt="Event" onerror="this.parentElement.style.background='var(--navy-100)'"/></div>
+          <div class="news-img"><img src="1773633178_7c545a8c3a0f1eb0c589.webp" alt="Perceptions SANGAMA 2K26" onerror="this.parentElement.style.background='var(--navy-100)'"/></div>
           <div class="news-body">
             <div class="news-meta"><span class="news-tag conclave">Conclave</span><span class="news-date"><i class="bi bi-calendar3"></i> 11 Mar 2026</span></div>
             <h4>Perceptions SANGAMA 2K26 — National Management Fest</h4>
@@ -1904,3 +1904,4 @@ document.querySelectorAll('.news-tab').forEach(tab => {
 </script>
 </body>
 </html>
+

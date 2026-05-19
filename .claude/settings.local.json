@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:msrim.in)",
-      "Bash(python3 -c ' *)"
+      "Bash(python3 -c ' *)",
+      "WebFetch(domain:christuniversity.in)",
+      "Bash(powershell -Command \"\\(Get-Content faculty.html -Raw\\) -replace 'href=\\\\\"https://msrim\\\\.in/faculty/inner/\\([^\\\\\"]+\\)\\\\\"', 'href=\\\\\"faculty-detail.html?id=\\\\$1\\\\\"' | Set-Content faculty.html -Encoding UTF8\")",
+      "Bash(powershell -Command \"\\(Get-Content faculty.html -Raw\\) -replace 'href=\\\\\"faculty-profile\\\\.html\\\\\"', 'href=\\\\\"faculty-detail.html?id=jeevitha-r\\\\\"' | Set-Content faculty.html -Encoding UTF8\")"
     ]
   }
 }
