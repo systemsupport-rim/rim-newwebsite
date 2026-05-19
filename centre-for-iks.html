@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Centre for Sustainability | Ramaiah Institute of Management</title>
+  <title>Centre for Indian Knowledge Systems | Ramaiah Institute of Management</title>
   <meta name="description"
-    content="MSRIM Centre for Sustainability — advancing UN Sustainable Development Goals through research, education and community action since 2022." />
+    content="Centre for Indian Knowledge Systems (IKS) at MSRIM — integrating timeless Indian wisdom with contemporary management education and practice." />
 
   <!-- Fonts: Fraunces (display serif) + DM Sans (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,13 +20,6 @@
 
   <style>
     :root {
-      --green-900: #1b5e20;
-      --green-700: #2e7d32;
-      --green-500: #43a047;
-      --green-100: #e8f5e9;
-      --teal-700: #00695c;
-      --teal-500: #00897b;
-      --teal-100: #e0f2f1;
       --navy-900: #0a1f3d;
       --navy-800: #102b52;
       --navy-700: #1a3a6b;
@@ -63,7 +56,7 @@
       font-size: 16px;
       line-height: 1.65;
       color: var(--ink);
-      background: #FDF9F4;
+      background: var(--cream);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       overflow-x: hidden;
@@ -186,7 +179,7 @@
     .has-drop:hover .drop-menu{opacity:1;visibility:visible;transform:translateY(0)}
     .drop-menu a{display:block;padding:9px 14px;font-size:13px;font-weight:500;color:#1a1a1a;border-radius:6px;transition:all .2s;white-space:nowrap}
     .drop-menu a:hover{background:#e8eef7;color:#0a1f3d;padding-left:18px}
-    .nav-cta{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#1b5e20,#43a047);color:#fff;padding:9px 20px;border-radius:999px;font-size:13.5px;font-weight:600;transition:opacity .25s;flex-shrink:0}
+    .nav-cta{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#E05A04,#F88C1A);color:#fff;padding:9px 20px;border-radius:999px;font-size:13.5px;font-weight:600;transition:opacity .25s;flex-shrink:0}
     .nav-cta:hover{opacity:.9}
     @media(max-width:1024px){.nav-links{display:none}.nav-cta{display:none}}
 
@@ -216,12 +209,12 @@
       align-items: center;
       justify-content: center;
       gap: 4px;
-      background: #2e7d32;
+      background: #E05A04;
       color: #fff;
       border: none;
       border-radius: 6px;
       padding: 10px 16px;
-      box-shadow: 0 3px 12px rgba(46,125,50,.35);
+      box-shadow: 0 3px 12px rgba(224,90,4,.35);
       cursor: pointer;
       transition: all .3s;
       flex-shrink: 0;
@@ -232,7 +225,7 @@
       text-transform: uppercase;
       min-width: 58px;
     }
-    .menu-pill:hover { background: #1b5e20; opacity: .95; transform: translateY(-1px); }
+    .menu-pill:hover { opacity: .88; transform: translateY(-1px); }
     .menu-pill .lines { display: flex; flex-direction: column; gap: 4px; width: 22px; }
     .menu-pill .lines span { height: 2px; background: #fff; border-radius: 2px; transition: all .3s; display: block; }
     .menu-pill .lines span:nth-child(2) { width: 70%; margin-left: auto; }
@@ -276,7 +269,7 @@
       right: -40px;
       width: 200px;
       height: 200px;
-      background-image: radial-gradient(circle, rgba(46,125,50,.15) 0%, transparent 60%);
+      background-image: radial-gradient(circle, rgba(201, 169, 97, .18) 0%, transparent 60%);
       pointer-events: none;
     }
 
@@ -304,7 +297,7 @@
       font-size: 11.5px;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: #2e7d32;
+      color: var(--gold-600);
       font-weight: 600;
       margin-bottom: 14px;
       display: inline-flex;
@@ -316,7 +309,7 @@
       content: "";
       width: 28px;
       height: 1px;
-      background: #43a047;
+      background: var(--gold-500);
     }
 
     .hero-title h1 {
@@ -328,7 +321,7 @@
     }
 
     .hero-title h1 .gold {
-      color: #2e7d32;
+      color: var(--gold-600);
       font-weight: 400;
       font-style: italic;
       display: block;
@@ -351,7 +344,7 @@
     /* RIGHT image panel */
     .hero-right {
       position: relative;
-      background: linear-gradient(145deg, #0d3b0f 0%, #1b5e20 100%);
+      background: linear-gradient(145deg, var(--navy-900) 0%, var(--navy-700) 100%);
       overflow: hidden;
       display: flex;
       align-items: center;
@@ -391,7 +384,7 @@
     }
 
     .hero-right.no-img {
-      background: linear-gradient(135deg, #0d3b0f 0%, #1b5e20 100%);
+      background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-700) 100%);
     }
 
     .hero-right.no-img::before {
@@ -425,7 +418,7 @@
       content: "";
       width: 30px;
       height: 1px;
-      background: #43a047;
+      background: var(--gold-500);
     }
 
     /* ============ MAIN LAYOUT ============ */
@@ -484,7 +477,7 @@
 
     .sidebar-nav a:hover,
     .sidebar-nav a.active {
-      background: #FDF9F4;
+      background: var(--cream);
       color: var(--navy-900);
       padding-left: 30px;
     }
@@ -601,7 +594,7 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background: #FDF9F4;
+      background: var(--cream);
       border: none;
       cursor: pointer;
       font-size: 20px;
@@ -713,7 +706,7 @@
       text-align: center;
       padding: 28px;
       position: relative;
-      box-shadow: 0 12px 40px rgba(27,94,32,.35), 0 0 0 2px #43a047, 0 0 0 5px #1b5e20, 0 0 0 7px #43a047;
+      box-shadow: 0 12px 40px rgba(10,31,61,.35), 0 0 0 2px #c9a961, 0 0 0 5px #0a1f3d, 0 0 0 7px #c9a961;
       flex-shrink: 0;
     }
 
@@ -737,16 +730,16 @@
 
     .about-emblem .icon {
       font-size: 32px;
-      color: #a5d6a7;
+      color: var(--gold-500);
       margin-bottom: 10px;
-      filter: drop-shadow(0 2px 6px rgba(165,214,167,.5));
+      filter: drop-shadow(0 2px 6px rgba(201,169,97,.5));
     }
 
     .about-emblem .label-top {
       font-size: 9px;
       letter-spacing: 4px;
       text-transform: uppercase;
-      color: #a5d6a7;
+      color: var(--gold-500);
       margin-bottom: 6px;
       font-weight: 600;
     }
@@ -1023,7 +1016,7 @@
       left: 0;
       right: 0;
       height: 3px;
-      background: linear-gradient(90deg, #c8e6c9, #43a047, #c8e6c9);
+      background: linear-gradient(90deg, var(--gold-100), var(--gold-500), var(--gold-100));
     }
 
     .team-card::after {
@@ -1033,7 +1026,7 @@
       left: 0;
       right: 0;
       height: 3px;
-      background: linear-gradient(90deg, #43a047, #2e7d32);
+      background: linear-gradient(90deg, var(--gold-500), var(--gold-600));
       transform: scaleX(0);
       transform-origin: left;
       transition: transform .4s;
@@ -1392,7 +1385,7 @@
       left: 0;
       width: 30px;
       height: 2px;
-      background: #43a047;
+      background: var(--gold-500);
     }
 
     .footer-brand img {
@@ -1753,10 +1746,10 @@
             <a href="centre-for-leadership (2).html">Centre for Leadership</a>
             <a href="centre-for-case-development.html">Centre for Case Development</a>
             <a href="centre-for-excellence.html">Centre for Excellence</a>
-          <a href="centre-for-iks.html">Centre for IKS</a>
-          <a href="centre-for-entrepreneurship.html">Centre for Entrepreneurship</a>
-          <a href="centre-for-corporate-relations.html">Centre for Corporate Relations</a>
-          <a href="centre-for-alumni-relations.html">Centre for Alumni Relations</a>
+            <a href="centre-for-iks.html" class="active">Centre for IKS</a>
+            <a href="centre-for-entrepreneurship.html">Centre for Entrepreneurship</a>
+            <a href="centre-for-corporate-relations.html">Centre for Corporate Relations</a>
+            <a href="centre-for-alumni-relations.html">Centre for Alumni Relations</a>
           <a href="innovation-council.html">Institute Innovation Council</a>
           </div>
         </div>
@@ -1780,16 +1773,15 @@
           <div class="eyebrow">MSRIM Centres</div>
           <h1>
             <span class="gold">Centre for</span>
-            <span class="navy">Sustainability</span>
+            <span class="navy">Indian Knowledge Systems</span>
           </h1>
-          <p class="sub">Cultivating next-generation leaders at the intersection of academia and industry — through
-            mentorship, learning &amp; development.</p>
+          <p class="sub">Rediscovering and integrating the timeless wisdom of India with contemporary management education — through research, dialogue and experiential learning.</p>
         </div>
       </div>
       <div class="hero-right" id="heroRight">
         <img src="https://msrim.in/images/msrim_campus.jpg" alt="MSRIM Campus"
           onerror="document.getElementById('heroRight').classList.add('no-img'); this.style.display='none';" />
-        <div class="badge-deco">Building Thought Leadership</div>
+        <div class="badge-deco">Wisdom · Heritage · Leadership</div>
       </div>
     </div>
   </section>
@@ -1798,63 +1790,78 @@
   <div class="main-section">
     <aside class="sidebar">
       <div class="sidebar-card">
-        <h3>Centre Menu</h3>
+        <h3>IKS Menu</h3>
         <ul class="sidebar-nav">
-          <li><a href="#about" class="active">About the Centre <span class="arrow">→</span></a></li>
-          <li><a href="#vision">Vision &amp; Mission <span class="arrow">→</span></a></li>
+          <li><a href="#about" class="active">About <span class="arrow">→</span></a></li>
+          <li><a href="#focus">Focus Areas <span class="arrow">→</span></a></li>
           <li><a href="#objectives">Objectives <span class="arrow">→</span></a></li>
-          <li><a href="#activities">Key Activities <span class="arrow">→</span></a></li>
-          <li><a href="#partnerships">Partnerships <span class="arrow">→</span></a></li>
+          <li><a href="#activities">Activities <span class="arrow">→</span></a></li>
           <li><a href="#team">Our Team <span class="arrow">→</span></a></li>
-          <li><a href="#events">Events &amp; Initiatives <span class="arrow">→</span></a></li>
-          <li><a href="#contact">Contact Us <span class="arrow">→</span></a></li>
+          <li><a href="#contact">Contact <span class="arrow">→</span></a></li>
         </ul>
       </div>
       <div class="sidebar-cta">
-        <h4>Collaborate with Us</h4>
-        <p>Partner with MSRIM on sustainability research and ESG initiatives.</p>
+        <h4>Explore IKS</h4>
+        <p>Engage with India's timeless wisdom through lectures, workshops and research at MSRIM.</p>
         <a href="mailto:support@msrim.org">Get in Touch</a>
       </div>
     </aside>
 
     <main class="content">
+      <!-- About -->
       <section id="about" class="reveal">
         <span class="section-eyebrow">About the Centre</span>
-        <h2 class="section-title">Building tomorrow's <em>sustainable leaders</em></h2>
         <div class="about-grid">
           <div class="about-emblem">
-            <i class="bi bi-tree-fill icon"></i>
+            <i class="bi bi-flower1 icon"></i>
             <div class="label-top">MSRIM</div>
-            <div class="label-main">Centre for<br />Sustainability</div>
+            <div class="label-main">IKS<br />Centre</div>
           </div>
           <div class="about-text">
-            <p>Established in 2022, the MSRIM Centre for Sustainability is a dedicated academic initiative committed to integrating sustainable development principles into management education, research and practice.</p>
-            <p>The Centre advances the United Nations Sustainable Development Goals (UN SDGs) by fostering an ecosystem where students, faculty and industry partners co-create solutions to contemporary sustainability challenges — from climate action and ESG governance to urban mobility and green policy.</p>
-            <p>Through targeted research programmes, ESG consulting, community engagement and policy advocacy, the Centre bridges the gap between academic knowledge and real-world sustainability action, preparing management graduates to lead with environmental responsibility and social consciousness.</p>
+            <p>The Centre for Indian Knowledge Systems (IKS) at Ramaiah Institute of Management is dedicated to rediscovering, preserving, and integrating the timeless wisdom of India with contemporary education and management practices.</p>
+            <p>Rooted in the rich intellectual traditions of Bharat, the Centre aims to create a deeper understanding of Indian philosophy, ethics, leadership, sustainability, governance, and holistic living through academic initiatives, research, dialogue, and experiential learning.</p>
+            <p>The Centre serves as a vibrant platform for students, academicians, researchers, industry leaders, and practitioners to explore the relevance of Indian knowledge traditions in addressing modern business, societal, and global challenges. Through lectures, workshops, conclaves, research projects, cultural engagements, and interdisciplinary programs, the Centre promotes value-based leadership and indigenous perspectives in management education.</p>
+            <p>The Centre actively encourages discussions on Indian epics, ancient sciences, governance models, spiritual wisdom, sustainable living practices, and traditional systems of knowledge, helping learners connect cultural heritage with contemporary professional excellence.</p>
+            <p>With a vision to foster responsible leadership and holistic development, the Centre for Indian Knowledge Systems seeks to build globally aware individuals who are deeply connected to India's intellectual and cultural foundations.</p>
+            <p>By blending ancient wisdom with modern relevance, the Centre aspires to emerge as a leading hub for Indian Knowledge Systems, contributing meaningfully to education, research, innovation, and nation-building.</p>
           </div>
         </div>
       </section>
 
-
-
-      <!-- Vision & Mission -->
-      <section id="vision" class="reveal">
-        <span class="section-eyebrow">Our Direction</span>
-        <h2 class="section-title">Vision &amp; <em>Mission</em></h2>
-        <div class="lead-card" style="margin-bottom:16px;">
-          <div class="lead-icon"><i class="bi bi-eye"></i></div>
-          <div>
-            <h5>Vision</h5>
-            <div class="lead-role">Education for Sustainable Development</div>
-            <p>To become a premier academic institution in <strong>Education for Sustainable Development (ESD)</strong> — building capacity, fostering innovations and enabling industry partnerships that drive meaningful, lasting change across society and the environment.</p>
+      <!-- Focus Areas -->
+      <section id="focus" class="reveal">
+        <span class="section-eyebrow">Core Themes</span>
+        <h2 class="section-title">Areas of <em>Focus</em></h2>
+        <div class="objectives-grid">
+          <div class="objective-card">
+            <div class="objective-num"><i class="bi bi-book-fill" style="font-size:22px;"></i></div>
+            <h5>Indian Philosophy &amp; Ethics</h5>
+            <p style="font-size:13px;color:#5a5a5a;margin-top:6px;line-height:1.6;">Exploring Vedantic thought, Dharmic ethics, and philosophical systems that underpin Indian civilisation and leadership traditions.</p>
           </div>
-        </div>
-        <div class="lead-card">
-          <div class="lead-icon"><i class="bi bi-bullseye"></i></div>
-          <div>
-            <h5>Mission</h5>
-            <div class="lead-role">ESG · Research · Community Action</div>
-            <p>Equipping professionals with sustainability knowledge, conducting impactful research, promoting <strong>ESG principles</strong> across sectors, and engaging communities to advance the UN Sustainable Development Goals through education and collaborative action.</p>
+          <div class="objective-card">
+            <div class="objective-num"><i class="bi bi-person-arms-up" style="font-size:22px;"></i></div>
+            <h5>Value-Based Leadership</h5>
+            <p style="font-size:13px;color:#5a5a5a;margin-top:6px;line-height:1.6;">Drawing from ancient texts on statecraft, governance, and leadership — from Arthashastra to the Bhagavad Gita — for modern management contexts.</p>
+          </div>
+          <div class="objective-card">
+            <div class="objective-num"><i class="bi bi-tree-fill" style="font-size:22px;"></i></div>
+            <h5>Sustainability &amp; Holistic Living</h5>
+            <p style="font-size:13px;color:#5a5a5a;margin-top:6px;line-height:1.6;">Ancient Indian practices of ecological balance, sustainable agriculture, and community welfare as precursors to modern sustainability frameworks.</p>
+          </div>
+          <div class="objective-card">
+            <div class="objective-num"><i class="bi bi-bank" style="font-size:22px;"></i></div>
+            <h5>Governance &amp; Administration</h5>
+            <p style="font-size:13px;color:#5a5a5a;margin-top:6px;line-height:1.6;">Classical Indian models of governance, public administration, and economic thought relevant to contemporary policy and institutional design.</p>
+          </div>
+          <div class="objective-card">
+            <div class="objective-num"><i class="bi bi-mortarboard-fill" style="font-size:22px;"></i></div>
+            <h5>Ancient Sciences &amp; Innovation</h5>
+            <p style="font-size:13px;color:#5a5a5a;margin-top:6px;line-height:1.6;">Mathematics, astronomy, medicine, metallurgy and other scientific traditions of ancient India and their relevance to contemporary innovation.</p>
+          </div>
+          <div class="objective-card">
+            <div class="objective-num"><i class="bi bi-globe-asia-australia" style="font-size:22px;"></i></div>
+            <h5>Cultural Heritage &amp; Identity</h5>
+            <p style="font-size:13px;color:#5a5a5a;margin-top:6px;line-height:1.6;">Connecting India's rich cultural legacy — arts, epics, literature, and traditions — with professional identity and global awareness.</p>
           </div>
         </div>
       </section>
@@ -1862,84 +1869,88 @@
       <!-- Objectives -->
       <section id="objectives" class="reveal">
         <span class="section-eyebrow">What We Do</span>
-        <h2 class="section-title">Objectives of <em>Centre for Sustainability</em></h2>
+        <h2 class="section-title">Objectives of <em>Centre for IKS</em></h2>
         <div class="objectives-grid">
           <div class="objective-card">
             <div class="objective-num">01</div>
-            <h5>Integrate Sustainability &amp; ESG into PGDM Curriculum</h5>
+            <h5>Integrate Indian Wisdom into Management Curriculum</h5>
           </div>
           <div class="objective-card">
             <div class="objective-num">02</div>
-            <h5>Conduct High-Impact Research on Urban Sustainability &amp; Climate Action</h5>
+            <h5>Conduct Research on Indian Knowledge Traditions</h5>
           </div>
           <div class="objective-card">
             <div class="objective-num">03</div>
-            <h5>Forge Strategic Partnerships with Government, NGOs &amp; Industry</h5>
+            <h5>Foster Value-Based &amp; Responsible Leadership</h5>
           </div>
           <div class="objective-card">
             <div class="objective-num">04</div>
-            <h5>Engage Communities Through Awareness Campaigns &amp; Environmental Drives</h5>
+            <h5>Organise Conclaves, Lectures &amp; Cultural Dialogues</h5>
           </div>
           <div class="objective-card">
             <div class="objective-num">05</div>
-            <h5>Build Faculty &amp; Student Capacity in ESG Reporting and Sustainable Strategy</h5>
+            <h5>Connect Heritage with Contemporary Professional Excellence</h5>
+          </div>
+          <div class="objective-card">
+            <div class="objective-num">06</div>
+            <h5>Contribute to Education, Innovation and Nation-Building</h5>
           </div>
         </div>
       </section>
 
-      <!-- Key Activities -->
+      <!-- Activities -->
       <section id="activities" class="reveal">
-        <span class="section-eyebrow">Research &amp; Impact</span>
+        <span class="section-eyebrow">Programmes &amp; Engagement</span>
         <h2 class="section-title">Key <em>Activities</em></h2>
-        <div class="objectives-grid">
-          <div class="objective-card">
-            <div class="objective-num"><i class="bi bi-book-fill" style="font-size:20px;"></i></div>
-            <h5>Research &amp; Publications</h5>
-            <p style="font-size:13px;margin-top:6px;line-height:1.6;color:#5a5a5a;">Published book on "Institutions and Public Policy for India's Sustainable Development" (2024) and multiple peer-reviewed papers on transportation, EVs and urban planning.</p>
-          </div>
-          <div class="objective-card">
-            <div class="objective-num"><i class="bi bi-bus-front" style="font-size:20px;"></i></div>
-            <h5>Brand Bengaluru Campaign 2023</h5>
-            <p style="font-size:13px;margin-top:6px;line-height:1.6;color:#5a5a5a;">Led the Agile and Sustainable Mobility theme advocating for greener urban transportation and last-mile connectivity in Bengaluru.</p>
-          </div>
-          <div class="objective-card">
-            <div class="objective-num"><i class="bi bi-gender-ambiguous" style="font-size:20px;"></i></div>
-            <h5>Gender Inclusive Transport Policy</h5>
-            <p style="font-size:13px;margin-top:6px;line-height:1.6;color:#5a5a5a;">Government of Karnataka funded research project (Rs. 11 Lakhs) developing gender-sensitive transportation policies for urban Bengaluru.</p>
-          </div>
-          <div class="objective-card">
-            <div class="objective-num"><i class="bi bi-mortarboard-fill" style="font-size:20px;"></i></div>
-            <h5>Sustainability Education</h5>
-            <p style="font-size:13px;margin-top:6px;line-height:1.6;color:#5a5a5a;">SDG-aligned curriculum modules, guest lectures by sustainability practitioners and experiential learning projects integrated into PGDM.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Partnerships -->
-      <section id="partnerships" class="reveal">
-        <span class="section-eyebrow">Industry Collaboration</span>
-        <h2 class="section-title">Strategic <em>Partnerships</em></h2>
-        <div class="objectives-grid">
-          <div class="objective-card">
-            <div class="objective-num"><i class="bi bi-handshake" style="font-size:20px;"></i></div>
-            <h5>Tattva ESG Solutions</h5>
-            <p style="font-size:13px;margin-top:6px;line-height:1.6;color:#5a5a5a;">MOU 2024 — ESG consulting, curriculum collaboration and joint research on sustainable business practices.</p>
-          </div>
-          <div class="objective-card">
-            <div class="objective-num"><i class="bi bi-buildings" style="font-size:20px;"></i></div>
-            <h5>Urbanmorph Consultants</h5>
-            <p style="font-size:13px;margin-top:6px;line-height:1.6;color:#5a5a5a;">MOU 2025 — urban sustainability planning, smart city research and community design projects.</p>
-          </div>
-          <div class="objective-card">
-            <div class="objective-num"><i class="bi bi-globe2" style="font-size:20px;"></i></div>
-            <h5>Urban Works Institute</h5>
-            <p style="font-size:13px;margin-top:6px;line-height:1.6;color:#5a5a5a;">Collaboration on sustainable urban mobility, transportation policy research and city-scale sustainability projects.</p>
-          </div>
-          <div class="objective-card">
-            <div class="objective-num"><i class="bi bi-bank" style="font-size:20px;"></i></div>
-            <h5>Government of Karnataka</h5>
-            <p style="font-size:13px;margin-top:6px;line-height:1.6;color:#5a5a5a;">Funded project partner — Rs. 11 Lakh grant for Gender Inclusive Transport Policy research for urban Bengaluru.</p>
-          </div>
+        <div class="news-grid">
+          <article class="news-card">
+            <div class="news-img"><i class="bi bi-mic-fill"></i></div>
+            <div class="news-body">
+              <div class="news-date">Regular</div>
+              <h5>Guest Lectures &amp; Expert Talks</h5>
+              <p style="font-size:13px;color:#5a5a5a;margin-top:6px;line-height:1.5;">Eminent scholars, spiritual leaders, and practitioners sharing insights on Indian philosophy, epics, and traditional knowledge systems.</p>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="news-img v2"><i class="bi bi-easel-fill"></i></div>
+            <div class="news-body">
+              <div class="news-date">Ongoing</div>
+              <h5>Workshops &amp; Experiential Sessions</h5>
+              <p style="font-size:13px;color:#5a5a5a;margin-top:6px;line-height:1.5;">Hands-on workshops on Indian governance models, Vedic mathematics, Yoga for leadership, Ayurvedic principles, and cultural arts.</p>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="news-img v3"><i class="bi bi-people-fill"></i></div>
+            <div class="news-body">
+              <div class="news-date">Annual</div>
+              <h5>IKS Conclaves</h5>
+              <p style="font-size:13px;color:#5a5a5a;margin-top:6px;line-height:1.5;">Annual conclaves bringing together academicians, researchers, industry leaders and cultural practitioners to explore Indian knowledge in modern contexts.</p>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="news-img"><i class="bi bi-journal-richtext"></i></div>
+            <div class="news-body">
+              <div class="news-date">Ongoing</div>
+              <h5>Research Projects</h5>
+              <p style="font-size:13px;color:#5a5a5a;margin-top:6px;line-height:1.5;">Interdisciplinary research exploring Indian management thought, classical economics, ancient governance and traditional sustainability models.</p>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="news-img v2"><i class="bi bi-music-note-beamed"></i></div>
+            <div class="news-body">
+              <div class="news-date">Regular</div>
+              <h5>Cultural Engagements</h5>
+              <p style="font-size:13px;color:#5a5a5a;margin-top:6px;line-height:1.5;">Cultural programs, heritage walks, classical arts performances, and storytelling sessions from Indian epics connecting students to Bharat's living traditions.</p>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="news-img v3"><i class="bi bi-globe-asia-australia"></i></div>
+            <div class="news-body">
+              <div class="news-date">Ongoing</div>
+              <h5>Global IKS Collaborations</h5>
+              <p style="font-size:13px;color:#5a5a5a;margin-top:6px;line-height:1.5;">Partnerships with international universities, embassies and global forums to promote Indian knowledge systems and create joint research opportunities.</p>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -1947,82 +1958,22 @@
       <section id="team" class="reveal">
         <div class="team-header">
           <span class="section-eyebrow">Our Team</span>
-          <h2 class="section-title">Centre <em>Leadership</em></h2>
-          <p class="team-subtitle">Faculty driving the Centre's sustainability vision forward</p>
+          <h2 class="section-title">IKS <em>Leadership at MSRIM</em></h2>
+          <p class="team-subtitle">Faculty guiding the Centre for Indian Knowledge Systems</p>
         </div>
         <div class="team-grid">
           <div class="team-card">
             <div class="team-avatar"><img src="https://msrim.in/images/Geetha-Rajaram-dean.jpg" alt="Dr. Geetha M Rajaram" onerror="this.style.display='none'" /></div>
             <h4>Dr. Geetha M Rajaram</h4>
-            <div class="role">Professor and Dean</div>
-            <div class="dept">Faculty, MSRIM</div>
+            <div class="role">Head — Centre for IKS</div>
+            <div class="dept">Professor &amp; Dean, MSRIM</div>
           </div>
           <div class="team-card">
-            <div class="team-avatar"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/mrgha_varma_nw.png" alt="Dr. Meghna Verma" onerror="this.style.display='none'" /></div>
-            <h4>Dr. Meghna Verma</h4>
-            <div class="role">Head, Centre for Sustainability</div>
-            <div class="dept">Assoc. Professor, Marketing &amp; IB</div>
+            <div class="team-avatar"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/triveni_nw.png" alt="Dr. Triveni P" onerror="this.style.display='none'" /></div>
+            <h4>Dr. Triveni P</h4>
+            <div class="role">Faculty Coordinator — IKS</div>
+            <div class="dept">Professor, Finance &amp; BFSI</div>
           </div>
-        </div>
-      </section>
-
-      <!-- Events -->
-      <section id="events" class="reveal">
-        <div class="view-more-bar">
-          <div>
-            <span class="section-eyebrow">Outreach &amp; Engagement</span>
-            <h2 class="section-title">Events &amp; <em>Initiatives</em></h2>
-          </div>
-        </div>
-        <div class="news-grid">
-          <article class="news-card">
-            <div class="news-img"><i class="bi bi-tree-fill"></i></div>
-            <div class="news-body">
-              <div class="news-date">2025</div>
-              <h5>EcoBuild Conclave 2025</h5>
-              <p style="font-size:13px;color:#5a5a5a;margin-top:6px;line-height:1.5;">Annual flagship conclave on sustainable construction, green infrastructure and climate-resilient urban development.</p>
-            </div>
-          </article>
-          <article class="news-card">
-            <div class="news-img v2"><i class="bi bi-bicycle"></i></div>
-            <div class="news-body">
-              <div class="news-date">2025</div>
-              <h5>Pedaluru — Cycling Movement</h5>
-              <p style="font-size:13px;color:#5a5a5a;margin-top:6px;line-height:1.5;">Community cycling initiative promoting sustainable mobility and reducing carbon footprint in Bengaluru.</p>
-            </div>
-          </article>
-          <article class="news-card">
-            <div class="news-img v3"><i class="bi bi-sun-fill"></i></div>
-            <div class="news-body">
-              <div class="news-date">2024</div>
-              <h5>Sustainability Summit 2024</h5>
-              <p style="font-size:13px;color:#5a5a5a;margin-top:6px;line-height:1.5;">Multi-stakeholder summit bringing together industry leaders, policymakers and academics on sustainable development.</p>
-            </div>
-          </article>
-          <article class="news-card">
-            <div class="news-img"><i class="bi bi-droplet-fill"></i></div>
-            <div class="news-body">
-              <div class="news-date">2024</div>
-              <h5>Save Water, Save Bengaluru</h5>
-              <p style="font-size:13px;color:#5a5a5a;margin-top:6px;line-height:1.5;">Community awareness drive on water conservation and responsible usage across the Bengaluru metropolitan area.</p>
-            </div>
-          </article>
-          <article class="news-card">
-            <div class="news-img v2"><i class="bi bi-sign-stop-fill"></i></div>
-            <div class="news-body">
-              <div class="news-date">Ongoing</div>
-              <h5>Road Safety Sessions</h5>
-              <p style="font-size:13px;color:#5a5a5a;margin-top:6px;line-height:1.5;">Regular on-campus sessions on road safety awareness, pedestrian rights and sustainable commuting practices.</p>
-            </div>
-          </article>
-          <article class="news-card">
-            <div class="news-img v3"><i class="bi bi-recycle"></i></div>
-            <div class="news-body">
-              <div class="news-date">2019</div>
-              <h5>Plog Run — Bengaluru</h5>
-              <p style="font-size:13px;color:#5a5a5a;margin-top:6px;line-height:1.5;">Pioneer plogging event combining fitness with environmental action — one of the first such drives in Bengaluru's academic community.</p>
-            </div>
-          </article>
         </div>
       </section>
 
@@ -2038,15 +1989,13 @@
           <div class="lead-icon"><i class="bi bi-telephone-fill"></i></div>
           <div><h5>Phone</h5><div class="lead-role"><a href="tel:08023606640">080-2360-6640, 6641, 6642</a></div></div>
         </div>
-        <div class="lead-card" style="margin-bottom:12px;">
+        <div class="lead-card">
           <div class="lead-icon"><i class="bi bi-geo-alt-fill"></i></div>
           <div><h5>Address</h5><div class="lead-role">Gate No. 8, Ramaiah Group Campus, Bengaluru — 560054</div></div>
         </div>
-        <div class="lead-card">
-          <div class="lead-icon"><i class="bi bi-globe2"></i></div>
-          <div><h5>Website</h5><div class="lead-role"><a href="https://msrim.in/centre-for-sustainability" target="_blank">msrim.in/centre-for-sustainability</a></div></div>
-        </div>
       </section>
+
+
 
     </main>
   </div>
@@ -2072,15 +2021,11 @@
     </ul>
     <h5>Centres &amp; Cells</h5>
     <ul>
-      <li><a href="https://msrim.in/centre-for-leadership">Centre for Sustainability</a></li>
+      <li><a href="https://msrim.in/centre-for-leadership">Centre for Leadership</a></li>
       <li><a href="centre-for-sustainability.html">Centre for Sustainability</a></li>
       <li><a href="centre-for-case-development.html">Centre for Case Development</a></li>
-      <li><a href="centre-for-excellence.html">Centre for Excellence</a>
-          <a href="centre-for-iks.html">Centre for IKS</a>
-          <a href="centre-for-entrepreneurship.html">Centre for Entrepreneurship</a>
-          <a href="centre-for-corporate-relations.html">Centre for Corporate Relations</a>
-          <a href="centre-for-alumni-relations.html">Centre for Alumni Relations</a>
-          <a href="innovation-council.html">Institute Innovation Council</a></li>
+      <li><a href="centre-for-excellence.html" class="active">Centre for Excellence</a>
+          <a href="centre-for-iks.html" class="active">Centre for IKS</a></li>
       <li><a href="centre-for-research-consultancy.html">Centre for Research &amp; Consultancy</a></li>
     </ul>
     <h5>Quick Links</h5>
@@ -2125,15 +2070,11 @@
       <div>
         <h6>Centres</h6>
         <ul>
-          <li><a href="https://msrim.in/centre-for-leadership">Centre for Sustainability</a></li>
+          <li><a href="https://msrim.in/centre-for-leadership">Centre for Leadership</a></li>
           <li><a href="centre-for-sustainability.html">Centre for Sustainability</a></li>
           <li><a href="centre-for-case-development.html">Centre for Case Development</a></li>
-          <li><a href="centre-for-excellence.html">Centre for Excellence</a>
-          <a href="centre-for-iks.html">Centre for IKS</a>
-          <a href="centre-for-entrepreneurship.html">Centre for Entrepreneurship</a>
-          <a href="centre-for-corporate-relations.html">Centre for Corporate Relations</a>
-          <a href="centre-for-alumni-relations.html">Centre for Alumni Relations</a>
-          <a href="innovation-council.html">Institute Innovation Council</a></li>
+          <li><a href="centre-for-excellence.html" class="active">Centre for Excellence</a>
+          <a href="centre-for-iks.html" class="active">Centre for IKS</a></li>
           <li><a href="centre-for-research-consultancy.html">Centre for Research &amp; Consultancy</a></li>
         </ul>
       </div>
@@ -2151,7 +2092,7 @@
     <div class="footer-bottom">
       <div class="wrap">
         <div>© 2025 Ramaiah Institute of Management. All rights reserved.</div>
-        <div>Centre for Sustainability · MSRIM</div>
+        <div>Centre for Indian Knowledge Systems · MSRIM</div>
       </div>
     </div>
   </footer>

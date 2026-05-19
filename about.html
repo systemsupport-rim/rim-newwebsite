@@ -48,6 +48,7 @@ ul{list-style:none}
 .nav-links a{font-size:13.5px;font-weight:500;color:var(--navy);padding:6px 10px;border-radius:6px;transition:all .2s;white-space:nowrap}
 .nav-links a:hover{background:var(--gold-light)}
 .nav-links a.active{background:var(--gold-light);font-weight:700}
+.drop-menu a.active{background:transparent!important;font-weight:500!important;border-bottom:none!important;color:#1a1a1a!important}
 .has-drop{position:relative}
 .has-drop > a{display:flex;align-items:center;gap:4px}
 .has-drop > a::after{content:"";display:inline-block;width:0;height:0;border:4px solid transparent;border-top-color:var(--navy);margin-top:2px;transition:transform .2s}
@@ -212,7 +213,7 @@ ul{list-style:none}
 /* ── FOOTER ── */
 footer{background:var(--navy);color:#fff;padding:60px 0 0}
 .footer-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:44px;padding-bottom:44px;max-width:1400px;margin:0 auto;padding-left:28px;padding-right:28px}
-.footer-brand .logo img{height:38px;filter:brightness(10)}
+.footer-brand .logo img{height:42px;filter:brightness(0) invert(1);opacity:.9}
 .footer-brand p{font-size:13px;color:rgba(255,255,255,.52);line-height:1.75;margin-top:16px;max-width:280px}
 .footer-contact{margin-top:18px;display:flex;flex-direction:column;gap:10px}
 .fc{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:rgba(255,255,255,.58)}
@@ -275,7 +276,60 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
 .mobile-nav-sub a:hover{color:var(--navy);background:var(--cream);border-radius:6px}
 .mobile-nav-cta{margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
 .mobile-nav-cta a{display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#E05A04 0%,#F88C1A 100%);color:#fff;padding:13px;border-radius:999px;font-weight:700;font-size:14.5px}
-</style>
+
+    /* ============ FULLSCREEN MENU ============ */
+    .fsm-overlay{position:fixed;inset:0;z-index:9999;opacity:0;visibility:hidden;transition:opacity .38s}
+    .fsm-overlay.open{opacity:1;visibility:visible}
+    .fsm-panel{position:fixed;inset:0;background:url('https://msrim.in/images/msrim_campus.jpg') center/cover no-repeat;transform:translateY(-105%);transition:transform .48s cubic-bezier(.4,0,.2,1);overflow-y:auto;display:flex;flex-direction:column}
+    .fsm-panel::before{content:"";position:fixed;inset:0;background:linear-gradient(160deg,rgba(8,24,50,.45) 0%,rgba(10,31,61,.35) 100%);pointer-events:none;z-index:0}
+    .fsm-overlay.open .fsm-panel{transform:translateY(0)}
+    .fsm-header{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;padding:20px 44px;border-bottom:1px solid rgba(201,169,97,.2)}
+    .fsm-logo{height:40px;filter:brightness(0) invert(1);opacity:.9}
+    .fsm-header-right{display:flex;align-items:center;gap:14px}
+    .fsm-header-cta{display:inline-flex;align-items:center;gap:7px;padding:9px 22px;background:#E05A04;color:#fff;font-size:13px;font-weight:700;border-radius:999px;text-decoration:none;transition:all .2s}
+    .fsm-header-cta:hover{background:#c94f03;color:#fff;transform:translateY(-1px)}
+    .fsm-close{width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .25s}
+    .fsm-close:hover{background:#E05A04;border-color:#E05A04;transform:rotate(90deg)}
+    /* fsm-body replaced */
+    .fsm-section-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(201,169,97,.75);margin-bottom:8px;display:block}
+    .fsm-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:10px}
+    .fsm-card{background:rgba(255,255,255,.07);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid rgba(255,255,255,.28);border-bottom:3px solid rgba(255,255,255,.18);border-radius:16px;padding:14px 10px 12px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;transition:all .25s;box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 4px 24px rgba(0,0,0,.12)}
+    .fsm-card:hover{background:rgba(255,255,255,.96);border-color:rgba(255,255,255,.8);border-bottom-color:#E05A04;transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+    .fsm-card:hover .fsm-label{color:#0a1f3d}
+    .fsm-card:hover .fsm-icon{transform:scale(1.12);box-shadow:0 8px 24px rgba(224,90,4,.6)}
+    .fsm-icon{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#E05A04 0%,#F88C1A 100%);display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;flex-shrink:0;box-shadow:0 4px 12px rgba(224,90,4,.4);transition:all .25s}
+    .fsm-label{font-size:11px;font-weight:600;color:rgba(255,255,255,.9);line-height:1.3;transition:color .25s}
+    .fsm-quicklinks{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding-top:8px;border-top:1px solid rgba(255,255,255,.1)}
+    .fsm-quicklink{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border:1px solid rgba(255,255,255,.2);border-radius:999px;color:rgba(255,255,255,.75);font-size:12.5px;font-weight:500;text-decoration:none;transition:all .2s}
+    .fsm-quicklink:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.45);color:#fff}
+    
+    .fsm-body{position:relative;z-index:1;flex:1;padding:28px 32px 40px;display:grid;grid-template-columns:1fr 280px;gap:24px;align-items:start}
+    .fsm-left{display:flex;flex-direction:column;gap:10px}
+    .fsm-right{background:rgba(255,255,255,.07);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid rgba(255,255,255,.2);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;position:sticky;top:20px}
+    .fsm-side-ctas{display:grid;grid-template-columns:1fr 1fr}
+    .fsm-side-cta1{display:flex;align-items:center;justify-content:center;gap:6px;padding:13px 8px;background:#E05A04;color:#fff;font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;text-decoration:none;transition:background .2s}
+    .fsm-side-cta1:hover{background:#c94f03;color:#fff}
+    .fsm-side-cta2{display:flex;align-items:center;justify-content:center;gap:6px;padding:13px 8px;background:#0a1f3d;color:#fff;font-size:12px;font-weight:600;text-decoration:none;transition:background .2s}
+    .fsm-side-cta2:hover{background:#1a3a6b;color:#fff}
+    .fsm-side-nav{display:flex;flex-direction:column}
+    .fsm-side-link{display:flex;align-items:center;justify-content:space-between;padding:11px 16px;font-size:13px;font-weight:500;color:rgba(255,255,255,.85);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07);transition:all .2s;cursor:pointer;user-select:none}
+    a.fsm-side-link:hover,.fsm-side-link:hover{background:rgba(255,255,255,.1);color:#fff;padding-left:22px}
+    .fsm-side-link .chev{font-size:11px;color:rgba(255,255,255,.4);transition:transform .25s;flex-shrink:0}
+    .fsm-side-group.open>.fsm-side-link .chev{transform:rotate(180deg)}
+    .fsm-side-group.open>.fsm-side-link{background:rgba(224,90,4,.15);color:#F88C1A}
+    .fsm-side-sub{max-height:0;overflow:hidden;transition:max-height .3s ease;background:rgba(0,0,0,.2)}
+    .fsm-side-group.open .fsm-side-sub{max-height:500px}
+    .fsm-side-sub a{display:flex;align-items:center;gap:6px;padding:9px 16px 9px 28px;font-size:12px;color:rgba(255,255,255,.65);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.04);transition:all .2s}
+    .fsm-side-sub a::before{content:"›";color:#E05A04;font-size:14px;line-height:1;flex-shrink:0}
+    .fsm-side-sub a:hover{background:rgba(255,255,255,.08);color:#fff;padding-left:34px}
+    .fsm-side-footer{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 16px;background:rgba(201,169,97,.12);color:#c9a961;font-size:12.5px;font-weight:600;text-decoration:none;transition:all .2s}
+    .fsm-side-footer:hover{background:rgba(201,169,97,.22);color:#e0be7a}
+    @media(max-width:1000px){.fsm-body{grid-template-columns:1fr}.fsm-right{display:none}}
+    @media(max-width:700px){.fsm-grid{grid-template-columns:repeat(3,1fr)}.fsm-body{padding:20px 14px 32px}}
+    @media(max-width:480px){.fsm-grid{grid-template-columns:repeat(2,1fr);gap:8px}}
+    @media(max-width:800px){.fsm-grid{grid-template-columns:repeat(3,1fr);gap:10px}.fsm-body{padding:24px 20px 36px}.fsm-header{padding:16px 20px}}
+    @media(max-width:480px){.fsm-grid{grid-template-columns:repeat(2,1fr);gap:8px}}
+    </style>
 </head>
 <body>
 
@@ -326,14 +380,18 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
         <div class="drop-menu">
           <a href="centre-for-sustainability.html">Centre for Sustainability</a>
           <a href="centre-for-leadership (2).html">Centre for Leadership</a>
-          <a href="https://msrim.in/case-centre">Case Centre</a>
-          <a href="https://msrim.in/bcic">BCIC</a>
-          <a href="https://msrim.in/consultancy">Consultancy</a>
-          <a href="https://msrim.in/industry-on-campus">Industry Institute Interaction Cell</a>
-          <a href="https://msrim.in/rim-innovation-incubation-centre">RIM Innovation &amp; Incubation</a>
+          <a href="centre-for-case-development.html">Centre for Case Development</a>
+          <a href="centre-for-excellence.html">Centre for Excellence</a>
+          <a href="centre-for-iks.html">Centre for IKS</a>
+          <a href="centre-for-entrepreneurship.html">Centre for Entrepreneurship</a>
+          <a href="centre-for-research-consultancy.html">Centre for Research &amp; Consultancy</a>
+          <a href="centre-for-corporate-relations.html">Centre for Corporate Relations</a>
+          <a href="centre-for-alumni-relations.html">Centre for Alumni Relations</a>
+          <a href="innovation-council.html">Institute Innovation Council</a>
+          
         </div>
       </div>
-      <a href="research.html">R &amp; D Cell</a>
+      
     </nav>
     <a href="https://admissions.msrim.in/" class="nav-cta"><i class="bi bi-mortarboard-fill"></i> Admissions 2026</a>
     <button class="menu-pill" id="menuBtn" aria-label="Open navigation">
@@ -380,14 +438,18 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
         <div class="mobile-nav-sub">
           <a href="centre-for-sustainability.html">Centre for Sustainability</a>
           <a href="centre-for-leadership (2).html">Centre for Leadership</a>
-          <a href="https://msrim.in/case-centre">Case Centre</a>
-          <a href="https://msrim.in/bcic">BCIC</a>
-          <a href="https://msrim.in/consultancy">Consultancy</a>
-          <a href="https://msrim.in/industry-on-campus">Industry Institute Interaction Cell</a>
-          <a href="https://msrim.in/rim-innovation-incubation-centre">RIM Innovation &amp; Incubation</a>
+          <a href="centre-for-case-development.html">Centre for Case Development</a>
+          <a href="centre-for-excellence.html">Centre for Excellence</a>
+          <a href="centre-for-iks.html">Centre for IKS</a>
+          <a href="centre-for-entrepreneurship.html">Centre for Entrepreneurship</a>
+          <a href="centre-for-research-consultancy.html">Centre for Research &amp; Consultancy</a>
+          <a href="centre-for-corporate-relations.html">Centre for Corporate Relations</a>
+          <a href="centre-for-alumni-relations.html">Centre for Alumni Relations</a>
+          <a href="innovation-council.html">Institute Innovation Council</a>
+          
         </div>
       </div>
-      <a href="research.html">R &amp; D Cell</a>
+      
       <a href="about.html" class="active">About Us</a>
     </div>
     <div class="mobile-nav-cta">
@@ -806,9 +868,9 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
 
 <script>
 // Mobile nav
-const menuBtn=document.getElementById('menuBtn'),mobileNav=document.getElementById('mobileNav'),mobileClose=document.getElementById('mobileClose'),mobileOverlay=document.getElementById('mobileOverlay');
-function openMenu(){mobileNav.classList.add('open');menuBtn.classList.add('open');document.body.style.overflow='hidden'}
-function closeMenu(){mobileNav.classList.remove('open');menuBtn.classList.remove('open');document.body.style.overflow=''}
+// legacy menu replaced
+function openMenu(){document.getElementById('fsmOverlay').classList.add('open');document.body.style.overflow='hidden'}
+function closeMenu(){document.getElementById('fsmOverlay').classList.remove('open');document.body.style.overflow=''}
 if(menuBtn)menuBtn.addEventListener('click',openMenu);
 if(mobileClose)mobileClose.addEventListener('click',closeMenu);
 if(mobileOverlay)mobileOverlay.addEventListener('click',closeMenu);
@@ -832,6 +894,108 @@ const sectionObs = new IntersectionObserver((entries) => {
 }, {threshold:0.3, rootMargin:'-80px 0px -55% 0px'});
 sections.forEach(s => sectionObs.observe(s));
 </script>
+
+
+<!-- FULLSCREEN MENU -->
+<div class="fsm-overlay" id="fsmOverlay">
+  <div class="fsm-panel">
+    <div class="fsm-header">
+      <img src="https://msrim.in/images/logo-2.png" alt="MSRIM" class="fsm-logo">
+      <div class="fsm-header-right">
+        <a href="https://admissions.msrim.in/" class="fsm-header-cta"><i class="bi bi-mortarboard-fill"></i> Apply Now</a>
+        <button class="fsm-close" id="fsmClose"><i class="bi bi-x-lg"></i></button>
+      </div>
+    </div>
+    <div class="fsm-body">
+      <!-- LEFT: Card Grid -->
+      <div class="fsm-left">
+        <span class="fsm-section-label">Quick Navigation</span>
+        <div class="fsm-grid">
+          <a href="about.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-info-circle-fill"></i></div><span class="fsm-label">About Us</span></a>
+          <a href="programs.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-book-fill"></i></div><span class="fsm-label">Programs</span></a>
+          <a href="faculty.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-people-fill"></i></div><span class="fsm-label">Faculty</span></a>
+          <a href="admissions.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-pencil-square"></i></div><span class="fsm-label">Admissions</span></a>
+          <a href="placements.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-briefcase-fill"></i></div><span class="fsm-label">Placements</span></a>
+          <a href="centre-for-sustainability.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-tree-fill"></i></div><span class="fsm-label">Centre for Sustainability</span></a>
+          <a href="centre-for-leadership (2).html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-person-arms-up"></i></div><span class="fsm-label">Centre for Leadership</span></a>
+          <a href="centre-for-case-development.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-journal-richtext"></i></div><span class="fsm-label">Centre for Case Development</span></a>
+          <a href="centre-for-excellence.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-award-fill"></i></div><span class="fsm-label">Centre for Excellence</span></a>
+          <a href="centre-for-iks.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-flower1"></i></div><span class="fsm-label">Centre for IKS</span></a>
+          <a href="centre-for-entrepreneurship.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-lightbulb-fill"></i></div><span class="fsm-label">Centre for Entrepreneurship</span></a>
+          <a href="centre-for-research-consultancy.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-graph-up-arrow"></i></div><span class="fsm-label">Centre for Research &amp; Consultancy</span></a>
+          <a href="centre-for-corporate-relations.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-building-fill"></i></div><span class="fsm-label">Centre for Corporate Relations</span></a>
+          <a href="centre-for-alumni-relations.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-mortarboard-fill"></i></div><span class="fsm-label">Centre for Alumni Relations</span></a>
+          <a href="innovation-council.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-rocket-takeoff-fill"></i></div><span class="fsm-label">Institute Innovation Council</span></a>
+        </div>
+        <div class="fsm-quicklinks">
+          <a href="research.html" class="fsm-quicklink"><i class="bi bi-flask-fill"></i> R &amp; D Cell</a>
+          <a href="centres.html" class="fsm-quicklink"><i class="bi bi-grid-fill"></i> All Centres</a>
+          <a href="https://msrim.in/virtual-tour" target="_blank" class="fsm-quicklink"><i class="bi bi-camera-video-fill"></i> Campus Tour</a>
+          <a href="https://alumni.msrim.in/" target="_blank" class="fsm-quicklink"><i class="bi bi-person-heart"></i> Alumni Portal</a>
+        </div>
+      </div>
+      <!-- RIGHT: Side Nav -->
+      <div class="fsm-right">
+        <div class="fsm-side-ctas">
+          <a href="https://admissions.msrim.in/" class="fsm-side-cta1"><i class="bi bi-mortarboard-fill"></i> Admission</a>
+          <a href="placements.html" class="fsm-side-cta2"><i class="bi bi-briefcase-fill"></i> Placements</a>
+        </div>
+        <nav class="fsm-side-nav">
+          <a href="home.html" class="fsm-side-link">Home</a>
+          <div class="fsm-side-group">
+            <div class="fsm-side-link" onclick="toggleSide(this)">About Us <i class="bi bi-chevron-down chev"></i></div>
+            <div class="fsm-side-sub">
+              <a href="about.html#about">About MSRIM</a>
+              <a href="about.html#dean">Dean's Message</a>
+              <a href="about.html#vision">Vision &amp; Mission</a>
+              <a href="about.html#governance">Governance</a>
+              <a href="about.html#ranking">B-School Ranking</a>
+            </div>
+          </div>
+          <div class="fsm-side-group">
+            <div class="fsm-side-link" onclick="toggleSide(this)">Programs <i class="bi bi-chevron-down chev"></i></div>
+            <div class="fsm-side-sub">
+              <a href="programs.html#pgdm">PGDM — Two Year Full Time</a>
+              <a href="programs.html#fpm">FPM</a>
+            </div>
+          </div>
+          <a href="admissions.html" class="fsm-side-link">Admissions</a>
+          <a href="faculty.html" class="fsm-side-link">Faculty</a>
+          <a href="placements.html" class="fsm-side-link">Placements</a>
+          <div class="fsm-side-group">
+            <div class="fsm-side-link" onclick="toggleSide(this)">Centres <i class="bi bi-chevron-down chev"></i></div>
+            <div class="fsm-side-sub">
+              <a href="centre-for-sustainability.html">Centre for Sustainability</a>
+              <a href="centre-for-leadership (2).html">Centre for Leadership</a>
+              <a href="centre-for-case-development.html">Centre for Case Development</a>
+              <a href="centre-for-excellence.html">Centre for Excellence</a>
+              <a href="centre-for-iks.html">Centre for IKS</a>
+              <a href="centre-for-entrepreneurship.html">Centre for Entrepreneurship</a>
+              <a href="centre-for-research-consultancy.html">Centre for Research &amp; Consultancy</a>
+              <a href="centre-for-corporate-relations.html">Centre for Corporate Relations</a>
+              <a href="centre-for-alumni-relations.html">Centre for Alumni Relations</a>
+              <a href="innovation-council.html">Institute Innovation Council</a>
+            </div>
+          </div>
+          <a href="research.html" class="fsm-side-link">R &amp; D Cell</a>
+        </nav>
+        <a href="https://msrim.in/virtual-tour" target="_blank" class="fsm-side-footer"><i class="bi bi-camera-video-fill"></i> Campus Tour</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn'),ov=document.getElementById('fsmOverlay'),cl=document.getElementById('fsmClose');
+  function openFSM(){if(ov){ov.classList.add('open');document.body.style.overflow='hidden';}}
+  function closeFSM(){if(ov){ov.classList.remove('open');document.body.style.overflow='';}}
+  if(btn)btn.addEventListener('click',openFSM);
+  if(cl)cl.addEventListener('click',closeFSM);
+  if(ov)ov.addEventListener('click',function(e){if(e.target===ov)closeFSM();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeFSM();});
+})();
+function toggleSide(el){var g=el.parentElement;document.querySelectorAll('.fsm-side-group.open').forEach(function(o){if(o!==g)o.classList.remove('open');});g.classList.toggle('open');}
+</script>
+
 </body>
 </html>
-

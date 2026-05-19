@@ -1,0 +1,101 @@
+
+<!-- FULLSCREEN MENU -->
+<div class="fsm-overlay" id="fsmOverlay">
+  <div class="fsm-panel">
+    <div class="fsm-header">
+      <img src="https://msrim.in/images/logo-2.png" alt="MSRIM" class="fsm-logo">
+      <div class="fsm-header-right">
+        <a href="https://admissions.msrim.in/" class="fsm-header-cta"><i class="bi bi-mortarboard-fill"></i> Apply Now</a>
+        <button class="fsm-close" id="fsmClose"><i class="bi bi-x-lg"></i></button>
+      </div>
+    </div>
+    <div class="fsm-body">
+      <!-- LEFT: Card Grid -->
+      <div class="fsm-left">
+        <span class="fsm-section-label">Quick Navigation</span>
+        <div class="fsm-grid">
+          <a href="about.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-info-circle-fill"></i></div><span class="fsm-label">About Us</span></a>
+          <a href="programs.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-book-fill"></i></div><span class="fsm-label">Programs</span></a>
+          <a href="faculty.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-people-fill"></i></div><span class="fsm-label">Faculty</span></a>
+          <a href="admissions.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-pencil-square"></i></div><span class="fsm-label">Admissions</span></a>
+          <a href="placements.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-briefcase-fill"></i></div><span class="fsm-label">Placements</span></a>
+          <a href="centre-for-sustainability.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-tree-fill"></i></div><span class="fsm-label">Centre for Sustainability</span></a>
+          <a href="centre-for-leadership (2).html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-person-arms-up"></i></div><span class="fsm-label">Centre for Leadership</span></a>
+          <a href="centre-for-case-development.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-journal-richtext"></i></div><span class="fsm-label">Centre for Case Development</span></a>
+          <a href="centre-for-excellence.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-award-fill"></i></div><span class="fsm-label">Centre for Excellence</span></a>
+          <a href="centre-for-iks.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-flower1"></i></div><span class="fsm-label">Centre for IKS</span></a>
+          <a href="centre-for-entrepreneurship.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-lightbulb-fill"></i></div><span class="fsm-label">Centre for Entrepreneurship</span></a>
+          <a href="centre-for-research-consultancy.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-graph-up-arrow"></i></div><span class="fsm-label">Centre for Research &amp; Consultancy</span></a>
+          <a href="centre-for-corporate-relations.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-building-fill"></i></div><span class="fsm-label">Centre for Corporate Relations</span></a>
+          <a href="centre-for-alumni-relations.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-mortarboard-fill"></i></div><span class="fsm-label">Centre for Alumni Relations</span></a>
+          <a href="innovation-council.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-rocket-takeoff-fill"></i></div><span class="fsm-label">Institute Innovation Council</span></a>
+        </div>
+        <div class="fsm-quicklinks">
+          <a href="research.html" class="fsm-quicklink"><i class="bi bi-flask-fill"></i> R &amp; D Cell</a>
+          <a href="centres.html" class="fsm-quicklink"><i class="bi bi-grid-fill"></i> All Centres</a>
+          <a href="https://msrim.in/virtual-tour" target="_blank" class="fsm-quicklink"><i class="bi bi-camera-video-fill"></i> Campus Tour</a>
+          <a href="https://alumni.msrim.in/" target="_blank" class="fsm-quicklink"><i class="bi bi-person-heart"></i> Alumni Portal</a>
+        </div>
+      </div>
+      <!-- RIGHT: Side Nav -->
+      <div class="fsm-right">
+        <div class="fsm-side-ctas">
+          <a href="https://admissions.msrim.in/" class="fsm-side-cta1"><i class="bi bi-mortarboard-fill"></i> Admission</a>
+          <a href="placements.html" class="fsm-side-cta2"><i class="bi bi-briefcase-fill"></i> Placements</a>
+        </div>
+        <nav class="fsm-side-nav">
+          <a href="home.html" class="fsm-side-link">Home</a>
+          <div class="fsm-side-group">
+            <div class="fsm-side-link" onclick="toggleSide(this)">About Us <i class="bi bi-chevron-down chev"></i></div>
+            <div class="fsm-side-sub">
+              <a href="about.html#about">About MSRIM</a>
+              <a href="about.html#dean">Dean's Message</a>
+              <a href="about.html#vision">Vision &amp; Mission</a>
+              <a href="about.html#governance">Governance</a>
+              <a href="about.html#ranking">B-School Ranking</a>
+            </div>
+          </div>
+          <div class="fsm-side-group">
+            <div class="fsm-side-link" onclick="toggleSide(this)">Programs <i class="bi bi-chevron-down chev"></i></div>
+            <div class="fsm-side-sub">
+              <a href="programs.html#pgdm">PGDM — Two Year Full Time</a>
+              <a href="programs.html#fpm">FPM</a>
+            </div>
+          </div>
+          <a href="admissions.html" class="fsm-side-link">Admissions</a>
+          <a href="faculty.html" class="fsm-side-link">Faculty</a>
+          <a href="placements.html" class="fsm-side-link">Placements</a>
+          <div class="fsm-side-group">
+            <div class="fsm-side-link" onclick="toggleSide(this)">Centres <i class="bi bi-chevron-down chev"></i></div>
+            <div class="fsm-side-sub">
+              <a href="centre-for-sustainability.html">Centre for Sustainability</a>
+              <a href="centre-for-leadership (2).html">Centre for Leadership</a>
+              <a href="centre-for-case-development.html">Centre for Case Development</a>
+              <a href="centre-for-excellence.html">Centre for Excellence</a>
+              <a href="centre-for-iks.html">Centre for IKS</a>
+              <a href="centre-for-entrepreneurship.html">Centre for Entrepreneurship</a>
+              <a href="centre-for-research-consultancy.html">Centre for Research &amp; Consultancy</a>
+              <a href="centre-for-corporate-relations.html">Centre for Corporate Relations</a>
+              <a href="centre-for-alumni-relations.html">Centre for Alumni Relations</a>
+              <a href="innovation-council.html">Institute Innovation Council</a>
+            </div>
+          </div>
+          <a href="research.html" class="fsm-side-link">R &amp; D Cell</a>
+        </nav>
+        <a href="https://msrim.in/virtual-tour" target="_blank" class="fsm-side-footer"><i class="bi bi-camera-video-fill"></i> Campus Tour</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn'),ov=document.getElementById('fsmOverlay'),cl=document.getElementById('fsmClose');
+  function openFSM(){if(ov){ov.classList.add('open');document.body.style.overflow='hidden';}}
+  function closeFSM(){if(ov){ov.classList.remove('open');document.body.style.overflow='';}}
+  if(btn)btn.addEventListener('click',openFSM);
+  if(cl)cl.addEventListener('click',closeFSM);
+  if(ov)ov.addEventListener('click',function(e){if(e.target===ov)closeFSM();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeFSM();});
+})();
+function toggleSide(el){var g=el.parentElement;document.querySelectorAll('.fsm-side-group.open').forEach(function(o){if(o!==g)o.classList.remove('open');});g.classList.toggle('open');}
+</script>
