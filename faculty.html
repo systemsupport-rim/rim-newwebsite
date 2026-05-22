@@ -30,7 +30,7 @@ img{max-width:100%;display:block}
 ul{list-style:none}
 
 /* ── UTILITY BAR ── */
-.util{background:var(--grad);color:#fff;font-size:13px;padding:9px 0}
+.util{background:var(--navy);color:#fff;font-size:13px;padding:9px 0}
 .util-inner{max-width:1400px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
 .util .left{font-weight:500;opacity:.92}
 .util .right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
@@ -52,7 +52,7 @@ ul{list-style:none}
 
 /* ── HERO ── */
 .faculty-hero{background:var(--navy);padding:36px 0 32px;position:relative;overflow:hidden;text-align:center}
-.faculty-hero::before{content:"";position:absolute;inset:0;background:url('https://msrim.in/images/msrim_campus.jpg') center/cover no-repeat;opacity:.08}
+.faculty-hero::before{content:"";position:absolute;inset:0;background:#faf6ee;opacity:.08}
 .faculty-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,31,61,.92) 0%,rgba(10,31,61,.85) 100%)}
 .faculty-hero-inner{position:relative;z-index:2;max-width:760px;margin:0 auto;padding:0 28px}
 .faculty-hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,169,97,.18);border:1px solid rgba(201,169,97,.35);color:var(--gold);font-size:10.5px;font-weight:700;letter-spacing:2.5px;padding:6px 16px;border-radius:999px;margin-bottom:20px;text-transform:uppercase}
@@ -147,10 +147,16 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
 .socials{display:flex;gap:10px;margin-top:18px}
 .socials a{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.65);transition:all .25s}
 .socials a:hover{background:var(--grad);color:#fff}
-.footer-col h5{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:16px}
-.footer-col ul{display:flex;flex-direction:column;gap:9px}
-.footer-col ul a{font-size:13px;color:rgba(255,255,255,.55)}
-.footer-col ul a:hover{color:#fff}
+.footer-col{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-top:3px solid var(--gold);border-radius:8px;padding:22px 20px 24px}
+.footer-col h5{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;padding-bottom:0;display:flex;align-items:center;gap:8px}
+.footer-col h5::before{content:"";display:block;width:14px;height:2px;background:var(--gold);border-radius:2px;flex-shrink:0}
+.footer-col ul{display:flex;flex-direction:column;gap:0}
+.footer-col ul li{border-bottom:1px solid rgba(255,255,255,.05)}
+.footer-col ul li:last-child{border-bottom:none}
+.footer-col ul li a{font-size:12px;color:rgba(255,255,255,.62);transition:all .2s;display:flex;align-items:center;justify-content:space-between;padding:8px 0;gap:8px;white-space:nowrap;overflow:hidden}
+.footer-col ul li a::after{content:"›";color:var(--gold);font-size:16px;opacity:0;transition:opacity .2s;flex-shrink:0}
+.footer-col ul li a:hover{color:#fff;padding-left:6px}
+.footer-col ul li a:hover::after{opacity:1}
 .footer-erp{background:rgba(255,255,255,.04);border-top:1px solid rgba(255,255,255,.08);padding:14px 0}
 .footer-erp-inner{max-width:1400px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
 .footer-erp-group{display:flex;align-items:center;gap:14px}
@@ -216,49 +222,49 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
     /* ============ FULLSCREEN MENU ============ */
     .fsm-overlay{position:fixed;inset:0;z-index:9999;opacity:0;visibility:hidden;transition:opacity .38s}
     .fsm-overlay.open{opacity:1;visibility:visible}
-    .fsm-panel{position:fixed;inset:0;background:url('https://msrim.in/images/msrim_campus.jpg') center/cover no-repeat;transform:translateY(-105%);transition:transform .48s cubic-bezier(.4,0,.2,1);overflow-y:auto;display:flex;flex-direction:column}
-    .fsm-panel::before{content:"";position:fixed;inset:0;background:linear-gradient(160deg,rgba(8,24,50,.45) 0%,rgba(10,31,61,.35) 100%);pointer-events:none;z-index:0}
+    .fsm-panel{position:fixed;inset:0;background:#faf6ee;transform:translateY(-105%);transition:transform .48s cubic-bezier(.4,0,.2,1);overflow-y:auto;display:flex;flex-direction:column}
+    .fsm-panel::before{content:"";position:fixed;inset:0;display:none}
     .fsm-overlay.open .fsm-panel{transform:translateY(0)}
-    .fsm-header{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;padding:20px 44px;border-bottom:1px solid rgba(201,169,97,.2)}
-    .fsm-logo{height:40px;filter:brightness(0) invert(1);opacity:.9}
+    .fsm-header{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;padding:20px 44px;border-bottom:1px solid #e3dccd}
+    .fsm-logo{height:40px;filter:none;opacity:1}
     .fsm-header-right{display:flex;align-items:center;gap:14px}
     .fsm-header-cta{display:inline-flex;align-items:center;gap:7px;padding:9px 22px;background:#E05A04;color:#fff;font-size:13px;font-weight:700;border-radius:999px;text-decoration:none;transition:all .2s}
     .fsm-header-cta:hover{background:#c94f03;color:#fff;transform:translateY(-1px)}
-    .fsm-close{width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .25s}
+    .fsm-close{width:42px;height:42px;border-radius:50%;border:1.5px solid #ddd;background:#fff;color:#0a1f3d;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .25s}
     .fsm-close:hover{background:#E05A04;border-color:#E05A04;transform:rotate(90deg)}
     /* fsm-body replaced */
-    .fsm-section-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(201,169,97,.75);margin-bottom:8px;display:block}
-    .fsm-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:10px}
-    .fsm-card{background:rgba(255,255,255,.07);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid rgba(255,255,255,.28);border-bottom:3px solid rgba(255,255,255,.18);border-radius:16px;padding:14px 10px 12px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;transition:all .25s;box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 4px 24px rgba(0,0,0,.12)}
+    .fsm-section-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#b08f48;margin-bottom:8px;display:block}
+    .fsm-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:8px}
+    .fsm-card{background:#fff;border:1px solid #e3dccd;border-bottom:3px solid #e3dccd;border-radius:16px;padding:10px 8px 9px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;transition:all .25s;box-shadow:0 2px 10px rgba(10,31,61,.06)}
     .fsm-card:hover{background:rgba(255,255,255,.96);border-color:rgba(255,255,255,.8);border-bottom-color:#E05A04;transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.4)}
     .fsm-card:hover .fsm-label{color:#0a1f3d}
     .fsm-card:hover .fsm-icon{transform:scale(1.12);box-shadow:0 8px 24px rgba(224,90,4,.6)}
-    .fsm-icon{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#E05A04 0%,#F88C1A 100%);display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;flex-shrink:0;box-shadow:0 4px 12px rgba(224,90,4,.4);transition:all .25s}
-    .fsm-label{font-size:11px;font-weight:600;color:rgba(255,255,255,.9);line-height:1.3;transition:color .25s}
-    .fsm-quicklinks{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding-top:8px;border-top:1px solid rgba(255,255,255,.1)}
-    .fsm-quicklink{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border:1px solid rgba(255,255,255,.2);border-radius:999px;color:rgba(255,255,255,.75);font-size:12.5px;font-weight:500;text-decoration:none;transition:all .2s}
+    .fsm-icon{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#E05A04 0%,#F88C1A 100%);display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;flex-shrink:0;box-shadow:0 4px 12px rgba(224,90,4,.4);transition:all .25s}
+    .fsm-label{font-size:11px;font-weight:600;color:#1a1a1a;line-height:1.3;transition:color .25s}
+    .fsm-quicklinks{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding-top:8px;border-top:1px solid #e3dccd}
+    .fsm-quicklink{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border:1px solid #e3dccd;border-radius:999px;color:#333;font-size:12.5px;font-weight:500;text-decoration:none;transition:all .2s}
     .fsm-quicklink:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.45);color:#fff}
     
     .fsm-body{position:relative;z-index:1;flex:1;padding:28px 32px 40px;display:grid;grid-template-columns:1fr 280px;gap:24px;align-items:start}
     .fsm-left{display:flex;flex-direction:column;gap:10px}
-    .fsm-right{background:rgba(255,255,255,.07);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid rgba(255,255,255,.2);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;position:sticky;top:20px}
+    .fsm-right{background:#fff;border:1px solid #e3dccd;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;position:sticky;top:20px}
     .fsm-side-ctas{display:grid;grid-template-columns:1fr 1fr}
     .fsm-side-cta1{display:flex;align-items:center;justify-content:center;gap:6px;padding:13px 8px;background:#E05A04;color:#fff;font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;text-decoration:none;transition:background .2s}
     .fsm-side-cta1:hover{background:#c94f03;color:#fff}
     .fsm-side-cta2{display:flex;align-items:center;justify-content:center;gap:6px;padding:13px 8px;background:#0a1f3d;color:#fff;font-size:12px;font-weight:600;text-decoration:none;transition:background .2s}
     .fsm-side-cta2:hover{background:#1a3a6b;color:#fff}
     .fsm-side-nav{display:flex;flex-direction:column}
-    .fsm-side-link{display:flex;align-items:center;justify-content:space-between;padding:11px 16px;font-size:13px;font-weight:500;color:rgba(255,255,255,.85);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07);transition:all .2s;cursor:pointer;user-select:none}
-    a.fsm-side-link:hover,.fsm-side-link:hover{background:rgba(255,255,255,.1);color:#fff;padding-left:22px}
-    .fsm-side-link .chev{font-size:11px;color:rgba(255,255,255,.4);transition:transform .25s;flex-shrink:0}
+    .fsm-side-link{display:flex;align-items:center;justify-content:space-between;padding:11px 16px;font-size:13px;font-weight:500;color:#1a1a1a;text-decoration:none;border-bottom:1px solid #e8e3da;transition:all .2s;cursor:pointer;user-select:none}
+    a.fsm-side-link:hover,.fsm-side-link:hover{background:#f5f0e8;color:#0a1f3d;padding-left:22px}
+    .fsm-side-link .chev{font-size:11px;color:#aaa;transition:transform .25s;flex-shrink:0}
     .fsm-side-group.open>.fsm-side-link .chev{transform:rotate(180deg)}
-    .fsm-side-group.open>.fsm-side-link{background:rgba(224,90,4,.15);color:#F88C1A}
-    .fsm-side-sub{max-height:0;overflow:hidden;transition:max-height .3s ease;background:rgba(0,0,0,.2)}
+    .fsm-side-group.open>.fsm-side-link{background:#fdf0e8;color:#E05A04}
+    .fsm-side-sub{max-height:0;overflow:hidden;transition:max-height .3s ease;background:#f9f6f0}
     .fsm-side-group.open .fsm-side-sub{max-height:500px}
-    .fsm-side-sub a{display:flex;align-items:center;gap:6px;padding:9px 16px 9px 28px;font-size:12px;color:rgba(255,255,255,.65);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.04);transition:all .2s}
+    .fsm-side-sub a{display:flex;align-items:center;gap:6px;padding:9px 16px 9px 28px;font-size:12px;color:#555;text-decoration:none;border-bottom:1px solid #ede8e0;transition:all .2s}
     .fsm-side-sub a::before{content:"›";color:#E05A04;font-size:14px;line-height:1;flex-shrink:0}
-    .fsm-side-sub a:hover{background:rgba(255,255,255,.08);color:#fff;padding-left:34px}
-    .fsm-side-footer{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 16px;background:rgba(201,169,97,.12);color:#c9a961;font-size:12.5px;font-weight:600;text-decoration:none;transition:all .2s}
+    .fsm-side-sub a:hover{background:#f0ebe0;color:#0a1f3d;padding-left:34px}
+    .fsm-side-footer{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 16px;background:#f5ecd6;color:#b08f48;font-size:12.5px;font-weight:600;text-decoration:none;transition:all .2s}
     .fsm-side-footer:hover{background:rgba(201,169,97,.22);color:#e0be7a}
     @media(max-width:1000px){.fsm-body{grid-template-columns:1fr}.fsm-right{display:none}}
     @media(max-width:700px){.fsm-grid{grid-template-columns:repeat(3,1fr)}.fsm-body{padding:20px 14px 32px}}
@@ -316,9 +322,9 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
         <a href="centres.html">Centres</a>
         <div class="drop-menu">
           <a href="centre-for-sustainability.html">Centre for Sustainability</a>
-          <a href="centre-for-leadership (2).html">Centre for Leadership</a>
+          <a href="centre-for-leadership (2).html">Centre for Leadership and Capacity Building</a>
           <a href="centre-for-case-development.html">Centre for Case Development</a>
-          <a href="centre-for-excellence.html">Centre for Excellence</a>
+          <a href="centre-for-excellence.html">BCIC–Ramaiah Centre for Excellence</a>
           <a href="centre-for-iks.html">Centre for IKS</a>
           <a href="centre-for-entrepreneurship.html">Centre for Entrepreneurship</a>
           <a href="centre-for-research-consultancy.html">Centre for Research &amp; Consultancy</a>
@@ -374,9 +380,9 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
         <div class="mobile-nav-group-title" onclick="toggleGroup('mg-centres')">Centres <i class="bi bi-chevron-down"></i></div>
         <div class="mobile-nav-sub">
           <a href="centre-for-sustainability.html">Centre for Sustainability</a>
-          <a href="centre-for-leadership (2).html">Centre for Leadership</a>
+          <a href="centre-for-leadership (2).html">Centre for Leadership and Capacity Building</a>
           <a href="centre-for-case-development.html">Centre for Case Development</a>
-          <a href="centre-for-excellence.html">Centre for Excellence</a>
+          <a href="centre-for-excellence.html">BCIC–Ramaiah Centre for Excellence</a>
           <a href="centre-for-iks.html">Centre for IKS</a>
           <a href="centre-for-entrepreneurship.html">Centre for Entrepreneurship</a>
           <a href="centre-for-research-consultancy.html">Centre for Research &amp; Consultancy</a>
@@ -407,7 +413,7 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
 <!-- STATS BAR -->
 <div class="stats-bar">
   <div class="stats-bar-inner">
-    <div class="sbar"><span class="sbar-num">34+</span><span class="sbar-lbl">Faculty Members</span></div>
+    <div class="sbar"><span class="sbar-num">34</span><span class="sbar-lbl">Faculty Members</span></div>
     <div class="sbar"><span class="sbar-num">PhD</span><span class="sbar-lbl">Doctorate Holders</span></div>
     <div class="sbar"><span class="sbar-num">5</span><span class="sbar-lbl">Departments</span></div>
     <div class="sbar"><span class="sbar-num">10+</span><span class="sbar-lbl">Patents Filed</span></div>
@@ -419,87 +425,88 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
 <div class="faculty-grid-wrap">
   <div class="faculty-grid" id="facultyGrid">
 
-    <!-- Dr. Geetha M Rajaram — always first -->
+    <!-- Dr. Geetha Rajaram — Dean, always first -->
     <div class="fcard reveal" data-dept="Finance and BFSI" data-level="executive">
       <div class="fcard-photo">
-        <img src="https://msrim.in/images/Geetha-Rajaram-dean.jpg" alt="Dr. Geetha M Rajaram" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+        <img src="https://msrim.in/msrimmanage/uploads/faculty/1776055253_ed2ff98ad24c9f551405.webp" alt="Dr. Geetha Rajaram" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
         <div class="fcard-avatar" style="display:none">GR</div>
         <span class="fcard-dept-tag">Dean</span>
       </div>
       <div class="fcard-body">
-        <div class="fcard-name">Dr. Geetha M Rajaram</div>
+        <div class="fcard-name">Dr. Geetha Rajaram</div>
         <div class="fcard-role">Professor &amp; Dean</div>
-        <div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">MBA</span><span class="fcard-qual">FCMA</span><span class="fcard-qual">B.Com</span></div>
-        <div class="fcard-footer"><span class="fcard-spec">Finance &amp; Marketing</span><a href="faculty-detail.html?id=geetha-rajaram" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div>
+        <div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">M.Phil</span><span class="fcard-qual">MFM</span><span class="fcard-qual">M.Com</span></div>
+        <div class="fcard-footer"><span class="fcard-spec">Strategic Finance &amp; Management</span><a href="faculty-detail.html?id=geetha-rajaram" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div>
       </div>
     </div>
 
     <!-- A–Y alphabetical -->
-    <div class="fcard reveal" data-dept="Finance and BFSI"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1765451969_3443acee9590daca82af.webp" alt="Prof. Anilkumar M" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">AM</div><span class="fcard-dept-tag">Finance &amp; BFSI</span></div><div class="fcard-body"><div class="fcard-name">Prof. Anilkumar M</div><div class="fcard-role">Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">PGDM</span><span class="fcard-qual">MPP</span><span class="fcard-qual">B.Com</span></div><div class="fcard-footer"><span class="fcard-spec">Public Policy</span><a href="faculty-detail.html?id=anilkumar-m" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Finance and BFSI"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1765451969_3443acee9590daca82af.webp" alt="Prof. Anilkumar M" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">AM</div><span class="fcard-dept-tag">Finance &amp; BFSI</span></div><div class="fcard-body"><div class="fcard-name">Prof. Anilkumar M</div><div class="fcard-role">Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">MPP</span><span class="fcard-qual">PGDBA</span><span class="fcard-qual">CSM</span></div><div class="fcard-footer"><span class="fcard-spec">Space Economy &amp; Public Policy</span><a href="faculty-detail.html?id=anilkumar-m" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="OB and HR"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/Anita_R_Singh.png" alt="Dr. Anita R Singh" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">AS</div><span class="fcard-dept-tag">OB &amp; HR</span></div><div class="fcard-body"><div class="fcard-name">Dr. Anita R Singh</div><div class="fcard-role">Assoc. Professor &amp; Chairperson, OB &amp; HR</div><div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">MA</span><span class="fcard-qual">MSW</span></div><div class="fcard-footer"><span class="fcard-spec">OB &amp; HRM</span><a href="faculty-detail.html?id=anita-r-singh" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="OB and HR"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/Anita_R_Singh.png" alt="Dr. Anita R Singh" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">AS</div><span class="fcard-dept-tag">OB &amp; HR</span></div><div class="fcard-body"><div class="fcard-name">Dr. Anita R Singh</div><div class="fcard-role">Associate Professor &amp; Chairperson, OB &amp; HR</div><div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">MA (SW)</span><span class="fcard-qual">PGDIR&amp;PM</span><span class="fcard-qual">BA</span></div><div class="fcard-footer"><span class="fcard-spec">OB, HR &amp; International Business</span><a href="faculty-detail.html?id=anita-r-singh" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="Business Analytics and Data Science"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/Anjana_K_S_nw.png" alt="Prof. Anjana K S" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">AK</div><span class="fcard-dept-tag">Business Analytics</span></div><div class="fcard-body"><div class="fcard-name">Prof. Anjana K S</div><div class="fcard-role">Asst. Professor, Head Ramaiah Japan Centre</div><div class="fcard-quals"><span class="fcard-qual">MCA</span></div><div class="fcard-footer"><span class="fcard-spec">Computer Applications</span><a href="faculty-detail.html?id=anjana-k-s" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Business Analytics and Data Science"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/Anjana_K_S_nw.png" alt="Prof. Anjana K S" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">AK</div><span class="fcard-dept-tag">Business Analytics</span></div><div class="fcard-body"><div class="fcard-name">Prof. Anjana K S</div><div class="fcard-role">Assistant Professor &amp; Head, Ramaiah Japan Centre</div><div class="fcard-quals"><span class="fcard-qual">MCA</span><span class="fcard-qual">JLPT N2</span></div><div class="fcard-footer"><span class="fcard-spec">Indo-Japan Business Relations</span><a href="faculty-detail.html?id=anjana-k-s" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="Business Analytics and Data Science"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/Aravinda_Reddy_nw.png" alt="Dr. Aravinda Reddy M N" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">AR</div><span class="fcard-dept-tag">Business Analytics</span></div><div class="fcard-body"><div class="fcard-name">Dr. Aravinda Reddy M N</div><div class="fcard-role">Assoc. Professor &amp; Chairperson, Business Analytics</div><div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">MBA</span><span class="fcard-qual">M.Phil</span></div><div class="fcard-footer"><span class="fcard-spec">Analytics &amp; IT</span><a href="faculty-detail.html?id=aravinda-reddy-m-n" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Business Analytics and Data Science"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/Aravinda_Reddy_nw.png" alt="Dr. Aravinda Reddy M N" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">AR</div><span class="fcard-dept-tag">Business Analytics</span></div><div class="fcard-body"><div class="fcard-name">Dr. Aravinda Reddy M N</div><div class="fcard-role">Associate Professor &amp; Chairperson, Business Analytics</div><div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">M.Phil</span><span class="fcard-qual">MBA</span><span class="fcard-qual">M.Sc</span></div><div class="fcard-footer"><span class="fcard-spec">Business Analytics &amp; Data Science</span><a href="faculty-detail.html?id=aravinda-reddy-m-n" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="Marketing and IB"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/arul_joyhi_nw.png" alt="Prof. Arul Jyothi M" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">AJ</div><span class="fcard-dept-tag">Marketing &amp; IB</span></div><div class="fcard-body"><div class="fcard-name">Prof. Arul Jyothi M</div><div class="fcard-role">Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">M.Phil</span><span class="fcard-qual">MBA</span><span class="fcard-qual">BBM</span></div><div class="fcard-footer"><span class="fcard-spec">Marketing &amp; IB</span><a href="faculty-detail.html?id=arul-jyothi-m" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Marketing and IB"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/arul_joyhi_nw1.png" alt="Prof. Arul Jyothi M" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">AJ</div><span class="fcard-dept-tag">Marketing &amp; IB</span></div><div class="fcard-body"><div class="fcard-name">Prof. Arul Jyothi M</div><div class="fcard-role">Senior Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">MBA</span><span class="fcard-qual">M.Phil</span><span class="fcard-qual">PhD (Pursuing)</span></div><div class="fcard-footer"><span class="fcard-spec">Consumer Behaviour &amp; Retail Mgmt</span><a href="faculty-detail.html?id=arul-jyothi-m" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="OB and HR"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/bhanumathi_nw.png" alt="Dr. Bhanumathi P" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">BP</div><span class="fcard-dept-tag">OB &amp; HR</span></div><div class="fcard-body"><div class="fcard-name">Dr. Bhanumathi P</div><div class="fcard-role">Assoc. Professor, Controller of Examinations</div><div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">MBA</span><span class="fcard-qual">B.E</span></div><div class="fcard-footer"><span class="fcard-spec">OB &amp; HRM</span><a href="faculty-detail.html?id=bhanumathi-p" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="OB and HR"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/bhanumathi_nw.png" alt="Dr. Bhanumathi P" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">BP</div><span class="fcard-dept-tag">OB &amp; HR</span></div><div class="fcard-body"><div class="fcard-name">Dr. Bhanumathi P</div><div class="fcard-role">Associate Professor &amp; Controller of Examinations</div><div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">MBA (HRM)</span><span class="fcard-qual">B.E</span><span class="fcard-qual">UGC-NET</span></div><div class="fcard-footer"><span class="fcard-spec">Knowledge Management &amp; AI in HRM</span><a href="faculty-detail.html?id=bhanumathi-p" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="Marketing and IB"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/bakshi_nw.png" alt="Dr. Bikash Ranjan Debata" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">BD</div><span class="fcard-dept-tag">Marketing &amp; IB</span></div><div class="fcard-body"><div class="fcard-name">Dr. Bikash Ranjan Debata</div><div class="fcard-role">Professor &amp; Head, Research &amp; Development</div><div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">MBA</span></div><div class="fcard-footer"><span class="fcard-spec">Marketing &amp; IB</span><a href="faculty-detail.html?id=bikash-ranjan-debata" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Marketing and IB"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1753254396_6a35ff3d0237046b9d5e.webp" alt="Dr. Bikash Ranjan Debata" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">BD</div><span class="fcard-dept-tag">Marketing &amp; IB</span></div><div class="fcard-body"><div class="fcard-name">Dr. Bikash Ranjan Debata</div><div class="fcard-role">Professor &amp; Head — Research &amp; Development</div><div class="fcard-quals"><span class="fcard-qual">Ph.D (NIT)</span><span class="fcard-qual">Post Doc (Macau)</span><span class="fcard-qual">MBA</span></div><div class="fcard-footer"><span class="fcard-spec">Marketing Analytics &amp; Tourism</span><a href="faculty-detail.html?id=bikash-ranjan-debata" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="OB and HR"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1765363567_48d30f7fbce7b0ae77f6.webp" alt="Prof. Deepak S" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">DS</div><span class="fcard-dept-tag">OB &amp; HR</span></div><div class="fcard-body"><div class="fcard-name">Prof. Deepak S</div><div class="fcard-role">Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">PGDBA</span><span class="fcard-qual">MA</span><span class="fcard-qual">BA</span></div><div class="fcard-footer"><span class="fcard-spec">OB &amp; HRM</span><a href="faculty-detail.html?id=deepak-s" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="OB and HR"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1765363567_48d30f7fbce7b0ae77f6.webp" alt="Prof. Deepak S" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">DS</div><span class="fcard-dept-tag">OB &amp; HR</span></div><div class="fcard-body"><div class="fcard-name">Prof. Deepak S</div><div class="fcard-role">Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">MBA (HRM)</span><span class="fcard-qual">PGDBA</span><span class="fcard-qual">MA</span></div><div class="fcard-footer"><span class="fcard-spec">OB &amp; HRM</span><a href="faculty-detail.html?id=deepak-s" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="Finance and BFSI"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1765354917_68e43776ede050d1ebe4.jpg" alt="Dr. Ekta Yadav" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">EY</div><span class="fcard-dept-tag">Finance &amp; BFSI</span></div><div class="fcard-body"><div class="fcard-name">Dr. Ekta Yadav</div><div class="fcard-role">Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">M.Com</span><span class="fcard-qual">B.Com</span></div><div class="fcard-footer"><span class="fcard-spec">Finance &amp; BFSI</span><a href="faculty-detail.html?id=ekta-yadav" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Finance and BFSI"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1765354917_68e43776ede050d1ebe4.jpg" alt="Dr. Ekta Yadav" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">EY</div><span class="fcard-dept-tag">Finance &amp; BFSI</span></div><div class="fcard-body"><div class="fcard-name">Dr. Ekta Yadav</div><div class="fcard-role">Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">Ph.D (Applied Econ.)</span><span class="fcard-qual">UGC-JRF</span><span class="fcard-qual">GATE</span></div><div class="fcard-footer"><span class="fcard-spec">Demography &amp; Development Economics</span><a href="faculty-detail.html?id=ekta-yadav" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="Business Analytics and Data Science"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/Gifty_nw.png" alt="Dr. Gifty Malhotra" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">GM</div><span class="fcard-dept-tag">Business Analytics</span></div><div class="fcard-body"><div class="fcard-name">Dr. Gifty Malhotra</div><div class="fcard-role">Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">MSc</span></div><div class="fcard-footer"><span class="fcard-spec">Maths &amp; Analytics</span><a href="faculty-detail.html?id=gifty-malhotra" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Business Analytics and Data Science"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/Gifty_nw.png" alt="Dr. Gifty Malhotra" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">GM</div><span class="fcard-dept-tag">Business Analytics</span></div><div class="fcard-body"><div class="fcard-name">Dr. Gifty Malhotra</div><div class="fcard-role">Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">Ph.D (Applied Maths)</span><span class="fcard-qual">M.Sc</span><span class="fcard-qual">CSIR-NET JRF</span></div><div class="fcard-footer"><span class="fcard-spec">Financial Mathematics &amp; Risk Mgmt</span><a href="faculty-detail.html?id=gifty-malhotra" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="Finance and BFSI"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/JAYASHREE_KOWTAL_nw.png" alt="Prof. Jayashree Kowtal" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">JK</div><span class="fcard-dept-tag">Finance &amp; BFSI</span></div><div class="fcard-body"><div class="fcard-name">Prof. Jayashree Kowtal</div><div class="fcard-role">Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">M.Phil</span><span class="fcard-qual">MBA</span><span class="fcard-qual">M.Com</span></div><div class="fcard-footer"><span class="fcard-spec">Finance &amp; BFSI</span><a href="faculty-detail.html?id=jayashree-kowtal" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Finance and BFSI"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/JAYASHREE_KOWTAL_nw.png" alt="Prof. Jayashree Kowtal" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">JK</div><span class="fcard-dept-tag">Finance &amp; BFSI</span></div><div class="fcard-body"><div class="fcard-name">Prof. Jayashree Kowtal</div><div class="fcard-role">Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">Ph.D (Finance)</span></div><div class="fcard-footer"><span class="fcard-spec">Behavioural Finance &amp; Wealth Mgmt</span><a href="faculty-detail.html?id=jayashree-kowtal" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="Finance and BFSI"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/jeevitha_nw.png" alt="Dr. Jeevitha R" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">JR</div><span class="fcard-dept-tag">Finance &amp; BFSI</span></div><div class="fcard-body"><div class="fcard-name">Dr. Jeevitha R</div><div class="fcard-role">Assoc. Professor, Head Placements &amp; Corporate Relations</div><div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">MBA</span><span class="fcard-qual">BBM</span></div><div class="fcard-footer"><span class="fcard-spec">Finance &amp; BFSI</span><a href="faculty-detail.html?id=jeevitha-r" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Finance and BFSI"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/jeevitha_nw.png" alt="Dr. Jeevitha R" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">JR</div><span class="fcard-dept-tag">Finance &amp; BFSI</span></div><div class="fcard-body"><div class="fcard-name">Dr. Jeevitha R</div><div class="fcard-role">Associate Professor, Head Placements &amp; Corporate Relations</div><div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">MBA</span><span class="fcard-qual">UGC-NET</span></div><div class="fcard-footer"><span class="fcard-spec">Finance &amp; Corporate Relations</span><a href="faculty-detail.html?id=jeevitha-r" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="Finance and BFSI"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1765451892_32dbcfbfee06d8f50413.png" alt="Prof. Kiran Kumar K V" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">KK</div><span class="fcard-dept-tag">Finance &amp; BFSI</span></div><div class="fcard-body"><div class="fcard-name">Prof. Kiran Kumar K V</div><div class="fcard-role">Adjunct Faculty</div><div class="fcard-quals"><span class="fcard-qual">Finance &amp; BFSI</span></div><div class="fcard-footer"><span class="fcard-spec">Finance &amp; BFSI</span><a href="faculty-detail.html?id=kiran-kumar-k-v" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Finance and BFSI" data-level="adjunct"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1765451892_32dbcfbfee06d8f50413.png" alt="Prof. Kiran Kumar K V" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">KK</div><span class="fcard-dept-tag">Finance &amp; BFSI</span><div class="adjunct-badge">Adjunct</div></div><div class="fcard-body"><div class="fcard-name">Prof. Kiran Kumar K V</div><div class="fcard-role">Adjunct Faculty</div><div class="fcard-quals"><span class="fcard-qual">CFA (USA)</span><span class="fcard-qual">CMA</span><span class="fcard-qual">CAIIB</span><span class="fcard-qual">PGDBA</span></div><div class="fcard-footer"><span class="fcard-spec">FinTech &amp; Financial Analytics</span><a href="faculty-detail.html?id=kiran-kumar-k-v" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="Finance and BFSI"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/kirrom_bindu_nw.png" alt="Prof. Kirron Bindu" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">KB</div><span class="fcard-dept-tag">Finance &amp; BFSI</span></div><div class="fcard-body"><div class="fcard-name">Prof. Kirron Bindu</div><div class="fcard-role">Adjunct Faculty</div><div class="fcard-quals"><span class="fcard-qual">Finance &amp; BFSI</span></div><div class="fcard-footer"><span class="fcard-spec">Finance &amp; BFSI</span><a href="faculty-detail.html?id=kirron-bindu" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Finance and BFSI" data-level="adjunct"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/kirrom_bindu_nw.png" alt="Prof. Kirron Bindu" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">KB</div><span class="fcard-dept-tag">Finance &amp; BFSI</span><div class="adjunct-badge">Adjunct</div></div><div class="fcard-body"><div class="fcard-name">Prof. Kirron Bindu</div><div class="fcard-role">Adjunct Faculty</div><div class="fcard-quals"><span class="fcard-qual">iCMA</span><span class="fcard-qual">M.Com</span><span class="fcard-qual">Data Analytics (IIM-R)</span></div><div class="fcard-footer"><span class="fcard-spec">Corporate Finance &amp; Valuation</span><a href="faculty-detail.html?id=kirron-bindu" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="Finance and BFSI"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/Kumuda_P_R.png" alt="Dr. Kumuda P R" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">KP</div><span class="fcard-dept-tag">Finance &amp; BFSI</span></div><div class="fcard-body"><div class="fcard-name">Dr. Kumuda P R</div><div class="fcard-role">Associate Professor</div><div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">M.Phil</span><span class="fcard-qual">MBA</span></div><div class="fcard-footer"><span class="fcard-spec">Finance &amp; BFSI</span><a href="faculty-detail.html?id=kumuda-p-r" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Finance and BFSI"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/Kumuda_P_R.png" alt="Dr. Kumuda P R" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">KP</div><span class="fcard-dept-tag">Finance &amp; BFSI</span></div><div class="fcard-body"><div class="fcard-name">Dr. Kumuda P R</div><div class="fcard-role">Associate Professor</div><div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">M.Phil</span><span class="fcard-qual">PGDIB</span><span class="fcard-qual">M.Com</span></div><div class="fcard-footer"><span class="fcard-spec">Accounting, Finance &amp; BFSI</span><a href="faculty-detail.html?id=kumuda-p-r" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="Business Analytics and Data Science"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/Malleswari_nw.png" alt="Prof. Mallieswari R" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">MR</div><span class="fcard-dept-tag">Business Analytics</span></div><div class="fcard-body"><div class="fcard-name">Prof. Mallieswari R</div><div class="fcard-role">Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">M.Phil</span><span class="fcard-qual">MBA</span><span class="fcard-qual">M.Sc</span></div><div class="fcard-footer"><span class="fcard-spec">Applied Statistics &amp; Analytics</span><a href="faculty-detail.html?id=mallieswari-r" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Business Analytics and Data Science"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/Malleswari_nw.png" alt="Prof. Mallieswari R" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">MR</div><span class="fcard-dept-tag">Business Analytics</span></div><div class="fcard-body"><div class="fcard-name">Prof. Mallieswari R</div><div class="fcard-role">Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">M.Phil (Stats)</span><span class="fcard-qual">MBA</span><span class="fcard-qual">M.Sc (Applied Stats)</span></div><div class="fcard-footer"><span class="fcard-spec">Applied Statistics &amp; Healthcare Analytics</span><a href="faculty-detail.html?id=mallieswari-r" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="Marketing and IB"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/mrgha_varma_nw.png" alt="Dr. Meghna Verma" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">MV</div><span class="fcard-dept-tag">Marketing &amp; IB</span></div><div class="fcard-body"><div class="fcard-name">Dr. Meghna Verma</div><div class="fcard-role">Assoc. Professor, Head — Centre for Sustainability</div><div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">MBA</span><span class="fcard-qual">M.Sc</span></div><div class="fcard-footer"><span class="fcard-spec">Marketing &amp; Analytics</span><a href="faculty-detail.html?id=meghna-verma" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Marketing and IB"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/mrgha_varma_nw.png" alt="Dr. Meghna Verma" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">MV</div><span class="fcard-dept-tag">Marketing &amp; IB</span></div><div class="fcard-body"><div class="fcard-name">Dr. Meghna Verma</div><div class="fcard-role">Associate Professor, Head — Centre for Sustainability</div><div class="fcard-quals"><span class="fcard-qual">Ph.D (IISc)</span><span class="fcard-qual">MBA</span><span class="fcard-qual">M.Sc</span></div><div class="fcard-footer"><span class="fcard-spec">Sustainable Marketing &amp; Consumer Behaviour</span><a href="faculty-detail.html?id=meghna-verma" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="Marketing and IB"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1765369519_3e614fd45db6192cef1d.webp" alt="Prof. Neeraja B" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">NB</div><span class="fcard-dept-tag">Marketing &amp; IB</span></div><div class="fcard-body"><div class="fcard-name">Prof. Neeraja B</div><div class="fcard-role">Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">MBA</span></div><div class="fcard-footer"><span class="fcard-spec">Marketing</span><a href="faculty-detail.html?id=neeraja-b" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Marketing and IB"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1765369519_3e614fd45db6192cef1d.webp" alt="Prof. Neeraja B" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">NB</div><span class="fcard-dept-tag">Marketing &amp; IB</span></div><div class="fcard-body"><div class="fcard-name">Prof. Neeraja B</div><div class="fcard-role">Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">MBA (Marketing)</span></div><div class="fcard-footer"><span class="fcard-spec">Marketing &amp; International Business</span><a href="faculty-detail.html?id=neeraja-b" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="Marketing and IB"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/Niharika_Mishra_nw.png" alt="Dr. Niharika Mishra" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">NM</div><span class="fcard-dept-tag">Marketing &amp; IB</span></div><div class="fcard-body"><div class="fcard-name">Dr. Niharika Mishra</div><div class="fcard-role">Asst. Professor &amp; Chairperson, Marketing</div><div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">MBA</span><span class="fcard-qual">BA</span></div><div class="fcard-footer"><span class="fcard-spec">Marketing</span><a href="faculty-detail.html?id=niharika-mishra" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Marketing and IB"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/Niharika_Mishra_nw.png" alt="Dr. Niharika Mishra" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">NM</div><span class="fcard-dept-tag">Marketing &amp; IB</span></div><div class="fcard-body"><div class="fcard-name">Dr. Niharika Mishra</div><div class="fcard-role">Sr. Assistant Professor &amp; Chairperson, Marketing &amp; IB</div><div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">MBA</span><span class="fcard-qual">Digital Mktg (ISB)</span></div><div class="fcard-footer"><span class="fcard-spec">Digital Marketing &amp; Sustainability</span><a href="faculty-detail.html?id=niharika-mishra" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="OB and HR"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/padmaja_nw.png" alt="Dr. Padmaja V" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">PV</div><span class="fcard-dept-tag">OB &amp; HR</span></div><div class="fcard-body"><div class="fcard-name">Dr. Padmaja V</div><div class="fcard-role">Professor, Head — Centre for Leadership</div><div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">PGDPM</span><span class="fcard-qual">B.Com</span></div><div class="fcard-footer"><span class="fcard-spec">OB &amp; HRM</span><a href="faculty-detail.html?id=padmaja-v" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="OB and HR"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/padmaja_nw.png" alt="Dr. Padmaja V" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">PV</div><span class="fcard-dept-tag">OB &amp; HR</span></div><div class="fcard-body"><div class="fcard-name">Dr. Padmaja V</div><div class="fcard-role">Professor &amp; Head — Centre for Leadership and Capacity Building</div><div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">PGDPM (HRD)</span></div><div class="fcard-footer"><span class="fcard-spec">Leadership &amp; Social Entrepreneurship</span><a href="faculty-detail.html?id=padmaja-v" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="Marketing and IB"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1765355611_b3c448e3d7e0d18d4f91.webp" alt="Prof. Piyali Deb" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">PD</div><span class="fcard-dept-tag">Marketing &amp; IB</span></div><div class="fcard-body"><div class="fcard-name">Prof. Piyali Deb</div><div class="fcard-role">Asst. Professor, Head Admissions</div><div class="fcard-quals"><span class="fcard-qual">PGDM</span></div><div class="fcard-footer"><span class="fcard-spec">Marketing</span><a href="faculty-detail.html?id=piyali-deb" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Marketing and IB"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1765355611_b3c448e3d7e0d18d4f91.webp" alt="Prof. Piyali Deb" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">PD</div><span class="fcard-dept-tag">Marketing &amp; IB</span></div><div class="fcard-body"><div class="fcard-name">Prof. Piyali Deb</div><div class="fcard-role">Assistant Professor &amp; Head Admissions</div><div class="fcard-quals"><span class="fcard-qual">PGDM Executive (NMIMS)</span></div><div class="fcard-footer"><span class="fcard-spec">Branding &amp; Marketing Strategy</span><a href="faculty-detail.html?id=piyali-deb" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="Operations and Supply Chain Management"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1765451205_51b350280da16c707f5c.webp" alt="Prof. Prakash B S" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">PB</div><span class="fcard-dept-tag">Operations</span></div><div class="fcard-body"><div class="fcard-name">Prof. Prakash B S</div><div class="fcard-role">Adjunct Faculty</div><div class="fcard-quals"><span class="fcard-qual">FPM</span><span class="fcard-qual">MBA</span><span class="fcard-qual">BE</span></div><div class="fcard-footer"><span class="fcard-spec">Operations &amp; SCM</span><a href="faculty-detail.html?id=prakash-b-s" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Operations and Supply Chain Management" data-level="adjunct"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1765451205_51b350280da16c707f5c.webp" alt="Prof. Prakash B S" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">PB</div><span class="fcard-dept-tag">Operations</span><div class="adjunct-badge">Adjunct</div></div><div class="fcard-body"><div class="fcard-name">Prof. Prakash B S</div><div class="fcard-role">Adjunct Faculty</div><div class="fcard-quals"><span class="fcard-qual">MBA</span><span class="fcard-qual">B.E</span></div><div class="fcard-footer"><span class="fcard-spec">Sustainability &amp; Operations Excellence</span><a href="faculty-detail.html?id=prakash-b-s" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="OB and HR"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/Preeja_Sreedhar_nw.png" alt="Prof. Preeja Sreedhar" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">PS</div><span class="fcard-dept-tag">OB &amp; HR</span></div><div class="fcard-body"><div class="fcard-name">Prof. Preeja Sreedhar</div><div class="fcard-role">Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">PGDHR</span><span class="fcard-qual">M.O.Psy</span></div><div class="fcard-footer"><span class="fcard-spec">HR &amp; Business Comm.</span><a href="faculty-detail.html?id=preeja-sreedhar" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="OB and HR"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/Preeja_Sreedhar_nw.png" alt="Prof. Preeja Sreedhar" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">PS</div><span class="fcard-dept-tag">OB &amp; HR</span></div><div class="fcard-body"><div class="fcard-name">Prof. Preeja Sreedhar</div><div class="fcard-role">Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">M.Mass Comm</span><span class="fcard-qual">M.O.Psy</span><span class="fcard-qual">PGDHR</span><span class="fcard-qual">Lean Master</span></div><div class="fcard-footer"><span class="fcard-spec">OD Consulting &amp; Soft Skills</span><a href="faculty-detail.html?id=preeja-sreedhar" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="Finance and BFSI"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1765362788_f0ad0fe007e4be7a0a2e.webp" alt="Prof. Prreeya Shetty" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">PZ</div><span class="fcard-dept-tag">Finance &amp; BFSI</span></div><div class="fcard-body"><div class="fcard-name">Prof. Prreeya Shetty</div><div class="fcard-role">Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">MBA</span></div><div class="fcard-footer"><span class="fcard-spec">Finance</span><a href="faculty-detail.html?id=prreeya-shetty" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Finance and BFSI"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1765362788_f0ad0fe007e4be7a0a2e.webp" alt="Prof. Prreeya Shetty" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">PZ</div><span class="fcard-dept-tag">Finance &amp; BFSI</span></div><div class="fcard-body"><div class="fcard-name">Prof. Prreeya Shetty</div><div class="fcard-role">Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">MBA (Finance)</span></div><div class="fcard-footer"><span class="fcard-spec">Banking &amp; Corporate Relations</span><a href="faculty-detail.html?id=prreeya-shetty" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="Operations and Supply Chain Management"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1765355804_0159ae0329e0909e1cbb.webp" alt="Prof. Reena Y A" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">RY</div><span class="fcard-dept-tag">Operations</span></div><div class="fcard-body"><div class="fcard-name">Prof. Reena Y A</div><div class="fcard-role">Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">M.Tech</span><span class="fcard-qual">BE</span></div><div class="fcard-footer"><span class="fcard-spec">Operations</span><a href="faculty-detail.html?id=reena-y-a" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Operations and Supply Chain Management"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1765355804_0159ae0329e0909e1cbb.webp" alt="Prof. Reena Y A" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">RY</div><span class="fcard-dept-tag">Operations</span></div><div class="fcard-body"><div class="fcard-name">Prof. Reena Y A</div><div class="fcard-role">Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">M.Tech (Engg. Mgmt)</span><span class="fcard-qual">B.E (IPE)</span></div><div class="fcard-footer"><span class="fcard-spec">Production Engg. &amp; Supply Chain</span><a href="faculty-detail.html?id=reena-y-a" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="Operations and Supply Chain Management"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/ribhu_nw.png" alt="Prof. Ribhu Ray" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">RR</div><span class="fcard-dept-tag">Operations</span></div><div class="fcard-body"><div class="fcard-name">Prof. Ribhu Ray</div><div class="fcard-role">Asst. Professor &amp; Academic Coordinator, Operations</div><div class="fcard-quals"><span class="fcard-qual">M.Tech</span><span class="fcard-qual">B.Tech</span></div><div class="fcard-footer"><span class="fcard-spec">Operations</span><a href="faculty-detail.html?id=ribhu-ray" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Operations and Supply Chain Management"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1765610691_2370c18bfd1289e4dca3.webp" alt="Prof. Ribhu Ray" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">RR</div><span class="fcard-dept-tag">Operations</span></div><div class="fcard-body"><div class="fcard-name">Prof. Ribhu Ray</div><div class="fcard-role">Assistant Professor &amp; Chairperson, Operations &amp; SCM</div><div class="fcard-quals"><span class="fcard-qual">M.Tech (MPS)</span><span class="fcard-qual">B.Tech</span><span class="fcard-qual">PhD (Pursuing)</span></div><div class="fcard-footer"><span class="fcard-spec">Operations Mgmt &amp; Supply Chain</span><a href="faculty-detail.html?id=ribhu-ray" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="Finance and BFSI"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/sadaf_nw.png" alt="Dr. Sadaf Anwar" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">SA</div><span class="fcard-dept-tag">Finance &amp; BFSI</span></div><div class="fcard-body"><div class="fcard-name">Dr. Sadaf Anwar</div><div class="fcard-role">Associate Professor</div><div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">MBA</span></div><div class="fcard-footer"><span class="fcard-spec">Finance &amp; BFSI</span><a href="faculty-detail.html?id=sadaf-anwar" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Finance and BFSI"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/sadaf_nw.png" alt="Dr. Sadaf Anwar" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">SA</div><span class="fcard-dept-tag">Finance &amp; BFSI</span></div><div class="fcard-body"><div class="fcard-name">Dr. Sadaf Anwar</div><div class="fcard-role">Associate Professor</div><div class="fcard-quals"><span class="fcard-qual">Ph.D (IIT Delhi)</span><span class="fcard-qual">MBA (IIT Delhi)</span><span class="fcard-qual">UGC-NET JRF</span></div><div class="fcard-footer"><span class="fcard-spec">Corporate Finance &amp; Climate Finance</span><a href="faculty-detail.html?id=sadaf-anwar" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="Finance and BFSI"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1752204811_44b0f9780f5bcde09af9.jpg" alt="Dr. Sagar M" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">SG</div><span class="fcard-dept-tag">Finance &amp; BFSI</span></div><div class="fcard-body"><div class="fcard-name">Dr. Sagar M</div><div class="fcard-role">Associate Professor</div><div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">Postdoc IIM-B</span><span class="fcard-qual">MSc</span></div><div class="fcard-footer"><span class="fcard-spec">Economics</span><a href="faculty-detail.html?id=sagar-m" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Finance and BFSI"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1752204811_44b0f9780f5bcde09af9.jpg" alt="Dr. Sagar M" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">SG</div><span class="fcard-dept-tag">Finance &amp; BFSI</span></div><div class="fcard-body"><div class="fcard-name">Dr. Sagar M</div><div class="fcard-role">Associate Professor</div><div class="fcard-quals"><span class="fcard-qual">Ph.D (Agri. Econ.)</span><span class="fcard-qual">Postdoc IIM-B</span><span class="fcard-qual">UGC-NET</span></div><div class="fcard-footer"><span class="fcard-spec">Climate Economics &amp; Rural Development</span><a href="faculty-detail.html?id=sagar-m" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="Marketing and IB"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/Sankar_Mukherjee.png" alt="Dr. Sankar Mukherjee" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">SM</div><span class="fcard-dept-tag">Marketing &amp; IB</span></div><div class="fcard-body"><div class="fcard-name">Dr. Sankar Mukherjee</div><div class="fcard-role">Associate Professor</div><div class="fcard-quals"><span class="fcard-qual">FPM</span><span class="fcard-qual">MBA</span></div><div class="fcard-footer"><span class="fcard-spec">Marketing &amp; IB</span><a href="faculty-detail.html?id=sankar-mukherjee" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Marketing and IB"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/Sankar_Mukherjee.png" alt="Dr. Sankar Mukherjee" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">SM</div><span class="fcard-dept-tag">Marketing &amp; IB</span></div><div class="fcard-body"><div class="fcard-name">Dr. Sankar Mukherjee</div><div class="fcard-role">Associate Professor</div><div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">M.Phil</span><span class="fcard-qual">MBA</span><span class="fcard-qual">PGDBA (Purdue)</span></div><div class="fcard-footer"><span class="fcard-spec">Digital Marketing &amp; ESG</span><a href="faculty-detail.html?id=sankar-mukherjee" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="Finance and BFSI"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/savitha_rani_nw.png" alt="Dr. Savitha Rani" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">SR</div><span class="fcard-dept-tag">Registrar</span></div><div class="fcard-body"><div class="fcard-name">Dr. Savitha Rani Ramachandran</div><div class="fcard-role">Professor &amp; Registrar</div><div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">FCMA</span><span class="fcard-qual">MBA</span><span class="fcard-qual">B.Com</span></div><div class="fcard-footer"><span class="fcard-spec">Finance &amp; Marketing</span><a href="faculty-detail.html?id=savitha-rani-ramachandran" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Finance and BFSI"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/savitha_rani_nw.png" alt="Dr. Savitha Rani Ramachandran" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">SR</div><span class="fcard-dept-tag">Registrar</span></div><div class="fcard-body"><div class="fcard-name">Dr. Savitha Rani Ramachandran</div><div class="fcard-role">Professor &amp; Registrar</div><div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">FCMA</span><span class="fcard-qual">MBA (BIM)</span><span class="fcard-qual">B.Com</span></div><div class="fcard-footer"><span class="fcard-spec">Cost Mgmt &amp; Corporate Finance</span><a href="faculty-detail.html?id=savitha-rani-ramachandran" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="OB and HR"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1765369654_3135ed2018788bc7258c.webp" alt="Prof. Suma N" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">SN</div><span class="fcard-dept-tag">OB &amp; HR</span></div><div class="fcard-body"><div class="fcard-name">Prof. Suma N</div><div class="fcard-role">Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">MBA</span></div><div class="fcard-footer"><span class="fcard-spec">OB &amp; HRM</span><a href="faculty-detail.html?id=suma-n" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="Finance and BFSI"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/triveni_nw.png" alt="Dr. Triveni P" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">TP</div><span class="fcard-dept-tag">Finance &amp; BFSI</span></div><div class="fcard-body"><div class="fcard-name">Dr. Triveni P</div><div class="fcard-role">Professor &amp; Chairperson, Finance &amp; BFSI</div><div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">MBA</span><span class="fcard-qual">M.Com</span></div><div class="fcard-footer"><span class="fcard-spec">Finance &amp; BFSI</span><a href="faculty-detail.html?id=triveni-p" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="OB and HR"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1765369654_3135ed2018788bc7258c.webp" alt="Prof. Suma N" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">SN</div><span class="fcard-dept-tag">OB &amp; HR</span></div><div class="fcard-body"><div class="fcard-name">Prof. Suma N</div><div class="fcard-role">Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">MBA (HRM)</span><span class="fcard-qual">PGDM</span></div><div class="fcard-footer"><span class="fcard-spec">Human Resource Management</span><a href="faculty-detail.html?id=suma-n" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
-    <div class="fcard reveal" data-dept="OB and HR"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/yasushvini-v1.jpg" alt="Prof. Yashaswini Murthy B" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">YM</div><span class="fcard-dept-tag">OB &amp; HR</span></div><div class="fcard-body"><div class="fcard-name">Prof. Yashaswini Murthy B</div><div class="fcard-role">Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">MBA</span><span class="fcard-qual">B.Sc</span></div><div class="fcard-footer"><span class="fcard-spec">OB &amp; HRM</span><a href="faculty-detail.html?id=yashaswini-murthy-b" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+    <div class="fcard reveal" data-dept="Finance and BFSI"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1776842769_0249a27879dd1eaf4a7e.jpg" alt="Dr. Triveni P" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">TP</div><span class="fcard-dept-tag">Finance &amp; BFSI</span></div><div class="fcard-body"><div class="fcard-name">Dr. Triveni P</div><div class="fcard-role">Professor &amp; Chairperson, Finance &amp; BFSI</div><div class="fcard-quals"><span class="fcard-qual">Ph.D (BU)</span><span class="fcard-qual">MBA</span><span class="fcard-qual">M.Com (IGNOU)</span></div><div class="fcard-footer"><span class="fcard-spec">Sustainable Finance &amp; FinTech</span><a href="faculty-detail.html?id=triveni-p" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
+
+    <div class="fcard reveal" data-dept="OB and HR"><div class="fcard-photo"><img src="https://msrim.in/msrimmanage/uploads/faculty/1750226627_0d46be1945049b28cfbe.jpg" alt="Prof. Yashaswini Murthy B" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="fcard-avatar" style="display:none">YM</div><span class="fcard-dept-tag">OB &amp; HR</span></div><div class="fcard-body"><div class="fcard-name">Prof. Yashaswini Murthy B</div><div class="fcard-role">Assistant Professor</div><div class="fcard-quals"><span class="fcard-qual">Ph.D</span><span class="fcard-qual">MBA</span><span class="fcard-qual">B.Sc</span><span class="fcard-qual">UGC-NET</span></div><div class="fcard-footer"><span class="fcard-spec">HRM &amp; Entrepreneurship</span><a href="faculty-detail.html?id=yashaswini-murthy-b" class="fcard-link"><i class="bi bi-arrow-right"></i></a></div></div></div>
 
   </div><!-- end faculty-grid -->
 </div>
@@ -518,55 +525,75 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <div class="logo"><img src="https://msrim.in/images/logo-2.png" alt="MSRIM"/></div>
-      <p>Ramaiah Institute of Management has been nurturing business leaders since 1995. AICTE approved and NBA accredited.</p>
-      <div class="footer-contact">
-        <div class="fc"><i class="bi bi-telephone-fill"></i><span>080-2360-6640, 6641, 6642</span></div>
-        <div class="fc"><i class="bi bi-envelope-fill"></i><span>support@msrim.org</span></div>
-        <div class="fc"><i class="bi bi-geo-alt-fill"></i><span>Gate No. 8, Ramaiah Group Campus, Bengaluru — 560054</span></div>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><img src="https://msrim.in/images/logo-2.png" alt="MSRIM"/></div>
+        <p>Ramaiah Institute of Management has been nurturing business leaders since 1995. AICTE approved and NBA accredited, we are committed to delivering world-class management education.</p>
+        <div class="footer-contact">
+          <div class="fc"><i class="bi bi-telephone-fill"></i><span>080-2360-6640, 6641, 6642</span></div>
+          <div class="fc"><i class="bi bi-envelope-fill"></i><span>support@msrim.org</span></div>
+          <div class="fc"><i class="bi bi-geo-alt-fill"></i><span>Gate No. 8, Ramaiah Group Campus, 'C' Block, M.S.R.I.T. Post, Bengaluru — 560054</span></div>
+        </div>
+        <div class="socials">
+          <a href="https://facebook.com/msrim"><i class="bi bi-facebook"></i></a>
+          <a href="https://linkedin.com/school/msrim"><i class="bi bi-linkedin"></i></a>
+          <a href="https://instagram.com/msrim"><i class="bi bi-instagram"></i></a>
+          <a href="https://youtube.com/msrim"><i class="bi bi-youtube"></i></a>
+        </div>
+        <div class="footer-badges">
+          <div class="footer-badge"><img src="https://msrim.in/images/iic_new_logo.jpg" alt="IIC"/><span>Institution's Innovation Council</span></div>
+          <div class="footer-badge"><img src="https://msrim.in/images/amdisa_logo.jpg" alt="AMDISA"/><span>AMDISA Member</span></div>
+        </div>
       </div>
-      <div class="socials">
-        <a href="https://facebook.com/msrim"><i class="bi bi-facebook"></i></a>
-        <a href="https://linkedin.com/school/msrim"><i class="bi bi-linkedin"></i></a>
-        <a href="https://instagram.com/msrim"><i class="bi bi-instagram"></i></a>
-        <a href="https://youtube.com/msrim"><i class="bi bi-youtube"></i></a>
+      <div class="footer-col">
+        <h5>Campus Info</h5>
+        <ul>
+          <li><a href="our-policies.html">Our Policies</a></li>
+          <li><a href="https://msrim.in/images/Awards-Ranking.mp4" target="_blank">B-School Ranking</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="future-road-map.html">Future Road Map</a></li>
+          <li><a href="anti-ragging.html">Anti-Ragging</a></li>
+          <li><a href="https://msrim.in/pdf/Mandatory_Disclousre-2025-26V1.pdf" target="_blank">Mandatory Disclosure 2024–25</a></li>
+          <li><a href="photo-gallery.html">Photo Gallery</a></li>
+          <li><a href="https://msrim.in/pdf/Action_Taken_Report_2024-25.docx.pdf" target="_blank">Action Taken Report 2024–25</a></li>
+          <li><a href="https://msrim.in/pdf/rules/RIM-Governance-Guidelines.pdf" target="_blank">Governance Guidelines</a></li>
+          <li><a href="infrastructure.html">Infrastructure</a></li>
+        </ul>
       </div>
-    </div>
-    <div class="footer-col">
-      <h5>Campus Info</h5>
-      <ul>
-        <li><a href="https://msrim.in/our-policies">Our Policies</a></li>
-        <li><a href="https://msrim.in/faq">FAQs</a></li>
-        <li><a href="https://msrim.in/anti-ragging">Anti-Ragging</a></li>
-        <li><a href="https://msrim.in/photos-gallery">Photo Gallery</a></li>
-        <li><a href="https://msrim.in/infrastructure">Infrastructure</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h5>Important Info</h5>
-      <ul>
-        <li><a href="https://msrim.in/approvals">AICTE Approvals</a></li>
-        <li><a href="https://msrim.in/pdf/approvals/NBA-Results-March-2023.pdf" target="_blank">NBA Approval</a></li>
-        <li><a href="https://msrim.in/financial-statements">Financial Statements</a></li>
-        <li><a href="https://msrim.in/grievance-redressal-committees">Grievance Committees</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h5>Explore MSRIM</h5>
-      <ul>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="programs.html">Programmes</a></li>
-        <li><a href="placements.html">Placements</a></li>
-        <li><a href="admissions.html">Admissions</a></li>
-        <li><a href="https://alumni.msrim.in/" target="_blank">Alumni</a></li>
-        <li><a href="https://msrim.in/contact">Contact</a></li>
-      </ul>
+      <div class="footer-col">
+        <h5>Important Info</h5>
+        <ul>
+          <li><a href="grievance.html">Grievance &amp; Redressal Committees</a></li>
+          <li><a href="https://msrim.in/pdf/EOA-Report-2026-2027.PDF" target="_blank">AICTE Approval 2026–27</a></li>
+          <li><a href="approvals.html">AICTE Approvals since 1995</a></li>
+          <li><a href="https://msrim.in/pdf/rules/AICTE-CSS.pdf" target="_blank">AICTE Centralized Support System</a></li>
+          <li><a href="https://msrim.in/pdf/approvals/NBA-Results-March-2023.pdf" target="_blank">NBA Approval Letter 2022–2025</a></li>
+          <li><a href="https://msrim.in/pdf/approvals/AIU-2023.pdf" target="_blank">AIU Approval Letter 2022–2025</a></li>
+          <li><a href="student-initiatives.html">Student Initiatives</a></li>
+          <li><a href="financial-statements.html">Financial Statements</a></li>
+          <li><a href="https://msrmr.in" target="_blank">Journals</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Explore RIM</h5>
+        <ul>
+          <li><a href="contact.html">Campus Tour</a></li>
+          <li><a href="https://msrim.in/images/Ramaiah-Launch-Video.mp4" target="_blank">Ramaiah Logo Launch</a></li>
+          <li><a href="https://msrim.in/pdf/NIRF2026.pdf" target="_blank">NIRF Ranking 2026</a></li>
+          <li><a href="career.html">Career</a></li>
+          <li><a href="https://msrim.in/pdf/rules/GEFServiceRules.pdf" target="_blank">GEF Service Rules</a></li>
+          <li><a href="https://msrim.in/pdf/rules/GEFConductRules.pdf" target="_blank">GEF Conduct Rules</a></li>
+          <li><a href="https://msrim.in/blog">Blog</a></li>
+          <li><a href="https://alumni.msrim.in/" target="_blank">Alumni</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
   </div>
+  <!-- ERP LOGIN / DIGIICAMPUS BAR -->
   <div class="footer-erp">
-    <div class="footer-erp-inner">
+    <div class="wrap w">
       <div class="footer-erp-group">
         <span class="footer-erp-title">ERP Login</span>
         <div class="footer-erp-links">
@@ -577,12 +604,15 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
       </div>
       <div class="footer-erp-group">
         <span class="footer-erp-title">Digiicampus</span>
-        <div class="footer-erp-links"><a href="https://msrim.digiicampus.com/home">Login</a></div>
+        <div class="footer-erp-links">
+          <a href="https://msrim.digiicampus.com/home">Login</a>
+        </div>
       </div>
     </div>
   </div>
+
   <div class="footer-bottom">
-    <div class="footer-bottom-inner">
+    <div class="w">
       <span>© 2026 Ramaiah Institute of Management. All rights reserved.</span>
       <div style="display:flex;gap:20px">
         <a href="https://msrim.in/privacy-policy">Privacy Policy</a>
@@ -666,9 +696,9 @@ filterBtns.forEach(btn => {
           <a href="admissions.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-pencil-square"></i></div><span class="fsm-label">Admissions</span></a>
           <a href="placements.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-briefcase-fill"></i></div><span class="fsm-label">Placements</span></a>
           <a href="centre-for-sustainability.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-tree-fill"></i></div><span class="fsm-label">Centre for Sustainability</span></a>
-          <a href="centre-for-leadership (2).html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-person-arms-up"></i></div><span class="fsm-label">Centre for Leadership</span></a>
+          <a href="centre-for-leadership (2).html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-person-arms-up"></i></div><span class="fsm-label">Centre for Leadership and Capacity Building</span></a>
           <a href="centre-for-case-development.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-journal-richtext"></i></div><span class="fsm-label">Centre for Case Development</span></a>
-          <a href="centre-for-excellence.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-award-fill"></i></div><span class="fsm-label">Centre for Excellence</span></a>
+          <a href="centre-for-excellence.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-award-fill"></i></div><span class="fsm-label">BCIC–Ramaiah Centre for Excellence</span></a>
           <a href="centre-for-iks.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-flower1"></i></div><span class="fsm-label">Centre for IKS</span></a>
           <a href="centre-for-entrepreneurship.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-lightbulb-fill"></i></div><span class="fsm-label">Centre for Entrepreneurship</span></a>
           <a href="centre-for-research-consultancy.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-graph-up-arrow"></i></div><span class="fsm-label">Centre for Research &amp; Consultancy</span></a>
@@ -677,10 +707,10 @@ filterBtns.forEach(btn => {
           <a href="innovation-council.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-rocket-takeoff-fill"></i></div><span class="fsm-label">Institute Innovation Council</span></a>
         </div>
         <div class="fsm-quicklinks">
-          <a href="research.html" class="fsm-quicklink"><i class="bi bi-flask-fill"></i> R &amp; D Cell</a>
           <a href="centres.html" class="fsm-quicklink"><i class="bi bi-grid-fill"></i> All Centres</a>
           <a href="https://msrim.in/virtual-tour" target="_blank" class="fsm-quicklink"><i class="bi bi-camera-video-fill"></i> Campus Tour</a>
           <a href="https://alumni.msrim.in/" target="_blank" class="fsm-quicklink"><i class="bi bi-person-heart"></i> Alumni Portal</a>
+          <a href="https://msrim.digiicampus.com/" target="_blank" class="fsm-quicklink"><i class="bi bi-laptop-fill" style="color:#E05A04"></i> DigiCampus Login</a>
         </div>
       </div>
       <!-- RIGHT: Side Nav -->
@@ -715,9 +745,9 @@ filterBtns.forEach(btn => {
             <div class="fsm-side-link" onclick="toggleSide(this)">Centres <i class="bi bi-chevron-down chev"></i></div>
             <div class="fsm-side-sub">
               <a href="centre-for-sustainability.html">Centre for Sustainability</a>
-              <a href="centre-for-leadership (2).html">Centre for Leadership</a>
+              <a href="centre-for-leadership (2).html">Centre for Leadership and Capacity Building</a>
               <a href="centre-for-case-development.html">Centre for Case Development</a>
-              <a href="centre-for-excellence.html">Centre for Excellence</a>
+              <a href="centre-for-excellence.html">BCIC–Ramaiah Centre for Excellence</a>
               <a href="centre-for-iks.html">Centre for IKS</a>
               <a href="centre-for-entrepreneurship.html">Centre for Entrepreneurship</a>
               <a href="centre-for-research-consultancy.html">Centre for Research &amp; Consultancy</a>
@@ -726,7 +756,6 @@ filterBtns.forEach(btn => {
               <a href="innovation-council.html">Institute Innovation Council</a>
             </div>
           </div>
-          <a href="research.html" class="fsm-side-link">R &amp; D Cell</a>
         </nav>
         <a href="https://msrim.in/virtual-tour" target="_blank" class="fsm-side-footer"><i class="bi bi-camera-video-fill"></i> Campus Tour</a>
       </div>
@@ -748,3 +777,12 @@ function toggleSide(el){var g=el.parentElement;document.querySelectorAll('.fsm-s
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+

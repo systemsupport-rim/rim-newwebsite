@@ -27,7 +27,7 @@
     img{max-width:100%;display:block}
     ul{list-style:none}
 
-    .utility-bar{background:linear-gradient(135deg,#E05A04 0%,#F88C1A 100%);color:#fff;font-size:13.5px;padding:11px 0}
+    .utility-bar{background:#0a1f3d;color:#fff;font-size:13.5px;padding:11px 0}
     .utility-bar .wrap{max-width:1400px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
     .utility-bar .brand-tag{font-weight:500}
     .utility-bar a{color:#fff}
@@ -95,7 +95,8 @@
 
     /* CENTRE HEAD CARD */
     .centre-head{background:#FDF9F4;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;padding:16px 18px;display:flex;align-items:center;gap:14px;margin-bottom:20px}
-    .ch-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy-700));color:#fff;font-family:var(--serif);font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .ch-avatar{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy-700));color:#fff;font-family:var(--serif);font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden}
+    .ch-avatar img{width:100%;height:100%;object-fit:cover;object-position:center top}
     .ch-info strong{display:block;font-size:14px;font-weight:700;color:var(--navy)}
     .ch-info span{font-size:12.5px;color:var(--muted)}
 
@@ -121,7 +122,7 @@
 
     /* CTA */
     .cta-banner{background:var(--navy);position:relative;padding:64px 28px;text-align:center;overflow:hidden}
-    .cta-banner::before{content:"";position:absolute;inset:0;background:url('https://msrim.in/images/msrim_campus.jpg') center/cover no-repeat;opacity:.06}
+    .cta-banner::before{content:"";position:absolute;inset:0;background:#faf6ee;opacity:.06}
     .cta-banner-inner{position:relative;z-index:1;max-width:600px;margin:0 auto}
     .cta-banner h2{font-family:var(--serif);font-size:clamp(24px,3vw,36px);font-weight:600;color:#fff;margin-bottom:12px}
     .cta-banner p{font-size:15px;color:rgba(255,255,255,.75);margin-bottom:28px}
@@ -214,54 +215,54 @@
 .mobile-nav-sub a{font-size:13.5px;color:var(--muted);padding:9px 10px}
 .mobile-nav-sub a:hover{color:var(--navy);background:var(--cream);border-radius:6px}
 .mobile-nav-cta{margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
-.mobile-nav-cta a{display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#E05A04 0%,#F88C1A 100%);color:#fff;padding:13px;border-radius:999px;font-weight:700;font-size:14.5px}
+.mobile-nav-cta a{display:flex;align-items:center;justify-content:center;gap:8px;background:#0a1f3d;color:#fff;padding:13px;border-radius:999px;font-weight:700;font-size:14.5px}
   
     /* ============ FULLSCREEN MENU ============ */
     .fsm-overlay{position:fixed;inset:0;z-index:9999;opacity:0;visibility:hidden;transition:opacity .38s}
     .fsm-overlay.open{opacity:1;visibility:visible}
-    .fsm-panel{position:fixed;inset:0;background:url('https://msrim.in/images/msrim_campus.jpg') center/cover no-repeat;transform:translateY(-105%);transition:transform .48s cubic-bezier(.4,0,.2,1);overflow-y:auto;display:flex;flex-direction:column}
-    .fsm-panel::before{content:"";position:fixed;inset:0;background:linear-gradient(160deg,rgba(8,24,50,.45) 0%,rgba(10,31,61,.35) 100%);pointer-events:none;z-index:0}
+    .fsm-panel{position:fixed;inset:0;background:#faf6ee;transform:translateY(-105%);transition:transform .48s cubic-bezier(.4,0,.2,1);overflow-y:auto;display:flex;flex-direction:column}
+    .fsm-panel::before{content:"";position:fixed;inset:0;display:none}
     .fsm-overlay.open .fsm-panel{transform:translateY(0)}
-    .fsm-header{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;padding:20px 44px;border-bottom:1px solid rgba(201,169,97,.2)}
-    .fsm-logo{height:40px;filter:brightness(0) invert(1);opacity:.9}
+    .fsm-header{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;padding:20px 44px;border-bottom:1px solid #e3dccd}
+    .fsm-logo{height:40px;filter:none;opacity:1}
     .fsm-header-right{display:flex;align-items:center;gap:14px}
     .fsm-header-cta{display:inline-flex;align-items:center;gap:7px;padding:9px 22px;background:#E05A04;color:#fff;font-size:13px;font-weight:700;border-radius:999px;text-decoration:none;transition:all .2s}
     .fsm-header-cta:hover{background:#c94f03;color:#fff;transform:translateY(-1px)}
-    .fsm-close{width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .25s}
+    .fsm-close{width:42px;height:42px;border-radius:50%;border:1.5px solid #ddd;background:#fff;color:#0a1f3d;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .25s}
     .fsm-close:hover{background:#E05A04;border-color:#E05A04;transform:rotate(90deg)}
     /* fsm-body replaced */
-    .fsm-section-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(201,169,97,.75);margin-bottom:8px;display:block}
-    .fsm-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:10px}
-    .fsm-card{background:rgba(255,255,255,.07);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid rgba(255,255,255,.28);border-bottom:3px solid rgba(255,255,255,.18);border-radius:16px;padding:14px 10px 12px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;transition:all .25s;box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 4px 24px rgba(0,0,0,.12)}
+    .fsm-section-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#b08f48;margin-bottom:8px;display:block}
+    .fsm-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:8px}
+    .fsm-card{background:#fff;border:1px solid #e3dccd;border-bottom:3px solid #e3dccd;border-radius:16px;padding:10px 8px 9px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;transition:all .25s;box-shadow:0 2px 10px rgba(10,31,61,.06)}
     .fsm-card:hover{background:rgba(255,255,255,.96);border-color:rgba(255,255,255,.8);border-bottom-color:#E05A04;transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.4)}
     .fsm-card:hover .fsm-label{color:#0a1f3d}
     .fsm-card:hover .fsm-icon{transform:scale(1.12);box-shadow:0 8px 24px rgba(224,90,4,.6)}
-    .fsm-icon{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#E05A04 0%,#F88C1A 100%);display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;flex-shrink:0;box-shadow:0 4px 12px rgba(224,90,4,.4);transition:all .25s}
-    .fsm-label{font-size:11px;font-weight:600;color:rgba(255,255,255,.9);line-height:1.3;transition:color .25s}
-    .fsm-quicklinks{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding-top:8px;border-top:1px solid rgba(255,255,255,.1)}
-    .fsm-quicklink{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border:1px solid rgba(255,255,255,.2);border-radius:999px;color:rgba(255,255,255,.75);font-size:12.5px;font-weight:500;text-decoration:none;transition:all .2s}
+    .fsm-icon{width:34px;height:34px;border-radius:50%;background:#0a1f3d;display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;flex-shrink:0;box-shadow:0 4px 12px rgba(224,90,4,.4);transition:all .25s}
+    .fsm-label{font-size:11px;font-weight:600;color:#1a1a1a;line-height:1.3;transition:color .25s}
+    .fsm-quicklinks{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding-top:8px;border-top:1px solid #e3dccd}
+    .fsm-quicklink{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border:1px solid #e3dccd;border-radius:999px;color:#333;font-size:12.5px;font-weight:500;text-decoration:none;transition:all .2s}
     .fsm-quicklink:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.45);color:#fff}
     
     .fsm-body{position:relative;z-index:1;flex:1;padding:28px 32px 40px;display:grid;grid-template-columns:1fr 280px;gap:24px;align-items:start}
     .fsm-left{display:flex;flex-direction:column;gap:10px}
-    .fsm-right{background:rgba(255,255,255,.07);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid rgba(255,255,255,.2);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;position:sticky;top:20px}
+    .fsm-right{background:#fff;border:1px solid #e3dccd;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;position:sticky;top:20px}
     .fsm-side-ctas{display:grid;grid-template-columns:1fr 1fr}
     .fsm-side-cta1{display:flex;align-items:center;justify-content:center;gap:6px;padding:13px 8px;background:#E05A04;color:#fff;font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;text-decoration:none;transition:background .2s}
     .fsm-side-cta1:hover{background:#c94f03;color:#fff}
     .fsm-side-cta2{display:flex;align-items:center;justify-content:center;gap:6px;padding:13px 8px;background:#0a1f3d;color:#fff;font-size:12px;font-weight:600;text-decoration:none;transition:background .2s}
     .fsm-side-cta2:hover{background:#1a3a6b;color:#fff}
     .fsm-side-nav{display:flex;flex-direction:column}
-    .fsm-side-link{display:flex;align-items:center;justify-content:space-between;padding:11px 16px;font-size:13px;font-weight:500;color:rgba(255,255,255,.85);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07);transition:all .2s;cursor:pointer;user-select:none}
-    a.fsm-side-link:hover,.fsm-side-link:hover{background:rgba(255,255,255,.1);color:#fff;padding-left:22px}
-    .fsm-side-link .chev{font-size:11px;color:rgba(255,255,255,.4);transition:transform .25s;flex-shrink:0}
+    .fsm-side-link{display:flex;align-items:center;justify-content:space-between;padding:11px 16px;font-size:13px;font-weight:500;color:#1a1a1a;text-decoration:none;border-bottom:1px solid #e8e3da;transition:all .2s;cursor:pointer;user-select:none}
+    a.fsm-side-link:hover,.fsm-side-link:hover{background:#f5f0e8;color:#0a1f3d;padding-left:22px}
+    .fsm-side-link .chev{font-size:11px;color:#aaa;transition:transform .25s;flex-shrink:0}
     .fsm-side-group.open>.fsm-side-link .chev{transform:rotate(180deg)}
-    .fsm-side-group.open>.fsm-side-link{background:rgba(224,90,4,.15);color:#F88C1A}
-    .fsm-side-sub{max-height:0;overflow:hidden;transition:max-height .3s ease;background:rgba(0,0,0,.2)}
+    .fsm-side-group.open>.fsm-side-link{background:#fdf0e8;color:#E05A04}
+    .fsm-side-sub{max-height:0;overflow:hidden;transition:max-height .3s ease;background:#f9f6f0}
     .fsm-side-group.open .fsm-side-sub{max-height:500px}
-    .fsm-side-sub a{display:flex;align-items:center;gap:6px;padding:9px 16px 9px 28px;font-size:12px;color:rgba(255,255,255,.65);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.04);transition:all .2s}
+    .fsm-side-sub a{display:flex;align-items:center;gap:6px;padding:9px 16px 9px 28px;font-size:12px;color:#555;text-decoration:none;border-bottom:1px solid #ede8e0;transition:all .2s}
     .fsm-side-sub a::before{content:"›";color:#E05A04;font-size:14px;line-height:1;flex-shrink:0}
-    .fsm-side-sub a:hover{background:rgba(255,255,255,.08);color:#fff;padding-left:34px}
-    .fsm-side-footer{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 16px;background:rgba(201,169,97,.12);color:#c9a961;font-size:12.5px;font-weight:600;text-decoration:none;transition:all .2s}
+    .fsm-side-sub a:hover{background:#f0ebe0;color:#0a1f3d;padding-left:34px}
+    .fsm-side-footer{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 16px;background:#f5ecd6;color:#b08f48;font-size:12.5px;font-weight:600;text-decoration:none;transition:all .2s}
     .fsm-side-footer:hover{background:rgba(201,169,97,.22);color:#e0be7a}
     @media(max-width:1000px){.fsm-body{grid-template-columns:1fr}.fsm-right{display:none}}
     @media(max-width:700px){.fsm-grid{grid-template-columns:repeat(3,1fr)}.fsm-body{padding:20px 14px 32px}}
@@ -319,9 +320,9 @@
         <a href="centres.html" class="active">Centres</a>
         <div class="drop-menu">
           <a href="centre-for-sustainability.html">Centre for Sustainability</a>
-          <a href="centre-for-leadership (2).html">Centre for Leadership</a>
+          <a href="centre-for-leadership (2).html">Centre for Leadership and Capacity Building</a>
           <a href="centre-for-case-development.html">Centre for Case Development</a>
-          <a href="centre-for-excellence.html">Centre for Excellence</a>
+          <a href="centre-for-excellence.html">BCIC–Ramaiah Centre for Excellence</a>
           <a href="centre-for-iks.html">Centre for IKS</a>
           <a href="centre-for-entrepreneurship.html">Centre for Entrepreneurship</a>
           <a href="centre-for-research-consultancy.html">Centre for Research &amp; Consultancy</a>
@@ -377,9 +378,9 @@
         <div class="mobile-nav-group-title" onclick="toggleGroup('mg-centres')">Centres <i class="bi bi-chevron-down"></i></div>
         <div class="mobile-nav-sub">
           <a href="centre-for-sustainability.html">Centre for Sustainability</a>
-          <a href="centre-for-leadership (2).html">Centre for Leadership</a>
+          <a href="centre-for-leadership (2).html">Centre for Leadership and Capacity Building</a>
           <a href="centre-for-case-development.html">Centre for Case Development</a>
-          <a href="centre-for-excellence.html">Centre for Excellence</a>
+          <a href="centre-for-excellence.html">BCIC–Ramaiah Centre for Excellence</a>
           <a href="centre-for-iks.html">Centre for IKS</a>
           <a href="centre-for-entrepreneurship.html">Centre for Entrepreneurship</a>
           <a href="centre-for-research-consultancy.html">Centre for Research &amp; Consultancy</a>
@@ -404,8 +405,8 @@
       <div class="hero-title">
         <div class="eyebrow">Centres &amp; Cells</div>
         <h1>
-          <span class="gold">Excellence</span>
-          <span class="navy">Centres</span>
+          <span class="gold">Centre of</span>
+          <span class="navy">Excellence</span>
         </h1>
         <p class="sub">Specialised centres and cells that extend MSRIM's academic mission into research, innovation, leadership and industry engagement.</p>
       </div>
@@ -419,7 +420,7 @@
 
 <div class="stats-bar">
   <div class="stats-inner">
-    <div class="stat-item"><i class="bi bi-building-fill"></i><span>7 Centres</span></div>
+    <div class="stat-item"><i class="bi bi-building-fill"></i><span>10 Centres</span></div>
     <div class="stat-item"><i class="bi bi-journal-text"></i><span>Research Active</span></div>
     <div class="stat-item"><i class="bi bi-briefcase-fill"></i><span>Industry Connected</span></div>
     <div class="stat-item"><i class="bi bi-people-fill"></i><span>Student Focused</span></div>
@@ -432,49 +433,21 @@
     <div class="sidebar-card">
       <h3>Centres</h3>
       <ul class="sidebar-nav">
-        <li><a href="#leadership" class="active">Centre for Leadership <span class="arrow">→</span></a></li>
-        <li><a href="#sustainability">Centre for Sustainability <span class="arrow">→</span></a></li>
-        <li><a href="#case-centre">Case Centre <span class="arrow">→</span></a></li>
-        <li><a href="#bcic">BCIC <span class="arrow">→</span></a></li>
-        <li><a href="#iiic">Industry Institute <span class="arrow">→</span></a></li>
-        <li><a href="#innovation">Innovation &amp; Incubation <span class="arrow">→</span></a></li>
-        <li><a href="#consultancy">Consultancy <span class="arrow">→</span></a></li>
+        <li><a href="#sustainability" class="active">Centre for Sustainability <span class="arrow">→</span></a></li>
+        <li><a href="#leadership">Centre for Leadership and Capacity Building <span class="arrow">→</span></a></li>
+        <li><a href="#case-centre">Centre for Case Development <span class="arrow">→</span></a></li>
+        <li><a href="#bcic">BCIC–Ramaiah Centre for Excellence <span class="arrow">→</span></a></li>
+        <li><a href="#iks">Centre for IKS <span class="arrow">→</span></a></li>
+        <li><a href="#entrepreneurship">Centre for Entrepreneurship <span class="arrow">→</span></a></li>
+        <li><a href="#research">Centre for Research &amp; Consultancy <span class="arrow">→</span></a></li>
+        <li><a href="#corporate">Centre for Corporate Relations <span class="arrow">→</span></a></li>
+        <li><a href="#alumni">Centre for Alumni Relations <span class="arrow">→</span></a></li>
+        <li><a href="#innovation">Institute Innovation Council <span class="arrow">→</span></a></li>
       </ul>
     </div>
   </aside>
 
   <main class="content">
-
-    <section id="leadership" class="content-section reveal">
-      <div class="section-eyebrow">Centre for Leadership</div>
-      <h2 class="section-title">Centre for <em>Leadership</em></h2>
-      <p class="section-sub">Strategic initiative dedicated to cultivating next-generation leaders at the intersection of academia and industry.</p>
-
-      <div class="centre-head">
-        <div class="ch-avatar">VP</div>
-        <div class="ch-info">
-          <strong>Dr. V Padmaja</strong>
-          <span>Professor, Head — OB &amp; HR</span>
-        </div>
-      </div>
-
-      <div class="objectives">
-        <div class="obj-row"><i class="bi bi-circle-fill"></i> Strengthen RIM-Industry collaboration in leadership development</div>
-        <div class="obj-row"><i class="bi bi-circle-fill"></i> Empower student leadership through experiential learning</div>
-        <div class="obj-row"><i class="bi bi-circle-fill"></i> Enhance faculty pedagogical innovation and research</div>
-        <div class="obj-row"><i class="bi bi-circle-fill"></i> Develop customised MDPs for industry professionals</div>
-      </div>
-
-      <div class="activities-label">Activities</div>
-      <div class="activity-chips">
-        <span class="activity-chip">Leadership Training</span>
-        <span class="activity-chip">Workshops</span>
-        <span class="activity-chip">Distinguished Talk Series</span>
-        <span class="activity-chip">Career Conferences</span>
-      </div>
-
-      <a href="centre-for-leadership (2).html" class="centre-link-btn"><i class="bi bi-arrow-right-circle-fill"></i> Visit Centre Page</a>
-    </section>
 
     <section id="sustainability" class="content-section reveal">
       <div class="section-eyebrow">Centre for Sustainability</div>
@@ -482,140 +455,305 @@
       <p class="section-sub">Advancing research and education in Environmental, Social and Governance (ESG) dimensions of business.</p>
 
       <div class="centre-head">
-        <div class="ch-avatar">MV</div>
+        <div class="ch-avatar"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/mrgha_varma_nw.png" alt="Dr. Meghna Verma" onerror="this.parentElement.textContent='MV'"/></div>
         <div class="ch-info">
           <strong>Dr. Meghna Verma</strong>
-          <span>Associate Professor, Head — Marketing &amp; IB</span>
+          <span>Associate Professor &amp; Head — Centre for Sustainability, Marketing &amp; IB</span>
         </div>
       </div>
 
       <div class="act-list">
-        <div class="act-row"><i class="bi bi-circle-fill"></i> ESG Research and Scopus-indexed publications</div>
-        <div class="act-row"><i class="bi bi-circle-fill"></i> Sustainability reporting frameworks and training</div>
-        <div class="act-row"><i class="bi bi-circle-fill"></i> Green business practices and industry workshops</div>
-        <div class="act-row"><i class="bi bi-circle-fill"></i> Student projects on corporate social responsibility</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> ESG research published in ABDC and SJR-ranked journals</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Sustainability reporting frameworks and GRI standards training</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Government-funded research on sustainable mobility (DULT, Govt. of Karnataka)</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Student projects on circular economy, CSR and responsible consumption</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Indo-Dutch Research Project "Kumbh Mela Experiment" — cited by NITI Aayog</div>
       </div>
 
-      <div class="activities-label" style="margin-top:18px">Focus Areas</div>
+      <div class="activities-label" style="margin-top:18px">Key Highlights</div>
       <div class="activity-chips">
         <span class="activity-chip">ESG Research</span>
-        <span class="activity-chip">Sustainability Reporting</span>
+        <span class="activity-chip">Sustainability Reporting (GRI)</span>
         <span class="activity-chip">Green Business Practices</span>
-        <span class="activity-chip">Corporate Social Responsibility</span>
+        <span class="activity-chip">Responsible Consumption</span>
+        <span class="activity-chip">Sustainable Mobility</span>
+        <span class="activity-chip">NITI Aayog Recognition</span>
       </div>
+      <a href="centre-for-sustainability.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:var(--navy);font-weight:600;font-size:13.5px;">Visit Centre Page <i class="bi bi-arrow-right"></i></a>
+    </section>
+
+    <section id="leadership" class="content-section reveal">
+      <div class="section-eyebrow">Centre for Leadership and Capacity Building</div>
+      <h2 class="section-title">Centre for Leadership and <em>Capacity Building</em></h2>
+      <p class="section-sub">Strategic initiative dedicated to cultivating next-generation leaders at the intersection of academia and industry through mentorship, learning &amp; development.</p>
+
+      <div class="centre-head">
+        <div class="ch-avatar"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/padmaja_nw.png" alt="Dr. V Padmaja" onerror="this.parentElement.textContent='VP'"/></div>
+        <div class="ch-info">
+          <strong>Dr. V Padmaja</strong>
+          <span>Professor &amp; Head — Centre for Leadership and Capacity Building, OB &amp; HR</span>
+        </div>
+      </div>
+
+      <div class="objectives">
+        <div class="obj-row"><i class="bi bi-circle-fill"></i> Strengthen RIM–Industry collaboration in leadership development</div>
+        <div class="obj-row"><i class="bi bi-circle-fill"></i> Empower student leadership through experiential learning</div>
+        <div class="obj-row"><i class="bi bi-circle-fill"></i> Enhance faculty pedagogical innovation and research</div>
+        <div class="obj-row"><i class="bi bi-circle-fill"></i> Develop customised MDPs for industry professionals</div>
+        <div class="obj-row"><i class="bi bi-circle-fill"></i> Build capacity in social entrepreneurship and diversity &amp; inclusion</div>
+      </div>
+
+      <div class="activities-label">Key Highlights</div>
+      <div class="activity-chips">
+        <span class="activity-chip">Leadership Training</span>
+        <span class="activity-chip">Executive MDPs</span>
+        <span class="activity-chip">Distinguished Talk Series</span>
+        <span class="activity-chip">Career Conferences</span>
+        <span class="activity-chip">Corporate Workshops</span>
+        <span class="activity-chip">Social Entrepreneurship</span>
+      </div>
+      <a href="centre-for-leadership (2).html" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:var(--navy);font-weight:600;font-size:13.5px;">Visit Centre Page <i class="bi bi-arrow-right"></i></a>
     </section>
 
     <section id="case-centre" class="content-section reveal">
-      <div class="section-eyebrow">Academic Resource</div>
-      <h2 class="section-title"><em>Centre for Case Development</em></h2>
-      <p class="section-sub">Developing and curating real-world management case studies for classroom and research use.</p>
+      <div class="section-eyebrow">Centre for Case Development</div>
+      <h2 class="section-title">Centre for <em>Case Development</em></h2>
+      <p class="section-sub">Developing and curating real-world management case studies for classroom use, research, and submission to international case repositories.</p>
 
-      <p style="font-size:14.5px;color:#333;line-height:1.8;margin-bottom:20px;">The Case Centre develops original case studies drawn from Indian and global business contexts, used in PGDM curriculum and submitted to international case repositories. Cases span diverse industries and management domains, bridging theory and real-world practice for impactful classroom learning.</p>
+      <div class="centre-head">
+        <div class="ch-avatar"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/Anita_R_Singh.png" alt="Dr. Anita R Singh" onerror="this.parentElement.textContent='AS'"/></div>
+        <div class="ch-info">
+          <strong>Dr. Anita R Singh</strong>
+          <span>Associate Professor &amp; Chairperson — OB &amp; HR, Head Case Development Centre</span>
+        </div>
+      </div>
 
-      <div class="activities-label">Activities</div>
+      <div class="act-list">
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Original case studies from Indian and global business contexts</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Academic partnership with Emerald Publishing for peer-reviewed case publication</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Integration of cases into PGDM curriculum across all specialisations</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Annual case writing and teaching workshops for faculty</div>
+      </div>
+      <div class="activities-label" style="margin-top:16px">Key Highlights</div>
       <div class="activity-chips">
         <span class="activity-chip">Case Development</span>
-        <span class="activity-chip">Case Teaching Workshops</span>
+        <span class="activity-chip">Emerald Publishing Partnership</span>
+        <span class="activity-chip">Case Teaching FDPs</span>
         <span class="activity-chip">Case Competition</span>
-        <span class="activity-chip">Case Repository</span>
+        <span class="activity-chip">International Repository</span>
       </div>
-
-      <div class="act-list" style="margin-top:8px">
-        <div class="act-row"><i class="bi bi-circle-fill"></i> Original case studies from Indian and global business contexts</div>
-        <div class="act-row"><i class="bi bi-circle-fill"></i> Integration into PGDM curriculum across specialisations</div>
-        <div class="act-row"><i class="bi bi-circle-fill"></i> Submission to international case repositories</div>
-      </div>
+      <a href="centre-for-case-development.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:var(--navy);font-weight:600;font-size:13.5px;">Visit Centre Page <i class="bi bi-arrow-right"></i></a>
     </section>
 
     <section id="bcic" class="content-section reveal">
-      <div class="section-eyebrow">Business Cluster</div>
-      <h2 class="section-title">BCIC — Business Cluster <em>Incubation Centre</em></h2>
-      <p class="section-sub">Fostering entrepreneurial thinking and supporting student startups through mentorship, resources and networks.</p>
+      <div class="section-eyebrow">BCIC–Ramaiah Centre for Excellence</div>
+      <h2 class="section-title">BCIC–Ramaiah <em>Centre for Excellence</em></h2>
+      <p class="section-sub">Fostering entrepreneurial thinking and supporting student startups through the Industry Institute Interaction Cell in collaboration with BCIC.</p>
 
-      <p style="font-size:14.5px;color:#333;line-height:1.8;margin-bottom:20px;">BCIC supports students and alumni with entrepreneurial aspirations through structured incubation, mentorship from industry leaders and access to funding networks. The centre provides a nurturing ecosystem where ideas transform into viable business ventures.</p>
-
-      <div class="activities-label">Activities</div>
-      <div class="activity-chips">
-        <span class="activity-chip">Startup Incubation</span>
-        <span class="activity-chip">Mentorship Sessions</span>
-        <span class="activity-chip">Funding Guidance</span>
-        <span class="activity-chip">Demo Days</span>
+      <div class="centre-head">
+        <div class="ch-avatar"><img src="https://msrim.in/msrimmanage/uploads/faculty/1776842769_0249a27879dd1eaf4a7e.jpg" alt="Dr. Triveni P" onerror="this.parentElement.textContent='TP'"/></div>
+        <div class="ch-info">
+          <strong>Dr. Triveni P</strong>
+          <span>Professor &amp; Chairperson, Finance &amp; BFSI — Faculty Coordinator, BCIC</span>
+        </div>
       </div>
 
-      <div class="act-list" style="margin-top:8px">
+      <div class="act-list">
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Sector-specific seminars connecting students with industry practitioners and policymakers</div>
         <div class="act-row"><i class="bi bi-circle-fill"></i> Structured incubation for student and alumni startups</div>
         <div class="act-row"><i class="bi bi-circle-fill"></i> Access to investor networks and funding opportunities</div>
-        <div class="act-row"><i class="bi bi-circle-fill"></i> Mentorship from seasoned industry entrepreneurs</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Mentorship from seasoned industry entrepreneurs and business leaders</div>
       </div>
+      <div class="activities-label" style="margin-top:16px">Key Highlights</div>
+      <div class="activity-chips">
+        <span class="activity-chip">Startup Incubation</span>
+        <span class="activity-chip">Industry Seminars</span>
+        <span class="activity-chip">Funding Guidance</span>
+        <span class="activity-chip">Mentorship Sessions</span>
+        <span class="activity-chip">Demo Days</span>
+      </div>
+      <a href="bcic.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:var(--navy);font-weight:600;font-size:13.5px;">Visit Centre Page <i class="bi bi-arrow-right"></i></a>
     </section>
 
-    <section id="iiic" class="content-section reveal">
-      <div class="section-eyebrow">Industry Connect</div>
-      <h2 class="section-title">Industry Institute <em>Interaction Cell</em></h2>
-      <p class="section-sub">Building bridges between academia and industry through structured engagement programmes.</p>
 
-      <p style="font-size:14.5px;color:#333;line-height:1.8;margin-bottom:20px;">The IIIC facilitates sustained, meaningful interaction between MSRIM and the industry through guest lectures, MoUs, live projects, industrial visits and collaborative research. The cell ensures students receive continuous exposure to real-world business environments throughout their programme.</p>
+    <section id="iks" class="content-section reveal">
+      <div class="section-eyebrow">Indian Knowledge Systems</div>
+      <h2 class="section-title">Centre for <em>IKS</em></h2>
+      <p class="section-sub">Integrating India's ancient wisdom — from Kautilya's Arthashastra to Vedic economics — with contemporary management education and research.</p>
 
-      <div class="activities-label">Activities</div>
+      <div class="centre-head">
+        <div class="ch-avatar"><img src="https://msrim.in/msrimmanage/uploads/faculty/1776842769_0249a27879dd1eaf4a7e.jpg" alt="Dr. Triveni P" onerror="this.parentElement.textContent='TP'"/></div>
+        <div class="ch-info">
+          <strong>Dr. Triveni P</strong>
+          <span>Professor &amp; Chairperson — Finance &amp; BFSI, Head Centre for IKS</span>
+        </div>
+      </div>
+
+      <div class="act-list">
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Research on Indian knowledge systems and their applications in modern management</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Curriculum integration of IKS concepts across PGDM specialisations</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Guest sessions by IKS scholars, Sanskrit experts and practitioners</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Case studies drawing from Arthashastra, Panchatantra and ancient Indian management wisdom</div>
+      </div>
+      <div class="activities-label" style="margin-top:16px">Key Highlights</div>
       <div class="activity-chips">
-        <span class="activity-chip">Guest Lectures</span>
-        <span class="activity-chip">Industrial Visits</span>
-        <span class="activity-chip">MoU Partnerships</span>
-        <span class="activity-chip">Live Projects</span>
-        <span class="activity-chip">Expert Sessions</span>
+        <span class="activity-chip">Arthashastra &amp; Management</span>
+        <span class="activity-chip">Vedic Economics</span>
+        <span class="activity-chip">Indian Philosophy in Business</span>
+        <span class="activity-chip">Research &amp; Publications</span>
+        <span class="activity-chip">IKS Curriculum</span>
+      </div>
+      <a href="centre-for-iks.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:var(--navy);font-weight:600;font-size:13.5px;">Visit Centre Page <i class="bi bi-arrow-right"></i></a>
+    </section>
+
+    <section id="entrepreneurship" class="content-section reveal">
+      <div class="section-eyebrow">Entrepreneurship Education</div>
+      <h2 class="section-title">Centre for <em>Entrepreneurship</em></h2>
+      <p class="section-sub">Nurturing the entrepreneurial mindset and supporting student ventures from ideation to launch through structured mentorship and live projects.</p>
+
+      <div class="centre-head">
+        <div class="ch-avatar"><img src="https://msrim.in/msrimmanage/uploads/faculty/1750226627_0d46be1945049b28cfbe.jpg" alt="Prof. Yashaswini Murthy B" onerror="this.parentElement.textContent='YM'"/></div>
+        <div class="ch-info">
+          <strong>Prof. Yashaswini Murthy B</strong>
+          <span>Assistant Professor — Faculty Coordinator, Centre for Entrepreneurship</span>
+        </div>
       </div>
 
-      <div class="act-list" style="margin-top:8px">
-        <div class="act-row"><i class="bi bi-circle-fill"></i> Regular industry expert guest lectures and panel sessions</div>
-        <div class="act-row"><i class="bi bi-circle-fill"></i> MoU partnerships with leading corporates</div>
-        <div class="act-row"><i class="bi bi-circle-fill"></i> Industrial visits and immersive learning experiences</div>
+      <div class="act-list">
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Entrepreneurship development programmes and startup bootcamps</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Live startup projects and annual business plan competitions</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Mentorship by successful entrepreneurs, VCs and angel investors</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Collaboration with Atal Incubation Centre and IIC for startup support</div>
       </div>
+      <div class="activities-label" style="margin-top:16px">Key Highlights</div>
+      <div class="activity-chips">
+        <span class="activity-chip">Startup Bootcamps</span>
+        <span class="activity-chip">Business Plan Competition</span>
+        <span class="activity-chip">Founder Talks</span>
+        <span class="activity-chip">Startup Mentorship</span>
+        <span class="activity-chip">Pitch Sessions</span>
+      </div>
+      <a href="centre-for-entrepreneurship.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:var(--navy);font-weight:600;font-size:13.5px;">Visit Centre Page <i class="bi bi-arrow-right"></i></a>
+    </section>
+
+    <section id="research" class="content-section reveal">
+      <div class="section-eyebrow">Research &amp; Consultancy</div>
+      <h2 class="section-title">Centre for Research &amp; <em>Consultancy</em></h2>
+      <p class="section-sub">Driving high-impact research, Scopus-indexed publications and expert consulting services for industry and society.</p>
+
+      <div class="centre-head">
+        <div class="ch-avatar"><img src="https://msrim.in/msrimmanage/public/uploads/faculty/mrgha_varma_nw.png" alt="Dr. Meghna Verma" onerror="this.parentElement.textContent='MV'"/></div>
+        <div class="ch-info">
+          <strong>Dr. Meghna Verma</strong>
+          <span>Associate Professor &amp; Head — Centre for Sustainability, Marketing &amp; IB</span>
+        </div>
+      </div>
+
+      <div class="act-list">
+        <div class="act-row"><i class="bi bi-circle-fill"></i> 25+ Scopus-indexed publications; h-index: 10 (Head of R&amp;D)</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Government and industry-funded research projects</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Management consultancy and market research for corporates, NGOs and government</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> MDPs, training programmes and strategic advisory for organisations</div>
+      </div>
+      <div class="activities-label" style="margin-top:16px">Key Highlights</div>
+      <div class="activity-chips">
+        <span class="activity-chip">Scopus Publications</span>
+        <span class="activity-chip">Funded Research</span>
+        <span class="activity-chip">Management Consulting</span>
+        <span class="activity-chip">MDPs &amp; Training</span>
+        <span class="activity-chip">Market Research</span>
+      </div>
+      <a href="centre-for-research-consultancy.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:var(--navy);font-weight:600;font-size:13.5px;">Visit Centre Page <i class="bi bi-arrow-right"></i></a>
+    </section>
+
+    <section id="corporate" class="content-section reveal">
+      <div class="section-eyebrow">Industry Partnerships</div>
+      <h2 class="section-title">Centre for <em>Corporate Relations</em></h2>
+      <p class="section-sub">Building and sustaining strong industry partnerships for placements, internships and live projects — 150+ corporate partners across India.</p>
+
+      <div class="centre-head">
+        <div class="ch-avatar"><img src="https://msrim.in/msrimmanage/uploads/faculty/jeevitha_nw.png" alt="Dr. Jeevitha R" onerror="this.parentElement.textContent='JR'"/></div>
+        <div class="ch-info">
+          <strong>Dr. Jeevitha R</strong>
+          <span>Associate Professor &amp; Head — Placements &amp; Corporate Relations, Finance &amp; BFSI</span>
+        </div>
+      </div>
+
+      <div class="act-list">
+        <div class="act-row"><i class="bi bi-circle-fill"></i> 150+ active corporate partners across banking, FMCG, consulting and technology sectors</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Top 6 B-School placement ranking — Times of India 2024–25</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Best Campus Award — Acuity Knowledge Partners 2024</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Pre-placement training, mock interviews and corporate readiness programmes</div>
+      </div>
+      <div class="activities-label" style="margin-top:16px">Key Highlights</div>
+      <div class="activity-chips">
+        <span class="activity-chip">100% Placement Record</span>
+        <span class="activity-chip">150+ Corporate Partners</span>
+        <span class="activity-chip">Internship Drives</span>
+        <span class="activity-chip">Industry Mentorship</span>
+        <span class="activity-chip">Live Projects</span>
+      </div>
+      <a href="centre-for-corporate-relations.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:var(--navy);font-weight:600;font-size:13.5px;">Visit Centre Page <i class="bi bi-arrow-right"></i></a>
+    </section>
+
+    <section id="alumni" class="content-section reveal">
+      <div class="section-eyebrow">Alumni Engagement</div>
+      <h2 class="section-title">Centre for <em>Alumni Relations</em></h2>
+      <p class="section-sub">Fostering lifelong connections between MSRIM and its growing community of 2500+ alumni across 20+ countries worldwide.</p>
+
+      <div class="centre-head">
+        <div class="ch-avatar"><img src="https://msrim.in/msrimmanage/uploads/faculty/jeevitha_nw.png" alt="Dr. Jeevitha R" onerror="this.parentElement.textContent='JR'"/></div>
+        <div class="ch-info">
+          <strong>Dr. Jeevitha R</strong>
+          <span>Associate Professor &amp; Head — Placements &amp; Corporate Relations, Finance &amp; BFSI</span>
+        </div>
+      </div>
+
+      <div class="act-list">
+        <div class="act-row"><i class="bi bi-circle-fill"></i> 2500+ alumni across 20+ countries in leadership roles globally</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Annual and regional alumni reunions and networking events</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Alumni mentorship programme connecting seniors with current students</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Alumni guest lectures, industry panel discussions and career guidance sessions</div>
+      </div>
+      <div class="activities-label" style="margin-top:16px">Key Highlights</div>
+      <div class="activity-chips">
+        <span class="activity-chip">2500+ Alumni Worldwide</span>
+        <span class="activity-chip">Alumni Meets</span>
+        <span class="activity-chip">Mentorship Programme</span>
+        <span class="activity-chip">Alumni Portal</span>
+        <span class="activity-chip">Alumni Lectures</span>
+      </div>
+      <a href="centre-for-alumni-relations.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:var(--navy);font-weight:600;font-size:13.5px;">Visit Centre Page <i class="bi bi-arrow-right"></i></a>
     </section>
 
     <section id="innovation" class="content-section reveal">
-      <div class="section-eyebrow">Innovation Hub</div>
-      <h2 class="section-title">RIM Innovation &amp; <em>Incubation Centre</em></h2>
-      <p class="section-sub">A hub for student-driven innovation, patenting, and technology-led entrepreneurship.</p>
+      <div class="section-eyebrow">Institute Innovation Council</div>
+      <h2 class="section-title">Institute <em>Innovation Council</em></h2>
+      <p class="section-sub">A hub for student-driven innovation, IP creation, and technology-led entrepreneurship under MoE's IIC framework.</p>
 
-      <p style="font-size:14.5px;color:#333;line-height:1.8;margin-bottom:20px;">Supported by the Ministry of Education's Institution's Innovation Council (IIC), the RIM Innovation &amp; Incubation Centre encourages students and faculty to think beyond boundaries, develop patents and build innovative products. The centre has been instrumental in generating 10+ patents and fostering a culture of intellectual property creation at MSRIM.</p>
+      <div class="centre-head">
+        <div class="ch-avatar"><img src="https://msrim.in/msrimmanage/uploads/faculty/1776055253_ed2ff98ad24c9f551405.webp" alt="Dr. Geetha Rajaram" onerror="this.parentElement.textContent='GR'"/></div>
+        <div class="ch-info">
+          <strong>Dr. Geetha Rajaram</strong>
+          <span>Professor &amp; Dean — President, Institute Innovation Council</span>
+        </div>
+      </div>
 
-      <div class="activities-label">Activities</div>
+      <div class="act-list">
+        <div class="act-row"><i class="bi bi-circle-fill"></i> 10+ patents filed by faculty and students in AI, HR and business management</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> IIC-aligned innovation programmes and hackathons</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Technology-led product development and prototyping workshops</div>
+        <div class="act-row"><i class="bi bi-circle-fill"></i> Collaboration with MoE Innovation Cell and Atal Incubation Centre</div>
+      </div>
+      <div class="activities-label" style="margin-top:16px">Key Highlights</div>
       <div class="activity-chips">
-        <span class="activity-chip">Patent Filing Support</span>
+        <span class="activity-chip">10+ Patents Filed</span>
         <span class="activity-chip">Innovation Challenges</span>
         <span class="activity-chip">IIC Activities</span>
-        <span class="activity-chip">Product Development</span>
+        <span class="activity-chip">Hackathons</span>
+        <span class="activity-chip">IP Filing Support</span>
       </div>
-
-      <div class="act-list" style="margin-top:8px">
-        <div class="act-row"><i class="bi bi-circle-fill"></i> Support for patent development and IP filing</div>
-        <div class="act-row"><i class="bi bi-circle-fill"></i> IIC-aligned innovation programmes and challenges</div>
-        <div class="act-row"><i class="bi bi-circle-fill"></i> Technology-led product development workshops</div>
-        <div class="act-row"><i class="bi bi-circle-fill"></i> Collaboration with MoE Innovation Cell initiatives</div>
-      </div>
-    </section>
-
-    <section id="consultancy" class="content-section reveal">
-      <div class="section-eyebrow">Industry Services</div>
-      <h2 class="section-title"><em>Consultancy</em> Cell</h2>
-      <p class="section-sub">Providing expert management consultancy services to organisations through faculty expertise.</p>
-
-      <p style="font-size:14.5px;color:#333;line-height:1.8;margin-bottom:20px;">MSRIM's Consultancy Cell connects industry with our faculty's deep domain expertise for research studies, training programmes, market surveys and strategic consulting. The cell has successfully delivered engagements for corporate clients, NGOs and government organisations, bringing real-world impact to academic knowledge.</p>
-
-      <div class="activities-label">Activities</div>
-      <div class="activity-chips">
-        <span class="activity-chip">Market Research</span>
-        <span class="activity-chip">Training &amp; MDPs</span>
-        <span class="activity-chip">Strategic Consulting</span>
-        <span class="activity-chip">Survey &amp; Analytics</span>
-      </div>
-
-      <div class="act-list" style="margin-top:8px">
-        <div class="act-row"><i class="bi bi-circle-fill"></i> Market research and consumer behaviour studies</div>
-        <div class="act-row"><i class="bi bi-circle-fill"></i> Management Development Programmes (MDPs) for corporates</div>
-        <div class="act-row"><i class="bi bi-circle-fill"></i> Strategic advisory and organisational diagnostics</div>
-        <div class="act-row"><i class="bi bi-circle-fill"></i> Survey analytics and report development</div>
-      </div>
+      <a href="innovation-council.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:var(--navy);font-weight:600;font-size:13.5px;">Visit Centre Page <i class="bi bi-arrow-right"></i></a>
     </section>
 
   </main>
@@ -632,62 +770,101 @@
   </div>
 </section>
 
-<footer class="footer">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="https://msrim.in/images/logo-2.png" alt="MSRIM" />
-      <p><strong style="color:#fff">Ramaiah Institute of Management</strong></p>
-      <div class="contact-line"><i class="bi bi-geo-alt-fill"></i><span>Gate No. 8, Ramaiah Group Campus, 'C' Block, M.S.R.I.T. Post, Bengaluru — 560054</span></div>
-      <div class="contact-line"><i class="bi bi-telephone-fill"></i><span>080-2360-6640, 6641, 6642</span></div>
-      <div class="contact-line"><i class="bi bi-envelope-fill"></i><span>support@msrim.org</span></div>
-      <div class="socials">
-        <a href="https://www.facebook.com/RIMBangalore/" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://in.linkedin.com/school/m.s.-ramaiah-insitute-of-management/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-        <a href="https://www.instagram.com/ramaiahinstituteofmanagement/" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.youtube.com/channel/UCjUnYNrmB5DAWtG6vGTaC7A" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><img src="https://msrim.in/images/logo-2.png" alt="MSRIM"/></div>
+        <p>Ramaiah Institute of Management has been nurturing business leaders since 1995. AICTE approved and NBA accredited, we are committed to delivering world-class management education.</p>
+        <div class="footer-contact">
+          <div class="fc"><i class="bi bi-telephone-fill"></i><span>080-2360-6640, 6641, 6642</span></div>
+          <div class="fc"><i class="bi bi-envelope-fill"></i><span>support@msrim.org</span></div>
+          <div class="fc"><i class="bi bi-geo-alt-fill"></i><span>Gate No. 8, Ramaiah Group Campus, 'C' Block, M.S.R.I.T. Post, Bengaluru — 560054</span></div>
+        </div>
+        <div class="socials">
+          <a href="https://facebook.com/msrim"><i class="bi bi-facebook"></i></a>
+          <a href="https://linkedin.com/school/msrim"><i class="bi bi-linkedin"></i></a>
+          <a href="https://instagram.com/msrim"><i class="bi bi-instagram"></i></a>
+          <a href="https://youtube.com/msrim"><i class="bi bi-youtube"></i></a>
+        </div>
+        <div class="footer-badges">
+          <div class="footer-badge"><img src="https://msrim.in/images/iic_new_logo.jpg" alt="IIC"/><span>Institution's Innovation Council</span></div>
+          <div class="footer-badge"><img src="https://msrim.in/images/amdisa_logo.jpg" alt="AMDISA"/><span>AMDISA Member</span></div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Campus Info</h5>
+        <ul>
+          <li><a href="our-policies.html">Our Policies</a></li>
+          <li><a href="https://msrim.in/images/Awards-Ranking.mp4" target="_blank">B-School Ranking</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="future-road-map.html">Future Road Map</a></li>
+          <li><a href="anti-ragging.html">Anti-Ragging</a></li>
+          <li><a href="https://msrim.in/pdf/Mandatory_Disclousre-2025-26V1.pdf" target="_blank">Mandatory Disclosure 2024–25</a></li>
+          <li><a href="photo-gallery.html">Photo Gallery</a></li>
+          <li><a href="https://msrim.in/pdf/Action_Taken_Report_2024-25.docx.pdf" target="_blank">Action Taken Report 2024–25</a></li>
+          <li><a href="https://msrim.in/pdf/rules/RIM-Governance-Guidelines.pdf" target="_blank">Governance Guidelines</a></li>
+          <li><a href="infrastructure.html">Infrastructure</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Important Info</h5>
+        <ul>
+          <li><a href="grievance.html">Grievance &amp; Redressal Committees</a></li>
+          <li><a href="https://msrim.in/pdf/EOA-Report-2026-2027.PDF" target="_blank">AICTE Approval 2026–27</a></li>
+          <li><a href="approvals.html">AICTE Approvals since 1995</a></li>
+          <li><a href="https://msrim.in/pdf/rules/AICTE-CSS.pdf" target="_blank">AICTE Centralized Support System</a></li>
+          <li><a href="https://msrim.in/pdf/approvals/NBA-Results-March-2023.pdf" target="_blank">NBA Approval Letter 2022–2025</a></li>
+          <li><a href="https://msrim.in/pdf/approvals/AIU-2023.pdf" target="_blank">AIU Approval Letter 2022–2025</a></li>
+          <li><a href="student-initiatives.html">Student Initiatives</a></li>
+          <li><a href="financial-statements.html">Financial Statements</a></li>
+          <li><a href="https://msrmr.in" target="_blank">Journals</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Explore RIM</h5>
+        <ul>
+          <li><a href="contact.html">Campus Tour</a></li>
+          <li><a href="https://msrim.in/images/Ramaiah-Launch-Video.mp4" target="_blank">Ramaiah Logo Launch</a></li>
+          <li><a href="https://msrim.in/pdf/NIRF2026.pdf" target="_blank">NIRF Ranking 2026</a></li>
+          <li><a href="career.html">Career</a></li>
+          <li><a href="https://msrim.in/pdf/rules/GEFServiceRules.pdf" target="_blank">GEF Service Rules</a></li>
+          <li><a href="https://msrim.in/pdf/rules/GEFConductRules.pdf" target="_blank">GEF Conduct Rules</a></li>
+          <li><a href="https://msrim.in/blog">Blog</a></li>
+          <li><a href="https://alumni.msrim.in/" target="_blank">Alumni</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </div>
     </div>
-    <div>
-      <h6>Campus Info</h6>
-      <ul>
-        <li><a href="about.html">About MSRIM</a></li>
-        <li><a href="faculty.html">Our Faculty</a></li>
-        <li><a href="programs.html">Programmes</a></li>
-        <li><a href="research.html">Research &amp; R&D</a></li>
-        <li><a href="centres.html">Centres &amp; Cells</a></li>
-      </ul>
-    </div>
-    <div>
-      <h6>Important Info</h6>
-      <ul>
-        <li><a href="#">Our Policies</a></li>
-        <li><a href="#">Anti-Ragging</a></li>
-        <li><a href="#">Grievance Redressal</a></li>
-        <li><a href="#">FAQs</a></li>
-        <li><a href="#">Careers</a></li>
-      </ul>
-    </div>
-    <div>
-      <h6>Explore MSRIM</h6>
-      <ul>
-        <li><a href="placements.html">Placements</a></li>
-        <li><a href="admissions.html">Admissions</a></li>
-        <li><a href="#">Photo Gallery</a></li>
-        <li><a href="#">Alumni Network</a></li>
-        <li><a href="https://msrim.in/pdf/NIRF2026.pdf">NIRF</a></li>
-      </ul>
-    </div>
   </div>
+  <!-- ERP LOGIN / DIGIICAMPUS BAR -->
   <div class="footer-erp">
-    <span>ERP Login:</span>
-    <a href="https://msrim.digiicampus.com/">Student Portal</a>
-    <a href="#">Faculty Portal</a>
-    <a href="#">Admin Portal</a>
+    <div class="wrap w">
+      <div class="footer-erp-group">
+        <span class="footer-erp-title">ERP Login</span>
+        <div class="footer-erp-links">
+          <a href="https://msrim.digiicampus.com/">Student Login</a>
+          <a href="https://msrim.digiicampus.com/">Parent Login</a>
+          <a href="https://msrim.digiicampus.com/">Staff Login</a>
+        </div>
+      </div>
+      <div class="footer-erp-group">
+        <span class="footer-erp-title">Digiicampus</span>
+        <div class="footer-erp-links">
+          <a href="https://msrim.digiicampus.com/home">Login</a>
+        </div>
+      </div>
+    </div>
   </div>
+
   <div class="footer-bottom">
-    <div class="wrap">
-      <div>© 2026 Ramaiah Institute of Management. All rights reserved.</div>
-      <div><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></div>
+    <div class="w">
+      <span>© 2026 Ramaiah Institute of Management. All rights reserved.</span>
+      <div style="display:flex;gap:20px">
+        <a href="https://msrim.in/privacy-policy">Privacy Policy</a>
+        <a href="https://msrim.in/terms">Terms of Use</a>
+        <a href="https://msrim.in/sitemap">Sitemap</a>
+      </div>
     </div>
   </div>
 </footer>
@@ -703,9 +880,9 @@ if(mobileOverlay)mobileOverlay.addEventListener('click',closeMenu);
 function toggleGroup(id){const g=document.getElementById(id);if(g)g.classList.toggle('open')}
 
   const navLinks = document.querySelectorAll('.sidebar-nav a');
-  const sectionIds = ['leadership','sustainability','case-centre','bcic','iiic','innovation','consultancy'];
+  const sectionIds = ['sustainability','leadership','case-centre','bcic','iks','entrepreneurship','research','corporate','alumni','innovation'];
   function updateActive() {
-    const y = window.scrollY + 120;
+    const y = window.scrollY + 140;
     let active = 0;
     sectionIds.forEach((id, i) => {
       const el = document.getElementById(id);
@@ -714,6 +891,7 @@ function toggleGroup(id){const g=document.getElementById(id);if(g)g.classList.to
     navLinks.forEach((l, i) => l.classList.toggle('active', i === active));
   }
   window.addEventListener('scroll', updateActive, {passive:true});
+  updateActive();
   const reveals = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
@@ -743,9 +921,9 @@ function toggleGroup(id){const g=document.getElementById(id);if(g)g.classList.to
           <a href="admissions.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-pencil-square"></i></div><span class="fsm-label">Admissions</span></a>
           <a href="placements.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-briefcase-fill"></i></div><span class="fsm-label">Placements</span></a>
           <a href="centre-for-sustainability.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-tree-fill"></i></div><span class="fsm-label">Centre for Sustainability</span></a>
-          <a href="centre-for-leadership (2).html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-person-arms-up"></i></div><span class="fsm-label">Centre for Leadership</span></a>
+          <a href="centre-for-leadership (2).html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-person-arms-up"></i></div><span class="fsm-label">Centre for Leadership and Capacity Building</span></a>
           <a href="centre-for-case-development.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-journal-richtext"></i></div><span class="fsm-label">Centre for Case Development</span></a>
-          <a href="centre-for-excellence.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-award-fill"></i></div><span class="fsm-label">Centre for Excellence</span></a>
+          <a href="centre-for-excellence.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-award-fill"></i></div><span class="fsm-label">BCIC–Ramaiah Centre for Excellence</span></a>
           <a href="centre-for-iks.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-flower1"></i></div><span class="fsm-label">Centre for IKS</span></a>
           <a href="centre-for-entrepreneurship.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-lightbulb-fill"></i></div><span class="fsm-label">Centre for Entrepreneurship</span></a>
           <a href="centre-for-research-consultancy.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-graph-up-arrow"></i></div><span class="fsm-label">Centre for Research &amp; Consultancy</span></a>
@@ -754,10 +932,10 @@ function toggleGroup(id){const g=document.getElementById(id);if(g)g.classList.to
           <a href="innovation-council.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-rocket-takeoff-fill"></i></div><span class="fsm-label">Institute Innovation Council</span></a>
         </div>
         <div class="fsm-quicklinks">
-          <a href="research.html" class="fsm-quicklink"><i class="bi bi-flask-fill"></i> R &amp; D Cell</a>
           <a href="centres.html" class="fsm-quicklink"><i class="bi bi-grid-fill"></i> All Centres</a>
           <a href="https://msrim.in/virtual-tour" target="_blank" class="fsm-quicklink"><i class="bi bi-camera-video-fill"></i> Campus Tour</a>
           <a href="https://alumni.msrim.in/" target="_blank" class="fsm-quicklink"><i class="bi bi-person-heart"></i> Alumni Portal</a>
+          <a href="https://msrim.digiicampus.com/" target="_blank" class="fsm-quicklink"><i class="bi bi-laptop-fill" style="color:#E05A04"></i> DigiCampus Login</a>
         </div>
       </div>
       <!-- RIGHT: Side Nav -->
@@ -792,9 +970,9 @@ function toggleGroup(id){const g=document.getElementById(id);if(g)g.classList.to
             <div class="fsm-side-link" onclick="toggleSide(this)">Centres <i class="bi bi-chevron-down chev"></i></div>
             <div class="fsm-side-sub">
               <a href="centre-for-sustainability.html">Centre for Sustainability</a>
-              <a href="centre-for-leadership (2).html">Centre for Leadership</a>
+              <a href="centre-for-leadership (2).html">Centre for Leadership and Capacity Building</a>
               <a href="centre-for-case-development.html">Centre for Case Development</a>
-              <a href="centre-for-excellence.html">Centre for Excellence</a>
+              <a href="centre-for-excellence.html">BCIC–Ramaiah Centre for Excellence</a>
               <a href="centre-for-iks.html">Centre for IKS</a>
               <a href="centre-for-entrepreneurship.html">Centre for Entrepreneurship</a>
               <a href="centre-for-research-consultancy.html">Centre for Research &amp; Consultancy</a>
@@ -803,7 +981,6 @@ function toggleGroup(id){const g=document.getElementById(id);if(g)g.classList.to
               <a href="innovation-council.html">Institute Innovation Council</a>
             </div>
           </div>
-          <a href="research.html" class="fsm-side-link">R &amp; D Cell</a>
         </nav>
         <a href="https://msrim.in/virtual-tour" target="_blank" class="fsm-side-footer"><i class="bi bi-camera-video-fill"></i> Campus Tour</a>
       </div>
@@ -825,3 +1002,11 @@ function toggleSide(el){var g=el.parentElement;document.querySelectorAll('.fsm-s
 
 </body>
 </html>
+
+
+
+
+
+
+
+

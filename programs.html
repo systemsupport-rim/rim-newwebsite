@@ -30,7 +30,7 @@ img{max-width:100%;display:block}
 ul{list-style:none}
 
 /* ── UTILITY BAR ── */
-.utility-bar{background:var(--grad);color:#fff;font-size:13px;padding:10px 0}
+.utility-bar{background:var(--navy);color:#fff;font-size:13px;padding:10px 0}
 .util-wrap{max-width:1400px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .utility-bar .brand-tag{font-weight:500;opacity:.92}
 .utility-bar a{color:#fff;opacity:.88;transition:opacity .2s}
@@ -123,8 +123,11 @@ ul{list-style:none}
 .info-chips{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:20px 0}
 .info-chip{background:#FDF9F4;border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:flex;align-items:center;gap:12px}
 .info-chip i{color:var(--gold);font-size:18px;flex-shrink:0}
-.info-chip-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;font-weight:600;margin-bottom:2px}
+.info-chip-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;font-weight:600;margin-bottom:2px;display:flex;align-items:center;gap:7px}
 .info-chip-val{font-size:14px;font-weight:700;color:var(--navy)}
+.info-chip-new{border-color:rgba(201,169,97,.45);background:linear-gradient(135deg,#fffaf0 0%,#fdf3e0 100%)}
+.info-chip-new i{color:var(--gold-dark)}
+.chip-badge{display:inline-block;background:var(--gold);color:var(--navy);font-size:9px;font-weight:700;padding:2px 7px;border-radius:999px;letter-spacing:.4px;text-transform:uppercase;line-height:1.4}
 
 /* Specialisation pills */
 .spec-wrap{margin:28px 0;text-align:center}
@@ -140,9 +143,12 @@ ul{list-style:none}
 
 /* Curriculum */
 .curr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
-.curr-card{background:#FDF9F4;border:1px solid var(--line);border-radius:8px;padding:14px 16px;font-size:13px;font-weight:600;color:var(--navy);display:flex;align-items:center;gap:8px;transition:all .25s}
+.curr-card{background:#FDF9F4;border:1px solid var(--line);border-radius:8px;padding:14px 16px;font-size:13px;font-weight:600;color:var(--navy);display:flex;align-items:center;gap:8px;transition:all .25s;min-height:52px}
 .curr-card:hover{border-color:rgba(201,169,97,.4);box-shadow:var(--shadow-sm)}
 .curr-card i{color:var(--gold);font-size:14px;flex-shrink:0}
+.curr-card.sip-card,.curr-card.hbi-card,.curr-card.dt-card,.curr-card.inno-card,.curr-card.sim-card{background:linear-gradient(135deg,#fffaf0 0%,#fdf3e0 100%);border-color:rgba(201,169,97,.45)}
+.curr-card.sip-card:hover,.curr-card.hbi-card:hover,.curr-card.dt-card:hover,.curr-card.inno-card:hover,.curr-card.sim-card:hover{border-color:var(--gold);box-shadow:0 4px 16px rgba(201,169,97,.18)}
+.sip-logo{width:20px;height:20px;flex-shrink:0}
 
 /* Fee table */
 .fee-table{width:100%;border-collapse:collapse;margin-top:16px;background:#FDF9F4;border-radius:10px;overflow:hidden;box-shadow:var(--shadow-sm)}
@@ -197,10 +203,16 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
 .socials{display:flex;gap:10px;margin-top:18px}
 .socials a{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.65);transition:all .25s}
 .socials a:hover{background:var(--grad);color:#fff}
-.footer-col h5{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:16px}
-.footer-col ul{display:flex;flex-direction:column;gap:9px}
-.footer-col ul a{font-size:13px;color:rgba(255,255,255,.55)}
-.footer-col ul a:hover{color:#fff}
+.footer-col{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-top:3px solid var(--gold);border-radius:8px;padding:22px 20px 24px}
+.footer-col h5{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;padding-bottom:0;display:flex;align-items:center;gap:8px}
+.footer-col h5::before{content:"";display:block;width:14px;height:2px;background:var(--gold);border-radius:2px;flex-shrink:0}
+.footer-col ul{display:flex;flex-direction:column;gap:0}
+.footer-col ul li{border-bottom:1px solid rgba(255,255,255,.05)}
+.footer-col ul li:last-child{border-bottom:none}
+.footer-col ul li a{font-size:12px;color:rgba(255,255,255,.62);transition:all .2s;display:flex;align-items:center;justify-content:space-between;padding:8px 0;gap:8px;white-space:nowrap;overflow:hidden}
+.footer-col ul li a::after{content:"›";color:var(--gold);font-size:16px;opacity:0;transition:opacity .2s;flex-shrink:0}
+.footer-col ul li a:hover{color:#fff;padding-left:6px}
+.footer-col ul li a:hover::after{opacity:1}
 .footer-erp{background:rgba(255,255,255,.04);border-top:1px solid rgba(255,255,255,.08);padding:14px 0}
 .footer-erp-inner{max-width:1400px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
 .footer-erp-group{display:flex;align-items:center;gap:14px}
@@ -256,49 +268,49 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
     /* ============ FULLSCREEN MENU ============ */
     .fsm-overlay{position:fixed;inset:0;z-index:9999;opacity:0;visibility:hidden;transition:opacity .38s}
     .fsm-overlay.open{opacity:1;visibility:visible}
-    .fsm-panel{position:fixed;inset:0;background:url('https://msrim.in/images/msrim_campus.jpg') center/cover no-repeat;transform:translateY(-105%);transition:transform .48s cubic-bezier(.4,0,.2,1);overflow-y:auto;display:flex;flex-direction:column}
-    .fsm-panel::before{content:"";position:fixed;inset:0;background:linear-gradient(160deg,rgba(8,24,50,.45) 0%,rgba(10,31,61,.35) 100%);pointer-events:none;z-index:0}
+    .fsm-panel{position:fixed;inset:0;background:#faf6ee;transform:translateY(-105%);transition:transform .48s cubic-bezier(.4,0,.2,1);overflow-y:auto;display:flex;flex-direction:column}
+    .fsm-panel::before{content:"";position:fixed;inset:0;display:none}
     .fsm-overlay.open .fsm-panel{transform:translateY(0)}
-    .fsm-header{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;padding:20px 44px;border-bottom:1px solid rgba(201,169,97,.2)}
-    .fsm-logo{height:40px;filter:brightness(0) invert(1);opacity:.9}
+    .fsm-header{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;padding:20px 44px;border-bottom:1px solid #e3dccd}
+    .fsm-logo{height:40px;filter:none;opacity:1}
     .fsm-header-right{display:flex;align-items:center;gap:14px}
     .fsm-header-cta{display:inline-flex;align-items:center;gap:7px;padding:9px 22px;background:#E05A04;color:#fff;font-size:13px;font-weight:700;border-radius:999px;text-decoration:none;transition:all .2s}
     .fsm-header-cta:hover{background:#c94f03;color:#fff;transform:translateY(-1px)}
-    .fsm-close{width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .25s}
+    .fsm-close{width:42px;height:42px;border-radius:50%;border:1.5px solid #ddd;background:#fff;color:#0a1f3d;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .25s}
     .fsm-close:hover{background:#E05A04;border-color:#E05A04;transform:rotate(90deg)}
     /* fsm-body replaced */
-    .fsm-section-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(201,169,97,.75);margin-bottom:8px;display:block}
-    .fsm-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:10px}
-    .fsm-card{background:rgba(255,255,255,.07);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid rgba(255,255,255,.28);border-bottom:3px solid rgba(255,255,255,.18);border-radius:16px;padding:14px 10px 12px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;transition:all .25s;box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 4px 24px rgba(0,0,0,.12)}
+    .fsm-section-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#b08f48;margin-bottom:8px;display:block}
+    .fsm-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:8px}
+    .fsm-card{background:#fff;border:1px solid #e3dccd;border-bottom:3px solid #e3dccd;border-radius:16px;padding:10px 8px 9px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;transition:all .25s;box-shadow:0 2px 10px rgba(10,31,61,.06)}
     .fsm-card:hover{background:rgba(255,255,255,.96);border-color:rgba(255,255,255,.8);border-bottom-color:#E05A04;transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.4)}
     .fsm-card:hover .fsm-label{color:#0a1f3d}
     .fsm-card:hover .fsm-icon{transform:scale(1.12);box-shadow:0 8px 24px rgba(224,90,4,.6)}
-    .fsm-icon{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#E05A04 0%,#F88C1A 100%);display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;flex-shrink:0;box-shadow:0 4px 12px rgba(224,90,4,.4);transition:all .25s}
-    .fsm-label{font-size:11px;font-weight:600;color:rgba(255,255,255,.9);line-height:1.3;transition:color .25s}
-    .fsm-quicklinks{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding-top:8px;border-top:1px solid rgba(255,255,255,.1)}
-    .fsm-quicklink{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border:1px solid rgba(255,255,255,.2);border-radius:999px;color:rgba(255,255,255,.75);font-size:12.5px;font-weight:500;text-decoration:none;transition:all .2s}
+    .fsm-icon{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#E05A04 0%,#F88C1A 100%);display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;flex-shrink:0;box-shadow:0 4px 12px rgba(224,90,4,.4);transition:all .25s}
+    .fsm-label{font-size:11px;font-weight:600;color:#1a1a1a;line-height:1.3;transition:color .25s}
+    .fsm-quicklinks{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding-top:8px;border-top:1px solid #e3dccd}
+    .fsm-quicklink{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border:1px solid #e3dccd;border-radius:999px;color:#333;font-size:12.5px;font-weight:500;text-decoration:none;transition:all .2s}
     .fsm-quicklink:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.45);color:#fff}
     
     .fsm-body{position:relative;z-index:1;flex:1;padding:28px 32px 40px;display:grid;grid-template-columns:1fr 280px;gap:24px;align-items:start}
     .fsm-left{display:flex;flex-direction:column;gap:10px}
-    .fsm-right{background:rgba(255,255,255,.07);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid rgba(255,255,255,.2);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;position:sticky;top:20px}
+    .fsm-right{background:#fff;border:1px solid #e3dccd;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;position:sticky;top:20px}
     .fsm-side-ctas{display:grid;grid-template-columns:1fr 1fr}
     .fsm-side-cta1{display:flex;align-items:center;justify-content:center;gap:6px;padding:13px 8px;background:#E05A04;color:#fff;font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;text-decoration:none;transition:background .2s}
     .fsm-side-cta1:hover{background:#c94f03;color:#fff}
     .fsm-side-cta2{display:flex;align-items:center;justify-content:center;gap:6px;padding:13px 8px;background:#0a1f3d;color:#fff;font-size:12px;font-weight:600;text-decoration:none;transition:background .2s}
     .fsm-side-cta2:hover{background:#1a3a6b;color:#fff}
     .fsm-side-nav{display:flex;flex-direction:column}
-    .fsm-side-link{display:flex;align-items:center;justify-content:space-between;padding:11px 16px;font-size:13px;font-weight:500;color:rgba(255,255,255,.85);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07);transition:all .2s;cursor:pointer;user-select:none}
-    a.fsm-side-link:hover,.fsm-side-link:hover{background:rgba(255,255,255,.1);color:#fff;padding-left:22px}
-    .fsm-side-link .chev{font-size:11px;color:rgba(255,255,255,.4);transition:transform .25s;flex-shrink:0}
+    .fsm-side-link{display:flex;align-items:center;justify-content:space-between;padding:11px 16px;font-size:13px;font-weight:500;color:#1a1a1a;text-decoration:none;border-bottom:1px solid #e8e3da;transition:all .2s;cursor:pointer;user-select:none}
+    a.fsm-side-link:hover,.fsm-side-link:hover{background:#f5f0e8;color:#0a1f3d;padding-left:22px}
+    .fsm-side-link .chev{font-size:11px;color:#aaa;transition:transform .25s;flex-shrink:0}
     .fsm-side-group.open>.fsm-side-link .chev{transform:rotate(180deg)}
-    .fsm-side-group.open>.fsm-side-link{background:rgba(224,90,4,.15);color:#F88C1A}
-    .fsm-side-sub{max-height:0;overflow:hidden;transition:max-height .3s ease;background:rgba(0,0,0,.2)}
+    .fsm-side-group.open>.fsm-side-link{background:#fdf0e8;color:#E05A04}
+    .fsm-side-sub{max-height:0;overflow:hidden;transition:max-height .3s ease;background:#f9f6f0}
     .fsm-side-group.open .fsm-side-sub{max-height:500px}
-    .fsm-side-sub a{display:flex;align-items:center;gap:6px;padding:9px 16px 9px 28px;font-size:12px;color:rgba(255,255,255,.65);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.04);transition:all .2s}
+    .fsm-side-sub a{display:flex;align-items:center;gap:6px;padding:9px 16px 9px 28px;font-size:12px;color:#555;text-decoration:none;border-bottom:1px solid #ede8e0;transition:all .2s}
     .fsm-side-sub a::before{content:"›";color:#E05A04;font-size:14px;line-height:1;flex-shrink:0}
-    .fsm-side-sub a:hover{background:rgba(255,255,255,.08);color:#fff;padding-left:34px}
-    .fsm-side-footer{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 16px;background:rgba(201,169,97,.12);color:#c9a961;font-size:12.5px;font-weight:600;text-decoration:none;transition:all .2s}
+    .fsm-side-sub a:hover{background:#f0ebe0;color:#0a1f3d;padding-left:34px}
+    .fsm-side-footer{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 16px;background:#f5ecd6;color:#b08f48;font-size:12.5px;font-weight:600;text-decoration:none;transition:all .2s}
     .fsm-side-footer:hover{background:rgba(201,169,97,.22);color:#e0be7a}
     @media(max-width:1000px){.fsm-body{grid-template-columns:1fr}.fsm-right{display:none}}
     @media(max-width:700px){.fsm-grid{grid-template-columns:repeat(3,1fr)}.fsm-body{padding:20px 14px 32px}}
@@ -355,9 +367,9 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
         <a href="centres.html">Centres</a>
         <div class="drop-menu">
           <a href="centre-for-sustainability.html">Centre for Sustainability</a>
-          <a href="centre-for-leadership (2).html">Centre for Leadership</a>
+          <a href="centre-for-leadership (2).html">Centre for Leadership and Capacity Building</a>
           <a href="centre-for-case-development.html">Centre for Case Development</a>
-          <a href="centre-for-excellence.html">Centre for Excellence</a>
+          <a href="centre-for-excellence.html">BCIC–Ramaiah Centre for Excellence</a>
           <a href="centre-for-iks.html">Centre for IKS</a>
           <a href="centre-for-entrepreneurship.html">Centre for Entrepreneurship</a>
           <a href="centre-for-research-consultancy.html">Centre for Research &amp; Consultancy</a>
@@ -413,9 +425,9 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
         <div class="mobile-nav-group-title" onclick="toggleGroup('mg-centres')">Centres <i class="bi bi-chevron-down"></i></div>
         <div class="mobile-nav-sub">
           <a href="centre-for-sustainability.html">Centre for Sustainability</a>
-          <a href="centre-for-leadership (2).html">Centre for Leadership</a>
+          <a href="centre-for-leadership (2).html">Centre for Leadership and Capacity Building</a>
           <a href="centre-for-case-development.html">Centre for Case Development</a>
-          <a href="centre-for-excellence.html">Centre for Excellence</a>
+          <a href="centre-for-excellence.html">BCIC–Ramaiah Centre for Excellence</a>
           <a href="centre-for-iks.html">Centre for IKS</a>
           <a href="centre-for-entrepreneurship.html">Centre for Entrepreneurship</a>
           <a href="centre-for-research-consultancy.html">Centre for Research &amp; Consultancy</a>
@@ -462,7 +474,8 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
     <div class="sidebar-card">
       <h3>Our Programmes</h3>
       <ul class="sidebar-nav">
-        <li><a href="#pgdm" class="active">PGDM — Full Time <span class="arrow">→</span></a></li>
+        <li><a href="#pgdm-semester" class="active">PGDM — Full Time (Semester) <span class="arrow">→</span></a></li>
+        <li><a href="#pgdm">PGDM — Full Time (Trimester) <span class="arrow">→</span></a></li>
         <li><a href="#fpm">Fellow Programme (FPM) <span class="arrow">→</span></a></li>
       </ul>
     </div>
@@ -476,11 +489,25 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
   <!-- CONTENT -->
   <main class="content">
 
-    <!-- PGDM Full Time -->
-    <section id="pgdm" class="content-section reveal">
-      <div class="prog-badge pop"><i class="bi bi-star-fill"></i> Most Popular · AICTE · NBA Accredited</div>
+    <!-- PGDM Full Time — Semester -->
+    <section id="pgdm-semester" class="content-section reveal" style="padding-bottom:24px;margin-bottom:24px;border-bottom:none">
+      <div class="prog-badge pop"><i class="bi bi-stars"></i> New Batch 2026–28 · AICTE · NBA Accredited</div>
       <span class="section-eyebrow">Flagship Programme</span>
-      <h2 class="section-title">PGDM — Two Year <em>Full Time</em></h2>
+      <h2 class="section-title">PGDM — Two Year <em>Full Time</em> <span style="font-size:0.65em;font-style:normal;color:var(--gold-dark);font-family:var(--sans);font-weight:600;letter-spacing:0">(Semester)</span></h2>
+      <p class="body-text">The two-year full-time Post Graduate Diploma in Management is MSRIM's flagship programme — approved by AICTE, accredited by the National Board of Accreditation (NBA), and accorded MBA equivalence by the Association of Indian Universities (AIU). Structured across four semesters with 104 credits, it is designed to build future-ready leaders through industry-focused learning.</p>
+      <p class="body-text">The programme is also ranked as a "Diamond in Management" by QS I-Gauge, reflecting its commitment to quality, industry relevance and student outcomes.</p>
+      <div class="info-chips">
+        <div class="info-chip info-chip-new"><i class="bi bi-calendar2-week-fill"></i><div><div class="info-chip-label">Duration <span class="chip-badge">New Batch</span></div><div class="info-chip-val">2 Years · 4 Semesters</div></div></div>
+        <div class="info-chip info-chip-new"><i class="bi bi-journal-plus"></i><div><div class="info-chip-label">Credits</div><div class="info-chip-val">104 Credits (2026–28)</div></div></div>
+        <div class="info-chip"><i class="bi bi-patch-check-fill"></i><div><div class="info-chip-label">Approval</div><div class="info-chip-val">AICTE · NBA · AIU</div></div></div>
+        <div class="info-chip"><i class="bi bi-briefcase-fill"></i><div><div class="info-chip-label">Equivalence</div><div class="info-chip-val">MBA (AIU Recognised)</div></div></div>
+      </div>
+    </section>
+
+    <!-- PGDM Full Time — Trimester -->
+    <section id="pgdm" class="content-section reveal">
+      <span class="section-eyebrow">Flagship Programme</span>
+      <h2 class="section-title">PGDM — Two Year <em>Full Time</em> <span style="font-size:0.65em;font-style:normal;color:var(--gold-dark);font-family:var(--sans);font-weight:600;letter-spacing:0">(Trimester)</span></h2>
       <p class="body-text">The two-year full-time Post Graduate Diploma in Management is MSRIM's flagship programme — approved by AICTE, accredited by the National Board of Accreditation (NBA), and accorded MBA equivalence by the Association of Indian Universities (AIU). Structured across six trimesters with 110 credits, it is designed to build future-ready leaders through industry-focused learning.</p>
       <p class="body-text">The programme is also ranked as a "Diamond in Management" by QS I-Gauge, reflecting its commitment to quality, industry relevance and student outcomes.</p>
       <div class="info-chips">
@@ -497,13 +524,96 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
       </div>
       <div class="spec-label" style="margin-top:20px;margin-bottom:12px">Curriculum Highlights</div>
       <div class="curr-grid">
-        <div class="curr-card"><i class="bi bi-graph-up"></i> Financial Reporting</div>
-        <div class="curr-card"><i class="bi bi-bar-chart-fill"></i> Managerial Economics</div>
-        <div class="curr-card"><i class="bi bi-cpu-fill"></i> Data Analysis</div>
-        <div class="curr-card"><i class="bi bi-megaphone-fill"></i> Marketing Management</div>
-        <div class="curr-card"><i class="bi bi-people-fill"></i> Human Resource Mgmt</div>
-        <div class="curr-card"><i class="bi bi-truck"></i> Operations Management</div>
-        <div class="curr-card"><i class="bi bi-lightbulb-fill"></i> Personal Growth Lab</div>
+        <div class="curr-card sip-card">
+          <svg class="sip-logo" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- outer reflection arc top -->
+            <path d="M10 2.5A7.5 7.5 0 0 1 17.5 10" stroke="#c9a961" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- arrowhead top-right -->
+            <path d="M17.5 7 L17.5 10 L14.5 10" stroke="#c9a961" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- outer reflection arc bottom -->
+            <path d="M10 17.5A7.5 7.5 0 0 1 2.5 10" stroke="#c9a961" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- arrowhead bottom-left -->
+            <path d="M2.5 13 L2.5 10 L5.5 10" stroke="#c9a961" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- pen nib centre -->
+            <path d="M10 7.5 L12 10 L10 13 L8 10 Z" fill="#0a1f3d"/>
+            <circle cx="10" cy="10" r="1" fill="#c9a961"/>
+          </svg>
+          SIP Reflection Labs
+        </div>
+        <div class="curr-card hbi-card">
+          <svg class="sip-logo" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Globe meridian rings -->
+            <circle cx="10" cy="10" r="7.5" stroke="#c9a961" stroke-width="1.4"/>
+            <ellipse cx="10" cy="10" rx="3.5" ry="7.5" stroke="#c9a961" stroke-width="1.1"/>
+            <path d="M2.5 10 H17.5" stroke="#c9a961" stroke-width="1.1"/>
+            <path d="M3.5 6.5 H16.5M3.5 13.5 H16.5" stroke="#c9a961" stroke-width="0.9" stroke-dasharray="1.5 1"/>
+            <!-- Ribbon / cert badge bottom -->
+            <path d="M7.5 14.5 L10 17 L12.5 14.5" fill="#0a1f3d"/>
+            <!-- Star centre -->
+            <path d="M10 7.2 L10.6 8.9 H12.4 L11 9.8 L11.5 11.5 L10 10.5 L8.5 11.5 L9 9.8 L7.6 8.9 H9.4 Z" fill="#c9a961"/>
+          </svg>
+          HBI International Certification
+        </div>
+        <div class="curr-card dt-card">
+          <svg class="sip-logo" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Head/brain silhouette -->
+            <path d="M7 16 V13 C5 12.5 3.5 11 3.5 9 C3.5 6.5 5.5 4.5 8 4.5 C8.5 4.5 9 4.6 9.5 4.8" stroke="#0a1f3d" stroke-width="1.3" stroke-linecap="round"/>
+            <path d="M13 16 V13 C15 12.5 16.5 11 16.5 9 C16.5 6.5 14.5 4.5 12 4.5 C10 4.5 8.3 5.8 7.8 7.5" stroke="#0a1f3d" stroke-width="1.3" stroke-linecap="round"/>
+            <!-- Lightbulb filament inside -->
+            <circle cx="10" cy="9" r="2.6" stroke="#c9a961" stroke-width="1.2"/>
+            <path d="M8.8 11.5 C8.8 12.5 11.2 12.5 11.2 11.5" stroke="#c9a961" stroke-width="1" stroke-linecap="round"/>
+            <path d="M9.2 12.5 H10.8" stroke="#c9a961" stroke-width="1" stroke-linecap="round"/>
+            <!-- rays -->
+            <path d="M10 6 V5M13.8 9 H14.8M6.2 9 H5.2M12.9 6.1 L13.6 5.4M7.1 6.1 L6.4 5.4" stroke="#c9a961" stroke-width="1" stroke-linecap="round"/>
+          </svg>
+          Design Thinking
+        </div>
+        <div class="curr-card inno-card">
+          <svg class="sip-logo" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Flask body -->
+            <path d="M7.5 3 H12.5 M8.5 3 V8 L5 14.5 C4.5 15.5 5.2 16.5 6.3 16.5 H13.7 C14.8 16.5 15.5 15.5 15 14.5 L11.5 8 V3" stroke="#0a1f3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Bubbles inside flask -->
+            <circle cx="9" cy="13" r="0.9" fill="#c9a961"/>
+            <circle cx="11.5" cy="11.5" r="0.65" fill="#c9a961" opacity=".8"/>
+            <circle cx="10" cy="14.5" r="0.5" fill="#c9a961" opacity=".6"/>
+            <!-- spark top -->
+            <path d="M13 2 L13.6 3.2 L15 3 L14 4 L14.4 5.4 L13 4.6 L11.6 5.4 L12 4 L11 3 L12.4 3.2 Z" fill="#c9a961"/>
+          </svg>
+          Innovation Labs
+        </div>
+        <div class="curr-card sim-card">
+          <svg class="sip-logo" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Brain/head outline -->
+            <path d="M7 15 V12.5 C5 11.8 3.5 10.2 3.5 8.2 C3.5 5.8 5.5 3.8 8 3.8 C9 3.8 9.9 4.1 10.6 4.7" stroke="#0a1f3d" stroke-width="1.2" stroke-linecap="round"/>
+            <path d="M13 15 V12.5 C15 11.8 16.5 10.2 16.5 8.2 C16.5 5.8 14.5 3.8 12 3.8 C11 3.8 10.1 4.1 9.4 4.7" stroke="#0a1f3d" stroke-width="1.2" stroke-linecap="round"/>
+            <!-- Controller inside brain -->
+            <rect x="7" y="7.5" width="6" height="3.5" rx="1.5" stroke="#c9a961" stroke-width="1"/>
+            <path d="M8.5 9.2 H7.8 M8.15 8.8 V9.6" stroke="#c9a961" stroke-width=".8" stroke-linecap="round"/>
+            <circle cx="11.5" cy="9" r="0.5" fill="#c9a961"/>
+            <circle cx="12.5" cy="9.5" r="0.5" fill="#c9a961" opacity=".7"/>
+            <!-- Sparkle/stars -->
+            <path d="M10 2 L10.3 3 H11.2 L10.5 3.6 L10.8 4.5 L10 4 L9.2 4.5 L9.5 3.6 L8.8 3 H9.7 Z" fill="#c9a961"/>
+          </svg>
+          Experiential Learning with SimX and Gamifications
+        </div>
+        <div class="curr-card"><i class="bi bi-diagram-3-fill"></i> Knowledge - Skill Framework</div>
+        <div class="curr-card">
+          <svg class="sip-logo" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Globe outline -->
+            <circle cx="10" cy="10" r="7.5" stroke="#c9a961" stroke-width="1.3"/>
+            <!-- Equator line -->
+            <path d="M2.5 10 H17.5" stroke="#c9a961" stroke-width="1"/>
+            <!-- Vertical meridian -->
+            <ellipse cx="10" cy="10" rx="3" ry="7.5" stroke="#c9a961" stroke-width="1"/>
+            <!-- Left person -->
+            <circle cx="5" cy="7.5" r="1.2" fill="#0a1f3d"/>
+            <path d="M3.5 12 C3.5 10.3 6.5 10.3 6.5 12" stroke="#0a1f3d" stroke-width="1.1" stroke-linecap="round"/>
+            <!-- Right person -->
+            <circle cx="15" cy="7.5" r="1.2" fill="#c9a961"/>
+            <path d="M13.5 12 C13.5 10.3 16.5 10.3 16.5 12" stroke="#c9a961" stroke-width="1.1" stroke-linecap="round"/>
+          </svg>
+          Cross Culture Management Exposure
+        </div>
         <div class="curr-card"><i class="bi bi-rocket-fill"></i> Live Project in Startups</div>
         <div class="curr-card"><i class="bi bi-globe2"></i> Community Engagement</div>
       </div>
@@ -567,57 +677,75 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <div class="logo"><img src="https://msrim.in/images/logo-2.png" alt="MSRIM"/></div>
-      <p>Ramaiah Institute of Management has been nurturing business leaders since 1995. AICTE approved and NBA accredited.</p>
-      <div class="footer-contact">
-        <div class="fc"><i class="bi bi-telephone-fill"></i><span>080-2360-6640, 6641, 6642</span></div>
-        <div class="fc"><i class="bi bi-envelope-fill"></i><span>support@msrim.org</span></div>
-        <div class="fc"><i class="bi bi-geo-alt-fill"></i><span>Gate No. 8, Ramaiah Group Campus, Bengaluru — 560054</span></div>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><img src="https://msrim.in/images/logo-2.png" alt="MSRIM"/></div>
+        <p>Ramaiah Institute of Management has been nurturing business leaders since 1995. AICTE approved and NBA accredited, we are committed to delivering world-class management education.</p>
+        <div class="footer-contact">
+          <div class="fc"><i class="bi bi-telephone-fill"></i><span>080-2360-6640, 6641, 6642</span></div>
+          <div class="fc"><i class="bi bi-envelope-fill"></i><span>support@msrim.org</span></div>
+          <div class="fc"><i class="bi bi-geo-alt-fill"></i><span>Gate No. 8, Ramaiah Group Campus, 'C' Block, M.S.R.I.T. Post, Bengaluru — 560054</span></div>
+        </div>
+        <div class="socials">
+          <a href="https://facebook.com/msrim"><i class="bi bi-facebook"></i></a>
+          <a href="https://linkedin.com/school/msrim"><i class="bi bi-linkedin"></i></a>
+          <a href="https://instagram.com/msrim"><i class="bi bi-instagram"></i></a>
+          <a href="https://youtube.com/msrim"><i class="bi bi-youtube"></i></a>
+        </div>
+        <div class="footer-badges">
+          <div class="footer-badge"><img src="https://msrim.in/images/iic_new_logo.jpg" alt="IIC"/><span>Institution's Innovation Council</span></div>
+          <div class="footer-badge"><img src="https://msrim.in/images/amdisa_logo.jpg" alt="AMDISA"/><span>AMDISA Member</span></div>
+        </div>
       </div>
-      <div class="socials">
-        <a href="https://facebook.com/msrim"><i class="bi bi-facebook"></i></a>
-        <a href="https://linkedin.com/school/msrim"><i class="bi bi-linkedin"></i></a>
-        <a href="https://instagram.com/msrim"><i class="bi bi-instagram"></i></a>
-        <a href="https://youtube.com/msrim"><i class="bi bi-youtube"></i></a>
+      <div class="footer-col">
+        <h5>Campus Info</h5>
+        <ul>
+          <li><a href="our-policies.html">Our Policies</a></li>
+          <li><a href="https://msrim.in/images/Awards-Ranking.mp4" target="_blank">B-School Ranking</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="future-road-map.html">Future Road Map</a></li>
+          <li><a href="anti-ragging.html">Anti-Ragging</a></li>
+          <li><a href="https://msrim.in/pdf/Mandatory_Disclousre-2025-26V1.pdf" target="_blank">Mandatory Disclosure 2024–25</a></li>
+          <li><a href="photo-gallery.html">Photo Gallery</a></li>
+          <li><a href="https://msrim.in/pdf/Action_Taken_Report_2024-25.docx.pdf" target="_blank">Action Taken Report 2024–25</a></li>
+          <li><a href="https://msrim.in/pdf/rules/RIM-Governance-Guidelines.pdf" target="_blank">Governance Guidelines</a></li>
+          <li><a href="infrastructure.html">Infrastructure</a></li>
+        </ul>
       </div>
-    </div>
-    <div class="footer-col">
-      <h5>Programmes</h5>
-      <ul>
-        <li><a href="#pgdm">PGDM — Full Time</a></li>
-        <li><a href="#pgdm-iev">PGDM — IEV</a></li>
-        <li><a href="#pgdm-online">PGDM — Online</a></li>
-        <li><a href="#fpm">Fellow Programme (FPM)</a></li>
-        <li><a href="#pgp-sports">PGP Sports Management</a></li>
-        <li><a href="#phd">PhD in Management</a></li>
-        <li><a href="#xceed">Xceed Executive</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h5>Important Info</h5>
-      <ul>
-        <li><a href="https://msrim.in/approvals">AICTE Approvals</a></li>
-        <li><a href="https://msrim.in/pdf/approvals/NBA-Results-March-2023.pdf" target="_blank">NBA Approval</a></li>
-        <li><a href="https://msrim.in/faq">FAQs</a></li>
-        <li><a href="admissions.html">Admissions</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h5>Explore MSRIM</h5>
-      <ul>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="faculty.html">Faculty</a></li>
-        <li><a href="placements.html">Placements</a></li>
-        <li></li>
-        <li><a href="https://alumni.msrim.in/" target="_blank">Alumni</a></li>
-        <li><a href="https://msrim.in/contact">Contact</a></li>
-      </ul>
+      <div class="footer-col">
+        <h5>Important Info</h5>
+        <ul>
+          <li><a href="grievance.html">Grievance &amp; Redressal Committees</a></li>
+          <li><a href="https://msrim.in/pdf/EOA-Report-2026-2027.PDF" target="_blank">AICTE Approval 2026–27</a></li>
+          <li><a href="approvals.html">AICTE Approvals since 1995</a></li>
+          <li><a href="https://msrim.in/pdf/rules/AICTE-CSS.pdf" target="_blank">AICTE Centralized Support System</a></li>
+          <li><a href="https://msrim.in/pdf/approvals/NBA-Results-March-2023.pdf" target="_blank">NBA Approval Letter 2022–2025</a></li>
+          <li><a href="https://msrim.in/pdf/approvals/AIU-2023.pdf" target="_blank">AIU Approval Letter 2022–2025</a></li>
+          <li><a href="student-initiatives.html">Student Initiatives</a></li>
+          <li><a href="financial-statements.html">Financial Statements</a></li>
+          <li><a href="https://msrmr.in" target="_blank">Journals</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Explore RIM</h5>
+        <ul>
+          <li><a href="contact.html">Campus Tour</a></li>
+          <li><a href="https://msrim.in/images/Ramaiah-Launch-Video.mp4" target="_blank">Ramaiah Logo Launch</a></li>
+          <li><a href="https://msrim.in/pdf/NIRF2026.pdf" target="_blank">NIRF Ranking 2026</a></li>
+          <li><a href="career.html">Career</a></li>
+          <li><a href="https://msrim.in/pdf/rules/GEFServiceRules.pdf" target="_blank">GEF Service Rules</a></li>
+          <li><a href="https://msrim.in/pdf/rules/GEFConductRules.pdf" target="_blank">GEF Conduct Rules</a></li>
+          <li><a href="https://msrim.in/blog">Blog</a></li>
+          <li><a href="https://alumni.msrim.in/" target="_blank">Alumni</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
   </div>
+  <!-- ERP LOGIN / DIGIICAMPUS BAR -->
   <div class="footer-erp">
-    <div class="footer-erp-inner">
+    <div class="wrap w">
       <div class="footer-erp-group">
         <span class="footer-erp-title">ERP Login</span>
         <div class="footer-erp-links">
@@ -628,12 +756,15 @@ footer{background:var(--navy);color:#fff;padding:60px 0 0}
       </div>
       <div class="footer-erp-group">
         <span class="footer-erp-title">Digiicampus</span>
-        <div class="footer-erp-links"><a href="https://msrim.digiicampus.com/home">Login</a></div>
+        <div class="footer-erp-links">
+          <a href="https://msrim.digiicampus.com/home">Login</a>
+        </div>
       </div>
     </div>
   </div>
+
   <div class="footer-bottom">
-    <div class="footer-bottom-inner">
+    <div class="w">
       <span>© 2026 Ramaiah Institute of Management. All rights reserved.</span>
       <div style="display:flex;gap:20px">
         <a href="https://msrim.in/privacy-policy">Privacy Policy</a>
@@ -693,9 +824,9 @@ sections.forEach(s => sectionObs.observe(s));
           <a href="admissions.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-pencil-square"></i></div><span class="fsm-label">Admissions</span></a>
           <a href="placements.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-briefcase-fill"></i></div><span class="fsm-label">Placements</span></a>
           <a href="centre-for-sustainability.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-tree-fill"></i></div><span class="fsm-label">Centre for Sustainability</span></a>
-          <a href="centre-for-leadership (2).html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-person-arms-up"></i></div><span class="fsm-label">Centre for Leadership</span></a>
+          <a href="centre-for-leadership (2).html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-person-arms-up"></i></div><span class="fsm-label">Centre for Leadership and Capacity Building</span></a>
           <a href="centre-for-case-development.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-journal-richtext"></i></div><span class="fsm-label">Centre for Case Development</span></a>
-          <a href="centre-for-excellence.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-award-fill"></i></div><span class="fsm-label">Centre for Excellence</span></a>
+          <a href="centre-for-excellence.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-award-fill"></i></div><span class="fsm-label">BCIC–Ramaiah Centre for Excellence</span></a>
           <a href="centre-for-iks.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-flower1"></i></div><span class="fsm-label">Centre for IKS</span></a>
           <a href="centre-for-entrepreneurship.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-lightbulb-fill"></i></div><span class="fsm-label">Centre for Entrepreneurship</span></a>
           <a href="centre-for-research-consultancy.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-graph-up-arrow"></i></div><span class="fsm-label">Centre for Research &amp; Consultancy</span></a>
@@ -704,10 +835,10 @@ sections.forEach(s => sectionObs.observe(s));
           <a href="innovation-council.html" class="fsm-card"><div class="fsm-icon"><i class="bi bi-rocket-takeoff-fill"></i></div><span class="fsm-label">Institute Innovation Council</span></a>
         </div>
         <div class="fsm-quicklinks">
-          <a href="research.html" class="fsm-quicklink"><i class="bi bi-flask-fill"></i> R &amp; D Cell</a>
           <a href="centres.html" class="fsm-quicklink"><i class="bi bi-grid-fill"></i> All Centres</a>
           <a href="https://msrim.in/virtual-tour" target="_blank" class="fsm-quicklink"><i class="bi bi-camera-video-fill"></i> Campus Tour</a>
           <a href="https://alumni.msrim.in/" target="_blank" class="fsm-quicklink"><i class="bi bi-person-heart"></i> Alumni Portal</a>
+          <a href="https://msrim.digiicampus.com/" target="_blank" class="fsm-quicklink"><i class="bi bi-laptop-fill" style="color:#E05A04"></i> DigiCampus Login</a>
         </div>
       </div>
       <!-- RIGHT: Side Nav -->
@@ -742,9 +873,9 @@ sections.forEach(s => sectionObs.observe(s));
             <div class="fsm-side-link" onclick="toggleSide(this)">Centres <i class="bi bi-chevron-down chev"></i></div>
             <div class="fsm-side-sub">
               <a href="centre-for-sustainability.html">Centre for Sustainability</a>
-              <a href="centre-for-leadership (2).html">Centre for Leadership</a>
+              <a href="centre-for-leadership (2).html">Centre for Leadership and Capacity Building</a>
               <a href="centre-for-case-development.html">Centre for Case Development</a>
-              <a href="centre-for-excellence.html">Centre for Excellence</a>
+              <a href="centre-for-excellence.html">BCIC–Ramaiah Centre for Excellence</a>
               <a href="centre-for-iks.html">Centre for IKS</a>
               <a href="centre-for-entrepreneurship.html">Centre for Entrepreneurship</a>
               <a href="centre-for-research-consultancy.html">Centre for Research &amp; Consultancy</a>
@@ -753,7 +884,6 @@ sections.forEach(s => sectionObs.observe(s));
               <a href="innovation-council.html">Institute Innovation Council</a>
             </div>
           </div>
-          <a href="research.html" class="fsm-side-link">R &amp; D Cell</a>
         </nav>
         <a href="https://msrim.in/virtual-tour" target="_blank" class="fsm-side-footer"><i class="bi bi-camera-video-fill"></i> Campus Tour</a>
       </div>
@@ -775,3 +905,11 @@ function toggleSide(el){var g=el.parentElement;document.querySelectorAll('.fsm-s
 
 </body>
 </html>
+
+
+
+
+
+
+
+
