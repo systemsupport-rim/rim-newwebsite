@@ -1,0 +1,1206 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ramaiah Japan Centre | Ramaiah Institute of Management</title>
+  <meta name="description"
+    content="The Ramaiah Japan Centre at MSRIM — extending global engagement through Japanese language learning, cultural immersion, research collaboration, and international partnerships." />
+
+  <!-- Fonts: Fraunces (display serif) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <style>
+    :root {
+      --navy-900: #0a1f3d;
+      --navy-800: #102b52;
+      --navy-700: #1a3a6b;
+      --navy-100: #e8eef7;
+      --gold-500: #c9a961;
+      --gold-600: #b08f48;
+      --gold-100: #f5ecd6;
+      --japan-red: #BC002D;
+      --japan-red-soft: #f7e0e5;
+      --cream: #faf6ee;
+      --cream-2: #f3ece0;
+      --hero-cream: #f0e9da;
+      --hero-blue: #e8eef7;
+      --ink: #1a1a1a;
+      --muted: #5a5a5a;
+      --line: #e3dccd;
+      --shadow-sm: 0 2px 12px rgba(10, 31, 61, .06);
+      --shadow-md: 0 8px 30px rgba(10, 31, 61, .10);
+      --shadow-lg: 0 20px 60px rgba(10, 31, 61, .15);
+      --serif: "Fraunces", "Times New Roman", serif;
+      --sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; transition: color .25s ease; }
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+
+    /* ============ TOP UTILITY BAR ============ */
+    .utility-bar { background: #0a1f3d; color: #fff; font-size: 13.5px; padding: 11px 0; }
+    .utility-bar .wrap { max-width: 1400px; margin: 0 auto; padding: 0 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .utility-bar .brand-tag { font-weight: 500; letter-spacing: .2px; }
+    .utility-bar a { transition: color .25s; color: #fff; }
+    .utility-bar a:hover { color: rgba(255,255,255,.75); }
+    .utility-bar .right { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+    .utility-bar .right .ico { display: inline-flex; gap: 7px; align-items: center; }
+    .utility-bar .right .ico i { font-size: 13px; }
+    .utility-bar .careers-pill { display: inline-flex; align-items: center; gap: 7px; border: 1px solid rgba(255,255,255,.5); padding: 5px 16px; border-radius: 999px; font-size: 13px; transition: all .3s; }
+    .utility-bar .careers-pill:hover { background: rgba(255,255,255,.2); border-color: #fff; color: #fff; }
+
+    /* ============ HEADER ============ */
+    .site-header { background: #FDF9F4; position: sticky; top: 0; z-index: 900; border-bottom: 1px solid rgba(10,31,61,.08); box-shadow: 0 2px 16px rgba(10,31,61,.06); }
+    .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 28px; height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+
+    .nav-links { display: flex; align-items: center; gap: 2px; flex: 1; justify-content: center; }
+    .nav-links a { font-size: 13.5px; font-weight: 500; color: #0a1f3d; padding: 6px 10px; border-radius: 6px; transition: all .2s; white-space: nowrap; }
+    .nav-links a:hover { background: #f5ecd6; color: #0a1f3d; }
+    .nav-links a.active { background: #f5ecd6; font-weight: 700; border-bottom: 2px solid #c9a961; }
+    .drop-menu a.active { background: transparent !important; font-weight: 500 !important; border-bottom: none !important; color: #1a1a1a !important; }
+    .has-drop { position: relative; }
+    .has-drop > a { display: flex; align-items: center; gap: 4px; }
+    .has-drop > a::after { content: ""; display: inline-block; width: 0; height: 0; border: 4px solid transparent; border-top-color: #0a1f3d; margin-top: 2px; transition: transform .2s; }
+    .has-drop:hover > a::after { transform: rotate(180deg); margin-top: -2px; }
+    .drop-menu { position: absolute; top: calc(100% + 8px); left: 0; min-width: 220px; background: #FDF9F4; border: 1px solid #e3dccd; border-radius: 10px; box-shadow: 0 12px 40px rgba(10,31,61,.14); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all .25s; z-index: 999; padding: 6px; }
+    .has-drop:hover .drop-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+    .drop-menu a { display: block; padding: 9px 14px; font-size: 13px; font-weight: 500; color: #1a1a1a; border-radius: 6px; transition: all .2s; white-space: nowrap; }
+    .drop-menu a:hover { background: #e8eef7; color: #0a1f3d; padding-left: 18px; }
+    .nav-cta { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg,#E05A04,#F88C1A); color: #fff; padding: 9px 20px; border-radius: 999px; font-size: 13.5px; font-weight: 600; transition: opacity .25s; flex-shrink: 0; }
+    .nav-cta:hover { opacity: .9; }
+    @media(max-width:1024px) { .nav-links { display: none; } .nav-cta { display: none; } }
+
+    .logo-panel { display: flex; align-items: center; }
+    .logos { display: flex; align-items: center; }
+    .logos img { width: 150px; height: auto; object-fit: contain; object-position: left center; mix-blend-mode: multiply; }
+
+    .menu-pill { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; background: #E05A04; color: #fff; border: none; border-radius: 6px; padding: 10px 16px; box-shadow: 0 3px 12px rgba(224,90,4,.35); cursor: pointer; transition: all .3s; flex-shrink: 0; margin-left: auto; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; min-width: 58px; }
+    .menu-pill:hover { opacity: .88; transform: translateY(-1px); }
+    .menu-pill .lines { display: flex; flex-direction: column; gap: 4px; width: 22px; }
+    .menu-pill .lines span { height: 2px; background: #fff; border-radius: 2px; transition: all .3s; display: block; }
+    .menu-pill .lines span:nth-child(2) { width: 70%; margin-left: auto; }
+
+    /* ============ HERO with CURVE ============ */
+    .hero-curve { position: relative; background: #FDF9F4; overflow: hidden; height: 280px; }
+    .hero-curve-inner { position: relative; display: grid; grid-template-columns: 34% 66%; height: 100%; overflow: hidden; }
+    .hero-right { min-height: 280px; }
+
+    .hero-left { background: var(--hero-cream); position: relative; display: flex; align-items: flex-start; padding: 18px 60px 18px 28px; z-index: 2; clip-path: path('M 0 0 L 100% 0 Q 70% 50%, 100% 100% L 0 100% Z'); }
+    @supports not (clip-path: path('M 0 0')) { .hero-left { clip-path: ellipse(120% 100% at 0% 50%); } }
+
+    /* Japan red circle accent top-right of hero-left */
+    .hero-left::before { content: ""; position: absolute; top: -30px; right: -30px; width: 160px; height: 160px; background-image: radial-gradient(circle, rgba(188,0,45,.08) 0%, transparent 60%); pointer-events: none; }
+    .hero-left::after { content: ""; position: absolute; bottom: 24px; left: 28px; width: 70px; height: 70px; background-image: linear-gradient(45deg, transparent 48%, rgba(10,31,61,.07) 49%, rgba(10,31,61,.07) 51%, transparent 52%); background-size: 10px 10px; pointer-events: none; border-radius: 50%; }
+
+    .hero-title { position: relative; z-index: 3; max-width: 380px; }
+    .hero-title .eyebrow { font-size: 11.5px; letter-spacing: 3px; text-transform: uppercase; color: var(--japan-red); font-weight: 600; margin-bottom: 14px; display: inline-flex; align-items: center; gap: 10px; }
+    .hero-title .eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--japan-red); }
+    .hero-title h1 { font-family: var(--serif); font-weight: 300; line-height: 1.05; font-size: clamp(1.9rem, 3.2vw, 2.8rem); letter-spacing: -.5px; }
+    .hero-title h1 .gold { color: var(--gold-600); font-weight: 400; font-style: italic; display: block; }
+    .hero-title h1 .navy { color: var(--navy-900); font-weight: 400; display: block; }
+    .hero-title .sub { margin-top: 18px; font-size: 14.5px; color: var(--muted); line-height: 1.55; max-width: 340px; }
+
+    .hero-right { position: relative; background: linear-gradient(145deg, var(--navy-900) 0%, var(--navy-700) 100%); overflow: hidden; }
+    .hero-right::before { content: ""; position: absolute; top: -60px; right: -60px; width: 240px; height: 240px; background: radial-gradient(circle, rgba(188,0,45,.10) 0%, transparent 65%); pointer-events: none; z-index: 2; }
+    .hero-right img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 25%; z-index: 1; display: block; }
+    .hero-right::after { content: ""; position: absolute; bottom: 16px; right: 20px; width: 60px; height: 60px; border-radius: 50%; border: 1px solid rgba(188,0,45,.25); pointer-events: none; z-index: 3; }
+
+    /* Japan rising sun deco in hero-right no-img */
+    .hero-right.no-img { background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-700) 100%); }
+    .hero-right.no-img::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(circle at 50% 50%, rgba(188,0,45,.18) 0%, rgba(188,0,45,.06) 30%, transparent 60%), linear-gradient(to right, rgba(255,255,255,.02) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,.02) 1px, transparent 1px); background-size: auto, 50px 50px, 50px 50px; z-index: 0; }
+
+    .hero-right .badge-deco { position: absolute; bottom: 16px; right: 24px; color: rgba(255,255,255,.85); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; z-index: 3; display: flex; align-items: center; gap: 10px; font-weight: 500; }
+    .hero-right .badge-deco::before { content: ""; width: 30px; height: 1px; background: var(--japan-red); }
+
+    /* Japan circle overlay on hero-right */
+    .hero-japan-circle { position: absolute; right: 12%; top: 50%; transform: translateY(-50%); width: 130px; height: 130px; border-radius: 50%; border: 2px solid rgba(188,0,45,.25); display: flex; align-items: center; justify-content: center; z-index: 3; pointer-events: none; }
+    .hero-japan-circle::before { content: ""; position: absolute; inset: 8px; border-radius: 50%; border: 1px dashed rgba(188,0,45,.18); }
+
+    /* ============ HERO RIGHT PILLS ============ */
+    .hero-right-pills { position: absolute; left: clamp(8px, 1.5vw, 18px); right: clamp(16px, 3vw, 36px); top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; align-items: flex-start; gap: clamp(8px, 1vw, 12px); z-index: 4; }
+    .hr-pill { display: inline-flex; align-items: center; padding: clamp(10px, 1.1vw, 15px) clamp(18px, 2vw, 34px); border-radius: 100px; font-size: clamp(13px, 1.1vw, 16px); font-weight: 600; font-family: var(--sans); text-decoration: none; cursor: pointer; transition: all 0.25s ease; background: rgba(10,31,61,0.55); border: 1.5px solid rgba(255,255,255,.20); color: rgba(255,255,255,.92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); white-space: normal; max-width: 100%; line-height: 1.3; }
+    .hr-pill:hover { background: rgba(10,31,61,.75); border-color: rgba(188,0,45,.60); color: #fff; transform: translateX(4px); }
+    .hr-pill--red { background: linear-gradient(135deg, #d4133c 0%, #BC002D 100%); border-color: transparent; color: #fff; font-weight: 700; }
+    .hr-pill--red:hover { background: linear-gradient(135deg, #e01540 0%, #d4133c 100%); border-color: transparent; color: #fff; }
+
+    /* ============ HERO BANNER TAGLINE ============ */
+    .hero-banner-tagline { position: absolute; top: 16px; left: 50%; transform: translateX(-50%); z-index: 4; color: rgba(255,255,255,.92); font-size: 13px; font-weight: 600; font-family: var(--sans); letter-spacing: 2.5px; text-transform: uppercase; white-space: nowrap; background: rgba(10,31,61,.45); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); padding: 7px 20px; border-radius: 100px; border: 1px solid rgba(255,255,255,.15); }
+
+    /* ============ MAIN LAYOUT ============ */
+    .main-section { max-width: 1400px; margin: 0 auto; padding: 64px 28px 80px; display: grid; grid-template-columns: 290px 1fr; gap: 48px; align-items: flex-start; }
+
+    /* ============ SIDEBAR ============ */
+    .sidebar { position: sticky; top: 24px; }
+    .sidebar-card { background: #FDF9F4; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; box-shadow: var(--shadow-sm); }
+    .sidebar-card h3 { font-family: var(--serif); font-weight: 500; font-size: 18px; padding: 18px 24px; background: var(--navy-900); color: #fff; letter-spacing: .3px; }
+    .sidebar-nav li { border-bottom: 1px solid var(--line); }
+    .sidebar-nav li:last-child { border-bottom: none; }
+    .sidebar-nav a { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; font-size: 14.5px; color: var(--ink); font-weight: 500; transition: all .25s; }
+    .sidebar-nav a:hover, .sidebar-nav a.active { background: var(--cream); color: var(--navy-900); padding-left: 30px; }
+    .sidebar-nav a.active { border-left: 3px solid var(--japan-red); }
+    .sidebar-nav .arrow { color: var(--japan-red); font-size: 16px; transition: transform .25s; font-weight: 600; }
+    .sidebar-nav a:hover .arrow { transform: translateX(4px); }
+
+    .sidebar-cta { margin-top: 24px; background: linear-gradient(135deg, var(--navy-900), var(--navy-700)); color: #fff; padding: 28px 22px; border-radius: 4px; position: relative; overflow: hidden; }
+    .sidebar-cta::before { content: ""; position: absolute; top: -40px; right: -40px; width: 140px; height: 140px; background: radial-gradient(circle, var(--japan-red) 0%, transparent 70%); opacity: .18; }
+    .sidebar-cta h4 { font-family: var(--serif); font-size: 22px; font-weight: 500; margin-bottom: 8px; line-height: 1.2; position: relative; }
+    .sidebar-cta p { font-size: 13.5px; color: rgba(255,255,255,.8); margin-bottom: 16px; position: relative; }
+    .sidebar-cta a { display: inline-block; background: var(--japan-red); color: #fff; padding: 9px 18px; border-radius: 3px; font-size: 13px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase; position: relative; transition: background .25s; }
+    .sidebar-cta a:hover { background: #9e0024; }
+    .sidebar-cta-brochure { margin-top: 14px; background: var(--cream-2); border: 1px solid var(--line); padding: 18px 22px; border-radius: 4px; display: flex; align-items: center; gap: 14px; transition: all .3s; }
+    .sidebar-cta-brochure:hover { border-color: var(--gold-500); background: var(--gold-100); }
+    .sidebar-cta-brochure i { font-size: 26px; color: var(--japan-red); flex-shrink: 0; }
+    .sidebar-cta-brochure span { font-size: 13.5px; font-weight: 600; color: var(--navy-900); }
+
+    /* ============ MEGA MENU ============ */
+    .mega-overlay { position: fixed; inset: 0; background: rgba(10,31,61,.6); backdrop-filter: blur(4px); opacity: 0; visibility: hidden; transition: all .35s; z-index: 998; }
+    .mega-overlay.open { opacity: 1; visibility: visible; }
+    .mega-panel { position: fixed; top: 0; right: 0; height: 100vh; width: min(440px,90vw); background: #FDF9F4; box-shadow: -10px 0 40px rgba(0,0,0,.2); transform: translateX(100%); transition: transform .4s cubic-bezier(.4,0,.2,1); z-index: 999; overflow-y: auto; padding: 30px 36px; }
+    .mega-panel.open { transform: translateX(0); }
+    .mega-close { position: absolute; top: 22px; right: 22px; width: 40px; height: 40px; border-radius: 50%; background: var(--cream); border: none; cursor: pointer; font-size: 20px; color: var(--navy-900); display: flex; align-items: center; justify-content: center; transition: all .25s; }
+    .mega-close:hover { background: var(--gold-500); transform: rotate(90deg); }
+    .mega-panel h5 { font-family: var(--serif); font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold-600); margin: 30px 0 12px; font-weight: 600; }
+    .mega-panel h5:first-of-type { margin-top: 50px; }
+    .mega-panel ul li a { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; font-size: 16px; color: var(--navy-900); font-weight: 500; border-bottom: 1px solid var(--line); transition: all .25s; }
+    .mega-panel ul li a:hover { color: var(--gold-600); padding-left: 8px; }
+    .mega-panel ul li a::after { content: "→"; color: var(--gold-500); opacity: 0; transition: all .25s; }
+    .mega-panel ul li a:hover::after { opacity: 1; }
+
+    /* ============ CONTENT ============ */
+    .content > section { margin-bottom: 76px; }
+    .section-eyebrow { display: inline-block; font-size: 17px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--japan-red); font-weight: 800; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid var(--japan-red); }
+    .section-title { font-family: var(--serif); font-weight: 400; font-size: clamp(2rem, 3.5vw, 2.8rem); line-height: 1.1; margin-bottom: 18px; color: var(--navy-900); letter-spacing: -.4px; }
+    .section-title em { font-style: italic; color: var(--japan-red); font-weight: 300; }
+
+    /* About */
+    .about-grid { display: grid; grid-template-columns: 280px 1fr; gap: 56px; align-items: center; }
+    .about-emblem { width: 260px; height: 260px; border-radius: 50%; background: radial-gradient(circle at 40% 35%, #1a3a6b, #0a1f3d 70%); color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 28px; position: relative; box-shadow: 0 12px 40px rgba(10,31,61,.35), 0 0 0 2px #BC002D, 0 0 0 5px #0a1f3d, 0 0 0 7px #BC002D; flex-shrink: 0; }
+    .about-emblem::before { content: ""; position: absolute; inset: 16px; border-radius: 50%; border: 1px solid rgba(188,0,45,.35); pointer-events: none; }
+    .about-emblem::after { content: ""; position: absolute; inset: 22px; border-radius: 50%; border: 1px dashed rgba(188,0,45,.18); pointer-events: none; }
+    .about-emblem .icon { font-size: 32px; color: var(--japan-red); margin-bottom: 10px; filter: drop-shadow(0 2px 6px rgba(188,0,45,.5)); }
+    .about-emblem .label-top { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: var(--japan-red); margin-bottom: 6px; font-weight: 600; }
+    .about-emblem .label-main { font-family: var(--serif); font-size: 18px; font-weight: 600; line-height: 1.2; color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,.3); }
+    .about-emblem .label-sub { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold-500); margin-top: 10px; font-weight: 600; }
+    .about-text p { color: #2a2a2a; margin-bottom: 16px; font-size: 16px; line-height: 1.75; text-align: justify; }
+    .about-text p:first-of-type::first-letter { font-family: var(--serif); font-size: 56px; font-weight: 500; float: left; line-height: .9; margin: 6px 10px 0 0; color: var(--japan-red); }
+
+    /* Offerings / Objectives */
+    .objectives-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 8px; }
+    .objective-card { background: #FDF9F4; border: 1px solid var(--line); padding: 26px 24px; border-radius: 4px; position: relative; transition: all .35s; }
+    .objective-card::before { content: ""; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--japan-red); transform-origin: top; transform: scaleY(0); transition: transform .35s; }
+    .objective-card:hover { transform: translateX(4px); box-shadow: var(--shadow-sm); }
+    .objective-card:hover::before { transform: scaleY(1); }
+    .objective-num { font-family: var(--serif); font-size: 32px; color: var(--japan-red); font-weight: 500; line-height: 1; margin-bottom: 10px; }
+    .objective-card h5 { font-family: var(--serif); font-size: 18px; font-weight: 500; color: var(--navy-900); line-height: 1.3; }
+    .objective-card p { font-size: 14px; color: var(--muted); margin-top: 8px; line-height: 1.55; }
+    .objective-icon { font-size: 22px; color: var(--japan-red); margin-bottom: 8px; opacity: .8; }
+
+    /* Lead / Head */
+    .lead-card { background: #FDF9F4; border: 1px solid var(--line); border-left: 4px solid var(--japan-red); padding: 30px 32px; border-radius: 2px; box-shadow: var(--shadow-sm); display: grid; grid-template-columns: 100px 1fr; gap: 28px; align-items: center; }
+    .lead-avatar { width: 100px; height: 100px; border-radius: 50%; overflow: hidden; background: var(--cream-2); flex-shrink: 0; border: 3px solid var(--japan-red); }
+    .lead-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .lead-avatar-fallback { width: 100px; height: 100px; border-radius: 50%; background: var(--cream-2); display: flex; align-items: center; justify-content: center; color: var(--navy-900); font-size: 36px; flex-shrink: 0; }
+    .lead-card h5 { font-family: var(--serif); font-size: 22px; color: var(--navy-900); font-weight: 500; margin-bottom: 4px; }
+    .lead-card .lead-role { font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--japan-red); font-weight: 600; margin-bottom: 10px; }
+    .lead-card p { font-size: 15px; color: #444; line-height: 1.65; }
+
+    /* Japan flag accent strip */
+    .japan-strip { display: flex; align-items: center; gap: 18px; margin: 36px 0; padding: 18px 24px; background: linear-gradient(to right, var(--japan-red-soft), transparent); border-left: 4px solid var(--japan-red); border-radius: 2px; }
+    .japan-strip .jp-circle { width: 44px; height: 44px; border-radius: 50%; background: var(--japan-red); flex-shrink: 0; }
+    .japan-strip p { font-size: 14.5px; color: #444; line-height: 1.6; font-style: italic; }
+
+    /* News */
+    .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .news-card { background: #FDF9F4; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; transition: all .4s; display: flex; flex-direction: column; }
+    .news-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .news-img { width: 100%; height: 190px; background: linear-gradient(135deg, var(--navy-700), var(--navy-900)); display: flex; align-items: center; justify-content: center; color: var(--japan-red); font-size: 48px; position: relative; overflow: hidden; }
+    .news-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; display: block; }
+    .news-card:hover .news-img img { transform: scale(1.05); }
+    .news-img::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(45deg, transparent 48%, rgba(188,0,45,.10) 49%, rgba(188,0,45,.10) 51%, transparent 52%); background-size: 30px 30px; pointer-events: none; z-index: 1; }
+    .news-img.v2 { background: linear-gradient(135deg, #1a3a6b, #0a1f3d); }
+    .news-img.v3 { background: linear-gradient(135deg, #2c4a7e, #102b52); }
+    .news-body { padding: 22px 22px 24px; flex: 1; display: flex; flex-direction: column; }
+    .news-date { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--japan-red); font-weight: 600; margin-bottom: 10px; }
+    .news-card h5 { font-family: var(--serif); font-size: 18px; line-height: 1.3; color: var(--navy-900); font-weight: 500; margin-bottom: 14px; flex: 1; }
+    .news-link { font-size: 13px; font-weight: 600; color: var(--navy-900); letter-spacing: .5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 6px; transition: gap .25s; }
+    .news-link:hover { gap: 12px; color: var(--japan-red); }
+    .view-more-bar { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px; flex-wrap: wrap; gap: 12px; }
+    .view-more-link { font-size: 13px; font-weight: 600; color: var(--navy-900); letter-spacing: 1px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 6px; padding-bottom: 4px; border-bottom: 2px solid var(--japan-red); transition: gap .25s; }
+    .view-more-link:hover { gap: 12px; }
+
+    /* Gallery */
+    .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .gallery-item { position: relative; aspect-ratio: 1/1; overflow: hidden; border-radius: 4px; background: var(--navy-100); cursor: pointer; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+    .gallery-item:hover img { transform: scale(1.08); }
+    .gallery-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,31,61,.92) 0%, rgba(10,31,61,.3) 50%, transparent 100%); display: flex; align-items: flex-end; padding: 16px; opacity: 0; transition: opacity .3s; }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-overlay span { color: #fff; font-size: 13px; font-weight: 500; line-height: 1.3; }
+    .gallery-item.has-icon { background: linear-gradient(135deg, var(--navy-700), var(--navy-900)); display: flex; align-items: center; justify-content: center; color: var(--japan-red); font-size: 48px; }
+    .gallery-item.has-icon::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(to right, rgba(188,0,45,.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(188,0,45,.06) 1px, transparent 1px); background-size: 20px 20px; }
+    .gallery-item.has-icon i { position: relative; }
+
+    /* Resources */
+    .resources-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+    .resource-card { background: #FDF9F4; border: 1px solid var(--line); padding: 26px 28px; border-radius: 4px; display: flex; align-items: center; gap: 20px; transition: all .35s; }
+    .resource-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--japan-red); }
+    .resource-icon { width: 56px; height: 56px; background: var(--cream-2); border-radius: 4px; display: flex; align-items: center; justify-content: center; color: var(--japan-red); font-size: 24px; flex-shrink: 0; }
+    .resource-card h5 { font-family: var(--serif); font-size: 17px; color: var(--navy-900); font-weight: 500; margin-bottom: 4px; }
+    .resource-card span { font-size: 13px; color: var(--muted); }
+
+    /* VM-style mission card */
+    .vm-card { display: grid; grid-template-columns: 220px 1fr; gap: 0; background: #FDF9F4; border-radius: 4px; overflow: hidden; box-shadow: var(--shadow-sm); margin-bottom: 22px; border: 1px solid var(--line); transition: transform .35s, box-shadow .35s; }
+    .vm-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .vm-label { background: linear-gradient(135deg, var(--navy-900), var(--navy-700)); color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 32px; position: relative; overflow: hidden; }
+    .vm-label::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(circle at 20% 30%, rgba(188,0,45,.18) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(188,0,45,.10) 0%, transparent 50%); }
+    .vm-label .vm-icon { font-size: 32px; color: var(--japan-red); margin-bottom: 10px; position: relative; }
+    .vm-label h4 { font-family: var(--serif); font-weight: 300; font-size: 32px; letter-spacing: .5px; position: relative; }
+    .vm-body { padding: 32px 36px; display: flex; align-items: center; }
+    .vm-body p { font-size: 16.5px; line-height: 1.7; color: #2a2a2a; }
+    .vm-body strong { color: var(--navy-900); font-weight: 600; }
+
+    /* Footer */
+    .footer { background: var(--navy-900); color: #cfd8e8; padding: 70px 0 0; margin-top: 30px; position: relative; }
+    .footer::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(to right, var(--japan-red), transparent); }
+    .footer-grid { max-width: 1400px; margin: 0 auto; padding: 0 28px; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 50px; }
+    .footer h6 { color: #fff; font-family: var(--serif); font-size: 18px; font-weight: 500; margin-bottom: 20px; padding-bottom: 12px; position: relative; }
+    .footer h6::after { content: ""; position: absolute; bottom: 0; left: 0; width: 30px; height: 2px; background: var(--japan-red); }
+    .footer-brand img { max-height: 60px; margin-bottom: 18px; background: rgba(255,255,255,.95); padding: 8px 14px; border-radius: 4px; }
+    .footer-brand p { font-size: 14px; line-height: 1.65; color: rgba(255,255,255,.7); margin-bottom: 10px; }
+    .footer-brand .contact-line { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; font-size: 13.5px; }
+    .footer-brand .contact-line i { color: var(--japan-red); margin-top: 3px; }
+    .footer ul li { margin-bottom: 10px; font-size: 14px; }
+    .footer ul li a { color: rgba(255,255,255,.7); transition: all .25s; display: inline-flex; align-items: center; gap: 8px; }
+    .footer ul li a::before { content: "›"; color: var(--japan-red); font-size: 16px; line-height: 1; }
+    .footer ul li a:hover { color: var(--japan-red); transform: translateX(3px); }
+    .socials { display: flex; gap: 10px; margin-top: 18px; }
+    .socials a { width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,.08); display: flex; align-items: center; justify-content: center; color: #fff; transition: all .3s; }
+    .socials a:hover { background: var(--japan-red); color: #fff; transform: translateY(-3px); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.1); padding: 22px 0; background: rgba(0,0,0,.2); }
+    .footer-bottom .wrap { max-width: 1400px; margin: 0 auto; padding: 0 28px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: rgba(255,255,255,.6); flex-wrap: wrap; gap: 12px; }
+    .footer-bottom a { color: var(--japan-red); }
+    .footer-badges { display: flex; gap: 14px; margin-top: 18px; flex-wrap: wrap; }
+    .footer-badge { display: flex; align-items: center; gap: 8px; }
+    .footer-badge img { height: 38px; width: auto; border-radius: 4px; background: rgba(255,255,255,.9); padding: 4px; }
+    .footer-badge span { font-size: 11px; color: rgba(255,255,255,.6); line-height: 1.3; max-width: 80px; }
+    .footer-contact { margin-bottom: 4px; }
+    .fc { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; font-size: 13.5px; color: rgba(255,255,255,.7); }
+    .fc i { color: var(--japan-red); margin-top: 2px; flex-shrink: 0; }
+    .footer-col h5 { color: #fff; font-family: var(--serif); font-size: 18px; font-weight: 500; margin-bottom: 20px; padding-bottom: 12px; position: relative; }
+    .footer-col h5::after { content: ""; position: absolute; bottom: 0; left: 0; width: 30px; height: 2px; background: var(--japan-red); }
+    .footer-erp { background: rgba(0,0,0,.25); padding: 18px 0; }
+    .footer-erp .w { max-width: 1400px; margin: 0 auto; padding: 0 28px; display: flex; gap: 40px; flex-wrap: wrap; }
+    .footer-erp-group { display: flex; align-items: center; gap: 14px; }
+    .footer-erp-title { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,.5); font-weight: 600; }
+    .footer-erp-links { display: flex; gap: 12px; }
+    .footer-erp-links a { font-size: 13px; color: rgba(255,255,255,.7); border: 1px solid rgba(255,255,255,.15); padding: 5px 14px; border-radius: 3px; transition: all .25s; }
+    .footer-erp-links a:hover { background: rgba(255,255,255,.1); color: #fff; }
+    .footer-bottom .w { max-width: 1400px; margin: 0 auto; padding: 0 28px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: rgba(255,255,255,.6); flex-wrap: wrap; gap: 12px; }
+
+    /* Reveal animation */
+    .reveal { opacity: 0; transform: translateY(20px); transition: all .8s ease; }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+
+    /* ============ FULLSCREEN MENU ============ */
+    .fsm-overlay { position: fixed; inset: 0; z-index: 9999; opacity: 0; visibility: hidden; transition: opacity .38s; }
+    .fsm-overlay.open { opacity: 1; visibility: visible; }
+    .fsm-panel { position: fixed; inset: 0; background: #faf6ee; transform: translateY(-105%); transition: transform .48s cubic-bezier(.4,0,.2,1); overflow-y: auto; display: flex; flex-direction: column; }
+    .fsm-overlay.open .fsm-panel { transform: translateY(0); }
+    .fsm-header { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; padding: 20px 44px; border-bottom: 1px solid #e3dccd; }
+    .fsm-logo { height: 40px; filter: none; opacity: 1; }
+    .fsm-header-right { display: flex; align-items: center; gap: 14px; }
+    .fsm-header-cta { display: inline-flex; align-items: center; gap: 7px; padding: 9px 22px; background: #E05A04; color: #fff; font-size: 13px; font-weight: 700; border-radius: 999px; text-decoration: none; transition: all .2s; }
+    .fsm-header-cta:hover { background: #c94f03; color: #fff; transform: translateY(-1px); }
+    .fsm-close { width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid #ddd; background: #fff; color: #0a1f3d; font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all .25s; }
+    .fsm-close:hover { background: #E05A04; border-color: #E05A04; transform: rotate(90deg); }
+    .fsm-section-label { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #b08f48; margin-bottom: 8px; display: block; }
+    .fsm-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 8px; margin-bottom: 8px; }
+    .fsm-card { background: #fff; border: 1px solid #e3dccd; border-bottom: 3px solid #e3dccd; border-radius: 16px; padding: 10px 8px 9px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 6px; text-decoration: none; transition: all .25s; box-shadow: 0 2px 10px rgba(10,31,61,.06); }
+    .fsm-card:hover { background: rgba(255,255,255,.96); border-color: rgba(255,255,255,.8); border-bottom-color: #E05A04; transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,.4); }
+    .fsm-card:hover .fsm-label { color: #0a1f3d; }
+    .fsm-card:hover .fsm-icon { transform: scale(1.12); box-shadow: 0 8px 24px rgba(224,90,4,.6); }
+    .fsm-icon { width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg,#E05A04 0%,#F88C1A 100%); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 15px; flex-shrink: 0; box-shadow: 0 4px 12px rgba(224,90,4,.4); transition: all .25s; }
+    .fsm-label { font-size: 11px; font-weight: 600; color: #1a1a1a; line-height: 1.3; transition: color .25s; }
+    .fsm-quicklinks { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding-top: 8px; border-top: 1px solid #e3dccd; }
+    .fsm-quicklink { display: inline-flex; align-items: center; gap: 6px; padding: 8px 18px; border: 1px solid #e3dccd; border-radius: 999px; color: #333; font-size: 12.5px; font-weight: 500; text-decoration: none; transition: all .2s; }
+    .fsm-quicklink:hover { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.45); color: #555; }
+    .fsm-body { position: relative; z-index: 1; flex: 1; padding: 28px 32px 40px; display: grid; grid-template-columns: 1fr 280px; gap: 24px; align-items: start; }
+    .fsm-left { display: flex; flex-direction: column; gap: 10px; }
+    .fsm-right { background: #fff; border: 1px solid #e3dccd; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; position: sticky; top: 20px; }
+    .fsm-side-ctas { display: grid; grid-template-columns: 1fr 1fr; }
+    .fsm-side-cta1 { display: flex; align-items: center; justify-content: center; gap: 6px; padding: 13px 8px; background: #E05A04; color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; text-decoration: none; transition: background .2s; }
+    .fsm-side-cta1:hover { background: #c94f03; color: #fff; }
+    .fsm-side-cta2 { display: flex; align-items: center; justify-content: center; gap: 6px; padding: 13px 8px; background: #0a1f3d; color: #fff; font-size: 12px; font-weight: 600; text-decoration: none; transition: background .2s; }
+    .fsm-side-cta2:hover { background: #1a3a6b; color: #fff; }
+    .fsm-side-nav { display: flex; flex-direction: column; }
+    .fsm-side-link { display: flex; align-items: center; justify-content: space-between; padding: 11px 16px; font-size: 13px; font-weight: 500; color: #1a1a1a; text-decoration: none; border-bottom: 1px solid #e8e3da; transition: all .2s; cursor: pointer; user-select: none; }
+    a.fsm-side-link:hover, .fsm-side-link:hover { background: #f5f0e8; color: #0a1f3d; padding-left: 22px; }
+    .fsm-side-link .chev { font-size: 11px; color: #aaa; transition: transform .25s; flex-shrink: 0; }
+    .fsm-side-group.open > .fsm-side-link .chev { transform: rotate(180deg); }
+    .fsm-side-group.open > .fsm-side-link { background: #fdf0e8; color: #E05A04; }
+    .fsm-side-sub { max-height: 0; overflow: hidden; transition: max-height .3s ease; background: #f9f6f0; }
+    .fsm-side-group.open .fsm-side-sub { max-height: 500px; }
+    .fsm-side-sub a { display: flex; align-items: center; gap: 6px; padding: 9px 16px 9px 28px; font-size: 12px; color: #555; text-decoration: none; border-bottom: 1px solid #ede8e0; transition: all .2s; }
+    .fsm-side-sub a::before { content: "›"; color: #E05A04; font-size: 14px; line-height: 1; flex-shrink: 0; }
+    .fsm-side-sub a:hover { background: #f0ebe0; color: #0a1f3d; padding-left: 34px; }
+    .fsm-side-footer { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 16px; background: #f5ecd6; color: #b08f48; font-size: 12.5px; font-weight: 600; text-decoration: none; transition: all .2s; }
+    .fsm-side-footer:hover { background: rgba(201,169,97,.22); color: #e0be7a; }
+
+    /* ============ RESPONSIVE ============ */
+    @media(max-width:1100px) {
+      .hero-curve-inner { grid-template-columns: 40% 60%; }
+      .hero-left { padding: 18px 40px 18px 24px; }
+    }
+    @media(max-width:1024px) {
+      .main-section { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media(max-width:1000px) { .fsm-body { grid-template-columns: 1fr; } .fsm-right { display: none; } }
+    @media(max-width:768px) {
+      .utility-bar .brand-tag { display: none; }
+      .utility-bar .right { gap: 14px; font-size: 12px; }
+      .utility-bar .right .ico { display: none; }
+      .header-inner { min-height: 95px; padding: 0 16px 0 0; }
+      .hero-curve { height: auto; }
+      .hero-curve-inner { grid-template-columns: 1fr; }
+      .hero-left { clip-path: none; padding: 40px 24px 70px; align-items: center; }
+      .hero-right { height: 240px; clip-path: ellipse(150% 100% at 50% 100%); margin-top: -40px; }
+      .about-grid { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+      .about-emblem { margin: 0 auto; }
+      .about-text p:first-of-type::first-letter { float: none; font-size: 1em; margin: 0; }
+      .vm-card { grid-template-columns: 1fr; }
+      .vm-label { padding: 22px; }
+      .objectives-grid { grid-template-columns: 1fr; }
+      .news-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .resources-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+      .lead-card { grid-template-columns: 1fr; text-align: center; }
+      .lead-avatar { margin: 0 auto; }
+      .lead-avatar-fallback { margin: 0 auto; }
+      .main-section { padding: 40px 18px 60px; gap: 30px; }
+      .hero-right-pills { left: 50%; right: auto; top: auto; bottom: 48px; transform: translateX(-50%); flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center; }
+      .hr-pill { padding: 8px 16px; white-space: nowrap; font-size: 12px; }
+    }
+    @media(max-width:800px) { .fsm-grid { grid-template-columns: repeat(3,1fr); gap: 10px; } .fsm-body { padding: 24px 20px 36px; } .fsm-header { padding: 16px 20px; } }
+    @media(max-width:700px) { .fsm-grid { grid-template-columns: repeat(3,1fr); } .fsm-body { padding: 20px 14px 32px; } }
+    @media(max-width:480px) { .fsm-grid { grid-template-columns: repeat(2,1fr); gap: 8px; } }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP UTILITY BAR -->
+  <div class="utility-bar">
+    <div class="wrap">
+      <div class="brand-tag">Ramaiah Institute of Management | M.S.R.I.T. Post, Bengaluru</div>
+      <div class="right">
+        <a class="ico" href="tel:08023606640"><i class="bi bi-telephone-fill"></i> 080-2360-6640</a>
+        <a class="ico" href="mailto:support@msrim.org"><i class="bi bi-envelope-fill"></i> support@msrim.org</a>
+        <a href="https://alumni.msrim.in/">Alumni</a>
+        <a href="https://msrim.in/pdf/NIRF2026.pdf">NIRF</a>
+        <a href="https://msrim.digiicampus.com/">Student Portal</a>
+        <a class="careers-pill" href="https://msrim.in/career"><i class="bi bi-briefcase-fill"></i> Careers</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-panel">
+        <a href="https://msrim.in/" class="logos">
+          <img src="https://msrim.in/images/logo-2.png" alt="Ramaiah Institute of Management" />
+        </a>
+      </div>
+      <nav class="nav-links">
+        <div class="has-drop">
+          <a href="https://msrim.in/about">About Us</a>
+          <div class="drop-menu">
+            <a href="https://msrim.in/about">About MSRIM</a>
+            <a href="https://msrim.in/dean">Dean's Message</a>
+            <a href="https://msrim.in/governance">Governance</a>
+            <a href="https://msrim.in/vision-mission">Vision &amp; Mission</a>
+          </div>
+        </div>
+        <div class="has-drop">
+          <a href="https://msrim.in/programs">Programs</a>
+          <div class="drop-menu">
+            <a href="https://msrim.in/pgdm-two-year-full-time">PGDM — Two Year Full Time</a>
+            <a href="https://msrim.in/fpm">FPM</a>
+          </div>
+        </div>
+        <a href="https://msrim.in/faculty">Faculty</a>
+        <a href="https://msrim.in/admissions">Admissions</a>
+        <a href="https://msrim.in/placement">Placements</a>
+        <div class="has-drop">
+          <a href="https://msrim.in/centres" class="active">Centres</a>
+          <div class="drop-menu">
+            <a href="https://msrim.in/centre-for-sustainability">Centre for Sustainability</a>
+            <a href="https://msrim.in/centre-for-leadership">Centre for Leadership and Capacity Building</a>
+            <a href="https://msrim.in/centre-for-case-development">Centre for Case Development</a>
+            <a href="https://msrim.in/ramaiah-bcic-centre">BCIC–Ramaiah Centre for Excellence</a>
+            <a href="https://msrim.in/centre-for-iks">Centre for IKS</a>
+            <a href="https://msrim.in/centre-for-entrepreneurship">Centre for Entrepreneurship</a>
+            <a href="https://msrim.in/centre-for-research-consultancy">Centre for Research &amp; Consultancy</a>
+            <a href="https://msrim.in/centre-for-corporate-relations">Centre for Corporate Relations</a>
+            <a href="https://msrim.in/centre-for-alumni-relations">Centre for Alumni Relations</a>
+            <a href="https://msrim.in/innovation-council">Institute Innovation Council</a>
+            <a href="https://msrim.in/ramaiah-japan-centre" style="color:#BC002D;font-weight:700">Ramaiah Japan Centre</a>
+          </div>
+        </div>
+      </nav>
+      <a href="https://admissions.msrim.in/" class="nav-cta">
+        <i class="bi bi-mortarboard-fill"></i> Admissions 2026
+      </a>
+      <button class="menu-pill" id="menuBtn" aria-label="Open menu">
+        Menu
+        <span class="lines"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO with CURVE -->
+  <section class="hero-curve">
+    <div class="hero-curve-inner">
+      <div class="hero-left">
+        <div class="hero-title">
+          <div class="eyebrow">MSRIM Centres</div>
+          <h1>
+            <span class="gold">Ramaiah</span>
+            <span class="navy">Japan Centre</span>
+          </h1>
+          <p class="sub">Bridging India and Japan through language, culture, research, and global career pathways — at the heart of Bengaluru's business education.</p>
+        </div>
+      </div>
+      <div class="hero-right" id="heroRight">
+
+        <!-- Japan-themed SVG illustration banner -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" preserveAspectRatio="xMidYMid slice"
+          style="position:absolute;inset:0;width:100%;height:100%;display:block;z-index:1;">
+          <defs>
+            <linearGradient id="jSky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#06111f"/>
+              <stop offset="45%" stop-color="#0c2350"/>
+              <stop offset="80%" stop-color="#18447a"/>
+              <stop offset="100%" stop-color="#1c3d6e"/>
+            </linearGradient>
+            <radialGradient id="jHorizon" cx="62%" cy="80%" r="48%">
+              <stop offset="0%" stop-color="#ff6b35" stop-opacity="0.6"/>
+              <stop offset="40%" stop-color="#ffaa40" stop-opacity="0.28"/>
+              <stop offset="100%" stop-color="#ffaa40" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="jSunHalo" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#fff8f0" stop-opacity="0.9"/>
+              <stop offset="55%" stop-color="#ffe8d0" stop-opacity="0.3"/>
+              <stop offset="100%" stop-color="#ffd0a0" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="jWater" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#162e56" stop-opacity="0.92"/>
+              <stop offset="100%" stop-color="#06111f"/>
+            </linearGradient>
+            <linearGradient id="jFuji" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#162e56"/>
+              <stop offset="100%" stop-color="#06111f"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Sky -->
+          <rect width="900" height="280" fill="url(#jSky)"/>
+
+          <!-- Horizon warm glow -->
+          <ellipse cx="560" cy="222" rx="310" ry="135" fill="url(#jHorizon)"/>
+
+          <!-- Stars -->
+          <circle cx="80"  cy="28"  r="1"   fill="white" opacity="0.60"/>
+          <circle cx="155" cy="16"  r="1.2" fill="white" opacity="0.55"/>
+          <circle cx="225" cy="38"  r="0.9" fill="white" opacity="0.65"/>
+          <circle cx="318" cy="12"  r="1"   fill="white" opacity="0.50"/>
+          <circle cx="405" cy="26"  r="1.1" fill="white" opacity="0.45"/>
+          <circle cx="485" cy="14"  r="0.8" fill="white" opacity="0.60"/>
+          <circle cx="655" cy="20"  r="1"   fill="white" opacity="0.55"/>
+          <circle cx="728" cy="34"  r="1.2" fill="white" opacity="0.45"/>
+          <circle cx="808" cy="10"  r="0.9" fill="white" opacity="0.60"/>
+          <circle cx="862" cy="42"  r="1"   fill="white" opacity="0.50"/>
+          <circle cx="172" cy="58"  r="0.9" fill="white" opacity="0.40"/>
+          <circle cx="555" cy="32"  r="1"   fill="white" opacity="0.35"/>
+          <circle cx="625" cy="52"  r="0.8" fill="white" opacity="0.50"/>
+          <circle cx="752" cy="58"  r="1"   fill="white" opacity="0.42"/>
+          <circle cx="32"  cy="52"  r="1.1" fill="white" opacity="0.58"/>
+
+          <!-- Rising sun rays — 16 rays at 22.5° intervals -->
+          <g opacity="0.14">
+            <line x1="560" y1="125" x2="560" y2="-15" stroke="white" stroke-width="16"/>
+            <line x1="560" y1="125" x2="560" y2="-15" stroke="white" stroke-width="16" transform="rotate(22.5,560,125)"/>
+            <line x1="560" y1="125" x2="560" y2="-15" stroke="white" stroke-width="16" transform="rotate(45,560,125)"/>
+            <line x1="560" y1="125" x2="560" y2="-15" stroke="white" stroke-width="16" transform="rotate(67.5,560,125)"/>
+            <line x1="560" y1="125" x2="560" y2="-15" stroke="white" stroke-width="16" transform="rotate(90,560,125)"/>
+            <line x1="560" y1="125" x2="560" y2="-15" stroke="white" stroke-width="16" transform="rotate(112.5,560,125)"/>
+            <line x1="560" y1="125" x2="560" y2="-15" stroke="white" stroke-width="16" transform="rotate(135,560,125)"/>
+            <line x1="560" y1="125" x2="560" y2="-15" stroke="white" stroke-width="16" transform="rotate(157.5,560,125)"/>
+            <line x1="560" y1="125" x2="560" y2="-15" stroke="white" stroke-width="16" transform="rotate(180,560,125)"/>
+            <line x1="560" y1="125" x2="560" y2="-15" stroke="white" stroke-width="16" transform="rotate(202.5,560,125)"/>
+            <line x1="560" y1="125" x2="560" y2="-15" stroke="white" stroke-width="16" transform="rotate(225,560,125)"/>
+            <line x1="560" y1="125" x2="560" y2="-15" stroke="white" stroke-width="16" transform="rotate(247.5,560,125)"/>
+            <line x1="560" y1="125" x2="560" y2="-15" stroke="white" stroke-width="16" transform="rotate(270,560,125)"/>
+            <line x1="560" y1="125" x2="560" y2="-15" stroke="white" stroke-width="16" transform="rotate(292.5,560,125)"/>
+            <line x1="560" y1="125" x2="560" y2="-15" stroke="white" stroke-width="16" transform="rotate(315,560,125)"/>
+            <line x1="560" y1="125" x2="560" y2="-15" stroke="white" stroke-width="16" transform="rotate(337.5,560,125)"/>
+          </g>
+
+          <!-- Sun halo glow -->
+          <circle cx="560" cy="125" r="100" fill="url(#jSunHalo)"/>
+          <!-- Sun white disc -->
+          <circle cx="560" cy="125" r="52"  fill="white" opacity="0.97"/>
+          <!-- Sun red hinomaru -->
+          <circle cx="560" cy="125" r="40"  fill="#BC002D"/>
+
+          <!-- Background hills -->
+          <path d="M0,212 L75,168 L155,198 L245,148 L335,178 L430,212 Z" fill="#0c1f3c" opacity="0.55"/>
+
+          <!-- Mount Fuji silhouette -->
+          <path d="M115,280 L310,80 L505,280 Z" fill="url(#jFuji)"/>
+          <!-- Snow cap -->
+          <path d="M270,110 L310,80 L350,110 L338,106 L310,90 L282,106 Z" fill="white" opacity="0.94"/>
+          <!-- Snow ridgelines -->
+          <path d="M256,133 L276,124 L310,116 L344,124 L364,133" stroke="white" stroke-width="1.5" fill="none" opacity="0.32"/>
+          <path d="M242,158 L268,147 L310,139 L352,147 L378,158" stroke="white" stroke-width="1"   fill="none" opacity="0.18"/>
+
+          <!-- Horizon line -->
+          <line x1="0" y1="212" x2="900" y2="212" stroke="white" stroke-width="0.5" opacity="0.18"/>
+
+          <!-- Lake -->
+          <rect x="0" y="212" width="900" height="68" fill="url(#jWater)"/>
+
+          <!-- Water shimmer -->
+          <line x1="30"  y1="224" x2="185" y2="224" stroke="white" stroke-width="0.7" opacity="0.11"/>
+          <line x1="60"  y1="234" x2="255" y2="234" stroke="white" stroke-width="0.5" opacity="0.08"/>
+          <line x1="335" y1="227" x2="515" y2="227" stroke="white" stroke-width="0.7" opacity="0.10"/>
+          <line x1="585" y1="221" x2="755" y2="221" stroke="white" stroke-width="0.6" opacity="0.09"/>
+          <line x1="705" y1="237" x2="885" y2="237" stroke="white" stroke-width="0.5" opacity="0.08"/>
+
+          <!-- Fuji lake reflection -->
+          <path d="M115,212 L310,258 L505,212 Z" fill="#06111f" opacity="0.38"/>
+
+          <!-- Sun shimmer on water -->
+          <ellipse cx="560" cy="236" rx="20" ry="7" fill="#BC002D" opacity="0.16"/>
+          <ellipse cx="560" cy="250" rx="11" ry="4" fill="#BC002D" opacity="0.10"/>
+
+          <!-- Torii gate (right) -->
+          <g transform="translate(790,128)" opacity="0.52">
+            <path d="M-44,-2 Q0,-18 44,-2" stroke="#BC002D" stroke-width="10" fill="none" stroke-linecap="round"/>
+            <line x1="-52" y1="3"  x2="52"  y2="3"  stroke="#BC002D" stroke-width="9"/>
+            <line x1="-36" y1="22" x2="36"  y2="22" stroke="#BC002D" stroke-width="6"/>
+            <line x1="-27" y1="3"  x2="-27" y2="98" stroke="#BC002D" stroke-width="7"/>
+            <line x1="27"  y1="3"  x2="27"  y2="98" stroke="#BC002D" stroke-width="7"/>
+          </g>
+
+          <!-- Left cherry blossom branch -->
+          <path d="M0,108 Q32,84 58,62 Q74,52 94,57" stroke="#7a3b1e" stroke-width="2" fill="none" opacity="0.28"/>
+          <path d="M58,62 Q68,46 84,42" stroke="#7a3b1e" stroke-width="1.5" fill="none" opacity="0.22"/>
+          <circle cx="58"  cy="60" r="5.5" fill="#ffb7c5" opacity="0.80"/>
+          <circle cx="68"  cy="51" r="4"   fill="#ff8fa3" opacity="0.75"/>
+          <circle cx="81"  cy="46" r="5"   fill="#ffb7c5" opacity="0.72"/>
+          <circle cx="48"  cy="50" r="4.5" fill="#ffc4d1" opacity="0.72"/>
+          <circle cx="91"  cy="54" r="4.5" fill="#ff8fa3" opacity="0.68"/>
+          <circle cx="75"  cy="39" r="3.5" fill="#ffb7c5" opacity="0.68"/>
+          <circle cx="60"  cy="43" r="3"   fill="#ffc4d1" opacity="0.62"/>
+          <circle cx="96"  cy="41" r="3"   fill="#ff8fa3" opacity="0.56"/>
+
+          <!-- Right cherry blossom branch -->
+          <path d="M900,62 Q868,78 842,68 Q824,60 808,68" stroke="#7a3b1e" stroke-width="1.5" fill="none" opacity="0.22"/>
+          <circle cx="843" cy="66" r="5"   fill="#ffb7c5" opacity="0.76"/>
+          <circle cx="833" cy="58" r="4"   fill="#ff8fa3" opacity="0.72"/>
+          <circle cx="856" cy="62" r="4.5" fill="#ffc4d1" opacity="0.68"/>
+          <circle cx="824" cy="66" r="3.5" fill="#ffb7c5" opacity="0.62"/>
+          <circle cx="846" cy="74" r="3.5" fill="#ff8fa3" opacity="0.58"/>
+          <circle cx="820" cy="56" r="3"   fill="#ffb7c5" opacity="0.52"/>
+
+          <!-- Falling petals -->
+          <ellipse cx="142" cy="84"  rx="4"   ry="2.5" fill="#ffb7c5" opacity="0.55" transform="rotate(-22,142,84)"/>
+          <ellipse cx="202" cy="60"  rx="3"   ry="2"   fill="#ff8fa3" opacity="0.50" transform="rotate(14,202,60)"/>
+          <ellipse cx="355" cy="96"  rx="3.5" ry="2"   fill="#ffb7c5" opacity="0.45" transform="rotate(-30,355,96)"/>
+          <ellipse cx="422" cy="72"  rx="4"   ry="2.5" fill="#ffc4d1" opacity="0.42" transform="rotate(24,422,72)"/>
+          <ellipse cx="645" cy="90"  rx="3"   ry="2"   fill="#ffb7c5" opacity="0.45" transform="rotate(-16,645,90)"/>
+          <ellipse cx="700" cy="54"  rx="4"   ry="2.5" fill="#ff8fa3" opacity="0.50" transform="rotate(20,700,54)"/>
+          <ellipse cx="460" cy="108" rx="3"   ry="2"   fill="#ffb7c5" opacity="0.38" transform="rotate(-10,460,108)"/>
+          <ellipse cx="285" cy="78"  rx="3.5" ry="2"   fill="#ffc4d1" opacity="0.40" transform="rotate(18,285,78)"/>
+        </svg>
+
+        <div class="hero-banner-tagline" style="z-index:5;">Language &bull; Culture &bull; Global Connections</div>
+
+        <div class="hero-right-pills" style="z-index:5;">
+          <span class="hr-pill hr-pill--red">Japanese Language Learning</span>
+          <span class="hr-pill">Cultural Immersion</span>
+          <span class="hr-pill">Global Partnerships &amp; Internships</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <div class="main-section">
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <h3>Centre Navigation</h3>
+        <ul class="sidebar-nav">
+          <li><a href="#about" class="active">Home <span class="arrow">→</span></a></li>
+          <li><a href="#offerings">Offerings <span class="arrow">→</span></a></li>
+          <li><a href="#leadership">Centre Head <span class="arrow">→</span></a></li>
+          <li><a href="#news">News &amp; Events <span class="arrow">→</span></a></li>
+          <li><a href="#gallery">Photo Gallery <span class="arrow">→</span></a></li>
+          <li><a href="#resources">Resources <span class="arrow">→</span></a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-cta">
+        <h4>Connect with Japan</h4>
+        <p>Partner with us for cultural exchanges, language programmes &amp; research collaborations.</p>
+        <a href="https://msrim.in/contact">Get in Touch</a>
+      </div>
+
+      <a class="sidebar-cta-brochure" href="https://msrim.in/pdf/RJC-Brochure1.pdf" target="_blank" style="display:flex;align-items:center;gap:14px;margin-top:14px;background:var(--cream-2);border:1px solid var(--line);padding:18px 22px;border-radius:4px;transition:all .3s;text-decoration:none;">
+        <i class="bi bi-file-earmark-pdf-fill" style="font-size:26px;color:var(--japan-red);flex-shrink:0;"></i>
+        <span style="font-size:13.5px;font-weight:600;color:var(--navy-900);">Download Centre Brochure</span>
+      </a>
+    </aside>
+
+    <main class="content">
+
+      <!-- ABOUT -->
+      <section id="about" class="reveal">
+        <span class="section-eyebrow">About the Centre</span>
+        <h2 class="section-title">Japan at the <em>heart of MSRIM</em></h2>
+        <div class="about-grid">
+          <div class="about-emblem">
+            <i class="bi bi-globe-asia-australia icon"></i>
+            <div class="label-top">MSRIM</div>
+            <div class="label-main">Ramaiah<br />Japan<br />Centre</div>
+            <div class="label-sub">Est. MSRIM Bengaluru</div>
+          </div>
+          <div class="about-text">
+            <p>The Ramaiah Japan Centre was established with a singular vision — to extend global engagement opportunities for the Ramaiah Group through deep, meaningful collaborative activities with institutions, companies, and cultural organisations in Japan. It broadens employment avenues in industry, research, and higher education for our students and faculty alike.</p>
+            <p>At the Japan Centre, learners explore the Japanese language from conversational basics to JLPT-certified proficiency, while immersing themselves in Japan's rich artistic traditions — Origami, Calligraphy, Ikebana, Anime, and cuisine. Through strategic partnerships with Japanese universities and Indo-Japanese chambers of commerce, students gain access to international internships, faculty exchanges, and joint research opportunities that give them a decisive edge in today's global job market.</p>
+          </div>
+        </div>
+
+        <!-- Mission strip -->
+        <div class="japan-strip">
+          <div class="jp-circle"></div>
+          <p>"Leveraging the depth of Japanese management philosophy — <strong>Kaizen, Monozukuri, Omotenashi</strong> — the centre prepares MSRIM graduates for leadership roles in Indo-Japanese business environments and beyond."</p>
+        </div>
+      </section>
+
+      <!-- MISSION / VISION-STYLE CARD -->
+      <section id="mission" class="reveal">
+        <div class="vm-card">
+          <div class="vm-label">
+            <i class="bi bi-compass vm-icon"></i>
+            <h4>Mission</h4>
+          </div>
+          <div class="vm-body">
+            <p>To build a <strong>vibrant India-Japan bridge</strong> at MSRIM — nurturing language skills, cultural sensitivity, research collaboration, and global professional networks that empower our community to thrive in an interconnected world.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- OFFERINGS -->
+      <section id="offerings" class="reveal">
+        <span class="section-eyebrow">What We Offer</span>
+        <h2 class="section-title">Six pillars of <em>Japan engagement</em></h2>
+        <div class="objectives-grid">
+
+          <div class="objective-card">
+            <i class="bi bi-translate objective-icon"></i>
+            <div class="objective-num">01</div>
+            <h5>Language Learning</h5>
+            <p>40-hour Basic Japanese Conversation &amp; Business Culture course; JLPT certification pathways at N5, N4, and N3 levels.</p>
+          </div>
+
+          <div class="objective-card">
+            <i class="bi bi-palette2 objective-icon"></i>
+            <div class="objective-num">02</div>
+            <h5>Cultural Immersion</h5>
+            <p>Origami, Calligraphy, Ikebana, Anime appreciation, Japanese cuisine, and cross-cultural programmes with Japanese universities &amp; associations.</p>
+          </div>
+
+          <div class="objective-card">
+            <i class="bi bi-journal-richtext objective-icon"></i>
+            <div class="objective-num">03</div>
+            <h5>Research Initiatives</h5>
+            <p>Joint research opportunities with JV companies and Japanese firms operating in India and Japan — fostering scholarly exchange.</p>
+          </div>
+
+          <div class="objective-card">
+            <i class="bi bi-lightbulb objective-icon"></i>
+            <div class="objective-num">04</div>
+            <h5>Knowledge Hub</h5>
+            <p>Japanese management &amp; work culture workshops, technical talks, industry best practices, visits to Japanese-origin firms, and expert webinars from Japan.</p>
+          </div>
+
+          <div class="objective-card">
+            <i class="bi bi-diagram-3 objective-icon"></i>
+            <div class="objective-num">05</div>
+            <h5>Partnerships &amp; Connects</h5>
+            <p>International internships, immersion programmes, collaborative faculty/student exchanges, cultural exchanges, and active connects with Japanese associations.</p>
+          </div>
+
+          <div class="objective-card">
+            <i class="bi bi-rocket-takeoff objective-icon"></i>
+            <div class="objective-num">06</div>
+            <h5>Incubation Centre</h5>
+            <p>Promoting start-up initiatives with an Indo-Japanese lens — mentoring entrepreneurs who seek to leverage the India-Japan economic corridor.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CENTRE HEAD -->
+      <section id="leadership" class="reveal">
+        <span class="section-eyebrow">Centre Leadership</span>
+        <h2 class="section-title">Led by <em>Anjana K.S.</em></h2>
+        <div class="lead-card">
+          <div class="lead-avatar">
+            <img
+              src="https://msrim.in/msrimmanage/public/uploads/faculty/Anjana_K_S_nw.png"
+              alt="Anjana K.S."
+              onerror="this.parentElement.classList.add('lead-avatar-fallback'); this.outerHTML='<i class=\'bi bi-person-fill\' style=\'font-size:36px;color:var(--navy-900)\'></i>';" />
+          </div>
+          <div>
+            <h5>Anjana K.S.</h5>
+            <div class="lead-role">Head — Ramaiah Japan Centre</div>
+            <p>A Master's in Computer Application and certified Japanese language facilitator (JLPT N2), Anjana lived in Japan for five years and served as Relationship Manager at the Indo-Japanese Chamber of Commerce &amp; Industry (IJCCI), Karnataka for over 12 years. A classical Bharatanatyam dancer and Vice President of BNK (Bangalore Teachers' Association), she brings a unique blend of cultural depth and corporate acumen to lead the Japan Centre at MSRIM.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEWS & EVENTS -->
+      <section id="news" class="reveal">
+        <div class="view-more-bar">
+          <div>
+            <span class="section-eyebrow">Latest Updates</span>
+            <h2 class="section-title">News &amp; <em>Events</em></h2>
+          </div>
+          <a href="https://msrim.in/ramaiah-japan-centre" class="view-more-link">View All <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="news-grid">
+
+          <article class="news-card">
+            <div class="news-img">
+              <img src="https://msrim.in/msrimmanage/uploads/japan_centre_news/1765522780_d33fe03e39d44a542411.jpeg" alt="Kanazawa University led Industry delegation" onerror="this.style.display='none'; this.parentElement.innerHTML += '<i class=\'bi bi-building-fill\'></i>';" />
+            </div>
+            <div class="news-body">
+              <div class="news-date">13 Nov 2025</div>
+              <h5>Kanazawa University led Industry Delegation at RIM Campus</h5>
+              <a href="https://msrim.in/ramaiah-japan-centre/jcinfo/kanazawa-university-led-industry-delegation-on-13th-nov-2025-at-rim" class="news-link">Read More <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <div class="news-img v2">
+              <img src="https://msrim.in/msrimmanage/uploads/japan_centre_news/1765273292_563a44075f7dafb253cf.jpeg" alt="M&A Thinking Leaders Club Delegation" onerror="this.style.display='none'; this.parentElement.innerHTML += '<i class=\'bi bi-people-fill\'></i>';" />
+            </div>
+            <div class="news-body">
+              <div class="news-date">13 Nov 2025</div>
+              <h5>M&amp;A Thinking Leaders Club Delegation Visit</h5>
+              <a href="https://msrim.in/ramaiah-japan-centre/jcinfo/ma-thinking-leaders-club-delegation" class="news-link">Read More <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <div class="news-img v3">
+              <img src="https://msrim.in/msrimmanage/uploads/japan_centre_news/1765524828_f08178552ce23de9233e.jpeg" alt="Kanazawa Interns at RIM Campus" onerror="this.style.display='none'; this.parentElement.innerHTML += '<i class=\'bi bi-mortarboard-fill\'></i>';" />
+            </div>
+            <div class="news-body">
+              <div class="news-date">10 Oct 2025</div>
+              <h5>Kanazawa University Interns at RIM Campus</h5>
+              <a href="https://msrim.in/ramaiah-japan-centre/jcinfo/kanazawa-interns-at-rim-campus" class="news-link">Read More <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section id="gallery" class="reveal">
+        <div style="text-align:center; margin-bottom:36px;">
+          <span class="section-eyebrow">Moments at the Centre</span>
+          <h2 class="section-title">Photo <em>Gallery</em></h2>
+        </div>
+        <div class="gallery-grid">
+
+          <div class="gallery-item">
+            <img src="https://msrim.in/msrimmanage/uploads/japan_centre_news/1765522780_d33fe03e39d44a542411.jpeg" alt="Kanazawa Delegation"
+              onerror="this.parentElement.classList.add('has-icon');this.outerHTML='<i class=\'bi bi-building-fill\'></i>';">
+            <div class="gallery-overlay"><span>Kanazawa University Delegation · Nov 2025</span></div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="https://msrim.in/msrimmanage/uploads/japan_centre_news/1765273292_563a44075f7dafb253cf.jpeg" alt="Thinking Leaders Club"
+              onerror="this.parentElement.classList.add('has-icon');this.outerHTML='<i class=\'bi bi-people-fill\'></i>';">
+            <div class="gallery-overlay"><span>M&amp;A Thinking Leaders Club Visit</span></div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="https://msrim.in/msrimmanage/uploads/japan_centre_news/1765524828_f08178552ce23de9233e.jpeg" alt="Kanazawa Interns"
+              onerror="this.parentElement.classList.add('has-icon');this.outerHTML='<i class=\'bi bi-mortarboard-fill\'></i>';">
+            <div class="gallery-overlay"><span>Kanazawa Interns at RIM Campus · Oct 2025</span></div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="https://msrim.in/images/pu1.jpg" alt="Japan Centre Activity"
+              onerror="this.parentElement.classList.add('has-icon');this.outerHTML='<i class=\'bi bi-translate\'></i>';">
+            <div class="gallery-overlay"><span>Japanese Language Session</span></div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="https://msrim.in/images/pu2.jpg" alt="Cultural Programme"
+              onerror="this.parentElement.classList.add('has-icon');this.outerHTML='<i class=\'bi bi-palette2\'></i>';">
+            <div class="gallery-overlay"><span>Cultural Immersion Programme</span></div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="https://msrim.in/images/pu3.jpg" alt="Japan Centre Event"
+              onerror="this.parentElement.classList.add('has-icon');this.outerHTML='<i class=\'bi bi-diagram-3-fill\'></i>';">
+            <div class="gallery-overlay"><span>Industry Connect &amp; Networking</span></div>
+          </div>
+
+          <div class="gallery-item has-icon"><i class="bi bi-camera-fill"></i>
+            <div class="gallery-overlay"><span>Origami &amp; Cultural Workshops</span></div>
+          </div>
+
+          <div class="gallery-item has-icon"><i class="bi bi-arrow-right-circle-fill"></i>
+            <div class="gallery-overlay"><span>View Full Gallery</span></div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- RESOURCES -->
+      <section id="resources" class="reveal">
+        <span class="section-eyebrow">Downloads &amp; Connect</span>
+        <h2 class="section-title">Centre <em>Resources</em></h2>
+        <div class="resources-grid">
+
+          <a class="resource-card" href="https://msrim.in/pdf/RJC-Brochure1.pdf" target="_blank">
+            <div class="resource-icon"><i class="bi bi-file-earmark-pdf-fill"></i></div>
+            <div>
+              <h5>Japan Centre Brochure</h5>
+              <span>Complete overview of programmes, culture &amp; partnerships · PDF</span>
+            </div>
+          </a>
+
+          <a class="resource-card" href="https://msrim.in/ramaiah-japan-centre">
+            <div class="resource-icon"><i class="bi bi-newspaper"></i></div>
+            <div>
+              <h5>All News &amp; Events</h5>
+              <span>Delegations, internships &amp; cultural events · Archive</span>
+            </div>
+          </a>
+
+          <a class="resource-card" href="https://msrim.in/contact">
+            <div class="resource-icon"><i class="bi bi-envelope-paper-fill"></i></div>
+            <div>
+              <h5>Partner with the Centre</h5>
+              <span>Industry connects · University collaborations · MoU enquiries</span>
+            </div>
+          </a>
+
+          <a class="resource-card" href="https://admissions.msrim.in/">
+            <div class="resource-icon"><i class="bi bi-mortarboard-fill"></i></div>
+            <div>
+              <h5>Apply for PGDM 2026</h5>
+              <span>Join MSRIM and access Japan Centre programmes from day one</span>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- MEGA MENU PANEL -->
+  <div class="mega-overlay" id="megaOverlay"></div>
+  <aside class="mega-panel" id="megaPanel" aria-label="Site menu">
+    <button class="mega-close" id="megaClose" aria-label="Close menu"><i class="bi bi-x-lg"></i></button>
+    <h5>Main Navigation</h5>
+    <ul>
+      <li><a href="https://msrim.in/">Home</a></li>
+      <li><a href="https://msrim.in/about">About MSRIM</a></li>
+      <li><a href="https://msrim.in/dean">Dean's Message</a></li>
+      <li><a href="https://msrim.in/vision-mission">Vision &amp; Mission</a></li>
+    </ul>
+    <h5>Programs</h5>
+    <ul>
+      <li><a href="https://msrim.in/pgdm-two-year-full-time">PGDM — Two Year Full Time</a></li>
+      <li><a href="https://msrim.in/fpm">FPM — Doctoral Programme</a></li>
+      <li><a href="https://msrim.in/faculty">Faculty</a></li>
+      <li><a href="https://msrim.in/admissions">Admissions</a></li>
+      <li><a href="https://msrim.in/placement">Placements</a></li>
+    </ul>
+    <h5>Centres &amp; Cells</h5>
+    <ul>
+      <li><a href="https://msrim.in/centre-for-leadership">Centre for Leadership and Capacity Building</a></li>
+      <li><a href="https://msrim.in/centre-for-sustainability">Centre for Sustainability</a></li>
+      <li><a href="https://msrim.in/centre-for-case-development">Centre for Case Development</a></li>
+      <li><a href="https://msrim.in/ramaiah-bcic-centre">BCIC–Ramaiah Centre for Excellence</a></li>
+      <li><a href="https://msrim.in/centre-for-iks">Centre for IKS</a></li>
+      <li><a href="https://msrim.in/centre-for-entrepreneurship">Centre for Entrepreneurship</a></li>
+      <li><a href="https://msrim.in/centre-for-research-consultancy">Centre for Research &amp; Consultancy</a></li>
+      <li><a href="https://msrim.in/centre-for-corporate-relations">Centre for Corporate Relations</a></li>
+      <li><a href="https://msrim.in/centre-for-alumni-relations">Centre for Alumni Relations</a></li>
+      <li><a href="https://msrim.in/innovation-council">Institute Innovation Council</a></li>
+      <li><a href="https://msrim.in/ramaiah-japan-centre" style="color:#BC002D;font-weight:700">Ramaiah Japan Centre</a></li>
+    </ul>
+    <h5>Quick Links</h5>
+    <ul>
+      <li><a href="https://msrim.in/photos-gallery">Photo Gallery</a></li>
+      <li><a href="https://msrim.in/faq">FAQs</a></li>
+      <li><a href="https://msrim.in/contact">Contact</a></li>
+    </ul>
+  </aside>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://msrim.in/images/logo-2.png" alt="MSRIM" />
+        <p>Ramaiah Institute of Management has been nurturing business leaders since 1995. AICTE approved and NBA accredited, we are committed to delivering world-class management education.</p>
+        <div class="footer-contact">
+          <div class="fc"><i class="bi bi-telephone-fill"></i><span>080-2360-6640, 6641, 6642</span></div>
+          <div class="fc"><i class="bi bi-envelope-fill"></i><span>support@msrim.org</span></div>
+          <div class="fc"><i class="bi bi-geo-alt-fill"></i><span>Gate No. 8, Ramaiah Group Campus, 'C' Block, M.S.R.I.T. Post, Bengaluru — 560054</span></div>
+        </div>
+        <div class="socials">
+          <a href="https://facebook.com/msrim"><i class="bi bi-facebook"></i></a>
+          <a href="https://linkedin.com/school/msrim"><i class="bi bi-linkedin"></i></a>
+          <a href="https://instagram.com/msrim"><i class="bi bi-instagram"></i></a>
+          <a href="https://youtube.com/msrim"><i class="bi bi-youtube"></i></a>
+        </div>
+        <div class="footer-badges">
+          <div class="footer-badge"><img src="https://msrim.in/images/iic_new_logo.jpg" alt="IIC" /><span>Innovation Council</span></div>
+          <div class="footer-badge"><img src="https://msrim.in/images/amdisa_logo.jpg" alt="AMDISA" /><span>AMDISA Member</span></div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Campus Info</h5>
+        <ul>
+          <li><a href="https://msrim.in/our-policies">Our Policies</a></li>
+          <li><a href="https://msrim.in/faq">FAQs</a></li>
+          <li><a href="https://msrim.in/future-road-map">Future Road Map</a></li>
+          <li><a href="https://msrim.in/anti-ragging">Anti-Ragging</a></li>
+          <li><a href="https://msrim.in/pdf/Mandatory_Disclousre-2025-26V1.pdf" target="_blank">Mandatory Disclosure</a></li>
+          <li><a href="https://msrim.in/photos-gallery">Photo Gallery</a></li>
+          <li><a href="https://msrim.in/infrastructure">Infrastructure</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Important Info</h5>
+        <ul>
+          <li><a href="https://msrim.in/grievance">Grievance &amp; Redressal</a></li>
+          <li><a href="https://msrim.in/pdf/EOA-Report-2026-2027.PDF" target="_blank">AICTE Approval 2026–27</a></li>
+          <li><a href="https://msrim.in/approvals">AICTE Approvals since 1995</a></li>
+          <li><a href="https://msrim.in/pdf/approvals/NBA-Results-March-2023.pdf" target="_blank">NBA Approval Letter</a></li>
+          <li><a href="https://msrim.in/pdf/approvals/AIU-2023.pdf" target="_blank">AIU Approval Letter</a></li>
+          <li><a href="https://msrim.in/financial-statements">Financial Statements</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Explore RIM</h5>
+        <ul>
+          <li><a href="https://msrim.in/contact">Campus Tour</a></li>
+          <li><a href="https://msrim.in/pdf/NIRF2026.pdf" target="_blank">NIRF Ranking 2026</a></li>
+          <li><a href="https://msrim.in/career">Career</a></li>
+          <li><a href="https://msrim.in/blog">Blog</a></li>
+          <li><a href="https://alumni.msrim.in/" target="_blank">Alumni Portal</a></li>
+          <li><a href="https://msrim.in/contact">Contact</a></li>
+          <li><a href="https://msrimr.in" target="_blank">Journals</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-erp">
+      <div class="footer-erp .w" style="max-width:1400px;margin:0 auto;padding:0 28px;display:flex;gap:40px;flex-wrap:wrap;align-items:center;">
+        <div class="footer-erp-group">
+          <span class="footer-erp-title">ERP Login</span>
+          <div class="footer-erp-links">
+            <a href="https://msrim.digiicampus.com/">Student Login</a>
+            <a href="https://msrim.digiicampus.com/">Parent Login</a>
+            <a href="https://msrim.digiicampus.com/">Staff Login</a>
+          </div>
+        </div>
+        <div class="footer-erp-group">
+          <span class="footer-erp-title">Digiicampus</span>
+          <div class="footer-erp-links">
+            <a href="https://msrim.digiicampus.com/home">Login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="w">
+        <span>© 2026 Ramaiah Institute of Management. All rights reserved.</span>
+        <div style="display:flex;gap:20px">
+          <a href="https://msrim.in/privacy-policy">Privacy Policy</a>
+          <a href="https://msrim.in/terms">Terms of Use</a>
+          <a href="https://msrim.in/sitemap">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FULLSCREEN MENU -->
+  <div class="fsm-overlay" id="fsmOverlay">
+    <div class="fsm-panel">
+      <div class="fsm-header">
+        <img src="https://msrim.in/images/logo-2.png" alt="MSRIM" class="fsm-logo">
+        <div class="fsm-header-right">
+          <a href="https://admissions.msrim.in/" class="fsm-header-cta"><i class="bi bi-mortarboard-fill"></i> Apply Now</a>
+          <button class="fsm-close" id="fsmClose"><i class="bi bi-x-lg"></i></button>
+        </div>
+      </div>
+      <div class="fsm-body">
+        <div class="fsm-left">
+          <span class="fsm-section-label">Quick Navigation</span>
+          <div class="fsm-grid">
+            <a href="https://msrim.in/about" class="fsm-card"><div class="fsm-icon"><i class="bi bi-info-circle-fill"></i></div><span class="fsm-label">About Us</span></a>
+            <a href="https://msrim.in/programs" class="fsm-card"><div class="fsm-icon"><i class="bi bi-book-fill"></i></div><span class="fsm-label">Programs</span></a>
+            <a href="https://msrim.in/faculty" class="fsm-card"><div class="fsm-icon"><i class="bi bi-people-fill"></i></div><span class="fsm-label">Faculty</span></a>
+            <a href="https://msrim.in/admissions" class="fsm-card"><div class="fsm-icon"><i class="bi bi-pencil-square"></i></div><span class="fsm-label">Admissions</span></a>
+            <a href="https://msrim.in/placement" class="fsm-card"><div class="fsm-icon"><i class="bi bi-briefcase-fill"></i></div><span class="fsm-label">Placements</span></a>
+            <a href="https://msrim.in/centre-for-sustainability" class="fsm-card"><div class="fsm-icon"><i class="bi bi-tree-fill"></i></div><span class="fsm-label">Centre for Sustainability</span></a>
+            <a href="https://msrim.in/centre-for-leadership" class="fsm-card"><div class="fsm-icon"><i class="bi bi-person-arms-up"></i></div><span class="fsm-label">Centre for Leadership</span></a>
+            <a href="https://msrim.in/centre-for-case-development" class="fsm-card"><div class="fsm-icon"><i class="bi bi-journal-richtext"></i></div><span class="fsm-label">Centre for Case Dev</span></a>
+            <a href="https://msrim.in/ramaiah-bcic-centre" class="fsm-card"><div class="fsm-icon"><i class="bi bi-award-fill"></i></div><span class="fsm-label">BCIC Excellence</span></a>
+            <a href="https://msrim.in/centre-for-iks" class="fsm-card"><div class="fsm-icon"><i class="bi bi-flower1"></i></div><span class="fsm-label">Centre for IKS</span></a>
+            <a href="https://msrim.in/centre-for-entrepreneurship" class="fsm-card"><div class="fsm-icon"><i class="bi bi-lightbulb-fill"></i></div><span class="fsm-label">Entrepreneurship</span></a>
+            <a href="https://msrim.in/centre-for-research-consultancy" class="fsm-card"><div class="fsm-icon"><i class="bi bi-graph-up-arrow"></i></div><span class="fsm-label">Research &amp; Consultancy</span></a>
+            <a href="https://msrim.in/centre-for-corporate-relations" class="fsm-card"><div class="fsm-icon"><i class="bi bi-building-fill"></i></div><span class="fsm-label">Corporate Relations</span></a>
+            <a href="https://msrim.in/centre-for-alumni-relations" class="fsm-card"><div class="fsm-icon"><i class="bi bi-mortarboard-fill"></i></div><span class="fsm-label">Alumni Relations</span></a>
+            <a href="https://msrim.in/ramaiah-japan-centre" class="fsm-card"><div class="fsm-icon" style="background:linear-gradient(135deg,#BC002D,#9e0024)"><i class="bi bi-globe-asia-australia"></i></div><span class="fsm-label">Japan Centre</span></a>
+          </div>
+          <div class="fsm-quicklinks">
+            <a href="https://msrim.in/centres" class="fsm-quicklink"><i class="bi bi-grid-fill"></i> All Centres</a>
+            <a href="https://msrim.in/virtual-tour" target="_blank" class="fsm-quicklink"><i class="bi bi-camera-video-fill"></i> Campus Tour</a>
+            <a href="https://alumni.msrim.in/" target="_blank" class="fsm-quicklink"><i class="bi bi-person-heart"></i> Alumni Portal</a>
+            <a href="https://msrim.digiicampus.com/" target="_blank" class="fsm-quicklink"><i class="bi bi-laptop-fill"></i> DigiCampus Login</a>
+          </div>
+        </div>
+        <div class="fsm-right">
+          <div class="fsm-side-ctas">
+            <a href="https://admissions.msrim.in/" class="fsm-side-cta1"><i class="bi bi-mortarboard-fill"></i> Admission</a>
+            <a href="https://msrim.in/placement" class="fsm-side-cta2"><i class="bi bi-briefcase-fill"></i> Placements</a>
+          </div>
+          <nav class="fsm-side-nav">
+            <a href="https://msrim.in/" class="fsm-side-link">Home</a>
+            <div class="fsm-side-group">
+              <div class="fsm-side-link" onclick="toggleSide(this)">About Us <i class="bi bi-chevron-down chev"></i></div>
+              <div class="fsm-side-sub">
+                <a href="https://msrim.in/about">About MSRIM</a>
+                <a href="https://msrim.in/dean">Dean's Message</a>
+                <a href="https://msrim.in/vision-mission">Vision &amp; Mission</a>
+                <a href="https://msrim.in/governance">Governance</a>
+                <a href="https://msrim.in/rankings">B-School Ranking</a>
+              </div>
+            </div>
+            <div class="fsm-side-group">
+              <div class="fsm-side-link" onclick="toggleSide(this)">Programs <i class="bi bi-chevron-down chev"></i></div>
+              <div class="fsm-side-sub">
+                <a href="https://msrim.in/pgdm-two-year-full-time">PGDM — Two Year Full Time</a>
+                <a href="https://msrim.in/fpm">FPM</a>
+              </div>
+            </div>
+            <a href="https://msrim.in/admissions" class="fsm-side-link">Admissions</a>
+            <a href="https://msrim.in/faculty" class="fsm-side-link">Faculty</a>
+            <a href="https://msrim.in/placement" class="fsm-side-link">Placements</a>
+            <div class="fsm-side-group">
+              <div class="fsm-side-link" onclick="toggleSide(this)">Centres <i class="bi bi-chevron-down chev"></i></div>
+              <div class="fsm-side-sub">
+                <a href="https://msrim.in/centre-for-sustainability">Centre for Sustainability</a>
+                <a href="https://msrim.in/centre-for-leadership">Centre for Leadership</a>
+                <a href="https://msrim.in/centre-for-case-development">Centre for Case Development</a>
+                <a href="https://msrim.in/ramaiah-bcic-centre">BCIC–Ramaiah Centre for Excellence</a>
+                <a href="https://msrim.in/centre-for-iks">Centre for IKS</a>
+                <a href="https://msrim.in/centre-for-entrepreneurship">Centre for Entrepreneurship</a>
+                <a href="https://msrim.in/centre-for-research-consultancy">Centre for Research &amp; Consultancy</a>
+                <a href="https://msrim.in/centre-for-corporate-relations">Centre for Corporate Relations</a>
+                <a href="https://msrim.in/centre-for-alumni-relations">Centre for Alumni Relations</a>
+                <a href="https://msrim.in/innovation-council">Institute Innovation Council</a>
+                <a href="https://msrim.in/ramaiah-japan-centre" style="color:#BC002D;font-weight:700">Ramaiah Japan Centre</a>
+              </div>
+            </div>
+          </nav>
+          <a href="https://msrim.in/virtual-tour" target="_blank" class="fsm-side-footer"><i class="bi bi-camera-video-fill"></i> Campus Tour</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* ── Scroll-spy ── */
+    const navLinks = document.querySelectorAll('.sidebar-nav a');
+    const sections = Array.from(navLinks).map(a => document.querySelector(a.getAttribute('href')));
+    function updateActive() {
+      const y = window.scrollY + 200;
+      let activeIdx = 0;
+      sections.forEach((sec, i) => { if (sec && sec.offsetTop <= y) activeIdx = i; });
+      navLinks.forEach((l, i) => l.classList.toggle('active', i === activeIdx));
+    }
+    window.addEventListener('scroll', updateActive);
+
+    /* ── Reveal on scroll ── */
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+    }, { threshold: 0.08 });
+    reveals.forEach(r => io.observe(r));
+
+    /* ── Fullscreen menu ── */
+    (function () {
+      var btn = document.getElementById('menuBtn'),
+          ov = document.getElementById('fsmOverlay'),
+          cl = document.getElementById('fsmClose');
+      function openFSM() { if (ov) { ov.classList.add('open'); document.body.style.overflow = 'hidden'; } }
+      function closeFSM() { if (ov) { ov.classList.remove('open'); document.body.style.overflow = ''; } }
+      if (btn) btn.addEventListener('click', openFSM);
+      if (cl) cl.addEventListener('click', closeFSM);
+      if (ov) ov.addEventListener('click', function (e) { if (e.target === ov) closeFSM(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeFSM(); });
+    })();
+
+    function toggleSide(el) {
+      var g = el.parentElement;
+      document.querySelectorAll('.fsm-side-group.open').forEach(function (o) { if (o !== g) o.classList.remove('open'); });
+      g.classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>
