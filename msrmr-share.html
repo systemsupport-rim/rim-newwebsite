@@ -1,0 +1,2032 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M.S. Ramaiah Management Review | ISSN 0975-7988 | Peer-Reviewed International Journal</title>
+  <meta name="description"
+    content="M.S. Ramaiah Management Review — a peer-reviewed international journal advancing knowledge in management, business, and emerging markets through rigorous scholarly research." />
+
+  <!-- Fonts: Fraunces (display serif) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <style>
+    :root {
+      --navy-900: #0a1f3d;
+      --navy-800: #102b52;
+      --navy-700: #1a3a6b;
+      --navy-100: #e8eef7;
+      --gold-500: #c9a961;
+      --gold-600: #b08f48;
+      --gold-100: #f5ecd6;
+      --cream: #faf6ee;
+      --cream-2: #f3ece0;
+      --hero-cream: #f0e9da;
+      --ink: #1a1a1a;
+      --muted: #5a5a5a;
+      --line: #e3dccd;
+      --shadow-sm: 0 2px 12px rgba(10, 31, 61, .06);
+      --shadow-md: 0 8px 30px rgba(10, 31, 61, .10);
+      --shadow-lg: 0 20px 60px rgba(10, 31, 61, .15);
+      --serif: "Fraunces", "Times New Roman", serif;
+      --sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; transition: color .25s ease; }
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+
+    /* ============ TOP UTILITY BAR ============ */
+    .utility-bar {
+      background: var(--navy-900);
+      color: #fff;
+      font-size: 13.5px;
+      padding: 11px 0;
+    }
+
+    .utility-bar .wrap {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .utility-bar .brand-tag { font-weight: 500; letter-spacing: .2px; }
+
+    .utility-bar a { transition: color .25s; color: #fff; }
+    .utility-bar a:hover { color: rgba(255,255,255,.75); }
+
+    .utility-bar .right {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .utility-bar .right .ico {
+      display: inline-flex;
+      gap: 7px;
+      align-items: center;
+    }
+
+    .utility-bar .right .ico i { font-size: 13px; }
+
+    .utility-bar .register-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      border: 1px solid rgba(255,255,255,.5);
+      padding: 5px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      transition: all .3s;
+    }
+
+    .utility-bar .register-pill:hover {
+      background: rgba(255,255,255,.2);
+      border-color: #fff;
+      color: #fff;
+    }
+
+    /* ============ HEADER ============ */
+    .site-header {
+      background: #FDF9F4;
+      position: sticky;
+      top: 0;
+      z-index: 900;
+      border-bottom: 1px solid rgba(10,31,61,.08);
+      box-shadow: 0 2px 16px rgba(10,31,61,.06);
+    }
+
+    .header-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 28px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo-panel { display: flex; align-items: center; }
+    .logos { display: flex; align-items: center; }
+
+    /* Nav links */
+    .nav-links { display:flex; align-items:center; gap:2px; flex:1; justify-content:center; }
+    .nav-links a { font-size:13.5px; font-weight:500; color:var(--navy-900); padding:6px 10px; border-radius:6px; transition:all .2s; white-space:nowrap; }
+    .nav-links a:hover { background:var(--gold-100); color:var(--navy-900); }
+    .nav-links a.active { background:var(--gold-100); font-weight:700; border-bottom:2px solid var(--gold-500); }
+    @media(max-width:1100px) { .nav-links { display:none; } .nav-cta { display:none; } }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg,#E05A04,#F88C1A);
+      color: #fff;
+      padding: 9px 20px;
+      border-radius: 999px;
+      font-size: 13.5px;
+      font-weight: 600;
+      transition: opacity .25s;
+      flex-shrink: 0;
+    }
+    .nav-cta:hover { opacity: .9; }
+
+    /* MENU pill button */
+    .menu-pill {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      background: #E05A04;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 16px;
+      box-shadow: 0 3px 12px rgba(224,90,4,.35);
+      cursor: pointer;
+      transition: all .3s;
+      flex-shrink: 0;
+      margin-left: auto;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      min-width: 58px;
+    }
+    .menu-pill:hover { opacity: .88; transform: translateY(-1px); }
+    .menu-pill .lines { display: flex; flex-direction: column; gap: 4px; width: 22px; }
+    .menu-pill .lines span { height: 2px; background: #fff; border-radius: 2px; transition: all .3s; display: block; }
+    .menu-pill .lines span:nth-child(2) { width: 70%; margin-left: auto; }
+
+    /* ============ HERO with CURVE ============ */
+    .hero-curve {
+      position: relative;
+      background: #FDF9F4;
+      overflow: hidden;
+      height: 280px;
+    }
+
+    .hero-curve-inner {
+      position: relative;
+      display: grid;
+      grid-template-columns: 34% 66%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .hero-left {
+      background: var(--hero-cream);
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      padding: 18px 60px 18px 28px;
+      z-index: 2;
+      clip-path: path('M 0 0 L 100% 0 Q 70% 50%, 100% 100% L 0 100% Z');
+    }
+
+    @supports not (clip-path: path('M 0 0')) {
+      .hero-left { clip-path: ellipse(120% 100% at 0% 50%); }
+    }
+
+    .hero-left::before {
+      content: "";
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 200px; height: 200px;
+      background-image: radial-gradient(circle, rgba(201,169,97,.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero-title { position: relative; z-index: 3; max-width: 380px; }
+
+    .hero-title .eyebrow {
+      font-size: 11.5px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold-600);
+      font-weight: 600;
+      margin-bottom: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero-title .eyebrow::before {
+      content: "";
+      width: 28px; height: 1px;
+      background: var(--gold-500);
+    }
+
+    .hero-title h1 {
+      font-family: var(--serif);
+      font-weight: 300;
+      line-height: 1.05;
+      font-size: clamp(1.9rem, 3.2vw, 2.8rem);
+      letter-spacing: -.5px;
+    }
+
+    .hero-title h1 .gold {
+      color: var(--gold-600);
+      font-weight: 400;
+      font-style: italic;
+      display: block;
+    }
+
+    .hero-title h1 .navy {
+      color: var(--navy-900);
+      font-weight: 400;
+      display: block;
+    }
+
+    .hero-title .sub {
+      margin-top: 14px;
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.55;
+      max-width: 340px;
+    }
+
+    /* RIGHT image panel */
+    .hero-right {
+      position: relative;
+      background: linear-gradient(145deg, var(--navy-900) 0%, var(--navy-700) 100%);
+      overflow: hidden;
+      min-height: 280px;
+    }
+
+    /* ── Hero-right pill overlay ── */
+    .hero-right-pills {
+      position: absolute;
+      left: clamp(8px, 1.5vw, 18px);
+      right: clamp(16px, 3vw, 36px);
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: clamp(8px, 1vw, 12px);
+      z-index: 4;
+    }
+
+    .hr-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: clamp(10px, 1.1vw, 15px) clamp(18px, 2vw, 34px);
+      border-radius: 100px;
+      font-size: clamp(13px, 1.1vw, 16px);
+      font-weight: 600;
+      font-family: var(--sans);
+      cursor: default;
+      background: rgba(10,31,61,0.55);
+      border: 1.5px solid rgba(255,255,255,0.20);
+      color: rgba(255,255,255,0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      white-space: normal;
+      max-width: 100%;
+      line-height: 1.3;
+    }
+
+    .hr-pill--gold {
+      background: linear-gradient(135deg, #d4a843 0%, #c9a961 100%);
+      border-color: transparent;
+      color: var(--navy-900);
+      font-weight: 700;
+    }
+
+    /* ── Banner top-centre tagline ── */
+    .hero-banner-tagline {
+      position: absolute;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 4;
+      color: rgba(255,255,255,0.92);
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--sans);
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      background: rgba(10,31,61,0.45);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 7px 20px;
+      border-radius: 100px;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    /* ============ MAIN LAYOUT ============ */
+    .main-section {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 64px 28px 80px;
+      display: grid;
+      grid-template-columns: 290px 1fr;
+      gap: 48px;
+      align-items: flex-start;
+    }
+
+    /* ============ SIDEBAR ============ */
+    .sidebar { position: sticky; top: 88px; }
+
+    .sidebar-card {
+      background: #FDF9F4;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .sidebar-card h3 {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: 18px;
+      padding: 18px 24px;
+      background: var(--navy-900);
+      color: #fff;
+      letter-spacing: .3px;
+    }
+
+    .sidebar-nav li { border-bottom: 1px solid var(--line); }
+    .sidebar-nav li:last-child { border-bottom: none; }
+
+    .sidebar-nav a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 24px;
+      font-size: 14px;
+      color: var(--ink);
+      font-weight: 500;
+      transition: all .25s;
+    }
+
+    .sidebar-nav a:hover,
+    .sidebar-nav a.active {
+      background: var(--cream);
+      color: var(--navy-900);
+      padding-left: 30px;
+    }
+
+    .sidebar-nav a.active {
+      border-left: 3px solid var(--gold-500);
+    }
+
+    .sidebar-nav .arrow {
+      color: var(--gold-500);
+      font-size: 16px;
+      transition: transform .25s;
+      font-weight: 600;
+    }
+
+    .sidebar-nav a:hover .arrow { transform: translateX(4px); }
+
+    .sidebar-cta {
+      margin-top: 24px;
+      background: linear-gradient(135deg, var(--navy-900), var(--navy-700));
+      color: #fff;
+      padding: 28px 22px;
+      border-radius: 4px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sidebar-cta::before {
+      content: "";
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 140px; height: 140px;
+      background: radial-gradient(circle, var(--gold-500) 0%, transparent 70%);
+      opacity: .25;
+    }
+
+    .sidebar-cta h4 {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      line-height: 1.2;
+      position: relative;
+    }
+
+    .sidebar-cta p {
+      font-size: 13.5px;
+      color: rgba(255,255,255,.8);
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .sidebar-cta a {
+      display: inline-block;
+      background: var(--gold-500);
+      color: var(--navy-900);
+      padding: 9px 18px;
+      border-radius: 3px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      position: relative;
+    }
+
+    .sidebar-cta a:hover { background: #d8b96e; }
+
+    .sidebar-archive {
+      margin-top: 18px;
+      background: #FDF9F4;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 20px 22px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: all .3s;
+    }
+
+    .sidebar-archive:hover {
+      border-color: var(--gold-500);
+      box-shadow: var(--shadow-sm);
+      transform: translateY(-2px);
+    }
+
+    .sidebar-archive i {
+      font-size: 24px;
+      color: var(--gold-500);
+      flex-shrink: 0;
+    }
+
+    .sidebar-archive span {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy-900);
+    }
+
+    /* ============ CONTENT ============ */
+    .content > section { margin-bottom: 76px; }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 17px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold-600);
+      font-weight: 800;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--gold-500);
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      line-height: 1.1;
+      margin-bottom: 18px;
+      color: var(--navy-900);
+      letter-spacing: -.4px;
+    }
+
+    .section-title em { font-style: italic; color: var(--gold-600); font-weight: 300; }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .about-emblem {
+      width: 260px; height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 40% 35%, #1a3a6b, #0a1f3d 70%);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 28px;
+      position: relative;
+      box-shadow: 0 12px 40px rgba(10,31,61,.35), 0 0 0 2px #c9a961, 0 0 0 5px #0a1f3d, 0 0 0 7px #c9a961;
+      flex-shrink: 0;
+    }
+
+    .about-emblem::before {
+      content: "";
+      position: absolute;
+      inset: 16px;
+      border-radius: 50%;
+      border: 1px solid rgba(201,169,97,.35);
+      pointer-events: none;
+    }
+
+    .about-emblem::after {
+      content: "";
+      position: absolute;
+      inset: 22px;
+      border-radius: 50%;
+      border: 1px dashed rgba(201,169,97,.15);
+      pointer-events: none;
+    }
+
+    .about-emblem .icon {
+      font-size: 32px;
+      color: var(--gold-500);
+      margin-bottom: 10px;
+      filter: drop-shadow(0 2px 6px rgba(201,169,97,.5));
+    }
+
+    .about-emblem .label-top {
+      font-size: 9px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold-500);
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .about-emblem .label-main {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.2;
+      color: #fff;
+      text-shadow: 0 1px 4px rgba(0,0,0,.3);
+    }
+
+    .about-emblem .label-sub {
+      font-size: 9px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold-500);
+      margin-top: 10px;
+      font-weight: 600;
+    }
+
+    .about-text p {
+      color: #2a2a2a;
+      margin-bottom: 16px;
+      font-size: 16px;
+      line-height: 1.75;
+      text-align: justify;
+    }
+
+    .about-text p:first-of-type::first-letter {
+      font-family: var(--serif);
+      font-size: 56px;
+      font-weight: 500;
+      float: left;
+      line-height: .9;
+      margin: 6px 10px 0 0;
+      color: var(--navy-900);
+    }
+
+    /* Lead card */
+    .lead-card {
+      background: #FDF9F4;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--gold-500);
+      padding: 30px 32px;
+      border-radius: 2px;
+      box-shadow: var(--shadow-sm);
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .lead-icon {
+      width: 90px; height: 90px;
+      border-radius: 50%;
+      background: var(--cream-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-500);
+      font-size: 40px;
+    }
+
+    .lead-card h5 {
+      font-family: var(--serif);
+      font-size: 22px;
+      color: var(--navy-900);
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .lead-card .lead-role {
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold-600);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .lead-card p { font-size: 15px; color: #444; line-height: 1.65; }
+
+    /* News grid (articles) */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .news-card {
+      background: #FDF9F4;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: all .4s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .news-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+
+    .news-img {
+      width: 100%;
+      height: 180px;
+      background: linear-gradient(135deg, var(--navy-700), var(--navy-900));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-500);
+      font-size: 48px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .news-img::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(45deg, transparent 48%, rgba(201,169,97,.15) 49%, rgba(201,169,97,.15) 51%, transparent 52%);
+      background-size: 30px 30px;
+    }
+
+    .news-img.v2 { background: linear-gradient(135deg, #1a3a6b, #0a1f3d); }
+    .news-img.v3 { background: linear-gradient(135deg, #2c4a7e, #102b52); }
+
+    .news-body { padding: 22px 22px 24px; flex: 1; display: flex; flex-direction: column; }
+
+    .news-date {
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold-600);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .news-card h5 {
+      font-family: var(--serif);
+      font-size: 17px;
+      line-height: 1.35;
+      color: var(--navy-900);
+      font-weight: 500;
+      margin-bottom: 14px;
+      flex: 1;
+    }
+
+    .news-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--navy-900);
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap .25s;
+    }
+
+    .news-link:hover { gap: 12px; color: var(--gold-600); }
+
+    .view-more-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .view-more-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--navy-900);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding-bottom: 4px;
+      border-bottom: 2px solid var(--gold-500);
+      transition: gap .25s;
+    }
+
+    .view-more-link:hover { gap: 12px; }
+
+    /* Resources */
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .resource-card {
+      background: #FDF9F4;
+      border: 1px solid var(--line);
+      padding: 26px 28px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      transition: all .35s;
+    }
+
+    .resource-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--gold-500);
+    }
+
+    .resource-icon {
+      width: 56px; height: 56px;
+      background: var(--cream-2);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy-900);
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+
+    .resource-card h5 {
+      font-family: var(--serif);
+      font-size: 17px;
+      color: var(--navy-900);
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .resource-card span { font-size: 13px; color: var(--muted); }
+
+    /* Footer */
+    .footer {
+      background: var(--navy-900);
+      color: #cfd8e8;
+      padding: 70px 0 0;
+      margin-top: 30px;
+      position: relative;
+    }
+
+    .footer::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(to right, var(--gold-500), transparent);
+    }
+
+    .footer-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 28px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer h6 {
+      color: #fff;
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      position: relative;
+    }
+
+    .footer h6::after {
+      content: "";
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 30px; height: 2px;
+      background: var(--gold-500);
+    }
+
+    .footer-brand img {
+      max-height: 60px;
+      margin-bottom: 18px;
+      background: rgba(255,255,255,.95);
+      padding: 8px 14px;
+      border-radius: 4px;
+    }
+
+    .footer-brand p {
+      font-size: 14px;
+      line-height: 1.65;
+      color: rgba(255,255,255,.7);
+      margin-bottom: 10px;
+    }
+
+    .footer-brand .contact-line {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 8px;
+      font-size: 13.5px;
+    }
+
+    .footer-brand .contact-line i { color: var(--gold-500); margin-top: 3px; }
+
+    .footer ul li { margin-bottom: 10px; font-size: 14px; }
+
+    .footer ul li a {
+      color: rgba(255,255,255,.7);
+      transition: all .25s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer ul li a::before {
+      content: "›";
+      color: var(--gold-500);
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    .footer ul li a:hover { color: var(--gold-500); transform: translateX(3px); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding: 22px 0;
+      background: rgba(0,0,0,.2);
+    }
+
+    .footer-bottom .wrap {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: rgba(255,255,255,.6);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-bottom a { color: var(--gold-500); }
+
+    /* Reveal */
+    .reveal { opacity: 0; transform: translateY(20px); transition: all .8s ease; }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+
+    /* ============ JOURNAL-SPECIFIC CLASSES ============ */
+
+    /* Scope grid */
+    .scope-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:8px; }
+    .scope-card { background:#FDF9F4; border:1px solid var(--line); padding:20px 18px; border-radius:4px; position:relative; transition:all .35s; }
+    .scope-card::before { content:""; position:absolute; top:0; left:0; width:4px; height:100%; background:var(--gold-500); transform-origin:top; transform:scaleY(0); transition:transform .35s; }
+    .scope-card:hover { transform:translateX(4px); box-shadow:var(--shadow-sm); }
+    .scope-card:hover::before { transform:scaleY(1); }
+    .scope-card i { font-size:20px; color:var(--gold-600); margin-bottom:8px; display:block; }
+    .scope-card h5 { font-family:var(--serif); font-size:15px; font-weight:500; color:var(--navy-900); line-height:1.35; }
+    .scope-intro { font-size:15.5px; color:var(--muted); line-height:1.7; margin-bottom:20px; }
+    @media(max-width:768px) { .scope-grid { grid-template-columns:1fr; } }
+
+    /* Board member grid */
+    .board-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:24px; }
+    .board-card { background:#FDF9F4; border:1px solid var(--line); border-top:3px solid transparent; padding:20px 18px; border-radius:4px; transition:all .35s; }
+    .board-card:hover { border-top-color:var(--gold-500); transform:translateY(-3px); box-shadow:var(--shadow-md); }
+    .board-card h5 { font-family:var(--serif); font-size:15px; font-weight:600; color:var(--navy-900); margin-bottom:3px; }
+    .board-card .desig { font-size:12.5px; color:var(--muted); margin-bottom:3px; }
+    .board-card .inst { font-size:12.5px; color:var(--gold-600); font-weight:500; line-height:1.4; }
+    .board-card .divider { width:24px; height:1px; background:var(--gold-500); margin:8px 0; }
+    .board-card .country { display:inline-flex; align-items:center; gap:4px; font-size:10px; background:var(--navy-100); color:var(--navy-900); padding:2px 8px; border-radius:3px; font-weight:500; }
+    @media(max-width:768px) { .board-grid { grid-template-columns:1fr; } }
+
+    /* Current issue band */
+    .issue-band { background:linear-gradient(135deg,var(--navy-900),var(--navy-700)); color:#fff; padding:24px 28px; border-radius:4px; margin-bottom:28px; display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; }
+    .issue-vol { font-family:var(--serif); font-size:52px; font-weight:300; color:var(--gold-500); line-height:1; }
+    .issue-meta { display:flex; flex-direction:column; gap:4px; }
+    .issue-meta span { font-size:13.5px; color:rgba(255,255,255,.85); }
+    .issue-badge { display:inline-flex; gap:20px; align-items:center; }
+    .issue-cta { display:inline-flex; align-items:center; gap:8px; background:var(--gold-500); color:var(--navy-900); padding:10px 22px; border-radius:3px; font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:.5px; text-decoration:none; flex-shrink:0; }
+    .issue-cta:hover { background:#d8b96e; }
+
+    /* Article list */
+    .article-list { display:flex; flex-direction:column; gap:10px; }
+    .article-item { background:#FDF9F4; border:1px solid var(--line); border-left:3px solid transparent; padding:16px 22px; border-radius:2px; display:flex; justify-content:space-between; align-items:center; gap:16px; transition:all .3s; text-decoration:none; }
+    .article-item:hover { border-left-color:var(--gold-500); background:var(--cream-2); }
+    .article-num { width:28px; height:28px; border-radius:50%; background:var(--gold-500); color:var(--navy-900); display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0; }
+    .article-body { flex:1; }
+    .article-title { font-family:var(--serif); font-size:15px; color:var(--navy-900); font-weight:500; line-height:1.4; margin-bottom:4px; }
+    .article-item:hover .article-title { color:var(--gold-600); }
+    .article-type { font-size:11.5px; color:var(--muted); letter-spacing:.5px; }
+    .article-stats { display:flex; flex-direction:column; align-items:flex-end; gap:4px; flex-shrink:0; }
+    .article-stats span { font-size:11.5px; color:var(--muted); display:flex; align-items:center; gap:4px; }
+    .article-read { font-size:12px; font-weight:700; color:var(--gold-600); margin-top:4px; }
+
+    /* Indexing grid */
+    .index-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+    .index-card { background:#FDF9F4; border:1px solid var(--line); border-radius:8px; padding:32px 20px; text-align:center; transition:all .4s; }
+    .index-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); border-color:var(--gold-500); }
+    .index-card i { font-size:38px; color:var(--gold-500); margin-bottom:14px; display:block; }
+    .index-card h5 { font-family:var(--serif); font-size:18px; color:var(--navy-900); font-weight:500; margin-bottom:6px; }
+    .index-card p { font-size:13px; color:var(--muted); line-height:1.5; }
+    .index-sub { font-size:15.5px; color:var(--muted); line-height:1.7; margin-bottom:24px; }
+    @media(max-width:768px) { .index-grid { grid-template-columns:repeat(2,1fr); } }
+
+    /* CTA band */
+    .cta-band { background:linear-gradient(135deg,var(--navy-900),var(--navy-700)); border-left:4px solid var(--gold-500); padding:32px; border-radius:4px; display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap; margin-top:28px; }
+    .cta-band h4 { font-family:var(--serif); font-size:22px; color:#fff; font-weight:500; margin-bottom:6px; }
+    .cta-band p { font-size:14px; color:rgba(255,255,255,.78); }
+    .cta-btn { display:inline-flex; align-items:center; gap:8px; background:var(--gold-500); color:var(--navy-900); padding:12px 26px; border-radius:3px; font-size:14px; font-weight:700; text-decoration:none; flex-shrink:0; transition:background .25s; }
+    .cta-btn:hover { background:#d8b96e; }
+
+    /* ============ FULLSCREEN MENU ============ */
+    .fsm-overlay { position:fixed; inset:0; z-index:9999; opacity:0; visibility:hidden; transition:opacity .38s; }
+    .fsm-overlay.open { opacity:1; visibility:visible; }
+    .fsm-panel { position:fixed; inset:0; background:#faf6ee; transform:translateY(-105%); transition:transform .48s cubic-bezier(.4,0,.2,1); overflow-y:auto; display:flex; flex-direction:column; }
+    .fsm-overlay.open .fsm-panel { transform:translateY(0); }
+    .fsm-header { position:relative; z-index:1; display:flex; align-items:center; justify-content:space-between; padding:20px 44px; border-bottom:1px solid #e3dccd; }
+    .fsm-logo { height:40px; filter:none; opacity:1; }
+    .fsm-header-right { display:flex; align-items:center; gap:14px; }
+    .fsm-header-cta { display:inline-flex; align-items:center; gap:7px; padding:9px 22px; background:#E05A04; color:#fff; font-size:13px; font-weight:700; border-radius:999px; text-decoration:none; transition:all .2s; }
+    .fsm-header-cta:hover { background:#c94f03; color:#fff; transform:translateY(-1px); }
+    .fsm-close { width:42px; height:42px; border-radius:50%; border:1.5px solid #ddd; background:#fff; color:var(--navy-900); font-size:18px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all .25s; }
+    .fsm-close:hover { background:#E05A04; border-color:#E05A04; transform:rotate(90deg); color:#fff; }
+    .fsm-section-label { font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gold-600); margin-bottom:8px; display:block; }
+    .fsm-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:8px; }
+    .fsm-card { background:#fff; border:1px solid #e3dccd; border-bottom:3px solid #e3dccd; border-radius:16px; padding:10px 8px 9px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:6px; text-decoration:none; transition:all .25s; box-shadow:0 2px 10px rgba(10,31,61,.06); }
+    .fsm-card:hover { background:rgba(255,255,255,.96); border-color:rgba(255,255,255,.8); border-bottom-color:#E05A04; transform:translateY(-6px); box-shadow:0 20px 50px rgba(0,0,0,.4); }
+    .fsm-card:hover .fsm-label { color:var(--navy-900); }
+    .fsm-card:hover .fsm-icon { transform:scale(1.12); box-shadow:0 8px 24px rgba(224,90,4,.6); }
+    .fsm-icon { width:34px; height:34px; border-radius:50%; background:linear-gradient(135deg,#E05A04 0%,#F88C1A 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-size:15px; flex-shrink:0; box-shadow:0 4px 12px rgba(224,90,4,.4); transition:all .25s; }
+    .fsm-label { font-size:11px; font-weight:600; color:#1a1a1a; line-height:1.3; transition:color .25s; }
+    .fsm-quicklinks { display:flex; align-items:center; gap:8px; flex-wrap:wrap; padding-top:8px; border-top:1px solid #e3dccd; }
+    .fsm-quicklink { display:inline-flex; align-items:center; gap:6px; padding:8px 18px; border:1px solid #e3dccd; border-radius:999px; color:#333; font-size:12.5px; font-weight:500; text-decoration:none; transition:all .2s; }
+    .fsm-quicklink:hover { background:var(--gold-100); border-color:var(--gold-500); color:var(--navy-900); }
+    .fsm-body { position:relative; z-index:1; flex:1; padding:28px 32px 40px; display:grid; grid-template-columns:1fr 280px; gap:24px; align-items:start; }
+    .fsm-left { display:flex; flex-direction:column; gap:10px; }
+    .fsm-right { background:#fff; border:1px solid #e3dccd; border-radius:16px; overflow:hidden; display:flex; flex-direction:column; position:sticky; top:20px; }
+    .fsm-side-ctas { display:grid; grid-template-columns:1fr 1fr; }
+    .fsm-side-cta1 { display:flex; align-items:center; justify-content:center; gap:6px; padding:13px 8px; background:#E05A04; color:#fff; font-size:12px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; text-decoration:none; transition:background .2s; }
+    .fsm-side-cta1:hover { background:#c94f03; color:#fff; }
+    .fsm-side-cta2 { display:flex; align-items:center; justify-content:center; gap:6px; padding:13px 8px; background:var(--navy-900); color:#fff; font-size:12px; font-weight:600; text-decoration:none; transition:background .2s; }
+    .fsm-side-cta2:hover { background:var(--navy-700); color:#fff; }
+    .fsm-side-nav { display:flex; flex-direction:column; }
+    .fsm-side-link { display:flex; align-items:center; justify-content:space-between; padding:11px 16px; font-size:13px; font-weight:500; color:#1a1a1a; text-decoration:none; border-bottom:1px solid #e8e3da; transition:all .2s; cursor:pointer; user-select:none; }
+    a.fsm-side-link:hover, .fsm-side-link:hover { background:#f5f0e8; color:var(--navy-900); padding-left:22px; }
+    .fsm-side-link .chev { font-size:11px; color:#aaa; transition:transform .25s; flex-shrink:0; }
+    .fsm-side-group.open > .fsm-side-link .chev { transform:rotate(180deg); }
+    .fsm-side-group.open > .fsm-side-link { background:#fdf0e8; color:#E05A04; }
+    .fsm-side-sub { max-height:0; overflow:hidden; transition:max-height .3s ease; background:#f9f6f0; }
+    .fsm-side-group.open .fsm-side-sub { max-height:500px; }
+    .fsm-side-sub a { display:flex; align-items:center; gap:6px; padding:9px 16px 9px 28px; font-size:12px; color:#555; text-decoration:none; border-bottom:1px solid #ede8e0; transition:all .2s; }
+    .fsm-side-sub a::before { content:"›"; color:#E05A04; font-size:14px; line-height:1; flex-shrink:0; }
+    .fsm-side-sub a:hover { background:#f0ebe0; color:var(--navy-900); padding-left:34px; }
+    .fsm-side-footer { display:flex; align-items:center; justify-content:center; gap:8px; padding:13px 16px; background:var(--gold-100); color:var(--gold-600); font-size:12.5px; font-weight:600; text-decoration:none; transition:all .2s; }
+    .fsm-side-footer:hover { background:rgba(201,169,97,.22); color:#e0be7a; }
+
+    /* ============ RESPONSIVE ============ */
+    @media(max-width:1100px) {
+      .hero-curve { height:auto; }
+      .hero-curve-inner { overflow:visible; grid-template-columns:40% 60%; }
+      .hero-left { padding:18px 40px 18px 24px; align-items:center; }
+    }
+
+    @media(max-width:1024px) {
+      .main-section { grid-template-columns:1fr; }
+      .sidebar { position:static; }
+      .footer-grid { grid-template-columns:1fr 1fr; }
+      .fsm-body { grid-template-columns:1fr; }
+      .fsm-right { display:none; }
+    }
+
+    @media(max-width:800px) {
+      .fsm-grid { grid-template-columns:repeat(3,1fr); gap:10px; }
+      .fsm-body { padding:24px 20px 36px; }
+      .fsm-header { padding:16px 20px; }
+    }
+
+    @media(max-width:768px) {
+      .utility-bar .brand-tag { display:none; }
+      .utility-bar .right { gap:14px; font-size:12px; }
+      .hero-curve { height:auto; }
+      .hero-curve-inner { grid-template-columns:1fr; }
+      .hero-left { clip-path:none; padding:40px 24px 70px; align-items:center; }
+      .hero-right { height:240px; clip-path:ellipse(150% 100% at 50% 100%); margin-top:-40px; }
+      .about-grid { grid-template-columns:1fr; text-align:center; justify-items:center; }
+      .about-emblem { margin:0 auto; }
+      .about-text p:first-of-type::first-letter { float:none; font-size:1em; margin:0; }
+      .news-grid { grid-template-columns:1fr; }
+      .resources-grid { grid-template-columns:1fr; }
+      .footer-grid { grid-template-columns:1fr; gap:30px; }
+      .lead-card { grid-template-columns:1fr; text-align:center; }
+      .lead-icon { margin:0 auto; }
+      .main-section { padding:40px 18px 60px; gap:30px; }
+      .hero-right-pills { left:50%; right:auto; top:auto; bottom:48px; transform:translateX(-50%); flex-direction:row; flex-wrap:wrap; align-items:center; justify-content:center; width:90%; }
+      .hr-pill { font-size:12px; padding:8px 16px; white-space:nowrap; }
+      .issue-band { flex-direction:column; align-items:flex-start; }
+      .board-grid { grid-template-columns:1fr; }
+      .scope-grid { grid-template-columns:1fr; }
+    }
+
+    @media(max-width:480px) {
+      .fsm-grid { grid-template-columns:repeat(2,1fr); gap:8px; }
+      .index-grid { grid-template-columns:1fr 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP UTILITY BAR -->
+  <div class="utility-bar">
+    <div class="wrap">
+      <div class="brand-tag">M.S. Ramaiah Management Review | ISSN 0975-7988</div>
+      <div class="right">
+        <a class="ico" href="mailto:editor@msrmr.in"><i class="bi bi-envelope-fill"></i> editor@msrmr.in</a>
+        <a class="ico" href="https://msrim.in"><i class="bi bi-globe2"></i> MSRIM Website</a>
+        <a class="register-pill" href="https://msrmr.in/auth/register"><i class="bi bi-person-plus-fill"></i> Register</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-panel">
+        <a href="https://msrmr.in/" class="logos">
+          <img src="https://msrmr.in/public/assets/images/msrmr-logo.png" alt="MSRMR" style="height:44px;width:auto;object-fit:contain;" />
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="https://msrmr.in/about">About Us</a>
+        <a href="https://msrmr.in/about/editorial-board">Editorial Board</a>
+        <a href="https://msrmr.in/about/author-guidelines">Guidelines</a>
+        <a href="https://msrmr.in/about/submissions">Submissions</a>
+        <a href="https://msrmr.in/articles/past-issues">Archives</a>
+        <a href="https://msrmr.in/announcements">Announcements</a>
+        <a href="https://msrmr.in/contact">Contact</a>
+      </nav>
+      <a href="https://msrmr.in/about/submissions" class="nav-cta">
+        <i class="bi bi-send-fill"></i> Submit Research
+      </a>
+      <button class="menu-pill" id="menuBtn" aria-label="Open menu">
+        Menu
+        <span class="lines"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO with CURVE -->
+  <section class="hero-curve">
+    <div class="hero-curve-inner">
+      <div class="hero-left">
+        <div class="hero-title">
+          <div class="eyebrow">MSRIM Research Journal</div>
+          <h1>
+            <span class="gold">M.S. Ramaiah</span>
+            <span class="navy">Management Review</span>
+          </h1>
+          <p class="sub">A peer-reviewed international journal advancing knowledge in management, business, and emerging markets through rigorous scholarly research.</p>
+        </div>
+      </div>
+      <div class="hero-right" id="heroRight">
+        <!-- ACADEMIC SVG ILLUSTRATION -->
+        <svg viewBox="0 0 900 280" preserveAspectRatio="xMidYMid slice"
+             style="position:absolute;inset:0;width:100%;height:100%;z-index:1;"
+             xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <!-- Dark navy background gradient -->
+            <radialGradient id="rBg" cx="40%" cy="45%" r="70%">
+              <stop offset="0%" stop-color="#06111f"/>
+              <stop offset="55%" stop-color="#0b2048"/>
+              <stop offset="100%" stop-color="#0e2a5c"/>
+            </radialGradient>
+            <!-- Gold radial glow -->
+            <radialGradient id="rGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#c9a961" stop-opacity="0.28"/>
+              <stop offset="100%" stop-color="#c9a961" stop-opacity="0"/>
+            </radialGradient>
+            <!-- Dot grid pattern -->
+            <pattern id="rDots" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="0.8" fill="rgba(255,255,255,0.07)"/>
+            </pattern>
+            <!-- Book glow filter -->
+            <filter id="bookGlow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3.5" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <!-- Soft glow filter -->
+            <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="7" result="blur"/>
+            </filter>
+          </defs>
+
+          <!-- Background -->
+          <rect width="900" height="280" fill="url(#rBg)"/>
+          <rect width="900" height="280" fill="url(#rDots)"/>
+          <!-- Gold ambient ellipse -->
+          <ellipse cx="650" cy="140" rx="260" ry="180" fill="#c9a961" opacity="0.04"/>
+
+          <!-- Stars -->
+          <circle cx="310" cy="22" r="1" fill="white" opacity="0.55"/>
+          <circle cx="380" cy="45" r="0.8" fill="white" opacity="0.45"/>
+          <circle cx="430" cy="18" r="1.2" fill="white" opacity="0.60"/>
+          <circle cx="500" cy="35" r="0.9" fill="white" opacity="0.50"/>
+          <circle cx="560" cy="12" r="1" fill="white" opacity="0.55"/>
+          <circle cx="620" cy="30" r="0.8" fill="white" opacity="0.45"/>
+          <circle cx="700" cy="20" r="1.1" fill="white" opacity="0.55"/>
+          <circle cx="760" cy="40" r="0.9" fill="white" opacity="0.48"/>
+          <circle cx="820" cy="15" r="1" fill="white" opacity="0.52"/>
+          <circle cx="870" cy="50" r="0.8" fill="white" opacity="0.42"/>
+          <circle cx="290" cy="200" r="0.9" fill="white" opacity="0.40"/>
+          <circle cx="350" cy="230" r="1" fill="white" opacity="0.45"/>
+          <circle cx="420" cy="260" r="0.8" fill="white" opacity="0.38"/>
+          <circle cx="480" cy="248" r="1.1" fill="white" opacity="0.42"/>
+          <circle cx="550" cy="265" r="0.9" fill="white" opacity="0.40"/>
+          <circle cx="610" cy="245" r="0.8" fill="white" opacity="0.44"/>
+          <circle cx="740" cy="255" r="1" fill="white" opacity="0.42"/>
+          <circle cx="800" cy="238" r="0.9" fill="white" opacity="0.48"/>
+          <circle cx="855" cy="210" r="1.1" fill="white" opacity="0.50"/>
+          <circle cx="880" cy="260" r="0.8" fill="white" opacity="0.38"/>
+
+          <!-- OPEN BOOK ILLUSTRATION -->
+          <!-- Book shadow -->
+          <ellipse cx="672" cy="182" rx="145" ry="13" fill="#000" opacity="0.22"/>
+          <!-- Left page -->
+          <path d="M538,172 L538,88 Q538,80 546,78 L665,74 L665,162 Z" fill="white" opacity="0.09" filter="url(#bookGlow)"/>
+          <!-- Left page inner -->
+          <path d="M546,168 L546,92 Q546,86 553,84 L660,80 L660,158 Z" fill="white" opacity="0.06"/>
+          <!-- Right page -->
+          <path d="M678,74 L798,78 Q806,80 806,88 L806,172 L678,162 Z" fill="white" opacity="0.09" filter="url(#bookGlow)"/>
+          <!-- Right page inner -->
+          <path d="M683,80 L793,84 Q801,86 801,92 L801,168 L683,158 Z" fill="white" opacity="0.05"/>
+          <!-- Gold spine -->
+          <path d="M665,74 Q671,70 678,74 L678,162 Q671,166 665,162 Z" fill="#c9a961" opacity="0.80"/>
+
+          <!-- Left page text lines -->
+          <line x1="556" y1="96" x2="652" y2="93" stroke="white" stroke-width="1.5" opacity="0.35"/>
+          <line x1="558" y1="106" x2="650" y2="103" stroke="white" stroke-width="0.9" opacity="0.25"/>
+          <line x1="558" y1="116" x2="649" y2="113" stroke="white" stroke-width="0.9" opacity="0.22"/>
+          <line x1="559" y1="126" x2="648" y2="123" stroke="white" stroke-width="0.9" opacity="0.28"/>
+          <line x1="559" y1="136" x2="647" y2="133" stroke="white" stroke-width="0.9" opacity="0.22"/>
+          <line x1="560" y1="146" x2="646" y2="143" stroke="white" stroke-width="0.9" opacity="0.25"/>
+          <line x1="560" y1="156" x2="645" y2="153" stroke="white" stroke-width="0.9" opacity="0.20"/>
+
+          <!-- Right page text lines -->
+          <line x1="690" y1="96" x2="794" y2="99" stroke="white" stroke-width="1.5" opacity="0.32"/>
+          <line x1="691" y1="106" x2="793" y2="109" stroke="white" stroke-width="0.9" opacity="0.25"/>
+          <line x1="692" y1="116" x2="792" y2="119" stroke="white" stroke-width="0.9" opacity="0.22"/>
+          <line x1="692" y1="126" x2="791" y2="129" stroke="white" stroke-width="0.9" opacity="0.28"/>
+          <line x1="693" y1="136" x2="790" y2="139" stroke="white" stroke-width="0.9" opacity="0.22"/>
+          <line x1="694" y1="146" x2="789" y2="149" stroke="white" stroke-width="0.9" opacity="0.25"/>
+          <line x1="694" y1="156" x2="788" y2="159" stroke="white" stroke-width="0.9" opacity="0.20"/>
+
+          <!-- Gold glow behind book spine -->
+          <ellipse cx="671" cy="128" rx="35" ry="55" fill="#c9a961" opacity="0.08" filter="url(#softGlow)"/>
+
+          <!-- Research network: gold dots -->
+          <circle cx="512" cy="108" r="3" fill="#c9a961" opacity="0.75"/>
+          <circle cx="840" cy="115" r="3" fill="#c9a961" opacity="0.75"/>
+          <circle cx="508" cy="162" r="2.5" fill="#c9a961" opacity="0.65"/>
+          <circle cx="842" cy="72" r="2.5" fill="#c9a961" opacity="0.65"/>
+          <circle cx="475" cy="135" r="2" fill="#c9a961" opacity="0.60"/>
+          <circle cx="862" cy="148" r="2" fill="#c9a961" opacity="0.60"/>
+
+          <!-- Research network: white dots -->
+          <circle cx="488" cy="88" r="1.8" fill="white" opacity="0.55"/>
+          <circle cx="868" cy="100" r="1.8" fill="white" opacity="0.55"/>
+          <circle cx="462" cy="165" r="1.5" fill="white" opacity="0.50"/>
+          <circle cx="875" cy="170" r="1.5" fill="white" opacity="0.50"/>
+          <circle cx="470" cy="115" r="1.5" fill="white" opacity="0.50"/>
+          <circle cx="872" cy="130" r="1.5" fill="white" opacity="0.50"/>
+
+          <!-- Gold dashed connector lines -->
+          <line x1="512" y1="108" x2="538" y2="120" stroke="#c9a961" stroke-width="0.9" opacity="0.32" stroke-dasharray="3 3"/>
+          <line x1="840" y1="115" x2="806" y2="122" stroke="#c9a961" stroke-width="0.9" opacity="0.32" stroke-dasharray="3 3"/>
+          <line x1="508" y1="162" x2="538" y2="155" stroke="#c9a961" stroke-width="0.9" opacity="0.32" stroke-dasharray="3 3"/>
+          <line x1="842" y1="72" x2="806" y2="90" stroke="#c9a961" stroke-width="0.9" opacity="0.32" stroke-dasharray="3 3"/>
+          <line x1="475" y1="135" x2="538" y2="138" stroke="#c9a961" stroke-width="0.9" opacity="0.28" stroke-dasharray="3 3"/>
+          <line x1="862" y1="148" x2="806" y2="145" stroke="#c9a961" stroke-width="0.9" opacity="0.28" stroke-dasharray="3 3"/>
+          <line x1="488" y1="88" x2="538" y2="98" stroke="white" stroke-width="0.6" opacity="0.20" stroke-dasharray="3 3"/>
+          <line x1="868" y1="100" x2="806" y2="108" stroke="white" stroke-width="0.6" opacity="0.20" stroke-dasharray="3 3"/>
+
+          <!-- Floating keyword pill tags -->
+          <!-- Peer Reviewed -->
+          <rect x="492" y="50" width="86" height="18" rx="9" fill="none" stroke="#c9a961" stroke-width="0.9" opacity="0.55"/>
+          <text x="535" y="63" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#c9a961" opacity="0.80" font-weight="600">Peer Reviewed</text>
+          <!-- Vol. 16 Issue 3 -->
+          <rect x="752" y="44" width="100" height="18" rx="9" fill="none" stroke="#c9a961" stroke-width="0.9" opacity="0.55"/>
+          <text x="802" y="57" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#c9a961" opacity="0.80" font-weight="600">Vol. 16 · Issue 3</text>
+          <!-- ISSN -->
+          <rect x="612" y="244" width="96" height="18" rx="9" fill="none" stroke="rgba(201,169,97,0.4)" stroke-width="0.9" opacity="0.60"/>
+          <text x="660" y="257" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#c9a961" opacity="0.65" font-weight="500">ISSN 0975-7988</text>
+          <!-- DOI Enabled -->
+          <rect x="766" y="235" width="78" height="18" rx="9" fill="none" stroke="rgba(201,169,97,0.4)" stroke-width="0.9" opacity="0.60"/>
+          <text x="805" y="248" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#c9a961" opacity="0.65" font-weight="500">DOI Enabled</text>
+
+          <!-- Bottom decorative line -->
+          <line x1="260" y1="277" x2="900" y2="277" stroke="#c9a961" stroke-width="1" opacity="0.22"/>
+        </svg>
+
+        <!-- Tagline overlay -->
+        <div class="hero-banner-tagline">Peer-Reviewed &bull; International &bull; ISSN 0975-7988</div>
+
+        <!-- Pills overlay -->
+        <div class="hero-right-pills">
+          <span class="hr-pill hr-pill--gold">Volume 16 · Issue 3</span>
+          <span class="hr-pill">Open Access</span>
+          <span class="hr-pill">DOI Enabled</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <div class="main-section">
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <h3>Journal Navigation</h3>
+        <ul class="sidebar-nav">
+          <li><a href="#about" class="active">About <span class="arrow">→</span></a></li>
+          <li><a href="#scope">Aims &amp; Scope <span class="arrow">→</span></a></li>
+          <li><a href="#board">Editorial Board <span class="arrow">→</span></a></li>
+          <li><a href="#current-issue">Current Issue <span class="arrow">→</span></a></li>
+          <li><a href="#articles">Latest Articles <span class="arrow">→</span></a></li>
+          <li><a href="#indexing">Indexing <span class="arrow">→</span></a></li>
+          <li><a href="#submit">Submit Research <span class="arrow">→</span></a></li>
+        </ul>
+      </div>
+      <div class="sidebar-cta">
+        <h4>Submit Your Research</h4>
+        <p>We welcome submissions from academics, researchers, and practitioners worldwide.</p>
+        <a href="https://msrmr.in/about/submissions">Make a Submission</a>
+      </div>
+      <a href="https://msrmr.in/articles/past-issues" class="sidebar-archive">
+        <i class="bi bi-archive"></i>
+        <span>Browse Past Issues</span>
+      </a>
+    </aside>
+
+    <main class="content">
+
+      <!-- SECTION 1: ABOUT -->
+      <section id="about" class="reveal">
+        <span class="section-eyebrow">About the Journal</span>
+        <h2 class="section-title">Advancing <em>management scholarship</em></h2>
+        <div class="about-grid">
+          <div class="about-emblem">
+            <i class="bi bi-journal-richtext icon"></i>
+            <div class="label-top">MSRIM</div>
+            <div class="label-main">Management<br/>Review</div>
+            <div class="label-sub">ISSN 0975-7988</div>
+          </div>
+          <div class="about-text">
+            <p>M.S. Ramaiah Management Review (ISSN: 0975-7988) is a peer-reviewed international journal published by M.S. Ramaiah Institute of Management, Bengaluru. The journal provides a platform for academicians, researchers and professionals from business and management fields to publish high-quality, original research.</p>
+            <p>We prioritise research demonstrating theoretical innovation, empirical rigour, and practical relevance — with particular attention to emerging markets and the Global South. All accepted articles are published with a DOI, ensuring permanent, citable access to scholarly work.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: SCOPE -->
+      <section id="scope" class="reveal">
+        <span class="section-eyebrow">Research Areas</span>
+        <h2 class="section-title">Aims &amp; <em>Scope</em></h2>
+        <p class="scope-intro">The journal welcomes submissions across all major management disciplines — from empirical research and theoretical papers to conceptual frameworks, literature reviews, and case studies.</p>
+        <div class="scope-grid">
+          <div class="scope-card">
+            <i class="bi bi-graph-up-arrow"></i>
+            <h5>Strategic Management &amp; Leadership</h5>
+          </div>
+          <div class="scope-card">
+            <i class="bi bi-megaphone"></i>
+            <h5>Marketing &amp; Consumer Behaviour</h5>
+          </div>
+          <div class="scope-card">
+            <i class="bi bi-people"></i>
+            <h5>Human Resource Management &amp; OB</h5>
+          </div>
+          <div class="scope-card">
+            <i class="bi bi-cash-coin"></i>
+            <h5>Financial Management &amp; Accounting</h5>
+          </div>
+          <div class="scope-card">
+            <i class="bi bi-lightbulb"></i>
+            <h5>Entrepreneurship &amp; Innovation</h5>
+          </div>
+          <div class="scope-card">
+            <i class="bi bi-boxes"></i>
+            <h5>Operations &amp; Supply Chain Management</h5>
+          </div>
+          <div class="scope-card">
+            <i class="bi bi-globe2"></i>
+            <h5>International Business &amp; Trade</h5>
+          </div>
+          <div class="scope-card">
+            <i class="bi bi-cpu"></i>
+            <h5>Technology Management &amp; Digital Transformation</h5>
+          </div>
+          <div class="scope-card">
+            <i class="bi bi-bar-chart-line"></i>
+            <h5>Business Analytics &amp; Decision Sciences</h5>
+          </div>
+          <div class="scope-card">
+            <i class="bi bi-shield-check"></i>
+            <h5>Corporate Governance &amp; Business Ethics</h5>
+          </div>
+          <div class="scope-card">
+            <i class="bi bi-tree"></i>
+            <h5>Sustainable Business &amp; CSR</h5>
+          </div>
+          <div class="scope-card">
+            <i class="bi bi-building"></i>
+            <h5>Public Policy &amp; Business Environment</h5>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: EDITORIAL BOARD -->
+      <section id="board" class="reveal">
+        <span class="section-eyebrow">Editorial Team</span>
+        <h2 class="section-title">Led by <em>distinguished scholars</em></h2>
+
+        <!-- Editor-in-Chief -->
+        <div class="lead-card">
+          <div class="lead-icon"><i class="bi bi-person-badge-fill"></i></div>
+          <div>
+            <h5>Dr. Kumuda P.R.</h5>
+            <div class="lead-role">Editor-in-Chief, M.S. Ramaiah Management Review</div>
+            <p>Leading the journal's scholarly mission with a commitment to rigorous peer review, academic excellence, and advancing management knowledge across emerging markets.</p>
+          </div>
+        </div>
+
+        <!-- Associate Editor -->
+        <div class="lead-card" style="margin-top:16px;">
+          <div class="lead-icon"><i class="bi bi-person-workspace"></i></div>
+          <div>
+            <h5>Prof. Anilkumar M</h5>
+            <div class="lead-role">Associate Editor, M.S. Ramaiah Management Review</div>
+          </div>
+        </div>
+
+        <!-- Board Members -->
+        <div style="margin-top:40px;">
+          <span class="section-eyebrow" style="font-size:13px;letter-spacing:2px;">Editorial Board</span>
+        </div>
+        <div class="board-grid">
+          <div class="board-card">
+            <h5>Dr. Roselina Ahmad Saufi</h5>
+            <div class="desig">Professor, Business &amp; Management</div>
+            <div class="inst">Malaysian Graduate School of Entrepreneurship &amp; Business, Universiti Malaysia</div>
+            <div class="divider"></div>
+            <span class="country">Malaysia</span>
+          </div>
+          <div class="board-card">
+            <h5>Dr. Suresh Menon</h5>
+            <div class="desig">Senior Consultant, Process Excellence</div>
+            <div class="inst">Bengaluru</div>
+            <div class="divider"></div>
+            <span class="country">India</span>
+          </div>
+          <div class="board-card">
+            <h5>Dr. Ashwini Kumar</h5>
+            <div class="desig">Principal</div>
+            <div class="inst">Maharaja Agarsen College, Rajasthan</div>
+            <div class="divider"></div>
+            <span class="country">India</span>
+          </div>
+          <div class="board-card">
+            <h5>Dr. Mohd Fathi Bin Abu Yaziz</h5>
+            <div class="desig">Associate Professor</div>
+            <div class="inst">Universiti Teknologi Mara (UiTM)</div>
+            <div class="divider"></div>
+            <span class="country">Malaysia</span>
+          </div>
+          <div class="board-card">
+            <h5>Dr. Amitabh Anand</h5>
+            <div class="desig">Associate Professor</div>
+            <div class="inst">Excelia Business School, La Rochelle</div>
+            <div class="divider"></div>
+            <span class="country">France</span>
+          </div>
+          <div class="board-card">
+            <h5>Dr. Harold Andrew Patrick</h5>
+            <div class="desig">Professor &amp; Dean</div>
+            <div class="inst">CMS Business School, Jain University</div>
+            <div class="divider"></div>
+            <span class="country">India</span>
+          </div>
+          <div class="board-card">
+            <h5>Dr. Amit Shankar</h5>
+            <div class="desig">Assistant Professor</div>
+            <div class="inst">IIM Visakhapatnam</div>
+            <div class="divider"></div>
+            <span class="country">India</span>
+          </div>
+          <div class="board-card">
+            <h5>Dr. Anjula Gurtoo</h5>
+            <div class="desig">Professor, Management Studies</div>
+            <div class="inst">Indian Institute of Science, Bengaluru</div>
+            <div class="divider"></div>
+            <span class="country">India</span>
+          </div>
+          <div class="board-card">
+            <h5>Dr. Deepak Chandrashekar</h5>
+            <div class="desig">Assistant Professor</div>
+            <div class="inst">IIM Bengaluru</div>
+            <div class="divider"></div>
+            <span class="country">India</span>
+          </div>
+          <div class="board-card">
+            <h5>Dr. Easwaramoorthy Rangaswamy</h5>
+            <div class="desig">Principal &amp; Provost</div>
+            <div class="inst">Amity Global Institute, Singapore</div>
+            <div class="divider"></div>
+            <span class="country">Singapore</span>
+          </div>
+          <div class="board-card">
+            <h5>Dr. Jayasimha K.R</h5>
+            <div class="desig">Professor</div>
+            <div class="inst">IIM Indore</div>
+            <div class="divider"></div>
+            <span class="country">India</span>
+          </div>
+          <div class="board-card">
+            <h5>Dr. Mathew J Manimala</h5>
+            <div class="desig">Former Professor</div>
+            <div class="inst">IIM Bengaluru</div>
+            <div class="divider"></div>
+            <span class="country">India</span>
+          </div>
+          <div class="board-card">
+            <h5>Dr. Nazrul Islam</h5>
+            <div class="desig">Dean, School of Business</div>
+            <div class="inst">Canadian University of Bangladesh</div>
+            <div class="divider"></div>
+            <span class="country">Bangladesh</span>
+          </div>
+          <div class="board-card">
+            <h5>Dr. Rajendra Nargundkar</h5>
+            <div class="desig">Director</div>
+            <div class="inst">NMIMS Deemed University, Bengaluru</div>
+            <div class="divider"></div>
+            <span class="country">India</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: CURRENT ISSUE -->
+      <section id="current-issue" class="reveal">
+        <span class="section-eyebrow">Current Issue</span>
+        <h2 class="section-title">Volume 16 · Issue 3 · <em>July 2025</em></h2>
+
+        <!-- Issue header band -->
+        <div class="issue-band">
+          <div class="issue-badge">
+            <div class="issue-vol">16</div>
+            <div class="issue-meta">
+              <span style="font-size:18px;font-weight:600;color:#fff;">Issue 3</span>
+              <span>July 2025</span>
+              <span>ISSN 0975-7988</span>
+            </div>
+          </div>
+          <a href="https://msrmr.in/articles/current-issue" class="issue-cta">
+            <i class="bi bi-journal-text"></i> View Full Issue
+          </a>
+        </div>
+
+        <!-- Article list -->
+        <div class="article-list">
+
+          <a href="https://msrmr.in/articles/current-issue" class="article-item">
+            <span class="article-num">1</span>
+            <div class="article-body">
+              <div class="article-title">Trends in Sustainable Development in the Information Technology Sector</div>
+              <div class="article-type">Review Article &middot; Jul 2025</div>
+            </div>
+            <div class="article-stats">
+              <span><i class="bi bi-eye"></i> 569 views</span>
+              <span><i class="bi bi-download"></i> 313 downloads</span>
+              <span class="article-read">Read →</span>
+            </div>
+          </a>
+
+          <a href="https://msrmr.in/articles/current-issue" class="article-item">
+            <span class="article-num">2</span>
+            <div class="article-body">
+              <div class="article-title">Beyond the Paycheck: Exploring Motivations Behind Women's Entrepreneurial Intentions after Exiting Corporate Careers</div>
+              <div class="article-type">Review Article &middot; Jul 2025</div>
+            </div>
+            <div class="article-stats">
+              <span><i class="bi bi-eye"></i> 360 views</span>
+              <span><i class="bi bi-download"></i> 295 downloads</span>
+              <span class="article-read">Read →</span>
+            </div>
+          </a>
+
+          <a href="https://msrmr.in/articles/current-issue" class="article-item">
+            <span class="article-num">3</span>
+            <div class="article-body">
+              <div class="article-title">A Study on Retail Service Dimensions and Customer Perceptions Towards Organised Retail Outlets</div>
+              <div class="article-type">Review Article &middot; Jul 2025</div>
+            </div>
+            <div class="article-stats">
+              <span><i class="bi bi-eye"></i> 341 views</span>
+              <span><i class="bi bi-download"></i> 315 downloads</span>
+              <span class="article-read">Read →</span>
+            </div>
+          </a>
+
+          <a href="https://msrmr.in/articles/view/125" class="article-item">
+            <span class="article-num">4</span>
+            <div class="article-body">
+              <div class="article-title">The Role of Technology in Enhancing Sustainable Practices in International HRM: A Case Study of West African Multinationals</div>
+              <div class="article-type">Review Article &middot; Jul 2025</div>
+            </div>
+            <div class="article-stats">
+              <span><i class="bi bi-eye"></i> 763 views</span>
+              <span><i class="bi bi-download"></i> 768 downloads</span>
+              <span class="article-read">Read →</span>
+            </div>
+          </a>
+
+          <a href="https://msrmr.in/articles/view/126" class="article-item">
+            <span class="article-num">5</span>
+            <div class="article-body">
+              <div class="article-title">Experiment Analysis for Efficient Virgin Coconut Oil Extraction Technique for Small Scale Industries</div>
+              <div class="article-type">Review Article &middot; Jul 2025</div>
+            </div>
+            <div class="article-stats">
+              <span><i class="bi bi-eye"></i> 757 views</span>
+              <span><i class="bi bi-download"></i> 300 downloads</span>
+              <span class="article-read">Read →</span>
+            </div>
+          </a>
+
+          <a href="https://msrmr.in/articles/view/127" class="article-item">
+            <span class="article-num">6</span>
+            <div class="article-body">
+              <div class="article-title">Environmental Consciousness and Organic Choices: Investigating the Influence of Awareness, Green Self-Identity, and Subjective Norms among Millennials in Bangalore</div>
+              <div class="article-type">Review Article &middot; Jul 2025</div>
+            </div>
+            <div class="article-stats">
+              <span><i class="bi bi-eye"></i> 693 views</span>
+              <span><i class="bi bi-download"></i> 367 downloads</span>
+              <span class="article-read">Read →</span>
+            </div>
+          </a>
+
+          <a href="https://msrmr.in/articles/view/128" class="article-item">
+            <span class="article-num">7</span>
+            <div class="article-body">
+              <div class="article-title">Enhancing Environmental Sustainability and Operational Performance in Pharmaceutical Manufacturing: The Role of Technology Adoption</div>
+              <div class="article-type">Review Article &middot; Jul 2025</div>
+            </div>
+            <div class="article-stats">
+              <span><i class="bi bi-eye"></i> 717 views</span>
+              <span><i class="bi bi-download"></i> 376 downloads</span>
+              <span class="article-read">Read →</span>
+            </div>
+          </a>
+
+          <a href="https://msrmr.in/articles/view/129" class="article-item">
+            <span class="article-num">8</span>
+            <div class="article-body">
+              <div class="article-title">The Technological Paradox of Fintech: Drivers, Barriers and Solutions</div>
+              <div class="article-type">Review Article &middot; Jul 2025</div>
+            </div>
+            <div class="article-stats">
+              <span><i class="bi bi-eye"></i> 682 views</span>
+              <span><i class="bi bi-download"></i> 422 downloads</span>
+              <span class="article-read">Read →</span>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- SECTION 5: LATEST ARTICLES -->
+      <section id="articles" class="reveal">
+        <div class="view-more-bar">
+          <div>
+            <span class="section-eyebrow">Latest Publications</span>
+            <h2 class="section-title">Recent <em>research</em></h2>
+          </div>
+          <a href="https://msrmr.in/articles/past-issues" class="view-more-link">View All Archives →</a>
+        </div>
+        <div class="news-grid">
+
+          <a href="https://msrmr.in/articles/view/143" class="news-card" style="text-decoration:none;">
+            <div class="news-img">
+              <i class="bi bi-cash-coin"></i>
+            </div>
+            <div class="news-body">
+              <div class="news-date">Dec 01, 2025</div>
+              <h5>Determinants of Profitability of Public Sector Banks in India: A Study</h5>
+              <span class="news-link">Read Article →</span>
+            </div>
+          </a>
+
+          <a href="https://msrmr.in/articles/view/129" class="news-card" style="text-decoration:none;">
+            <div class="news-img v2">
+              <i class="bi bi-cpu"></i>
+            </div>
+            <div class="news-body">
+              <div class="news-date">Jul 01, 2025</div>
+              <h5>The Technological Paradox of Fintech: Drivers, Barriers and Solutions</h5>
+              <span class="news-link">Read Article →</span>
+            </div>
+          </a>
+
+          <a href="https://msrmr.in/articles/view/128" class="news-card" style="text-decoration:none;">
+            <div class="news-img v3">
+              <i class="bi bi-tree"></i>
+            </div>
+            <div class="news-body">
+              <div class="news-date">Jul 01, 2025</div>
+              <h5>Enhancing Environmental Sustainability and Operational Performance in Pharmaceutical Manufacturing</h5>
+              <span class="news-link">Read Article →</span>
+            </div>
+          </a>
+
+          <a href="https://msrmr.in/articles/view/127" class="news-card" style="text-decoration:none;">
+            <div class="news-img">
+              <i class="bi bi-people-fill"></i>
+            </div>
+            <div class="news-body">
+              <div class="news-date">Jul 01, 2025</div>
+              <h5>Environmental Consciousness and Organic Choices among Millennials in Bangalore</h5>
+              <span class="news-link">Read Article →</span>
+            </div>
+          </a>
+
+          <a href="https://msrmr.in/articles/view/126" class="news-card" style="text-decoration:none;">
+            <div class="news-img v2">
+              <i class="bi bi-graph-up-arrow"></i>
+            </div>
+            <div class="news-body">
+              <div class="news-date">Jul 01, 2025</div>
+              <h5>Experiment Analysis for Efficient Virgin Coconut Oil Extraction for Small Scale Industries</h5>
+              <span class="news-link">Read Article →</span>
+            </div>
+          </a>
+
+          <a href="https://msrmr.in/articles/view/125" class="news-card" style="text-decoration:none;">
+            <div class="news-img v3">
+              <i class="bi bi-globe2"></i>
+            </div>
+            <div class="news-body">
+              <div class="news-date">Jul 01, 2025</div>
+              <h5>The Role of Technology in Enhancing Sustainable Practices in International HRM</h5>
+              <span class="news-link">Read Article →</span>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- SECTION 6: INDEXING -->
+      <section id="indexing" class="reveal">
+        <span class="section-eyebrow">Indexed In</span>
+        <h2 class="section-title">Globally <em>recognised &amp; indexed</em></h2>
+        <p class="index-sub">M.S. Ramaiah Management Review is indexed in leading academic databases, ensuring global discoverability of published research.</p>
+        <div class="index-grid">
+          <div class="index-card">
+            <i class="bi bi-google"></i>
+            <h5>Google Scholar</h5>
+            <p>Free web search engine for scholarly literature</p>
+          </div>
+          <div class="index-card">
+            <i class="bi bi-journal"></i>
+            <h5>J-Gate</h5>
+            <p>e-journal access and management portal</p>
+          </div>
+          <div class="index-card">
+            <i class="bi bi-link-45deg"></i>
+            <h5>Crossref</h5>
+            <p>DOI registration and persistent identifiers</p>
+          </div>
+          <div class="index-card">
+            <i class="bi bi-star"></i>
+            <h5>Clever Fox</h5>
+            <p>Academic journal indexing and discovery</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 7: SUBMIT -->
+      <section id="submit" class="reveal">
+        <span class="section-eyebrow">For Authors</span>
+        <h2 class="section-title">Share your <em>research with the world</em></h2>
+        <div class="resources-grid">
+          <a href="https://msrmr.in/about/submissions" class="resource-card">
+            <div class="resource-icon"><i class="bi bi-send-fill"></i></div>
+            <div>
+              <h5>Submit Manuscript</h5>
+              <span>Original research, review articles, case studies &amp; conceptual frameworks</span>
+            </div>
+          </a>
+          <a href="https://msrmr.in/about/author-guidelines" class="resource-card">
+            <div class="resource-icon"><i class="bi bi-file-earmark-text"></i></div>
+            <div>
+              <h5>Author Guidelines</h5>
+              <span>Formatting requirements, citation style, and submission policies</span>
+            </div>
+          </a>
+          <a href="https://msrmr.in/about/editorial-board" class="resource-card">
+            <div class="resource-icon"><i class="bi bi-people"></i></div>
+            <div>
+              <h5>Editorial Board</h5>
+              <span>Meet our panel of internationally distinguished scholars</span>
+            </div>
+          </a>
+          <a href="https://msrmr.in/about/publication-ethics" class="resource-card">
+            <div class="resource-icon"><i class="bi bi-shield-check"></i></div>
+            <div>
+              <h5>Publication Ethics</h5>
+              <span>Our commitment to integrity, transparency, and scholarly standards</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- CTA Band -->
+        <div class="cta-band">
+          <div>
+            <h4>Ready to publish? Make a Submission Today</h4>
+            <p>All submissions undergo rigorous double-blind peer review.</p>
+          </div>
+          <a href="https://msrmr.in/about/submissions" class="cta-btn">Submit Now →</a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <!-- Col 1: Brand -->
+      <div class="footer-brand">
+        <h6>M.S. Ramaiah Management Review</h6>
+        <img src="https://msrmr.in/public/assets/images/msrmr-logo.png" alt="MSRMR" style="height:44px;border-radius:4px;padding:6px 12px;background:rgba(255,255,255,.95);margin-bottom:18px;" />
+        <p>M.S. Ramaiah Management Review is a peer-reviewed international journal published by M.S. Ramaiah Institute of Management. Advancing management scholarship since 2009.</p>
+        <div class="contact-line">
+          <i class="bi bi-envelope-fill"></i>
+          <a href="mailto:editor@msrmr.in" style="color:rgba(255,255,255,.7);">editor@msrmr.in</a>
+        </div>
+        <div class="contact-line">
+          <i class="bi bi-geo-alt-fill"></i>
+          <span style="color:rgba(255,255,255,.7);">New BEL Road, Bengaluru — 560054</span>
+        </div>
+        <p style="margin-top:12px;font-size:13px;color:rgba(255,255,255,.55);">Published by <a href="https://msrim.in" style="color:var(--gold-500);">M.S. Ramaiah Institute of Management</a></p>
+      </div>
+
+      <!-- Col 2: Journal -->
+      <div>
+        <h6>Journal</h6>
+        <ul>
+          <li><a href="https://msrmr.in/articles/current-issue">Current Issue</a></li>
+          <li><a href="https://msrmr.in/articles/past-issues">Archives</a></li>
+          <li><a href="https://msrmr.in/about/submissions">Make a Submission</a></li>
+          <li><a href="https://msrmr.in/announcements">Announcements</a></li>
+          <li><a href="https://msrmr.in/auth/register">Register</a></li>
+          <li><a href="https://msrmr.in/auth/login">Login</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Information -->
+      <div>
+        <h6>Information</h6>
+        <ul>
+          <li><a href="https://msrmr.in/about">About the Journal</a></li>
+          <li><a href="https://msrmr.in/about/editorial-board">Editorial Board</a></li>
+          <li><a href="https://msrmr.in/about/author-guidelines">Author Guidelines</a></li>
+          <li><a href="https://msrmr.in/about/publication-ethics">Publication Ethics</a></li>
+          <li><a href="https://msrmr.in/about/privacy">Privacy Policy</a></li>
+          <li><a href="https://msrmr.in/contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Published By -->
+      <div>
+        <h6>MSRIM</h6>
+        <ul>
+          <li><a href="https://msrim.in">MSRIM Home</a></li>
+          <li><a href="https://admissions.msrim.in">Admissions</a></li>
+          <li><a href="https://msrim.in/faculty">Faculty</a></li>
+          <li><a href="https://msrim.in/research">Research</a></li>
+          <li><a href="https://msrim.in/centres">Centres</a></li>
+          <li><a href="https://msrim.in/placement">Placements</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="wrap">
+        <span>© 2026 M S Ramaiah Management Review. All rights reserved. &middot; ISSN 0975-7988 &middot; Published by M.S. Ramaiah Institute of Management</span>
+        <div style="display:flex;gap:20px;">
+          <a href="https://msrmr.in/about/privacy">Privacy Policy</a>
+          <a href="https://msrmr.in/contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FULLSCREEN MENU -->
+  <div class="fsm-overlay" id="fsmOverlay">
+    <div class="fsm-panel">
+      <div class="fsm-header">
+        <img src="https://msrmr.in/public/assets/images/msrmr-logo.png" alt="MSRMR" class="fsm-logo" style="height:36px;background:#fff;padding:4px 10px;border-radius:4px;">
+        <div class="fsm-header-right">
+          <a href="https://msrmr.in/about/submissions" class="fsm-header-cta"><i class="bi bi-send-fill"></i> Submit Research</a>
+          <button class="fsm-close" id="fsmClose"><i class="bi bi-x-lg"></i></button>
+        </div>
+      </div>
+      <div class="fsm-body">
+        <!-- LEFT: Card Grid -->
+        <div class="fsm-left">
+          <span class="fsm-section-label">Quick Navigation</span>
+          <div class="fsm-grid">
+            <a href="https://msrmr.in/" class="fsm-card">
+              <div class="fsm-icon"><i class="bi bi-house-fill"></i></div>
+              <span class="fsm-label">Home</span>
+            </a>
+            <a href="https://msrmr.in/about" class="fsm-card">
+              <div class="fsm-icon"><i class="bi bi-info-circle-fill"></i></div>
+              <span class="fsm-label">About Journal</span>
+            </a>
+            <a href="https://msrmr.in/about/editorial-board" class="fsm-card">
+              <div class="fsm-icon"><i class="bi bi-people-fill"></i></div>
+              <span class="fsm-label">Editorial Board</span>
+            </a>
+            <a href="https://msrmr.in/about/author-guidelines" class="fsm-card">
+              <div class="fsm-icon"><i class="bi bi-file-earmark-text-fill"></i></div>
+              <span class="fsm-label">Author Guidelines</span>
+            </a>
+            <a href="https://msrmr.in/about/submissions" class="fsm-card">
+              <div class="fsm-icon"><i class="bi bi-send-fill"></i></div>
+              <span class="fsm-label">Submissions</span>
+            </a>
+            <a href="https://msrmr.in/articles/current-issue" class="fsm-card">
+              <div class="fsm-icon"><i class="bi bi-journal-text"></i></div>
+              <span class="fsm-label">Current Issue</span>
+            </a>
+            <a href="https://msrmr.in/articles/past-issues" class="fsm-card">
+              <div class="fsm-icon"><i class="bi bi-archive-fill"></i></div>
+              <span class="fsm-label">Archives</span>
+            </a>
+            <a href="https://msrmr.in/announcements" class="fsm-card">
+              <div class="fsm-icon"><i class="bi bi-megaphone-fill"></i></div>
+              <span class="fsm-label">Announcements</span>
+            </a>
+            <a href="https://msrmr.in/contact" class="fsm-card">
+              <div class="fsm-icon"><i class="bi bi-envelope-fill"></i></div>
+              <span class="fsm-label">Contact</span>
+            </a>
+            <a href="https://msrim.in" class="fsm-card">
+              <div class="fsm-icon"><i class="bi bi-building-fill"></i></div>
+              <span class="fsm-label">MSRIM Website</span>
+            </a>
+            <a href="https://msrmr.in/auth/register" class="fsm-card">
+              <div class="fsm-icon"><i class="bi bi-person-plus-fill"></i></div>
+              <span class="fsm-label">Register</span>
+            </a>
+            <a href="https://msrmr.in/about/publication-ethics" class="fsm-card">
+              <div class="fsm-icon"><i class="bi bi-shield-fill-check"></i></div>
+              <span class="fsm-label">Publication Ethics</span>
+            </a>
+          </div>
+          <div class="fsm-quicklinks">
+            <a href="https://msrmr.in/articles/current-issue" class="fsm-quicklink"><i class="bi bi-journal-text"></i> Current Issue</a>
+            <a href="https://msrmr.in/articles/past-issues" class="fsm-quicklink"><i class="bi bi-archive"></i> Archives</a>
+            <a href="https://msrmr.in/auth/login" class="fsm-quicklink"><i class="bi bi-person-fill"></i> Login</a>
+            <a href="https://msrim.in" class="fsm-quicklink"><i class="bi bi-box-arrow-up-right"></i> MSRIM</a>
+          </div>
+        </div>
+        <!-- RIGHT: Side Nav -->
+        <div class="fsm-right">
+          <div class="fsm-side-ctas">
+            <a href="https://msrmr.in/about/submissions" class="fsm-side-cta1"><i class="bi bi-send-fill"></i> Submit</a>
+            <a href="https://msrmr.in/auth/register" class="fsm-side-cta2"><i class="bi bi-person-plus-fill"></i> Register</a>
+          </div>
+          <nav class="fsm-side-nav">
+            <a href="https://msrmr.in/" class="fsm-side-link">Home</a>
+            <div class="fsm-side-group">
+              <div class="fsm-side-link" onclick="toggleSide(this)">About <i class="bi bi-chevron-down chev"></i></div>
+              <div class="fsm-side-sub">
+                <a href="https://msrmr.in/about">About the Journal</a>
+                <a href="https://msrmr.in/about/editorial-board">Editorial Board</a>
+                <a href="https://msrmr.in/about/publication-ethics">Publication Ethics</a>
+                <a href="https://msrmr.in/about/privacy">Privacy Policy</a>
+              </div>
+            </div>
+            <div class="fsm-side-group">
+              <div class="fsm-side-link" onclick="toggleSide(this)">For Authors <i class="bi bi-chevron-down chev"></i></div>
+              <div class="fsm-side-sub">
+                <a href="https://msrmr.in/about/submissions">Make a Submission</a>
+                <a href="https://msrmr.in/about/author-guidelines">Author Guidelines</a>
+                <a href="https://msrmr.in/about/publication-ethics">Publication Ethics</a>
+              </div>
+            </div>
+            <div class="fsm-side-group">
+              <div class="fsm-side-link" onclick="toggleSide(this)">Articles <i class="bi bi-chevron-down chev"></i></div>
+              <div class="fsm-side-sub">
+                <a href="https://msrmr.in/articles/current-issue">Current Issue</a>
+                <a href="https://msrmr.in/articles/past-issues">Past Issues / Archives</a>
+              </div>
+            </div>
+            <a href="https://msrmr.in/announcements" class="fsm-side-link">Announcements</a>
+            <a href="https://msrmr.in/contact" class="fsm-side-link">Contact</a>
+          </nav>
+          <a href="https://msrim.in" target="_blank" class="fsm-side-footer"><i class="bi bi-box-arrow-up-right"></i> MSRIM Website</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // FSM open/close
+    (function () {
+      var btn = document.getElementById('menuBtn');
+      var ov = document.getElementById('fsmOverlay');
+      var cl = document.getElementById('fsmClose');
+      function openFSM() { if (ov) { ov.classList.add('open'); document.body.style.overflow = 'hidden'; } }
+      function closeFSM() { if (ov) { ov.classList.remove('open'); document.body.style.overflow = ''; } }
+      if (btn) btn.addEventListener('click', openFSM);
+      if (cl) cl.addEventListener('click', closeFSM);
+      if (ov) ov.addEventListener('click', function (e) { if (e.target === ov) closeFSM(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeFSM(); });
+    })();
+
+    // FSM side group toggle
+    function toggleSide(el) {
+      var g = el.parentElement;
+      document.querySelectorAll('.fsm-side-group.open').forEach(function (o) { if (o !== g) o.classList.remove('open'); });
+      g.classList.toggle('open');
+    }
+
+    // Sidebar scroll-spy
+    var navLinks = document.querySelectorAll('.sidebar-nav a');
+    var sections = Array.from(navLinks).map(function (a) { return document.querySelector(a.getAttribute('href')); });
+    function updateActive() {
+      var y = window.scrollY + 200;
+      var activeIdx = 0;
+      sections.forEach(function (sec, i) { if (sec && sec.offsetTop <= y) activeIdx = i; });
+      navLinks.forEach(function (l, i) { l.classList.toggle('active', i === activeIdx); });
+    }
+    window.addEventListener('scroll', updateActive);
+
+    // Reveal on scroll
+    var reveals = document.querySelectorAll('.reveal');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('in'); });
+    }, { threshold: 0.08 });
+    reveals.forEach(function (r) { io.observe(r); });
+  </script>
+
+</body>
+</html>
